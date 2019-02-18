@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1550439484957.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B7545371",
+    "lastKnownWriteTime" : 1550453559,
+    "last_content_update" : 1550453736970,
+    "path" : "~/statistics_with_R/plot_in_R.Rmd",
+    "project_path" : "plot_in_R.Rmd",
+    "properties" : {
+        "cursorPosition" : "63,3",
+        "last_setup_crc32" : "55aa6e11bb338d19",
+        "scrollLine" : "23",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

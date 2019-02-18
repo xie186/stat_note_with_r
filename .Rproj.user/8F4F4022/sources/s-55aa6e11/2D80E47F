@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1550175815438.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2D80E47F",
+    "lastKnownWriteTime" : 1550431710,
+    "last_content_update" : 1550431904254,
+    "path" : "~/statistics_with_R/multi_linear_regression.Rmd",
+    "project_path" : "multi_linear_regression.Rmd",
+    "properties" : {
+        "cursorPosition" : "15,0",
+        "last_setup_crc32" : "",
+        "scrollLine" : "4",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

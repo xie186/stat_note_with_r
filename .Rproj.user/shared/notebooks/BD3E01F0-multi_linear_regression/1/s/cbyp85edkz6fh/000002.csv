@@ -1,0 +1,2 @@
+"0","tab$sex=as.numeric(tab$sex) -1 "
+"0","head(tab)"

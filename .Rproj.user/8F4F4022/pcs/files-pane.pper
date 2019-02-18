@@ -1,0 +1,9 @@
+{
+    "path" : "~/statistics_with_R/data",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

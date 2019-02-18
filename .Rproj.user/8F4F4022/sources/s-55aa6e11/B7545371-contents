@@ -1,0 +1,64 @@
+---
+title: "Untitled"
+author: "xie186"
+date: "2/17/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Read the data
+
+Consider the data collected by Francis Galton in the 1880s, stored in a modern format in the `galton.csv` file. In this file, `heights` is the variable containing the child’s heights, while the `father`’s and `mother`’s height is contained in the variables father and mother.
+The family variable is a numerical code identifying children in the same family; the number of kids in this family is in `nkids`.
+
+
+
+```{r}
+## Data from  https://github.com/thomas-haslwanter/statsintro_python/blob/master/ISP/Code_Quantlets/08_TestsMeanValues/anovaOneway/galton.csv
+tab<-read.csv("data/galton.csv")
+head(tab)
+```
+
+
+
+## Line plot
+
+## Basic line plot
+
+```{r}
+plot(tab$father, tab$height)
+```
+
+
+## Color the dots based on the `sex` information
+
+```{r}
+col_info = ifelse(tab$sex=="M", "royalblue", "darkred")
+plot(tab$father, tab$height, col=col_info)
+```
+
+
+```{r}
+col_info = ifelse(tab$sex=="M", "royalblue", "darkred")
+plot(tab$father, tab$height, col=col_info, xlim=c(60, 80), ylim=c(60, 80))
+legend(76, 65,pch=c(19,19),col=c("royalblue", "darkred"),c("female", "male"),bty="o",cex=.8)
+
+```
+
+
+
+## 
+
+
+
+
+
+
+
+```{r}
+meth_lev=read.table("data/global_meth_lev.tsv", header=TRUE)
+meth_lev
+```

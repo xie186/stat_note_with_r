@@ -1,0 +1,2 @@
+"0","par(mfrow=c(2,2)) # Change the panel layout to 2 x 2"
+"0","plot(model_fs)"

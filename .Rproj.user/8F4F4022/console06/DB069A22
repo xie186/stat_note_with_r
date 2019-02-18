@@ -1,0 +1,50 @@
+]0;/home/xie186/statistics_with_R$ [K$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ cd ../
+]0;/home/xie186$ ls
+
+[0m[01;34manaconda3[0m                                   note_danshen.ipynb
+[01;34mbin[0m                                         [01;34mpearDB_anno[0m
+[01;34mbiodocker_viewbs_bak[0m                        PEAR.ipynb
+[01;34mconda-bld[0m                                   [01;34mperl5[0m
+[01;36mdanshen_RNA_seq_metabolomics.ipynb[0m          [01;34mPictures[0m
+[01;36mDESeq2_time_series.ipynb[0m                    [01;34mPublic[0m
+[01;34mDesktop[0m                                     [01;34mR[0m
+Dockerfile_ViewBS                           requirements.txt
+[01;34mdocker_test[0m                                 Rplots.pdf
+[01;34mDocuments[0m                                   [01;34msalvia_RNA-seq[0m
+[01;34mdog_snp[0m                                     [01;34mSinogene[0m
+[01;34mdog_snp_chip[0m                                [01;34msnakemake_academy[0m
+DogWGS.ipynb                                [01;34msnap[0m
+[01;34mDownloads[0m                                   [01;34msoftware[0m
+examples.desktop                            [01;34mstatistics_with_R[0m
+FastqSummaryF1L1.txt                        TabOmics_GeCKOdata_map_stat.xlsx_0_1.ods
+[01;31mG2-2_S2_L001_R1_001.fastq.gz[0m                TabOmics_GeCKOdata_map_stat.xlsx_0.ods
+[01;34mGGPred[0m                                      TabOmics_GeCKOdata_map_stat.xlsx_1.ods
+[01;34mgithub_book[0m                                 [01;34mtbDocker[0m
+[01;34migv[0m                                         [01;34mtbDogDoc[0m
+inline-supplementary-material-1.xlsx_0.ods  [01;34mtbDogSNPchip[0m
+[01;34mjikai_data[0m                                  [01;34mTemplates[0m
+[01;34mjupyter_nb[0m                                  [01;34mtest[0m
+[01;34mKivyMD-master[0m                               test1
+[01;31mKivyMD-master.zip[0m                           [01;34mtest_ara[0m
+[01;34mkivy_test[0m                                   [01;34mtest_crispr[0m
+[01;34mlib[0m                                         test.sh
+[01;34mmaize_phasiRNA[0m                              [01;34mtip4bioinformatics[0m
+[01;34mminiconda2[0m                                  Untitled1.ipynb
+[01;34mminiconda3[0m                                  untitled_1.ods
+mRNA_Phloem_vs_Xylem.DE_ALL.xls_0.ods       Untitled2.ipynb
+[01;34mMusic[0m                                       Untitled.ipynb
+[01;34mncbi[0m                                        [01;34mVideos[0m
+nohup.out                                   [01;34mViewBSdocker[0m
+]0;/home/xie186$ 
+]0;/home/xie186$ 
+]0;/home/xie186$ cd maize_phasiRNA/
+]0;/home/xie186/maize_phasiRNA$ 
+]0;/home/xie186/maize_phasiRNA$ ls
+[0m[01;34mdata[0m  [01;34mdocs[0m  Maize_phasiRNA.html  Maize_phasiRNA.ipynb  README.md  [01;34mresults[0m  [01;34mscripts[0m  [01;34msoftware[0m
+]0;/home/xie186/maize_phasiRNA$ 
+]0;/home/xie186/maize_phasiRNA$ git remote -v
+origin	https://github.com/xie186/maize_phasiRNA.git (fetch)
+origin	https://github.com/xie186/maize_phasiRNA.git (push)
+]0;/home/xie186/maize_phasiRNA$ 

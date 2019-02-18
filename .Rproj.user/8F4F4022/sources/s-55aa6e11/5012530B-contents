@@ -1,0 +1,43 @@
+---
+title: "PCA"
+author: "xie186"
+date: "2/14/2019"
+output: html_document
+---
+
+# References
+
+https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html#about-iris
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Read data
+
+```{r}
+```
+
+```{r}
+iris_tab <- read.csv("https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/d546eaee765268bf2f487608c537c05e22e4b221/iris.csv")
+```
+
+## Head data
+
+```{r}
+head(iris_tab)
+```
+
+## Summary of the data
+
+```{r}
+summary(iris_tab)
+```
+
+
+## Check the distribution of the data
+
+```{r}
+hist(iris_tab$sepal_length)
+```
