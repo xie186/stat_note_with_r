@@ -1,30 +1,65 @@
----
-title: "Untitled"
-author: "TabOmics"
-date: "2/14/2019"
-output: html_document
----
+# PCA 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+## Read data
+
+```{r}
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r}
+iris_tab <- read.csv("https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/d546eaee765268bf2f487608c537c05e22e4b221/iris.csv")
 ```
 
-## Including Plots
+## Head data
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+head(iris_tab)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Summary of the data
+
+```{r}
+summary(iris_tab)
+```
+
+
+## Check the distribution of the data
+
+```{r}
+hist(iris_tab$sepal_length)
+```
+
+
+
+## Eigendecomposition - Computing Eigenvectors and Eigenvalues
+
+The eigenvectors and eigenvalues of a covariance (or correlation) matrix represent the "core" of a PCA: The eigenvectors (principal components) determine the directions of the new feature space, and the eigenvalues determine their magnitude. In other words, the eigenvalues explain the variance of the data along the new feature axes.
+
+### Covariance Matrix
+
+The classic approach to PCA is to perform the eigendecomposition on the covariance matrix $\Sigma$, which is a $d \times d$ matrix where each element represents the covariance between two features. The covariance between two features is calculated as follows:
+
+$\sigma_{jk} = \frac{1}{n-1}\sum_{i=1}^{N}\left(  x_{ij}-\bar{x}_j \right)  \left( x_{ik}-\bar{x}_k \right).$
+
+We can summarize the calculation of the covariance matrix via the following matrix equation:   
+
+$\Sigma = \frac{1}{n-1} \left( (\mathbf{X} - \mathbf{\bar{x}})^T\;(\mathbf{X} - \mathbf{\bar{x}}) \right)$  
+where $\mathbf{\bar{x}}$ is the mean vector 
+$\mathbf{\bar{x}} = \sum\limits_{i=1}^n x_{i}.$  
+
+The mean vector is a $d$-dimensional vector where each value in this vector represents the sample mean of a feature column in the dataset.
+
+```
+
+
+
+## References
+
+https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html#about-iris
+
+How to read PCA biplots and scree plots: https://blog.bioturing.com/2018/06/18/how-to-read-pca-biplots-and-scree-plots/
+
+Principal Component Analysis (PCA): 
+https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/index
+
+
+

@@ -1,13 +1,4 @@
----
-title: "Untitled"
-author: "TabOmics"
-date: "2/17/2019"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+# Plot in R 
 
 ## Read the data
 
@@ -51,3 +42,14 @@ legend(76, 65,pch=c(19,19),col=c("royalblue", "darkred"),c("female", "male"),bty
 
 
 ## 
+
+
+
+
+
+
+
+```{r}
+meth_lev=read.table("data/global_meth_lev.tsv", header=TRUE)
+meth_lev
+```

@@ -1,13 +1,4 @@
----
-title: "Untitled"
-author: "xie186"
-date: "2/17/2019"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+# Plot in R 
 
 ## Read the data
 

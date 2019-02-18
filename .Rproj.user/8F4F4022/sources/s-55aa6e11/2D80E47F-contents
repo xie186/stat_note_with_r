@@ -1,13 +1,4 @@
----
-title: "Mutiple lenear regression"
-author: "xie186"
-date: "2/14/2019"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+# MRG
 
 Sir Francis Galton (1822–1911) was an English statistician. He founded many concepts in statistics, such as correlation, quartile, percentile and regression, that are still being used today.
 
@@ -16,6 +7,7 @@ Sir Francis Galton (1822–1911) was an English statistician. He founded many co
 ## Read the data
 
 Consider the data collected by Francis Galton in the 1880s, stored in a modern format in the `galton.csv` file. In this file, `heights` is the variable containing the child’s heights, while the `father`’s and `mother`’s height is contained in the variables father and mother.
+
 The family variable is a numerical code identifying children in the same family; the number of kids in this family is in `nkids`.
 
 

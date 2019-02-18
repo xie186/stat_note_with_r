@@ -94,4 +94,162 @@ Branch master set up to track remote branch master from origin.
 ]0;/home/xie186/statistics_with_R$ 
 ]0;/home/xie186/statistics_with_R$ git add .
 
-git
+git commit -=m  m ]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git commit -m :[K""U"o"d"a"[1P"[1P"[1P"p"d"a"t"e"
+[master bff0b53] Update
+ Committer: Shaojun Xie <xie186@tabomics.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 113 files changed, 3439 insertions(+)
+ create mode 100644 .Rproj.user/8F4F4022/console06/5A4F419A
+ create mode 100644 .Rproj.user/8F4F4022/console06/5A4F419A.env
+ create mode 100644 .Rproj.user/8F4F4022/console06/DB069A22
+ create mode 100644 .Rproj.user/8F4F4022/console06/DB069A22.env
+ create mode 100644 .Rproj.user/8F4F4022/console06/INDEX001
+ create mode 100644 .Rproj.user/8F4F4022/pcs/files-pane.pper
+ create mode 100644 .Rproj.user/8F4F4022/pcs/source-pane.pper
+ create mode 100644 .Rproj.user/8F4F4022/pcs/windowlayoutstate.pper
+ create mode 100644 .Rproj.user/8F4F4022/pcs/workbench-pane.pper
+ create mode 100644 .Rproj.user/8F4F4022/persistent-state
+ create mode 100644 .Rproj.user/8F4F4022/saved_source_markers
+ create mode 100644 .Rproj.user/8F4F4022/sources/prop/1BE8C2BD
+ create mode 100644 .Rproj.user/8F4F4022/sources/prop/3EC47E26
+ create mode 100644 .Rproj.user/8F4F4022/sources/prop/54EF3952
+ create mode 100644 .Rproj.user/8F4F4022/sources/prop/6650AAEE
+ create mode 100644 .Rproj.user/8F4F4022/sources/prop/6DDDEFFA
+ create mode 100644 .Rproj.user/8F4F4022/sources/prop/9D44723B
+ create mode 100644 .Rproj.user/8F4F4022/sources/prop/B660A67A
+ create mode 100644 .Rproj.user/8F4F4022/sources/prop/INDEX
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2D80E47F
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2D80E47F-contents
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E13D092-contents
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E21E68C
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E21E68C-contents
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/5012530B
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/5012530B-contents
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/9B4F0203
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/9B4F0203-contents
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/AE4A4304-contents
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/B7545371
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/B7545371-contents
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/D20268C5-contents
+ create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/lock_file
+ create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000003.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000003.png
+ create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000003.snapshot
+ create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/csetup_chunk/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/s/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c1h3lr4xk6ho5/000004.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c4xd9cmukbsab/000009.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c4xd9cmukbsab/00000b.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c4xd9cmukbsab/00000c.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c4xd9cmukbsab/00000c.png
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c4xd9cmukbsab/00000c.snapshot
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c73jsudoweal9/00000b.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c73jsudoweal9/00000c.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c73jsudoweal9/00000c.png
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c73jsudoweal9/00000c.snapshot
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c89cywye0o834/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c8omxjw27oni1/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cbmrlfm7p34lt/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chlimp0ajzzwe/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/00000b.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/00000d.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/00000f.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/000011.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/000012.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/000012.png
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/000012.snapshot
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cloditcu6riai/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp1y8035w8cyj/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp1y8035w8cyj/000004.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp1y8035w8cyj/000005.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp1y8035w8cyj/000005.png
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp1y8035w8cyj/000005.snapshot
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp62t93r9ejex/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp62t93r9ejex/000003.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp62t93r9ejex/000003.png
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp62t93r9ejex/000003.snapshot
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/csetup_chunk/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cyx4l7v6rrffy/000004.csv
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cyx4l7v6rrffy/000005.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cyx4l7v6rrffy/000005.png
+ create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cyx4l7v6rrffy/000005.snapshot
+ create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chj8gnyb16af5/000004.csv
+ create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chj8gnyb16af5/000005.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chj8gnyb16af5/000005.rdf
+ create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/csetup_chunk/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/cah4uoz9t424x/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/cah4uoz9t424x/000003.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/cah4uoz9t424x/000003.rdf
+ create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/csetup_chunk/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/8F4F402255aa6e11/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/c842yke67oj2f/000006.csv
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/c842yke67oj2f/000007.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/c842yke67oj2f/000007.rdf
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cbyp85edkz6fh/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cbyp85edkz6fh/000003.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cbyp85edkz6fh/000003.rdf
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cknfhlj9txtfq/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/csetup_chunk/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cw3o4b22bg0vg/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cw3o4b22bg0vg/000003.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cw3o4b22bg0vg/000003.rdf
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 .Rproj.user/shared/notebooks/paths
+ create mode 100644 LICENSE
+ create mode 100644 PCA.Rmd
+ create mode 100644 S2_multiple_regresssion_with_an_interaction_term.Rmd
+ create mode 100644 bookdown-minimal.Rproj
+ create mode 100644 data/galton.csv
+ create mode 100644 data/global_meth_lev.tsv
+ create mode 100644 index.Rmd
+ create mode 100644 multi_linear_regression.Rmd
+ create mode 100644 multi_linear_regression.html
+ create mode 100644 plot_in_R.Rmd
+ create mode 100644 statistics_with_R.Rproj
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ ls
+bookdown-minimal.Rproj  LICENSE                       PCA.Rmd        S2_multiple_regresssion_with_an_interaction_term.Rmd
+[0m[01;34mdata[0m                    multi_linear_regression.html  plot_in_R.Rmd  statistics_with_R.Rproj
+index.Rmd               multi_linear_regression.Rmd   README.md
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ ls
+bookdown-minimal.Rproj  LICENSE                       PCA.Rmd        S2_multiple_regresssion_with_an_interaction_term.Rmd
+[0m[01;34mdata[0m                    multi_linear_regression.html  plot_in_R.Rmd  statistics_with_R.Rproj
+index.Rmd               multi_linear_regression.Rmd   README.md
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ b[Klibrary()b)o)o)k)d)o)w)n)
+bash: syntax error near unexpected token `bookdown'
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ library(bookdown)[C[C[C[C[C[C[C[C[C[C
+bash: syntax error near unexpected token `bookdown'
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ library(bookdown)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)()")")b")l")[1P")o")o")k")d")o")w")n")
+bash: syntax error near unexpected token `"bookdown"'
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ ^M[Kinstall.packages("bookdown")
+bash: syntax error near unexpected token `"bookdown"'
+[K$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git commit -m ""^C
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git c[Kadd .
