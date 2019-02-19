@@ -253,3 +253,117 @@ bash: syntax error near unexpected token `"bookdown"'
 ]0;/home/xie186/statistics_with_R$ git commit -m ""^C
 ]0;/home/xie186/statistics_with_R$ 
 ]0;/home/xie186/statistics_with_R$ git c[Kadd .
+
+
+g]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git commimt -m ""U"p"d"a"t"e"
+git: 'commimt' is not a git command. See 'git --help'.
+
+Did you mean this?
+	commit
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git commimt -m "Update"[1P
+
+
+[master c6b6848] Update
+ Committer: Shaojun Xie <xie186@tabomics.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 110 files changed, 3611 insertions(+), 1409 deletions(-)
+ rewrite .Rproj.user/8F4F4022/console06/INDEX001 (92%)
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E13D092-contents
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E21E68C
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/AE4A4304-contents
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/D20268C5-contents
+ delete mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000002.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000003.metadata
+ delete mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000003.png
+ delete mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000003.snapshot
+ rewrite .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/chunks.json (100%)
+ delete mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/csetup_chunk/000002.csv
+ rewrite .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chunks.json (100%)
+ delete mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/csetup_chunk/000002.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chj8gnyb16af5/000004.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chj8gnyb16af5/000005.metadata
+ delete mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chj8gnyb16af5/000005.rdf
+ rewrite .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chunks.json (90%)
+ delete mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/csetup_chunk/000002.csv
+ rewrite .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/chunks.json (100%)
+ delete mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/csetup_chunk/000002.csv
+ rewrite .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/8F4F402255aa6e11/chunks.json (100%)
+ rewrite .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/chunks.json (100%)
+ delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/csetup_chunk/000002.csv
+ create mode 100644 .gitignore
+ create mode 100644 01_R_intro.Rmd
+ create mode 100644 02_correlation_in_R.Rmd
+ rewrite PCA.Rmd (97%)
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-11-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-12-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-13-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-14-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-15-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-16-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-17-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-18-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-19-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-2-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-21-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-22-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-24-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-26-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-28-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-30-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-9-1.png
+ create mode 100644 _book/basic-systax.html
+ create mode 100644 _book/index.html
+ create mode 100644 _book/libs/gitbook-2.6.7/css/fontawesome/fontawesome-webfont.ttf
+ create mode 100644 _book/libs/gitbook-2.6.7/css/plugin-bookdown.css
+ create mode 100644 _book/libs/gitbook-2.6.7/css/plugin-fontsettings.css
+ create mode 100644 _book/libs/gitbook-2.6.7/css/plugin-highlight.css
+ create mode 100644 _book/libs/gitbook-2.6.7/css/plugin-search.css
+ create mode 100644 _book/libs/gitbook-2.6.7/css/style.css
+ create mode 100644 _book/libs/gitbook-2.6.7/js/app.min.js
+ create mode 100644 _book/libs/gitbook-2.6.7/js/jquery.highlight.js
+ create mode 100644 _book/libs/gitbook-2.6.7/js/lunr.js
+ create mode 100644 _book/libs/gitbook-2.6.7/js/plugin-bookdown.js
+ create mode 100644 _book/libs/gitbook-2.6.7/js/plugin-fontsettings.js
+ create mode 100644 _book/libs/gitbook-2.6.7/js/plugin-search.js
+ create mode 100644 _book/libs/gitbook-2.6.7/js/plugin-sharing.js
+ create mode 100644 _book/libs/jquery-2.2.3/jquery.min.js
+ create mode 100644 _book/mrg.html
+ create mode 100644 _book/multiple-linear-regression.html
+ create mode 100644 _book/pca.html
+ create mode 100644 _book/plot-in-r.html
+ create mode 100644 _book/search_index.json
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-11-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-12-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-13-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-14-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-15-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-16-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-17-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-18-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-19-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-2-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-21-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-22-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-24-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-26-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-28-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-30-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-9-1.png
+ delete mode 100644 multi_linear_regression.html
+ delete mode 100644 statistics_with_R.Rproj
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 

@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Statistics notes for Bioinformation in R</title>
-  <meta name="description" content="Statistics notes for Bioinformation in R">
+  <title>Statistics notes for Bioinformatics in R</title>
+  <meta name="description" content="Statistics notes for Bioinformatics in R">
   <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="Statistics notes for Bioinformation in R" />
+  <meta property="og:title" content="Statistics notes for Bioinformatics in R" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Statistics notes for Bioinformation in R" />
+  <meta name="twitter:title" content="Statistics notes for Bioinformatics in R" />
   
   
   
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="pca.html">
-<link rel="next" href="multiple-linear-regression.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -100,31 +100,42 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
 <li class="chapter" data-level="2" data-path="basic-systax.html"><a href="basic-systax.html"><i class="fa fa-check"></i><b>2</b> Basic systax</a><ul>
-<li class="chapter" data-level="2.1" data-path="basic-systax.html"><a href="basic-systax.html#variale"><i class="fa fa-check"></i><b>2.1</b> Variale</a></li>
+<li class="chapter" data-level="2.1" data-path="basic-systax.html"><a href="basic-systax.html#setup"><i class="fa fa-check"></i><b>2.1</b> Setup</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="basic-systax.html"><a href="basic-systax.html#install-packages"><i class="fa fa-check"></i><b>2.1.1</b> Install packages</a></li>
+<li class="chapter" data-level="2.1.2" data-path="basic-systax.html"><a href="basic-systax.html#install"><i class="fa fa-check"></i><b>2.1.2</b> Install</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>3</b> MRG</a><ul>
-<li class="chapter" data-level="3.1" data-path="mrg.html"><a href="mrg.html#read-the-data"><i class="fa fa-check"></i><b>3.1</b> Read the data</a></li>
+<li class="chapter" data-level="2.2" data-path="basic-systax.html"><a href="basic-systax.html#data-type"><i class="fa fa-check"></i><b>2.2</b> Data type</a></li>
+<li class="chapter" data-level="2.3" data-path="basic-systax.html"><a href="basic-systax.html#data-structures"><i class="fa fa-check"></i><b>2.3</b> Data structures</a></li>
+<li class="chapter" data-level="2.4" data-path="basic-systax.html"><a href="basic-systax.html#read-from-and-write-into-files"><i class="fa fa-check"></i><b>2.4</b> Read from and write into files</a></li>
+<li class="chapter" data-level="2.5" data-path="basic-systax.html"><a href="basic-systax.html#functions"><i class="fa fa-check"></i><b>2.5</b> Functions</a></li>
+<li class="chapter" data-level="2.6" data-path="basic-systax.html"><a href="basic-systax.html#control-structure"><i class="fa fa-check"></i><b>2.6</b> Control structure</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="pca.html"><a href="pca.html"><i class="fa fa-check"></i><b>4</b> PCA</a><ul>
-<li class="chapter" data-level="4.1" data-path="pca.html"><a href="pca.html#read-data"><i class="fa fa-check"></i><b>4.1</b> Read data</a></li>
-<li class="chapter" data-level="4.2" data-path="pca.html"><a href="pca.html#head-data"><i class="fa fa-check"></i><b>4.2</b> Head data</a></li>
-<li class="chapter" data-level="4.3" data-path="pca.html"><a href="pca.html#summary-of-the-data"><i class="fa fa-check"></i><b>4.3</b> Summary of the data</a></li>
-<li class="chapter" data-level="4.4" data-path="pca.html"><a href="pca.html#check-the-distribution-of-the-data"><i class="fa fa-check"></i><b>4.4</b> Check the distribution of the data</a></li>
-<li class="chapter" data-level="4.5" data-path="pca.html"><a href="pca.html#eigendecomposition---computing-eigenvectors-and-eigenvalues"><i class="fa fa-check"></i><b>4.5</b> Eigendecomposition - Computing Eigenvectors and Eigenvalues</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="pca.html"><a href="pca.html#covariance-matrix"><i class="fa fa-check"></i><b>4.5.1</b> Covariance Matrix</a></li>
+<li class="chapter" data-level="3" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>3</b> Multiple linear regression</a><ul>
+<li class="chapter" data-level="3.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section"><i class="fa fa-check"></i><b>3.1</b> </a></li>
+<li class="chapter" data-level="3.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-1"><i class="fa fa-check"></i><b>3.2</b> </a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="pca.html"><a href="pca.html#references"><i class="fa fa-check"></i><b>4.6</b> References</a></li>
+<li class="chapter" data-level="4" data-path="references-and-resouces.html"><a href="references-and-resouces.html"><i class="fa fa-check"></i><b>4</b> References and Resouces</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="5" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>5</b> MRG</a><ul>
+<li class="chapter" data-level="5.1" data-path="mrg.html"><a href="mrg.html#read-the-data"><i class="fa fa-check"></i><b>5.1</b> Read the data</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="plot-in-r.html"><a href="plot-in-r.html"><i class="fa fa-check"></i><b>5</b> Plot in R</a><ul>
-<li class="chapter" data-level="5.1" data-path="plot-in-r.html"><a href="plot-in-r.html#read-the-data-1"><i class="fa fa-check"></i><b>5.1</b> Read the data</a></li>
-<li class="chapter" data-level="5.2" data-path="plot-in-r.html"><a href="plot-in-r.html#line-plot"><i class="fa fa-check"></i><b>5.2</b> Line plot</a></li>
-<li class="chapter" data-level="5.3" data-path="plot-in-r.html"><a href="plot-in-r.html#basic-line-plot"><i class="fa fa-check"></i><b>5.3</b> Basic line plot</a></li>
-<li class="chapter" data-level="5.4" data-path="plot-in-r.html"><a href="plot-in-r.html#color-the-dots-based-on-the-sex-information"><i class="fa fa-check"></i><b>5.4</b> Color the dots based on the <code>sex</code> information</a></li>
-<li class="chapter" data-level="5.5" data-path="plot-in-r.html"><a href="plot-in-r.html#section"><i class="fa fa-check"></i><b>5.5</b> </a></li>
+<li class="chapter" data-level="6" data-path="pca.html"><a href="pca.html"><i class="fa fa-check"></i><b>6</b> PCA</a><ul>
+<li class="chapter" data-level="6.1" data-path="pca.html"><a href="pca.html#read-data"><i class="fa fa-check"></i><b>6.1</b> Read data</a></li>
+<li class="chapter" data-level="6.2" data-path="pca.html"><a href="pca.html#head-data"><i class="fa fa-check"></i><b>6.2</b> Head data</a></li>
+<li class="chapter" data-level="6.3" data-path="pca.html"><a href="pca.html#summary-of-the-data"><i class="fa fa-check"></i><b>6.3</b> Summary of the data</a></li>
+<li class="chapter" data-level="6.4" data-path="pca.html"><a href="pca.html#check-the-distribution-of-the-data"><i class="fa fa-check"></i><b>6.4</b> Check the distribution of the data</a></li>
+<li class="chapter" data-level="6.5" data-path="pca.html"><a href="pca.html#eigendecomposition---computing-eigenvectors-and-eigenvalues"><i class="fa fa-check"></i><b>6.5</b> Eigendecomposition - Computing Eigenvectors and Eigenvalues</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="pca.html"><a href="pca.html#covariance-matrix"><i class="fa fa-check"></i><b>6.5.1</b> Covariance Matrix</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>6</b> Multiple linear regression</a><ul>
-<li class="chapter" data-level="6.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-1"><i class="fa fa-check"></i><b>6.1</b> </a></li>
-<li class="chapter" data-level="6.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-2"><i class="fa fa-check"></i><b>6.2</b> </a></li>
+<li class="chapter" data-level="6.6" data-path="pca.html"><a href="pca.html#references-1"><i class="fa fa-check"></i><b>6.6</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="plot-in-r.html"><a href="plot-in-r.html"><i class="fa fa-check"></i><b>7</b> Plot in R</a><ul>
+<li class="chapter" data-level="7.1" data-path="plot-in-r.html"><a href="plot-in-r.html#read-the-data-1"><i class="fa fa-check"></i><b>7.1</b> Read the data</a></li>
+<li class="chapter" data-level="7.2" data-path="plot-in-r.html"><a href="plot-in-r.html#line-plot"><i class="fa fa-check"></i><b>7.2</b> Line plot</a></li>
+<li class="chapter" data-level="7.3" data-path="plot-in-r.html"><a href="plot-in-r.html#basic-line-plot"><i class="fa fa-check"></i><b>7.3</b> Basic line plot</a></li>
+<li class="chapter" data-level="7.4" data-path="plot-in-r.html"><a href="plot-in-r.html#color-the-dots-based-on-the-sex-information"><i class="fa fa-check"></i><b>7.4</b> Color the dots based on the <code>sex</code> information</a></li>
+<li class="chapter" data-level="7.5" data-path="plot-in-r.html"><a href="plot-in-r.html#section-2"><i class="fa fa-check"></i><b>7.5</b> </a></li>
+<li class="chapter" data-level="7.6" data-path="plot-in-r.html"><a href="plot-in-r.html#draw-a-circle-in-r"><i class="fa fa-check"></i><b>7.6</b> Draw a circle in R</a></li>
 </ul></li>
 </ul>
 
@@ -135,7 +146,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics notes for Bioinformation in R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics notes for Bioinformatics in R</a>
           </h1>
         </div>
 
@@ -144,9 +155,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="plot-in-r" class="section level1">
-<h1><span class="header-section-number">5</span> Plot in R</h1>
+<h1><span class="header-section-number">7</span> Plot in R</h1>
 <div id="read-the-data-1" class="section level2">
-<h2><span class="header-section-number">5.1</span> Read the data</h2>
+<h2><span class="header-section-number">7.1</span> Read the data</h2>
 <p>Consider the data collected by Francis Galton in the 1880s, stored in a modern format in the <code>galton.csv</code> file. In this file, <code>heights</code> is the variable containing the child’s heights, while the <code>father</code>’s and <code>mother</code>’s height is contained in the variables father and mother. The family variable is a numerical code identifying children in the same family; the number of kids in this family is in <code>nkids</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## Data from  https://github.com/thomas-haslwanter/statsintro_python/blob/master/ISP/Code_Quantlets/08_TestsMeanValues/anovaOneway/galton.csv
 tab&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;data/galton.csv&quot;</span>)
@@ -160,25 +171,25 @@ tab&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;data/galton.csv&
 ## 6      2   75.5   66.5   M   72.5     4</code></pre>
 </div>
 <div id="line-plot" class="section level2">
-<h2><span class="header-section-number">5.2</span> Line plot</h2>
+<h2><span class="header-section-number">7.2</span> Line plot</h2>
 </div>
 <div id="basic-line-plot" class="section level2">
-<h2><span class="header-section-number">5.3</span> Basic line plot</h2>
+<h2><span class="header-section-number">7.3</span> Basic line plot</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(tab<span class="op">$</span>father, tab<span class="op">$</span>height)</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="576" /></p>
 </div>
 <div id="color-the-dots-based-on-the-sex-information" class="section level2">
-<h2><span class="header-section-number">5.4</span> Color the dots based on the <code>sex</code> information</h2>
+<h2><span class="header-section-number">7.4</span> Color the dots based on the <code>sex</code> information</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">col_info =<span class="st"> </span><span class="kw">ifelse</span>(tab<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;M&quot;</span>, <span class="st">&quot;royalblue&quot;</span>, <span class="st">&quot;darkred&quot;</span>)
 <span class="kw">plot</span>(tab<span class="op">$</span>father, tab<span class="op">$</span>height, <span class="dt">col=</span>col_info)</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-30-1.png" width="576" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">col_info =<span class="st"> </span><span class="kw">ifelse</span>(tab<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;M&quot;</span>, <span class="st">&quot;royalblue&quot;</span>, <span class="st">&quot;darkred&quot;</span>)
 <span class="kw">plot</span>(tab<span class="op">$</span>father, tab<span class="op">$</span>height, <span class="dt">col=</span>col_info, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">60</span>, <span class="dv">80</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">60</span>, <span class="dv">80</span>))
 <span class="kw">legend</span>(<span class="dv">76</span>, <span class="dv">65</span>,<span class="dt">pch=</span><span class="kw">c</span>(<span class="dv">19</span>,<span class="dv">19</span>),<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;royalblue&quot;</span>, <span class="st">&quot;darkred&quot;</span>),<span class="kw">c</span>(<span class="st">&quot;female&quot;</span>, <span class="st">&quot;male&quot;</span>),<span class="dt">bty=</span><span class="st">&quot;o&quot;</span>,<span class="dt">cex=</span>.<span class="dv">8</span>)</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-31-1.png" width="576" /></p>
 </div>
-<div id="section" class="section level2">
-<h2><span class="header-section-number">5.5</span> </h2>
+<div id="section-2" class="section level2">
+<h2><span class="header-section-number">7.5</span> </h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">meth_lev=<span class="kw">read.table</span>(<span class="st">&quot;data/global_meth_lev.tsv&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)
 meth_lev</code></pre></div>
 <pre><code>##       Sample    CG   CHG   CHH
@@ -187,6 +198,19 @@ meth_lev</code></pre></div>
 ## 3 drm12cmt23 0.221 0.004 0.005
 ## 4  drm12cmt2 0.222 0.059 0.005
 ## 5         WT 0.247 0.079 0.029</code></pre>
+</div>
+<div id="draw-a-circle-in-r" class="section level2">
+<h2><span class="header-section-number">7.6</span> Draw a circle in R</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># initialize a plot</span>
+<span class="kw">plot</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="dt">type =</span> <span class="st">&quot;n&quot;</span>)
+
+<span class="co"># prepare &quot;circle data&quot;</span>
+radius &lt;-<span class="st"> </span><span class="dv">1</span>
+theta &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">2</span> <span class="op">*</span><span class="st"> </span>pi, <span class="dt">length =</span> <span class="dv">200</span>)
+
+<span class="co"># draw the circle</span>
+<span class="kw">lines</span>(<span class="dt">x =</span> radius <span class="op">*</span><span class="st"> </span><span class="kw">cos</span>(theta), <span class="dt">y =</span> radius <span class="op">*</span><span class="st"> </span><span class="kw">sin</span>(theta))</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="576" /></p>
 
 </div>
 </div>
@@ -195,8 +219,8 @@ meth_lev</code></pre></div>
           </div>
         </div>
       </div>
-<a href="pca.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="multiple-linear-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pca.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,0 +1,573 @@
+---
+title: "Statistics notes for Bioinformatics in R"
+author: "Shaojun Xie"
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::gitbook: default
+  bookdown::pdf_book: default
+bibliography: ["reference.bib"]
+
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.width=6, fig.height=6) 
+
+```
+
+# Preface
+
+This book includes the notes I have during the using of R as a Bioinformatician. 
+
+<!--chapter:end:index.Rmd-->
+
+# Basic systax
+
+## Setup
+
+### Install packages
+
+### Install 
+
+#### Getting help on functions and packages
+
+
+## Data type
+
+## Data structures
+
+
+
+R has multiple data structures. If you are familiar with excel you can think of data structures as building blocks of a table and the table itself, and a table is similar to a sheet in excel. Most of the time you will deal with tabular data sets, you will manipulate them, take sub-sections of them. It is essential to know what are the common data structures in R and how they can be used. R deals with named data structures, this means you can give names to data structures and manipulate or operate on them using those names.
+
+## Read from and write into files
+
+
+## Functions
+
+
+## Control structure
+
+
+
+
+<!--chapter:end:01_R_intro.Rmd-->
+
+
+
+```{r}
+library(datasets)
+data(iris)
+head(iris)
+summary(iris)
+```
+
+
+```{r}
+library("PerformanceAnalytics")
+
+chart.Correlation(iris[, 1:4], histogram=TRUE, pch=19)
+```
+
+<!--chapter:end:02_correlation_in_R.Rmd-->
+
+
+# Multiple linear regression
+
+## 
+
+
+Descriptions of the data: https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/airquality.html
+
+Daily air quality measurements in New York, May to September 1973.
+
+
+
+```{r}
+data("airquality")
+names(airquality)
+```
+
+
+```{r}
+require(graphics)
+pairs(airquality, panel = panel.smooth, main = "airquality data")
+```
+
+A formula of the form `y ~ x | a` indicates that plots of `y` versus `x` should be produced conditional on the variable `a`. A formula of the form `y ~ x| a * b` indicates that plots of `y` versus `x` should be produced conditional on the two variables `a` and `b`
+
+```{r}
+
+coplot(Ozone~Solar.R|Wind,  panel = panel.smooth, airquality)
+```
+
+```{r}
+model2 = lm(Ozone~Solar.R*Wind, airquality)
+
+```
+
+```{r}
+par(mfrow=c(2,2)) # Change the panel layout to 2 x 2
+plot(model2)
+par(mfrow=c(1,1)) # Change back to 1 x 1
+
+```
+1. Residuals vs Fitted
+
+This plot shows if residuals have non-linear patterns. There could be a non-linear relationship between predictor variables and an outcome variable and the pattern could show up in this plot if the model doesn’t capture the non-linear relationship. If you find equally spread residuals around a horizontal line without distinct patterns, that is a good indication you don’t have non-linear relationships.
+
+2. Normal Q-Q
+
+This plot shows if residuals are normally distributed. Do residuals follow a straight line well or do they deviate severely? It’s good if residuals are lined well on the straight dashed line.
+
+3. Scale-Location
+
+It’s also called Spread-Location plot. This plot shows if residuals are spread equally along the ranges of predictors. This is how you can check the assumption of equal variance (homoscedasticity). It’s good if you see a horizontal line with equally (randomly) spread points.
+
+4. Residuals vs Leverage
+
+This plot helps us to find influential cases (i.e., subjects) if any. Not all outliers are influential in linear regression analysis (whatever outliers mean). Even though data have extreme values, they might not be influential to determine a regression line. That means, the results wouldn’t be much different if we either include or exclude them from analysis. They follow the trend in the majority of cases and they don’t really matter; they are not influential. On the other hand, some cases could be very influential even if they look to be within a reasonable range of the values. They could be extreme cases against a regression line and can alter the results if we exclude them from analysis. Another way to put it is that they don’t get along with the trend in the majority of the cases.
+
+Unlike the other plots, this time patterns are not relevant. We watch out for outlying values at the upper right corner or at the lower right corner. Those spots are the places where cases can be influential against a regression line. Look for cases outside of a dashed line, Cook’s distance. When cases are outside of the Cook’s distance (meaning they have high Cook’s distance scores), the cases are influential to the regression results. The regression results will be altered if we exclude those cases.
+
+
+```{r}
+#install.packages("UsingR")
+suppressWarnings(suppressMessages(library(UsingR)))
+data(father.son)
+names(father.son)
+```
+
+```{r}
+model_fs = lm(fheight~sheight, father.son)
+
+```
+
+```{r}
+par(mfrow=c(2,2)) # Change the panel layout to 2 x 2
+plot(model_fs)
+
+```
+
+
+## 
+
+
+```{r}
+
+summary(model2)
+```
+```{r}
+par(mfrow=c(1,2)) # Change back to 1 x 1
+termplot(model2, partial.resid=TRUE, col.res = "royalblue")
+```
+
+```{r}
+summary(airquality$Solar.R)
+summary(airquality$Wind)
+```
+
+
+```{r}
+Solar1 = mean(airquality$Solar.R, na.rm=T)
+Solar2 = 100
+Solar3 = 300
+
+p1 = predict(model2, data.frame(Solar.R=Solar1, Wind=1:20))
+p2 = predict(model2, data.frame(Solar.R=Solar2, Wind=1:20))
+p3 = predict(model2, data.frame(Solar.R=Solar3, Wind=1:20))
+```
+
+```{r}
+p1
+```
+
+```{r}
+plot(Ozone~Wind, airquality, col="grey")
+lines(p1, col="red")
+lines(p2, col="blue")
+lines(p3, col="darkgreen")
+```
+
+<!--chapter:end:77_multiple_regresssion_with_an_interaction_term.Rmd-->
+
+# References and Resouces
+
+
+`r if (knitr::is_html_output()) '# References {-}'`
+
+<!--chapter:end:99_reference_resouce.Rmd-->
+
+---
+title: 'Principal Component Analysis'
+author: 'Dataset new_data'
+output:
+  pdf_document: default
+---
+This dataset contains 150 individuals and 2 variables.
+
+- - -
+
+```{r, echo = FALSE}
+load('Workspace.RData')
+```
+### 1. Study of the outliers
+The analysis of the graphs does not detect any outlier.
+
+- - -
+
+### 2. Inertia distribution
+The inertia of the first dimensions shows if there are strong relationships between variables and suggests the number of dimensions that should be studied.
+
+The first two dimensions of PCA express **100%** of the total dataset inertia ; that means that 100% of the individuals (or variables) cloud total variability is explained by the plane.
+The inertia observed on the first plane is smaller than the reference value that equals **100%**, therefore low in comparison
+(the reference value is the 0.95-quantile of the inertia percentages distribution obtained by simulating 1429 data tables of equivalent size on the basis of a normal distribution).
+However, the inertia related to the first dimension is greater than the reference value **57.75%**.
+Even if the inertia projected on the first plane is not significant, these explained by the first dimension is significant.
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+par(mar = c(2.6, 4.1, 1.1, 2.1))
+barplot(res$eig[,2], names.arg = 1:nrow(res$eig))
+```
+
+**Figure 2 - Decomposition of the total inertia on the components of the PCA**
+*The first factor is largely dominant: it expresses itself 98.14% of the data variability.*
+*Note that in such a case, the variability related to the other components might be meaningless, despite of a high percentage.*
+
+An estimation of the right number of axis to interpret suggests to restrict the analysis to the description of the first 1 axis.
+These axis present an amount of inertia greater than those obtained by the 0.95-quantile of random distributions (98.14% against 57.75%).
+This observation suggests that only this axis is carrying a real information.
+As a consequence, the description will stand to these axis.
+
+- - -
+
+### 3. Description of the dimension 1
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <-
+c("115", "135", "142", "108", "123", "146", "130", "145", "116", 
+"137")
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.PCA(res, select = drawn, axes = 1:2, choix = 'ind', invisible = 'quali', title = '', cex = cex)
+```
+
+**Figure 3.1 - Individuals factor map (PCA)**
+*The labeled individuals are those with the higher contribution to the plane construction.*
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <-
+c("petal_length", "petal_width")
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.PCA(res, select = drawn, axes = 1:2, choix = 'var', title = '', cex = cex)
+```
+
+**Figure 3.2 - Variables factor map (PCA)**
+*The labeled variables are those the best shown on the plane.*
+
+* * *
+
+The **dimension 1** opposes individuals such as *108*, *115*, *116*, *123*, *130*, *135* and *142* (to the right of the graph, characterized by a strongly positive coordinate on the axis)
+to individuals characterized by a strongly negative coordinate on the axis (to the left of the graph).
+
+The group in which the individuals *108*, *115*, *116*, *123*, *130*, *135* and *142* stand (characterized by a positive coordinate on the axis) is sharing :
+
+- high values for the variables *petal_width* and *petal_length* (variables are sorted from the strongest).
+
+The group 2 (characterized by a negative coordinate on the axis) is sharing :
+
+- low values for the variables *petal_length* and *petal_width* (variables are sorted from the weakest).
+
+Note that the variables *petal_length* and *petal_width* are highly correlated with this dimension (respective correlation of 0.98, 0.98). These variables could therefore summarize themselve the dimension 1.
+
+- - -
+
+### 4. Classification
+
+```{r, echo = FALSE}
+res.hcpc = HCPC(res, nb.clust = -1, graph = FALSE)
+```
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <-
+c("115", "135", "142", "108", "123", "146", "130", "145", "116", 
+"137")
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.HCPC(res.hcpc, choice = 'map', draw.tree = FALSE, select = drawn, title = '')
+```
+
+**Figure 4 - Ascending Hierarchical Classification of the individuals.**
+*The classification made on individuals reveals 3 clusters.*
+
+
+The **cluster 1** is made of individuals sharing :
+
+- low values for the variables *petal_length* and *petal_width* (variables are sorted from the weakest).
+
+The **cluster 2** is made of individuals such as *135*. This group is characterized by :
+
+- high values for the variable *petal_length*.
+
+The **cluster 3** is made of individuals such as *108*, *115*, *116*, *123*, *130*, *137*, *142*, *145* and *146*. This group is characterized by :
+
+- high values for the variables *petal_width* and *petal_length* (variables are sorted from the strongest).
+
+- - -
+
+## Annexes
+```{r, comment = ''}
+dimdesc(res, axes = 1:1)
+```
+**Figure 5 - List of variables characterizing the dimensions of the analysis.**
+
+
+
+```{r, comment = ''}
+res.hcpc$desc.var
+```
+**Figure 6 - List of variables characterizing the clusters of the classification.**
+
+
+
+<!--chapter:end:Investigate.Rmd-->
+
+# MRG
+
+Sir Francis Galton (1822–1911) was an English statistician. He founded many concepts in statistics, such as correlation, quartile, percentile and regression, that are still being used today.
+
+
+
+## Read the data
+
+Consider the data collected by Francis Galton in the 1880s, stored in a modern format in the `galton.csv` file. In this file, `heights` is the variable containing the child’s heights, while the `father`’s and `mother`’s height is contained in the variables father and mother.
+
+The family variable is a numerical code identifying children in the same family; the number of kids in this family is in `nkids`.
+
+
+
+```{r}
+## Data from  https://github.com/thomas-haslwanter/statsintro_python/blob/master/ISP/Code_Quantlets/08_TestsMeanValues/anovaOneway/galton.csv
+tab<-read.csv("data/galton.csv")
+head(tab)
+```
+
+Check the number of rows and columns:
+
+```{r}
+dim(tab)
+```
+
+Covert the column of `sex` into numberic values:
+
+```{r}
+tab$sex=as.numeric(tab$sex) -1 
+head(tab)
+```
+Remove the columns of `nkids`: 
+
+```{r}
+tab<-tab[, -c(6)]
+head(tab)
+```
+
+<!--chapter:end:multi_linear_regression.Rmd-->
+
+# PCA 
+
+PCA reduces the dimensionality of a multivariate data to two or three principal components, that can be visualized graphically, with minimal loss of information.
+
+PCA is veru useful whne the varianle with the data set are highly correlated. Correlation indicates that there is redundancy in the data. Due to this redundancy, PCA can be used to reduce the original variable into smaller number of new variabeles, nameing principal components. 
+
+## Read data
+
+```{r}
+```
+
+```{r}
+iris_tab <- read.csv("https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/d546eaee765268bf2f487608c537c05e22e4b221/iris.csv")
+```
+
+## Head data
+
+```{r}
+head(iris_tab)
+```
+
+## Summary of the data
+
+```{r}
+summary(iris_tab)
+```
+
+
+## Check the distribution of the data
+
+```{r}
+hist(iris_tab$sepal_length)
+```
+
+
+
+## Eigendecomposition - Computing Eigenvectors and Eigenvalues
+
+In linear algebra, an `eigenvector` is a non-zero vector that changes by only a scalar factor when that linear transformation is applied to it.
+
+The eigenvectors and eigenvalues of a covariance (or correlation) matrix represent the "core" of a PCA: The eigenvectors (principal components) determine the directions of the new feature space, and the eigenvalues determine their magnitude. In other words, the eigenvalues explain the variance of the data along the new feature axes.
+
+### Covariance Matrix
+
+The classic approach to PCA is to perform the eigendecomposition on the covariance matrix $\Sigma$, which is a $d \times d$ matrix where each element represents the covariance between two features. The covariance between two features is calculated as follows:
+
+$\sigma_{jk} = \frac{1}{n-1}\sum_{i=1}^{N}\left(  x_{ij}-\bar{x}_j \right)  \left( x_{ik}-\bar{x}_k \right).$
+
+We can summarize the calculation of the covariance matrix via the following matrix equation:   
+
+$\Sigma = \frac{1}{n-1} \left( (\mathbf{X} - \mathbf{\bar{x}})^T\;(\mathbf{X} - \mathbf{\bar{x}}) \right)$  
+where $\mathbf{\bar{x}}$ is the mean vector 
+$\mathbf{\bar{x}} = \sum\limits_{i=1}^n x_{i}.$  
+
+The mean vector is a $d$-dimensional vector where each value in this vector represents the sample mean of a feature column in the dataset.
+
+
+```{r}
+cov_mat<-cor(iris_tab[,1:4])
+cov_mat
+```
+
+```{r}
+#install.packages("corrplot")
+library(corrplot)
+corrplot(cov_mat)
+```
+
+
+## PCA with two variables
+
+
+```{r}
+new_data = as.data.frame(cbind(petal_length = iris_tab$petal_length, petal_width = iris_tab$petal_width))
+head(new_data)
+plot(new_data$petal_length, new_data$petal_width)
+```
+
+
+
+```{r}
+#install.packages("FactoMineR")
+library("FactoMineR")
+pc_2var_res = PCA(new_data)
+print(pc_2var_res)
+```
+
+
+```{r}
+#install.packages("FactoInvestigate")
+#library(FactoInvestigate)
+#Investigate(pc_2var_res, document = "pdf_document")
+```
+
+
+
+
+
+Next, we perform an eigendecomposition on the covariance matrix:
+
+```{r}
+eigen(cov_mat)
+```
+
+## References
+
+https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html#about-iris
+
+How to read PCA biplots and scree plots: https://blog.bioturing.com/2018/06/18/how-to-read-pca-biplots-and-scree-plots/
+
+Principal Component Analysis (PCA): 
+https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/index
+
+Exploratory Multivariate Analysis by Example using R:
+http://factominer.free.fr/course/index.html
+
+https://github.com/gabi493/ADEI/blob/master/Husson%20F.%20et%20al.%20-%20Exploratory%20Multivariate%20Analysis%20by%20Example%20-%20Using%20R%20-%202011.pdf
+
+
+<!--chapter:end:PCA.Rmd-->
+
+# Plot in R 
+
+## Read the data
+
+Consider the data collected by Francis Galton in the 1880s, stored in a modern format in the `galton.csv` file. In this file, `heights` is the variable containing the child’s heights, while the `father`’s and `mother`’s height is contained in the variables father and mother.
+The family variable is a numerical code identifying children in the same family; the number of kids in this family is in `nkids`.
+
+
+
+```{r}
+## Data from  https://github.com/thomas-haslwanter/statsintro_python/blob/master/ISP/Code_Quantlets/08_TestsMeanValues/anovaOneway/galton.csv
+tab<-read.csv("data/galton.csv")
+head(tab)
+```
+
+
+
+## Line plot
+
+## Basic line plot
+
+```{r}
+plot(tab$father, tab$height)
+```
+
+
+## Color the dots based on the `sex` information
+
+```{r}
+col_info = ifelse(tab$sex=="M", "royalblue", "darkred")
+plot(tab$father, tab$height, col=col_info)
+```
+
+
+```{r}
+col_info = ifelse(tab$sex=="M", "royalblue", "darkred")
+plot(tab$father, tab$height, col=col_info, xlim=c(60, 80), ylim=c(60, 80))
+legend(76, 65,pch=c(19,19),col=c("royalblue", "darkred"),c("female", "male"),bty="o",cex=.8)
+
+```
+
+
+
+## 
+
+
+
+
+
+
+
+```{r}
+meth_lev=read.table("data/global_meth_lev.tsv", header=TRUE)
+meth_lev
+```
+
+
+
+## Draw a circle in R 
+
+
+```{r}
+# initialize a plot
+plot(c(-1, 1), c(-1, 1), type = "n")
+
+# prepare "circle data"
+radius <- 1
+theta <- seq(0, 2 * pi, length = 200)
+
+# draw the circle
+lines(x = radius * cos(theta), y = radius * sin(theta))
+```
+
+
+
+<!--chapter:end:plot_in_R.Rmd-->
+

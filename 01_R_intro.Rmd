@@ -1,6 +1,29 @@
 # Basic systax
 
-## Variale
+## Setup
+
+### Install packages
+
+### Install 
+
+#### Getting help on functions and packages
+
+
+## Data type
+
+## Data structures
+
+
+
+R has multiple data structures. If you are familiar with excel you can think of data structures as building blocks of a table and the table itself, and a table is similar to a sheet in excel. Most of the time you will deal with tabular data sets, you will manipulate them, take sub-sections of them. It is essential to know what are the common data structures in R and how they can be used. R deals with named data structures, this means you can give names to data structures and manipulate or operate on them using those names.
+
+## Read from and write into files
+
+
+## Functions
+
+
+## Control structure
 
 
 

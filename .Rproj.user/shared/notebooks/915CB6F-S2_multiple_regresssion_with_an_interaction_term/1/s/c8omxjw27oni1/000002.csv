@@ -1,1 +1,0 @@
-"0","model2 = lm(Ozone~Solar.R*Wind, airquality)"

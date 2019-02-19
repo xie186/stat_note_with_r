@@ -53,3 +53,22 @@ legend(76, 65,pch=c(19,19),col=c("royalblue", "darkred"),c("female", "male"),bty
 meth_lev=read.table("data/global_meth_lev.tsv", header=TRUE)
 meth_lev
 ```
+
+
+
+## Draw a circle in R 
+
+
+```{r}
+# initialize a plot
+plot(c(-1, 1), c(-1, 1), type = "n")
+
+# prepare "circle data"
+radius <- 1
+theta <- seq(0, 2 * pi, length = 200)
+
+# draw the circle
+lines(x = radius * cos(theta), y = radius * sin(theta))
+```
+
+

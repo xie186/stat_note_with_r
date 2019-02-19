@@ -1,2 +1,0 @@
-"0","require(graphics)"
-"0","pairs(airquality, panel = panel.smooth, main = ""airquality data"")"

@@ -1,5 +1,9 @@
 # PCA 
 
+PCA reduces the dimensionality of a multivariate data to two or three principal components, that can be visualized graphically, with minimal loss of information.
+
+PCA is veru useful whne the varianle with the data set are highly correlated. Correlation indicates that there is redundancy in the data. Due to this redundancy, PCA can be used to reduce the original variable into smaller number of new variabeles, nameing principal components. 
+
 ## Read data
 
 ```{r}
@@ -32,6 +36,8 @@ hist(iris_tab$sepal_length)
 
 ## Eigendecomposition - Computing Eigenvectors and Eigenvalues
 
+In linear algebra, an `eigenvector` is a non-zero vector that changes by only a scalar factor when that linear transformation is applied to it.
+
 The eigenvectors and eigenvalues of a covariance (or correlation) matrix represent the "core" of a PCA: The eigenvectors (principal components) determine the directions of the new feature space, and the eigenvalues determine their magnitude. In other words, the eigenvalues explain the variance of the data along the new feature axes.
 
 ### Covariance Matrix
@@ -48,9 +54,53 @@ $\mathbf{\bar{x}} = \sum\limits_{i=1}^n x_{i}.$
 
 The mean vector is a $d$-dimensional vector where each value in this vector represents the sample mean of a feature column in the dataset.
 
+
+```{r}
+cov_mat<-cor(iris_tab[,1:4])
+cov_mat
+```
+
+```{r}
+#install.packages("corrplot")
+library(corrplot)
+corrplot(cov_mat)
 ```
 
 
+## PCA with two variables
+
+
+```{r}
+new_data = as.data.frame(cbind(petal_length = iris_tab$petal_length, petal_width = iris_tab$petal_width))
+head(new_data)
+plot(new_data$petal_length, new_data$petal_width)
+```
+
+
+
+```{r}
+#install.packages("FactoMineR")
+library("FactoMineR")
+pc_2var_res = PCA(new_data)
+print(pc_2var_res)
+```
+
+
+```{r}
+#install.packages("FactoInvestigate")
+#library(FactoInvestigate)
+#Investigate(pc_2var_res, document = "pdf_document")
+```
+
+
+
+
+
+Next, we perform an eigendecomposition on the covariance matrix:
+
+```{r}
+eigen(cov_mat)
+```
 
 ## References
 
@@ -61,5 +111,8 @@ How to read PCA biplots and scree plots: https://blog.bioturing.com/2018/06/18/h
 Principal Component Analysis (PCA): 
 https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/index
 
+Exploratory Multivariate Analysis by Example using R:
+http://factominer.free.fr/course/index.html
 
+https://github.com/gabi493/ADEI/blob/master/Husson%20F.%20et%20al.%20-%20Exploratory%20Multivariate%20Analysis%20by%20Example%20-%20Using%20R%20-%202011.pdf
 

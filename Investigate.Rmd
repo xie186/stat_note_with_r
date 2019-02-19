@@ -1,0 +1,129 @@
+---
+title: 'Principal Component Analysis'
+author: 'Dataset new_data'
+output:
+  pdf_document: default
+---
+This dataset contains 150 individuals and 2 variables.
+
+- - -
+
+```{r, echo = FALSE}
+load('Workspace.RData')
+```
+### 1. Study of the outliers
+The analysis of the graphs does not detect any outlier.
+
+- - -
+
+### 2. Inertia distribution
+The inertia of the first dimensions shows if there are strong relationships between variables and suggests the number of dimensions that should be studied.
+
+The first two dimensions of PCA express **100%** of the total dataset inertia ; that means that 100% of the individuals (or variables) cloud total variability is explained by the plane.
+The inertia observed on the first plane is smaller than the reference value that equals **100%**, therefore low in comparison
+(the reference value is the 0.95-quantile of the inertia percentages distribution obtained by simulating 1429 data tables of equivalent size on the basis of a normal distribution).
+However, the inertia related to the first dimension is greater than the reference value **57.75%**.
+Even if the inertia projected on the first plane is not significant, these explained by the first dimension is significant.
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+par(mar = c(2.6, 4.1, 1.1, 2.1))
+barplot(res$eig[,2], names.arg = 1:nrow(res$eig))
+```
+
+**Figure 2 - Decomposition of the total inertia on the components of the PCA**
+*The first factor is largely dominant: it expresses itself 98.14% of the data variability.*
+*Note that in such a case, the variability related to the other components might be meaningless, despite of a high percentage.*
+
+An estimation of the right number of axis to interpret suggests to restrict the analysis to the description of the first 1 axis.
+These axis present an amount of inertia greater than those obtained by the 0.95-quantile of random distributions (98.14% against 57.75%).
+This observation suggests that only this axis is carrying a real information.
+As a consequence, the description will stand to these axis.
+
+- - -
+
+### 3. Description of the dimension 1
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <-
+c("115", "135", "142", "108", "123", "146", "130", "145", "116", 
+"137")
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.PCA(res, select = drawn, axes = 1:2, choix = 'ind', invisible = 'quali', title = '', cex = cex)
+```
+
+**Figure 3.1 - Individuals factor map (PCA)**
+*The labeled individuals are those with the higher contribution to the plane construction.*
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <-
+c("petal_length", "petal_width")
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.PCA(res, select = drawn, axes = 1:2, choix = 'var', title = '', cex = cex)
+```
+
+**Figure 3.2 - Variables factor map (PCA)**
+*The labeled variables are those the best shown on the plane.*
+
+* * *
+
+The **dimension 1** opposes individuals such as *108*, *115*, *116*, *123*, *130*, *135* and *142* (to the right of the graph, characterized by a strongly positive coordinate on the axis)
+to individuals characterized by a strongly negative coordinate on the axis (to the left of the graph).
+
+The group in which the individuals *108*, *115*, *116*, *123*, *130*, *135* and *142* stand (characterized by a positive coordinate on the axis) is sharing :
+
+- high values for the variables *petal_width* and *petal_length* (variables are sorted from the strongest).
+
+The group 2 (characterized by a negative coordinate on the axis) is sharing :
+
+- low values for the variables *petal_length* and *petal_width* (variables are sorted from the weakest).
+
+Note that the variables *petal_length* and *petal_width* are highly correlated with this dimension (respective correlation of 0.98, 0.98). These variables could therefore summarize themselve the dimension 1.
+
+- - -
+
+### 4. Classification
+
+```{r, echo = FALSE}
+res.hcpc = HCPC(res, nb.clust = -1, graph = FALSE)
+```
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <-
+c("115", "135", "142", "108", "123", "146", "130", "145", "116", 
+"137")
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.HCPC(res.hcpc, choice = 'map', draw.tree = FALSE, select = drawn, title = '')
+```
+
+**Figure 4 - Ascending Hierarchical Classification of the individuals.**
+*The classification made on individuals reveals 3 clusters.*
+
+
+The **cluster 1** is made of individuals sharing :
+
+- low values for the variables *petal_length* and *petal_width* (variables are sorted from the weakest).
+
+The **cluster 2** is made of individuals such as *135*. This group is characterized by :
+
+- high values for the variable *petal_length*.
+
+The **cluster 3** is made of individuals such as *108*, *115*, *116*, *123*, *130*, *137*, *142*, *145* and *146*. This group is characterized by :
+
+- high values for the variables *petal_width* and *petal_length* (variables are sorted from the strongest).
+
+- - -
+
+## Annexes
+```{r, comment = ''}
+dimdesc(res, axes = 1:1)
+```
+**Figure 5 - List of variables characterizing the dimensions of the analysis.**
+
+
+
+```{r, comment = ''}
+res.hcpc$desc.var
+```
+**Figure 6 - List of variables characterizing the clusters of the classification.**
+
+
