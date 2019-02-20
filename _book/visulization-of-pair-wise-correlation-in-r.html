@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="pca.html">
-
+<link rel="prev" href="basic-systax.html">
+<link rel="next" href="multiple-linear-regression.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -163,63 +163,52 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="plot-in-r" class="section level1">
-<h1><span class="header-section-number">8</span> Plot in R</h1>
-<div id="read-the-data-1" class="section level2">
-<h2><span class="header-section-number">8.1</span> Read the data</h2>
-<p>Consider the data collected by Francis Galton in the 1880s, stored in a modern format in the <code>galton.csv</code> file. In this file, <code>heights</code> is the variable containing the child’s heights, while the <code>father</code>’s and <code>mother</code>’s height is contained in the variables father and mother. The family variable is a numerical code identifying children in the same family; the number of kids in this family is in <code>nkids</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## Data from  https://github.com/thomas-haslwanter/statsintro_python/blob/master/ISP/Code_Quantlets/08_TestsMeanValues/anovaOneway/galton.csv
-tab&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;data/galton.csv&quot;</span>)
-<span class="kw">head</span>(tab)</code></pre></div>
-<pre><code>##   family father mother sex height nkids
-## 1      1   78.5   67.0   M   73.2     4
-## 2      1   78.5   67.0   F   69.2     4
-## 3      1   78.5   67.0   F   69.0     4
-## 4      1   78.5   67.0   F   69.0     4
-## 5      2   75.5   66.5   M   73.5     4
-## 6      2   75.5   66.5   M   72.5     4</code></pre>
-</div>
-<div id="line-plot" class="section level2">
-<h2><span class="header-section-number">8.2</span> Line plot</h2>
-</div>
-<div id="basic-line-plot" class="section level2">
-<h2><span class="header-section-number">8.3</span> Basic line plot</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(tab<span class="op">$</span>father, tab<span class="op">$</span>height)</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-36-1.png" width="576" /></p>
-</div>
-<div id="color-the-dots-based-on-the-sex-information" class="section level2">
-<h2><span class="header-section-number">8.4</span> Color the dots based on the <code>sex</code> information</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">col_info =<span class="st"> </span><span class="kw">ifelse</span>(tab<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;M&quot;</span>, <span class="st">&quot;royalblue&quot;</span>, <span class="st">&quot;darkred&quot;</span>)
-<span class="kw">plot</span>(tab<span class="op">$</span>father, tab<span class="op">$</span>height, <span class="dt">col=</span>col_info)</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-37-1.png" width="576" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">col_info =<span class="st"> </span><span class="kw">ifelse</span>(tab<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;M&quot;</span>, <span class="st">&quot;royalblue&quot;</span>, <span class="st">&quot;darkred&quot;</span>)
-<span class="kw">plot</span>(tab<span class="op">$</span>father, tab<span class="op">$</span>height, <span class="dt">col=</span>col_info, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">60</span>, <span class="dv">80</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">60</span>, <span class="dv">80</span>))
-<span class="kw">legend</span>(<span class="dv">76</span>, <span class="dv">65</span>,<span class="dt">pch=</span><span class="kw">c</span>(<span class="dv">19</span>,<span class="dv">19</span>),<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;royalblue&quot;</span>, <span class="st">&quot;darkred&quot;</span>),<span class="kw">c</span>(<span class="st">&quot;female&quot;</span>, <span class="st">&quot;male&quot;</span>),<span class="dt">bty=</span><span class="st">&quot;o&quot;</span>,<span class="dt">cex=</span>.<span class="dv">8</span>)</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-38-1.png" width="576" /></p>
-</div>
-<div id="section-3" class="section level2">
-<h2><span class="header-section-number">8.5</span> </h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">meth_lev=<span class="kw">read.table</span>(<span class="st">&quot;data/global_meth_lev.tsv&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)
-meth_lev</code></pre></div>
-<pre><code>##       Sample    CG   CHG   CHH
-## 1      cmt23 0.227 0.009 0.011
-## 2     cmt2-3 0.229 0.062 0.010
-## 3 drm12cmt23 0.221 0.004 0.005
-## 4  drm12cmt2 0.222 0.059 0.005
-## 5         WT 0.247 0.079 0.029</code></pre>
-</div>
-<div id="draw-a-circle-in-r" class="section level2">
-<h2><span class="header-section-number">8.6</span> Draw a circle in R</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># initialize a plot</span>
-<span class="kw">plot</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="dt">type =</span> <span class="st">&quot;n&quot;</span>)
-
-<span class="co"># prepare &quot;circle data&quot;</span>
-radius &lt;-<span class="st"> </span><span class="dv">1</span>
-theta &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">2</span> <span class="op">*</span><span class="st"> </span>pi, <span class="dt">length =</span> <span class="dv">200</span>)
-
-<span class="co"># draw the circle</span>
-<span class="kw">lines</span>(<span class="dt">x =</span> radius <span class="op">*</span><span class="st"> </span><span class="kw">cos</span>(theta), <span class="dt">y =</span> radius <span class="op">*</span><span class="st"> </span><span class="kw">sin</span>(theta))</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-40-1.png" width="576" /></p>
+<div id="visulization-of-pair-wise-correlation-in-r" class="section level1">
+<h1><span class="header-section-number">3</span> Visulization of pair-wise correlation in R</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(datasets)
+<span class="kw">data</span>(iris)
+<span class="kw">head</span>(iris)</code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(iris)</code></pre></div>
+<pre><code>##   Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
+##  Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
+##  1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
+##  Median :5.800   Median :3.000   Median :4.350   Median :1.300  
+##  Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
+##  3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
+##  Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
+##        Species  
+##  setosa    :50  
+##  versicolor:50  
+##  virginica :50  
+##                 
+##                 
+## </code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;PerformanceAnalytics&quot;</span>)</code></pre></div>
+<pre><code>## Loading required package: xts</code></pre>
+<pre><code>## Loading required package: zoo</code></pre>
+<pre><code>## 
+## Attaching package: &#39;zoo&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     as.Date, as.Date.numeric</code></pre>
+<pre><code>## 
+## Attaching package: &#39;PerformanceAnalytics&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     legend</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">chart.Correlation</span>(iris[, <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], <span class="dt">histogram=</span><span class="ot">TRUE</span>, <span class="dt">pch=</span><span class="dv">19</span>)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="576" /></p>
+<div id="reference" class="section level2">
+<h2><span class="header-section-number">3.1</span> Reference</h2>
+<p>Seven Easy Graphs to Visualize Correlation Matrices in R: <a href="http://jamesmarquezportfolio.com/correlation_matrices_in_r.html" class="uri">http://jamesmarquezportfolio.com/correlation_matrices_in_r.html</a></p>
+<p>Example 9.17: (much) better pairs plots: <a href="https://www.r-bloggers.com/example-9-17-much-better-pairs-plots/" class="uri">https://www.r-bloggers.com/example-9-17-much-better-pairs-plots/</a></p>
 
 </div>
 </div>
@@ -228,8 +217,8 @@ theta &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv"
           </div>
         </div>
       </div>
-<a href="pca.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="basic-systax.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="multiple-linear-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

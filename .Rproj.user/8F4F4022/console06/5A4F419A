@@ -366,4 +366,192 @@ After doing this, you may fix the identity used for this commit with:
  delete mode 100644 statistics_with_R.Rproj
 ]0;/home/xie186/statistics_with_R$ 
 ]0;/home/xie186/statistics_with_R$ 
+[K$ 
 ]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ p[wd
+> 
+> c^C
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ cd .
+]0;/home/xie186/statistics_with_R$ ls
+01_R_intro.Rmd                                        [0m[01;34m_bookdown_files[0m         Investigate.html  _main.Rmd                    reference.bib
+02_correlation_in_R.Rmd                               bookdown-minimal.Rproj  Investigate.log   multi_linear_regression.Rmd  Workspace.RData
+77_multiple_regresssion_with_an_interaction_term.Rmd  code.R                  Investigate.Rmd   PCA.Rmd
+99_reference_resouce.Rmd                              [01;34mdata[0m                    Investigate.tex   plot_in_R.Rmd
+[01;34m_book[0m                                                 index.Rmd               LICENSE           README.md
+]0;/home/xie186/statistics_with_R$ cd ..
+]0;/home/xie186$ ls
+[0m[01;32mABI_all_SNP.vcf[0m                     [01;34mGGPred[0m                                      [01;34mpearDB_anno[0m                               [01;34mtbDocker[0m
+[01;34manaconda3[0m                           [01;34mgithub_book[0m                                 PEAR.ipynb                                [01;34mtbDogDoc[0m
+[01;34mbin[0m                                 [01;34migv[0m                                         [01;34mperl5[0m                                     [01;34mtbDogSNPchip[0m
+[01;34mbiodocker_viewbs_bak[0m                inline-supplementary-material-1.xlsx_0.ods  [01;34mPictures[0m                                  [01;34mTemplates[0m
+[01;34mconda-bld[0m                           [01;34mjikai_data[0m                                  [01;34mPublic[0m                                    [01;34mtest[0m
+[01;36mdanshen_RNA_seq_metabolomics.ipynb[0m  [01;34mjupyter_nb[0m                                  [01;34mR[0m                                         test1
+[01;36mDESeq2_time_series.ipynb[0m            [01;34mKivyMD-master[0m                               requirements.txt                          [01;34mtest_ara[0m
+[01;34mDesktop[0m                             [01;31mKivyMD-master.zip[0m                           [01;31mresult_for_Xie_BJXNG18.tar.gz[0m             [01;34mtest_crispr[0m
+Dockerfile_ViewBS                   [01;34mkivy_test[0m                                   Rplots.pdf                                test.sh
+[01;34mdocker_test[0m                         [01;34mlib[0m                                         [01;34msalvia_RNA-seq[0m                            [01;34mtip4bioinformatics[0m
+[01;34mDocuments[0m                           [01;34mmaize_phasiRNA[0m                              [01;34mSinogene[0m                                  Untitled1.ipynb
+[01;34mdog_snp[0m                             [01;34mminiconda2[0m                                  [01;34msnakemake_academy[0m                         untitled_1.ods
+[01;34mdog_snp_chip[0m                        [01;34mminiconda3[0m                                  [01;34msnap[0m                                      Untitled2.ipynb
+DogWGS.ipynb                        mRNA_Phloem_vs_Xylem.DE_ALL.xls_0.ods       [01;34msoftware[0m                                  Untitled.ipynb
+[01;34mDownloads[0m                           [01;34mMusic[0m                                       [01;34mstatistics_with_R[0m                         [01;34mVideos[0m
+examples.desktop                    [01;34mncbi[0m                                        TabOmics_GeCKOdata_map_stat.xlsx_0_1.ods  [01;34mViewBSdocker[0m
+FastqSummaryF1L1.txt                nohup.out                                   TabOmics_GeCKOdata_map_stat.xlsx_0.ods
+[01;31mG2-2_S2_L001_R1_001.fastq.gz[0m        note_danshen.ipynb                          TabOmics_GeCKOdata_map_stat.xlsx_1.ods
+]0;/home/xie186$ 
+]0;/home/xie186$ cp -r statistics_with_R/ bioinfo_with_perl
+
+
+
+
+]0;/home/xie186$ 
+]0;/home/xie186$ 
+]0;/home/xie186$ 
+]0;/home/xie186$ 
+]0;/home/xie186$ cd bioinfo_with_perl/
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ ls
+01_R_intro.Rmd                                        [0m[01;34m_bookdown_files[0m         Investigate.html  _main.Rmd                    reference.bib
+02_correlation_in_R.Rmd                               bookdown-minimal.Rproj  Investigate.log   multi_linear_regression.Rmd  Workspace.RData
+77_multiple_regresssion_with_an_interaction_term.Rmd  code.R                  Investigate.Rmd   PCA.Rmd
+99_reference_resouce.Rmd                              [01;34mdata[0m                    Investigate.tex   plot_in_R.Rmd
+[01;34m_book[0m                                                 index.Rmd               LICENSE           README.md
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ 
+
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ vi data/wine
+wine.csv            wine_data_desc.tsv  
+$ vi data/wine_data_desc.tsv 
+01_R_intro.Rmd                                        Investigate.Rmd
+02_correlation_in_R.Rmd                               Investigate.tex
+03_regexp.Rmd                                         kegg_compound_id2map.pl
+77_multiple_regresssion_with_an_interaction_term.Rmd  LICENSE
+99_reference_resouce.Rmd                              _main.Rmd
+_book/                                                multi_linear_regression.Rmd
+_bookdown_files/                                      PCA.Rmd
+bookdown-minimal.Rproj                                plot_in_R.Rmd
+code.R                                                .RData
+data/                                                 README.md
+.git/                                                 reference.bib
+.gitignore                                            .Rhistory
+index.Rmd                                             .Rproj.user/
+Investigate.html                                      scripts/
+Investigate.log                                       Workspace.RData
+$ vi data/wine_data_desc.tsv 
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ vi data/wine_data_desc.tsv ^C
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ ls
+01_R_intro.Rmd                                        [0m[01;34m_book[0m                   index.Rmd         kegg_compound_id2map.pl      plot_in_R.Rmd
+02_correlation_in_R.Rmd                               [01;34m_bookdown_files[0m         Investigate.html  LICENSE                      README.md
+03_regexp.Rmd                                         bookdown-minimal.Rproj  Investigate.log   _main.Rmd                    reference.bib
+77_multiple_regresssion_with_an_interaction_term.Rmd  code.R                  Investigate.Rmd   multi_linear_regression.Rmd  [01;34mscripts[0m
+99_reference_resouce.Rmd                              [01;34mdata[0m                    Investigate.tex   PCA.Rmd                      Workspace.RData
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ vi data/[K[K[K[K[K[K[K[Kpwd
+/home/xie186/bioinfo_with_perl
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ ca[K[Kcd ../[K[K[K[K[K[Kmv data/
+galton.csv                  global_meth_lev.tsv         regexp_kegg_compund_id.txt  wine.csv                    wine_data_desc.tsv
+$ mv data/wein[K[K[Kine_data_desc.tsv 
+01_R_intro.Rmd                                        Investigate.Rmd
+02_correlation_in_R.Rmd                               Investigate.tex
+03_regexp.Rmd                                         kegg_compound_id2map.pl
+77_multiple_regresssion_with_an_interaction_term.Rmd  LICENSE
+99_reference_resouce.Rmd                              _main.Rmd
+_book/                                                multi_linear_regression.Rmd
+_bookdown_files/                                      PCA.Rmd
+bookdown-minimal.Rproj                                plot_in_R.Rmd
+code.R                                                .RData
+data/                                                 README.md
+.git/                                                 reference.bib
+.gitignore                                            .Rhistory
+index.Rmd                                             .Rproj.user/
+Investigate.html                                      scripts/
+Investigate.log                                       Workspace.RData
+$ mv data/wine_data_desc.tsv ../../st[K[K[K[K[Kstatistics_with_R/data/
+]0;/home/xie186/bioinfo_with_perl$ 
+[K$ 
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ git add .
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ pwd
+/home/xie186/bioinfo_with_perl
+]0;/home/xie186/bioinfo_with_perl$ cd ..[K[K[K[K[Kgit ocmmi[K[K[K[K[Kcommit -m ""U"p"d"a"t"e"
+
+
+[master 20f4d1a] Update
+ Committer: Shaojun Xie <xie186@tabomics.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 26 files changed, 432 insertions(+), 474 deletions(-)
+ rewrite .Rproj.user/8F4F4022/console06/INDEX001 (93%)
+ rewrite .Rproj.user/8F4F4022/persistent-state (97%)
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2D80E47F
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2D80E47F-contents
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E21E68C-contents
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/5012530B
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/5012530B-contents
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/9B4F0203
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/9B4F0203-contents
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/B7545371
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/B7545371-contents
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/lock_file
+ create mode 100644 03_regexp.Rmd
+ create mode 100644 data/regexp_kegg_compund_id.txt
+ create mode 100644 data/wine.csv
+ create mode 100644 kegg_compound_id2map.pl
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ 
+]0;/home/xie186/bioinfo_with_perl$ cd ..
+]0;/home/xie186$ ls
+[0m[01;32mABI_all_SNP.vcf[0m                             [01;34mjupyter_nb[0m                             [01;34msnakemake_academy[0m
+[01;34manaconda3[0m                                   [01;34mKivyMD-master[0m                          [01;34msnap[0m
+[01;34mbin[0m                                         [01;31mKivyMD-master.zip[0m                      [01;34msoftware[0m
+[01;34mbiodocker_viewbs_bak[0m                        [01;34mkivy_test[0m                              [01;34mstatistics_with_R[0m
+[01;34mbioinfo_with_perl[0m                           [01;34mlib[0m                                    TabOmics_GeCKOdata_map_stat.xlsx_0_1.ods
+[01;34mconda-bld[0m                                   [01;34mmaize_phasiRNA[0m                         TabOmics_GeCKOdata_map_stat.xlsx_0.ods
+[01;36mdanshen_RNA_seq_metabolomics.ipynb[0m          [01;34mminiconda2[0m                             TabOmics_GeCKOdata_map_stat.xlsx_1.ods
+[01;36mDESeq2_time_series.ipynb[0m                    [01;34mminiconda3[0m                             [01;34mtbDocker[0m
+[01;34mDesktop[0m                                     mRNA_Phloem_vs_Xylem.DE_ALL.xls_0.ods  [01;34mtbDogDoc[0m
+Dockerfile_ViewBS                           [01;34mMusic[0m                                  [01;34mtbDogSNPchip[0m
+[01;34mdocker_test[0m                                 [01;34mncbi[0m                                   [01;34mTemplates[0m
+[01;34mDocuments[0m                                   nohup.out                              [01;34mtest[0m
+[01;34mdog_snp[0m                                     note_danshen.ipynb                     test1
+[01;34mdog_snp_chip[0m                                [01;34mpearDB_anno[0m                            [01;34mtest_ara[0m
+DogWGS.ipynb                                PEAR.ipynb                             [01;34mtest_crispr[0m
+[01;34mDownloads[0m                                   [01;34mperl5[0m                                  test.sh
+examples.desktop                            [01;34mPictures[0m                               [01;34mtip4bioinformatics[0m
+FastqSummaryF1L1.txt                        [01;34mPublic[0m                                 Untitled1.ipynb
+[01;31mG2-2_S2_L001_R1_001.fastq.gz[0m                [01;34mR[0m                                      untitled_1.ods
+[01;34mGGPred[0m                                      requirements.txt                       Untitled2.ipynb
+[01;34mgithub_book[0m                                 [01;31mresult_for_Xie_BJXNG18.tar.gz[0m          Untitled.ipynb
+[01;34migv[0m                                         Rplots.pdf                             [01;34mVideos[0m
+inline-supplementary-material-1.xlsx_0.ods  [01;34msalvia_RNA-seq[0m                         [01;34mViewBSdocker[0m
+[01;34mjikai_data[0m                                  [01;34mSinogene[0m
+]0;/home/xie186$ cd statistics_with_R/
+]0;/home/xie186/statistics_with_R$ ls
+01_R_intro.Rmd                                        [0m[01;34m_book[0m                   [01;34mdata[0m                         PCA.Rmd        Workspace.RData
+02_correlation_in_R.Rmd                               [01;34m_bookdown_files[0m         index.Rmd                    plot_in_R.Rmd
+77_multiple_regresssion_with_an_interaction_term.Rmd  bookdown-minimal.Rproj  LICENSE                      README.md
+99_reference_resouce.Rmd                              code.R                  multi_linear_regression.Rmd  reference.bib
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git add .

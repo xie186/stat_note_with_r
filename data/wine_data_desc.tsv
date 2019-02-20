@@ -1,0 +1,15 @@
+colname	description
+Type	The type of wine, into one of three classes, 1 (59 obs), 2(71 obs), and 3 (48 obs).
+Alcohol	Alcohol
+Malic	Malic acid
+Ash	Ash
+Alcalinity	Alcalinity of ash
+Magnesium	Magnesium
+Phenols	Total phenols
+Flavanoids	Flavanoids
+Nonflavanoids	Nonflavanoid phenols
+Proanthocyanins	Proanthocyanins
+Color	Color intensity.
+Hue	Hue
+Dilution	D280/OD315 of diluted wines.
+Proline	Proline

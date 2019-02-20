@@ -2,3 +2,9 @@
 
 
 `r if (knitr::is_html_output()) '# References {-}'`
+
+CSAMA 2017: Statistical Data Analysis for Genome-Scale Biology: https://bioconductor.org/help/course-materials/2017/CSAMA/
+
+Bioconductor Courses & Conferences: https://bioconductor.org/help/course-materials/
+
+Scalable Genomics with R and Bioconductor: https://arxiv.org/pdf/1409.2864v1.pdf

@@ -1,4 +1,6 @@
 
+# Visulization of pair-wise correlation in R
+
 
 ```{r}
 library(datasets)
@@ -13,3 +15,11 @@ library("PerformanceAnalytics")
 
 chart.Correlation(iris[, 1:4], histogram=TRUE, pch=19)
 ```
+
+
+## Reference
+
+
+Seven Easy Graphs to Visualize Correlation Matrices in R: http://jamesmarquezportfolio.com/correlation_matrices_in_r.html
+
+Example 9.17: (much) better pairs plots: https://www.r-bloggers.com/example-9-17-much-better-pairs-plots/

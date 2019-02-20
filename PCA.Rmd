@@ -102,6 +102,41 @@ Next, we perform an eigendecomposition on the covariance matrix:
 eigen(cov_mat)
 ```
 
+
+
+## PCA on `wine` data
+
+### Read the `wine` data
+
+```{r}
+wine <- read.csv("data/wine.csv", header=T)
+knitr::kable(wine)
+```
+
+### Description of each column
+
+```{r}
+wine_desc <- read.table("data/wine_data_desc.tsv", sep="\t", header = T)
+knitr::kable(wine_desc)
+```
+
+
+```{r}
+library(corrplot)
+dim(wine)
+wine_x<-wine[, 2:14]
+cor_matrix<-cor(wine_x)
+
+# method = "square", ellipse, number, shade, color, pie
+# type = upper, lower, full(default)
+corrplot(cor_matrix, method="circle", type = "upper")
+corrplot.mixed(cor_matrix)
+
+```
+
+### 
+
+
 ## References
 
 https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html#about-iris

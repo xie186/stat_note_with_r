@@ -1,9 +1,8 @@
----
-title: 'Principal Component Analysis'
-author: 'Dataset new_data'
-output:
-  pdf_document: default
----
+
+
+## 
+
+
 This dataset contains 150 individuals and 2 variables.
 
 - - -

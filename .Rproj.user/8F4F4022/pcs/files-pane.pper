@@ -2,7 +2,7 @@
     "path" : "~/statistics_with_R",
     "sortOrder" : [
         {
-            "ascending" : true,
+            "ascending" : false,
             "columnIndex" : 2
         }
     ]
