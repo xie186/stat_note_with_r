@@ -555,3 +555,99 @@ inline-supplementary-material-1.xlsx_0.ods  [01;34msalvia_RNA-seq[0m          
 99_reference_resouce.Rmd                              code.R                  multi_linear_regression.Rmd  reference.bib
 ]0;/home/xie186/statistics_with_R$ 
 ]0;/home/xie186/statistics_with_R$ git add .
+
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git oc[K[Kcommit -m ""U"p"d"a"t"e"
+
+[master cf03a27] Update
+ Committer: Shaojun Xie <xie186@tabomics.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 64 files changed, 4089 insertions(+), 938 deletions(-)
+ rewrite .Rproj.user/8F4F4022/console06/INDEX001 (93%)
+ rewrite .Rproj.user/8F4F4022/persistent-state (97%)
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2D80E47F
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E21E68C-contents
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/9B4F0203
+ delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/B7545371
+ delete mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chunks.json
+ delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/8F4F402255aa6e11/chunks.json
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-27-1.png
+ rewrite _book/_main_files/figure-html/unnamed-chunk-28-1.png (99%)
+ rewrite _book/_main_files/figure-html/unnamed-chunk-29-1.png (98%)
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-29-2.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-34-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-34-2.png
+ copy _bookdown_files/_main_files/figure-html/unnamed-chunk-29-1.png => _book/_main_files/figure-html/unnamed-chunk-36-1.png (100%)
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-37-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-38-1.png
+ create mode 100644 _book/_main_files/figure-html/unnamed-chunk-40-1.png
+ create mode 100644 _book/visulization-of-pair-wise-correlation-in-r.html
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-27-1.png
+ rewrite _bookdown_files/_main_files/figure-html/unnamed-chunk-28-1.png (99%)
+ rewrite _bookdown_files/_main_files/figure-html/unnamed-chunk-29-1.png (98%)
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-29-2.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-34-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-34-2.png
+ copy _book/_main_files/figure-html/unnamed-chunk-29-1.png => _bookdown_files/_main_files/figure-html/unnamed-chunk-36-1.png (100%)
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-37-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-38-1.png
+ create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-40-1.png
+ delete mode 100644 _main.Rmd
+ rename Investigate.Rmd => data/Investigate.Rmd (97%)
+ rename Investigate.html => data/Investigate.html (100%)
+ rename Investigate.log => data/Investigate.log (100%)
+ rename Investigate.tex => data/Investigate.tex (100%)
+ create mode 100644 data/wine.csv
+ create mode 100644 data/wine_data_desc.tsv
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git push origin [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ pwd
+/home/xie186/statistics_with_R
+]0;/home/xie186/statistics_with_R$ 
+[K$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ cd data/
+]0;/home/xie186/statistics_with_R/data$ 
+]0;/home/xie186/statistics_with_R/data$ wget https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/msleep_ggplot2.csv
+--2019-02-22 08:55:55--  https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/msleep_ggplot2.csv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.184.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.184.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5993 (5.9K) [text/plain]
+Saving to: ‘msleep_ggplot2.csv’
+
+msleep_ggplot2.csv                       0%[                                                                          ]       0  --.-KB/s               msleep_ggplot2.csv                     100%[=========================================================================>]   5.85K  --.-KB/s    in 0s      
+
+2019-02-22 08:55:55 (61.7 MB/s) - ‘msleep_ggplot2.csv’ saved [5993/5993]
+
+]0;/home/xie186/statistics_with_R/data$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ pwd
+/home/xie186/statistics_with_R
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ ls
+01_R_intro.Rmd                                        [0m[01;34mdata[0m
+02_correlation_in_R.Rmd                               index.Rmd
+12_multi_linear_regression.Rmd                        LICENSE
+77_multiple_regresssion_with_an_interaction_term.Rmd  missing_values.Rmd
+99_reference_resouce.Rmd                              PCA.Rmd
+[01;34m_book[0m                                                 plot_in_R.Rmd
+[01;34m_bookdown_files[0m                                       README.md
+bookdown-minimal.Rproj                                reference.bib
+code.R                                                Workspace.RData
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git add .

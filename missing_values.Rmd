@@ -1,0 +1,91 @@
+# Working with missing values
+
+## 
+
+```{r}
+## Some sample data
+set.seed(0)
+dat <- matrix(1:100, 10, 10)
+dat[sample(1:100, 10)] <- NA
+dat <- data.frame(dat)
+
+```
+
+
+
+
+## Summaryize the missing values
+
+
+### Summarize the missing values using `mice` package
+
+The `mice` package provides a nice function md.pattern() to get a better understanding of the pattern of missing data. 
+
+
+
+```{r}
+#install.packages("mice")
+library(mice)
+md.pattern(dat)
+```
+
+### Summarize the missing values using `VIM` packages
+
+```{r}
+#install.packages("VIM")
+library(VIM)
+aggr(dat, numbers = TRUE, prop = c(TRUE, FALSE))
+aggr(t(dat), numbers = TRUE, prop = c(TRUE, FALSE))
+
+```
+
+```{r}
+aggr_plot <- aggr(dat, col=c('navyblue','red'), numbers=TRUE, sortVars=TRUE, labels=names(dat), cex.axis=.7, gap=3, ylab=c("Histogram of missing data","Pattern"))
+
+```
+
+```{r}
+tdat = t(dat)
+aggr_plot <- aggr(tdat, col=c('navyblue','red'), numbers=TRUE, sortVars=TRUE, labels=names(tdat), cex.axis=.7, gap=3, ylab=c("Histogram of missing data","Pattern"))
+
+```
+
+
+## Delete columns/rows with more that x% missing 
+
+```{r}
+## Remove columns with more than 50% NA
+dat_file = dat[, -which(colMeans(is.na(dat)) > 0.5)]
+
+```
+
+## Imputing the data
+
+### Imputing the data with row-wise mean
+
+```{r}
+dat.imp = dat
+k <- which(is.na(dat.imp), arr.ind=TRUE)
+dat.imp[k] <- rowMeans(dat.imp, na.rm=TRUE)[k[,1]]
+```
+
+
+### Imputing the data with  row-wise mean using `mice`
+
+```{r}
+tempDat <- mice(as.matrix(dat), method = "mean")
+summary(tempDat)
+impDat<- complete(tempDat)
+impDat
+```
+
+
+## Reference
+
+Imputing Missing Data with R; MICE package: https://datascienceplus.com/imputing-missing-data-with-r-mice-package/
+
+Delete columns/rows with more that x% missing : https://stackoverflow.com/questions/31848156/delete-columns-rows-with-more-that-x-missing
+
+
+Tutorial on 5 Powerful R Packages used for imputing missing values
+: https://www.analyticsvidhya.com/blog/2016/03/tutorial-powerful-packages-imputing-missing-values/
