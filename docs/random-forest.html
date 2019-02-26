@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="multiple-linear-regression.html">
-<link rel="next" href="references.html">
+<link rel="prev" href="working-with-missing-values.html">
+<link rel="next" href="pca.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -202,16 +202,206 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references-and-resouces" class="section level1">
-<h1><span class="header-section-number">6</span> References and Resouces</h1>
+<div id="random-forest" class="section level1">
+<h1><span class="header-section-number">12</span> Random forest</h1>
+<div id="practical-experiments-1" class="section level2">
+<h2><span class="header-section-number">12.1</span> Practical experiments</h2>
+<div id="random-forest-for-prediction-of-iris" class="section level3">
+<h3><span class="header-section-number">12.1.1</span> Random forest for prediction of iris</h3>
+<p>The <code>caret</code> package (short for _C_lassification _A_nd _RE_gression _T_raining) is a set of functions that attempt to streamline the process for creating predictive models. The package contains tools for:</p>
+<ul>
+<li>data splitting</li>
+<li>pre-processing</li>
+<li>feature selection</li>
+<li>model tuning using resampling</li>
+<li>variable importance estimation</li>
+</ul>
+<div id="required-r-packages" class="section level4">
+<h4><span class="header-section-number">12.1.1.1</span> Required R packages</h4>
+<p>Required packages:</p>
+<pre><code>caret   
+AppliedPredictiveModeling 
+ellipse </code></pre>
+<p>Attribute Information:</p>
+<ol style="list-style-type: decimal">
+<li><p>sepal length in cm</p></li>
+<li><p>sepal width in cm</p></li>
+<li><p>petal length in cm</p></li>
+<li><p>petal width in cm</p></li>
+<li><p>class:</p></li>
+</ol>
+<p>– Iris Setosa – Iris Versicolour – Iris Virginica</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(iris)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    150 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(iris)</code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(iris)</code></pre></div>
+<pre><code>## [1] 150   5</code></pre>
+</div>
+<div id="visulization" class="section level4">
+<h4><span class="header-section-number">12.1.1.2</span> Visulization</h4>
+<div id="scatterplot-matrix" class="section level5">
+<h5><span class="header-section-number">12.1.1.2.1</span> Scatterplot Matrix</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;AppliedPredictiveModeling&quot;)</span>
+<span class="kw">library</span>(AppliedPredictiveModeling)
+<span class="kw">transparentTheme</span>(<span class="dt">trans =</span> .<span class="dv">4</span>)
+<span class="co">#install.packages(&quot;caret&quot;)</span>
+<span class="kw">library</span>(caret)</code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;caret&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:survival&#39;:
+## 
+##     cluster</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">featurePlot</span>(<span class="dt">x =</span> iris[, <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], 
+            <span class="dt">y =</span> iris<span class="op">$</span>Species, 
+            <span class="dt">plot =</span> <span class="st">&quot;pairs&quot;</span>,
+            ## Add a key at the top
+            <span class="dt">auto.key =</span> <span class="kw">list</span>(<span class="dt">columns =</span> <span class="dv">3</span>))</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-40-1.png" width="576" /></p>
+</div>
+<div id="scatterplot-matrix-with-ellipses" class="section level5">
+<h5><span class="header-section-number">12.1.1.2.2</span> Scatterplot Matrix with Ellipses</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;ellipse&quot;)</span>
+<span class="kw">library</span>(ellipse)</code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;ellipse&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     pairs</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">featurePlot</span>(<span class="dt">x =</span> iris[, <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], 
+            <span class="dt">y =</span> iris<span class="op">$</span>Species, 
+            <span class="dt">plot =</span> <span class="st">&quot;ellipse&quot;</span>,
+            ## Add a key at the top
+            <span class="dt">auto.key =</span> <span class="kw">list</span>(<span class="dt">columns =</span> <span class="dv">3</span>))</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-41-1.png" width="576" /></p>
+</div>
+<div id="overlayed-density-plots" class="section level5">
+<h5><span class="header-section-number">12.1.1.2.3</span> Overlayed Density Plots</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">featurePlot</span>(<span class="dt">x =</span> iris[, <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], 
+            <span class="dt">y =</span> iris<span class="op">$</span>Species,
+            <span class="dt">plot =</span> <span class="st">&quot;density&quot;</span>, 
+            ## Pass in options to xyplot() to 
+            ## make it prettier
+            <span class="dt">scales =</span> <span class="kw">list</span>(<span class="dt">x =</span> <span class="kw">list</span>(<span class="dt">relation=</span><span class="st">&quot;free&quot;</span>), 
+                          <span class="dt">y =</span> <span class="kw">list</span>(<span class="dt">relation=</span><span class="st">&quot;free&quot;</span>)), 
+            <span class="dt">adjust =</span> <span class="fl">1.5</span>, 
+            <span class="dt">pch =</span> <span class="st">&quot;|&quot;</span>, 
+            <span class="dt">layout =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">1</span>), 
+            <span class="dt">auto.key =</span> <span class="kw">list</span>(<span class="dt">columns =</span> <span class="dv">3</span>))</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-42-1.png" width="576" /></p>
+</div>
+<div id="box-plots" class="section level5">
+<h5><span class="header-section-number">12.1.1.2.4</span> Box Plots</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">featurePlot</span>(<span class="dt">x =</span> iris[, <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], 
+            <span class="dt">y =</span> iris<span class="op">$</span>Species, 
+            <span class="dt">plot =</span> <span class="st">&quot;box&quot;</span>, 
+            ## Pass in options to bwplot() 
+            <span class="dt">scales =</span> <span class="kw">list</span>(<span class="dt">y =</span> <span class="kw">list</span>(<span class="dt">relation=</span><span class="st">&quot;free&quot;</span>),
+                          <span class="dt">x =</span> <span class="kw">list</span>(<span class="dt">rot =</span> <span class="dv">90</span>)),  
+            <span class="dt">layout =</span> <span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">1</span> ), 
+            <span class="dt">auto.key =</span> <span class="kw">list</span>(<span class="dt">columns =</span> <span class="dv">2</span>))</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-43-1.png" width="576" /></p>
+</div>
+<div id="machine-leraning---random-forest" class="section level5">
+<h5><span class="header-section-number">12.1.1.2.5</span> Machine leraning - Random forest</h5>
+</div>
+<div id="model-train" class="section level5">
+<h5><span class="header-section-number">12.1.1.2.6</span> Model Train</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">186</span>)
+<span class="co"># Data Splitting</span>
+train_index &lt;-<span class="st"> </span><span class="kw">createDataPartition</span>(iris<span class="op">$</span>Species, <span class="dt">p =</span> <span class="fl">0.75</span>, , <span class="dt">times=</span><span class="dv">1</span>, <span class="dt">list =</span> <span class="ot">FALSE</span>)
+train_set =<span class="st"> </span>iris[train_index, ]
+test_set  =<span class="st"> </span>iris[<span class="op">-</span>train_index, ]
+fit_rf_cv &lt;-<span class="st"> </span><span class="kw">train</span>(Species <span class="op">~</span><span class="st"> </span>., <span class="dt">data=</span>train_set, <span class="dt">method=</span><span class="st">&#39;rf&#39;</span>, <span class="dt">metric =</span> <span class="st">&quot;Accuracy&quot;</span>,
+                   <span class="dt">trControl=</span><span class="kw">trainControl</span>(<span class="dt">method=</span><span class="st">&quot;cv&quot;</span>,<span class="dt">number=</span><span class="dv">5</span>)) 
+fit_rf_cv</code></pre></div>
+<pre><code>## Random Forest 
+## 
+## 114 samples
+##   4 predictors
+##   3 classes: &#39;setosa&#39;, &#39;versicolor&#39;, &#39;virginica&#39; 
+## 
+## No pre-processing
+## Resampling: Cross-Validated (5 fold) 
+## Summary of sample sizes: 91, 91, 93, 91, 90 
+## Resampling results across tuning parameters:
+## 
+##   mtry  Accuracy   Kappa    
+##   2     0.9398551  0.9100274
+##   3     0.9398551  0.9100274
+##   4     0.9398551  0.9100274
+## 
+## Accuracy was used to select the optimal model using the largest value.
+## The final value used for the model was mtry = 2.</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## Variance importance
+rfVarImpcv =<span class="st"> </span><span class="kw">varImp</span>(fit_rf_cv)
+rfVarImpcv</code></pre></div>
+<pre><code>## rf variable importance
+## 
+##              Overall
+## Petal.Width   100.00
+## Petal.Length   95.11
+## Sepal.Length   16.93
+## Sepal.Width     0.00</code></pre>
+</div>
+<div id="testing-test-data" class="section level5">
+<h5><span class="header-section-number">12.1.1.2.7</span> Testing test data</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## predict
+test_set<span class="op">$</span>predict_rf &lt;-<span class="st"> </span><span class="kw">predict</span>(fit_rf_cv, test_set, <span class="st">&quot;raw&quot;</span>)
+<span class="kw">confusionMatrix</span>(test_set<span class="op">$</span>predict_rf, test_set<span class="op">$</span>Species)</code></pre></div>
+<pre><code>## Confusion Matrix and Statistics
+## 
+##             Reference
+## Prediction   setosa versicolor virginica
+##   setosa         12          0         0
+##   versicolor      0         11         1
+##   virginica       0          1        11
+## 
+## Overall Statistics
+##                                           
+##                Accuracy : 0.9444          
+##                  95% CI : (0.8134, 0.9932)
+##     No Information Rate : 0.3333          
+##     P-Value [Acc &gt; NIR] : 1.728e-14       
+##                                           
+##                   Kappa : 0.9167          
+##  Mcnemar&#39;s Test P-Value : NA              
+## 
+## Statistics by Class:
+## 
+##                      Class: setosa Class: versicolor Class: virginica
+## Sensitivity                 1.0000            0.9167           0.9167
+## Specificity                 1.0000            0.9583           0.9583
+## Pos Pred Value              1.0000            0.9167           0.9167
+## Neg Pred Value              1.0000            0.9583           0.9583
+## Prevalence                  0.3333            0.3333           0.3333
+## Detection Rate              0.3333            0.3056           0.3056
+## Detection Prevalence        0.3333            0.3333           0.3333
+## Balanced Accuracy           1.0000            0.9375           0.9375</code></pre>
+
+</div>
+</div>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="multiple-linear-regression.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="working-with-missing-values.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pca.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

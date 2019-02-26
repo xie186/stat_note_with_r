@@ -1,0 +1,137 @@
+# Random forest
+
+
+
+## Practical experiments
+
+
+### Random forest for prediction of iris 
+
+
+The `caret` package (short for _C_lassification _A_nd _RE_gression _T_raining) is a set of functions that attempt to streamline the process for creating predictive models. The package contains tools for:
+
+* data splitting
+* pre-processing
+* feature selection
+* model tuning using resampling
+* variable importance estimation
+
+#### Required R packages
+
+Required packages:
+
+```
+caret   
+AppliedPredictiveModeling 
+ellipse 
+```
+
+Attribute Information:
+
+1. sepal length in cm 
+
+2. sepal width in cm 
+
+3. petal length in cm 
+
+4. petal width in cm 
+
+5. class: 
+
+-- Iris Setosa 
+-- Iris Versicolour 
+-- Iris Virginica
+
+```{r}
+str(iris)
+head(iris)
+dim(iris)
+```
+
+#### Visulization
+
+##### Scatterplot Matrix
+
+```{r}
+#install.packages("AppliedPredictiveModeling")
+library(AppliedPredictiveModeling)
+transparentTheme(trans = .4)
+#install.packages("caret")
+library(caret)
+featurePlot(x = iris[, 1:4], 
+            y = iris$Species, 
+            plot = "pairs",
+            ## Add a key at the top
+            auto.key = list(columns = 3))
+```
+
+##### Scatterplot Matrix with Ellipses
+
+```{r}
+#install.packages("ellipse")
+library(ellipse)
+featurePlot(x = iris[, 1:4], 
+            y = iris$Species, 
+            plot = "ellipse",
+            ## Add a key at the top
+            auto.key = list(columns = 3))
+```
+
+##### Overlayed Density Plots
+
+```{r}
+featurePlot(x = iris[, 1:4], 
+            y = iris$Species,
+            plot = "density", 
+            ## Pass in options to xyplot() to 
+            ## make it prettier
+            scales = list(x = list(relation="free"), 
+                          y = list(relation="free")), 
+            adjust = 1.5, 
+            pch = "|", 
+            layout = c(4, 1), 
+            auto.key = list(columns = 3))
+```
+
+##### Box Plots
+
+```{r}
+featurePlot(x = iris[, 1:4], 
+            y = iris$Species, 
+            plot = "box", 
+            ## Pass in options to bwplot() 
+            scales = list(y = list(relation="free"),
+                          x = list(rot = 90)),  
+            layout = c(4,1 ), 
+            auto.key = list(columns = 2))
+```
+ 
+ 
+##### Machine leraning - Random forest
+
+##### Model Train 
+
+```{r}
+set.seed(186)
+# Data Splitting
+train_index <- createDataPartition(iris$Species, p = 0.75, , times=1, list = FALSE)
+train_set = iris[train_index, ]
+test_set  = iris[-train_index, ]
+fit_rf_cv <- train(Species ~ ., data=train_set, method='rf', metric = "Accuracy",
+                   trControl=trainControl(method="cv",number=5)) 
+fit_rf_cv
+## Variance importance
+rfVarImpcv = varImp(fit_rf_cv)
+rfVarImpcv
+```
+
+
+##### Testing test data
+
+```{r}
+## predict
+test_set$predict_rf <- predict(fit_rf_cv, test_set, "raw")
+confusionMatrix(test_set$predict_rf, test_set$Species)
+```
+
+
