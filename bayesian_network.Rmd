@@ -1,0 +1,98 @@
+# Bayesian newwork in R
+
+Bayesian networks (BNs) are a type of graphical model that encode the conditional probability between different learning variables in a directed acyclic graph. There are benefits to using BNs compared to other unsupervised machine learning techniques. A few of these benefits are:
+
+1. It is easy to exploit expert knowledge in BN models. 
+
+2. BN models have been found to be very robust in the sense of noisy data, missing data and sparse data. 
+
+3. Unlike many machine learning models (including Artificial Neural Network), which usually appear as a “black box,” all the parameters in BNs have an understandable semantic interpretation. 
+
+```{r}
+#install.packages("bnlearn")
+```
+
+
+## Practical experiments
+
+
+### Analysis of the MAGIC population in Scutari et al., Genetics (2014)
+
+
+#### Reading and preprocessing the data
+
+
+```{r}
+#install.packages(lme4)
+#install.packages("bnlearn")
+library(lme4)
+library(bnlearn)
+library(parallel)
+# load the data.
+## http://www.bnlearn.com/research/genetics14/prepd-magic.txt.xz
+xzfd = xzfile("data/prepd-magic.txt.xz", open = "r")
+magic = read.table(xzfd, header = TRUE,
+          colClasses = c(rep("factor", 4), rep("numeric", 3164)))
+close(xzfd)
+```
+
+
+```{r}
+head(magic)
+```
+++++Afterwards, we substitute short labels to the marker names, which are quite long and make plotting problematic. In addition we identify which variables in the data are traits, which are markers, which contain variety IDs and pedigree information.
+
+```{r}
+names(magic)[12:14]
+names(magic)[12:ncol(magic)] = paste("G", 12:ncol(magic) - 11, sep = "")
+names(magic)[12:14]
+```
+
+
+Finally, we extract observations with incomplete data (in the traits and variety information, missing values in the markers have all been imputed).
+
+```{r}
+partial = magic[!complete.cases(magic), ]
+margic = magic[complete.cases(magic),]
+```
+
+#### Performing cross-validation
+
+The Bayesian networks model is fitted by the fit.the.model() function below, which takes the data and the type I error threshold alpha to use for structure learning as arguments.
+
+```{r}
+fit.the.model = function(data, alpha) {
+
+   cpc = vector(length(traits), mode = "list")
+   names(cpc) = traits
+
+   # find the parents of each trait (may be genes or other traits).
+   for (t in seq_along(traits)) {
+
+     # BLUP away the family structure.
+     m = lmer(as.formula(paste(traits[t], "~ (1|FUNNEL:PLANT)")), data = data)
+     data[!is.na(data[, traits[t]]), traits[t]] =
+       data[, traits[t]] - ranef(m)[[1]][paste(data$FUNNEL, data$PLANT, sep = ":"), 1]
+     # find out the parents.
+     cpc[[t]] = learn.nbr(data[, c(traits, genes)], node = traits[t], debug = FALSE,
+                   method = "si.hiton.pc", test = "cor", alpha = alpha)
+
+   }#FOR
+
+   # merge the relevant variables to use for learning.
+   nodes = unique(c(traits, unlist(cpc)))
+   # yield has no children, and genes cannot depend on traits.
+   blacklist = tiers2blacklist(list(nodes[!(nodes %in% traits)],
+                 traits[traits != "YLD"], "YLD"))
+
+   # build the Bayesian network.
+   bn = hc(data[, nodes], blacklist = blacklist)
+
+   return(bn)
+}#FIT.THE.MODEL
+```
+
+
+## Reference
+
+Analysis of the MAGIC population in Scutari et al., Genetics (2014): http://www.bnlearn.com/research/genetics14/.The contents of this page are licensed under the Creative Commons Attribution-Share Alike License. 

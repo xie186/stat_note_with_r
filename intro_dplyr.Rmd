@@ -22,9 +22,6 @@ library(dplyr)
 ```
 
 
-```{r}
-head(artists0, 10)
-```
 
 
 
