@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="mrg.html">
-<link rel="next" href="references-and-resouces.html">
+<link rel="prev" href="plot-in-r.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -197,111 +197,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="multiple-linear-regression" class="section level1">
-<h1><span class="header-section-number">5</span> Multiple linear regression</h1>
-<div id="section" class="section level2">
-<h2><span class="header-section-number">5.1</span> </h2>
-<p>Descriptions of the data: <a href="https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/airquality.html" class="uri">https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/airquality.html</a></p>
-<p>Daily air quality measurements in New York, May to September 1973.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(<span class="st">&quot;airquality&quot;</span>)
-<span class="kw">names</span>(airquality)</code></pre></div>
-<pre><code>## [1] &quot;Ozone&quot;   &quot;Solar.R&quot; &quot;Wind&quot;    &quot;Temp&quot;    &quot;Month&quot;   &quot;Day&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(graphics)
-<span class="kw">pairs</span>(airquality, <span class="dt">panel =</span> panel.smooth, <span class="dt">main =</span> <span class="st">&quot;airquality data&quot;</span>)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-8-1.png" width="576" /></p>
-<p>A formula of the form <code>y ~ x | a</code> indicates that plots of <code>y</code> versus <code>x</code> should be produced conditional on the variable <code>a</code>. A formula of the form <code>y ~ x| a * b</code> indicates that plots of <code>y</code> versus <code>x</code> should be produced conditional on the two variables <code>a</code> and <code>b</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">coplot</span>(Ozone<span class="op">~</span>Solar.R<span class="op">|</span>Wind,  <span class="dt">panel =</span> panel.smooth, airquality)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-9-1.png" width="576" /></p>
-<pre><code>## 
-##  Missing rows: 5, 6, 10, 11, 25, 26, 27, 32, 33, 34, 35, 36, 37, 39, 42, 43, 45, 46, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 65, 72, 75, 83, 84, 96, 97, 98, 102, 103, 107, 115, 119, 150</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">model2 =<span class="st"> </span><span class="kw">lm</span>(Ozone<span class="op">~</span>Solar.R<span class="op">*</span>Wind, airquality)</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="co"># Change the panel layout to 2 x 2</span>
-<span class="kw">plot</span>(model2)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-11-1.png" width="576" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>)) <span class="co"># Change back to 1 x 1</span></code></pre></div>
-<ol style="list-style-type: decimal">
-<li>Residuals vs Fitted</li>
-</ol>
-<p>This plot shows if residuals have non-linear patterns. There could be a non-linear relationship between predictor variables and an outcome variable and the pattern could show up in this plot if the model doesn’t capture the non-linear relationship. If you find equally spread residuals around a horizontal line without distinct patterns, that is a good indication you don’t have non-linear relationships.</p>
-<ol start="2" style="list-style-type: decimal">
-<li>Normal Q-Q</li>
-</ol>
-<p>This plot shows if residuals are normally distributed. Do residuals follow a straight line well or do they deviate severely? It’s good if residuals are lined well on the straight dashed line.</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Scale-Location</li>
-</ol>
-<p>It’s also called Spread-Location plot. This plot shows if residuals are spread equally along the ranges of predictors. This is how you can check the assumption of equal variance (homoscedasticity). It’s good if you see a horizontal line with equally (randomly) spread points.</p>
-<ol start="4" style="list-style-type: decimal">
-<li>Residuals vs Leverage</li>
-</ol>
-<p>This plot helps us to find influential cases (i.e., subjects) if any. Not all outliers are influential in linear regression analysis (whatever outliers mean). Even though data have extreme values, they might not be influential to determine a regression line. That means, the results wouldn’t be much different if we either include or exclude them from analysis. They follow the trend in the majority of cases and they don’t really matter; they are not influential. On the other hand, some cases could be very influential even if they look to be within a reasonable range of the values. They could be extreme cases against a regression line and can alter the results if we exclude them from analysis. Another way to put it is that they don’t get along with the trend in the majority of the cases.</p>
-<p>Unlike the other plots, this time patterns are not relevant. We watch out for outlying values at the upper right corner or at the lower right corner. Those spots are the places where cases can be influential against a regression line. Look for cases outside of a dashed line, Cook’s distance. When cases are outside of the Cook’s distance (meaning they have high Cook’s distance scores), the cases are influential to the regression results. The regression results will be altered if we exclude those cases.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;UsingR&quot;)</span>
-<span class="kw">suppressWarnings</span>(<span class="kw">suppressMessages</span>(<span class="kw">library</span>(UsingR)))
-<span class="kw">data</span>(father.son)
-<span class="kw">names</span>(father.son)</code></pre></div>
-<pre><code>## [1] &quot;fheight&quot; &quot;sheight&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">model_fs =<span class="st"> </span><span class="kw">lm</span>(fheight<span class="op">~</span>sheight, father.son)</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="co"># Change the panel layout to 2 x 2</span>
-<span class="kw">plot</span>(model_fs)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-14-1.png" width="576" /></p>
-</div>
-<div id="section-1" class="section level2">
-<h2><span class="header-section-number">5.2</span> </h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(model2)</code></pre></div>
-<pre><code>## 
-## Call:
-## lm(formula = Ozone ~ Solar.R * Wind, data = airquality)
-## 
-## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -48.694 -17.200  -4.384  12.740  78.218 
-## 
-## Coefficients:
-##               Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)  34.467686  17.634602   1.955 0.053246 .  
-## Solar.R       0.324141   0.083928   3.862 0.000193 ***
-## Wind         -1.594546   1.508979  -1.057 0.293026    
-## Solar.R:Wind -0.020279   0.007246  -2.799 0.006089 ** 
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 24.16 on 107 degrees of freedom
-##   (42 observations deleted due to missingness)
-## Multiple R-squared:  0.487,  Adjusted R-squared:  0.4727 
-## F-statistic: 33.86 on 3 and 107 DF,  p-value: 1.807e-15</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)) <span class="co"># Change back to 1 x 1</span>
-<span class="kw">termplot</span>(model2, <span class="dt">partial.resid=</span><span class="ot">TRUE</span>, <span class="dt">col.res =</span> <span class="st">&quot;royalblue&quot;</span>)</code></pre></div>
-<pre><code>## Warning in termplot(model2, partial.resid = TRUE, col.res = &quot;royalblue&quot;):
-## &#39;model&#39; appears to involve interactions: see the help page</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-16-1.png" width="576" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(airquality<span class="op">$</span>Solar.R)</code></pre></div>
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
-##     7.0   115.8   205.0   185.9   258.8   334.0       7</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(airquality<span class="op">$</span>Wind)</code></pre></div>
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   1.700   7.400   9.700   9.958  11.500  20.700</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Solar1 =<span class="st"> </span><span class="kw">mean</span>(airquality<span class="op">$</span>Solar.R, <span class="dt">na.rm=</span>T)
-Solar2 =<span class="st"> </span><span class="dv">100</span>
-Solar3 =<span class="st"> </span><span class="dv">300</span>
-
-p1 =<span class="st"> </span><span class="kw">predict</span>(model2, <span class="kw">data.frame</span>(<span class="dt">Solar.R=</span>Solar1, <span class="dt">Wind=</span><span class="dv">1</span><span class="op">:</span><span class="dv">20</span>))
-p2 =<span class="st"> </span><span class="kw">predict</span>(model2, <span class="kw">data.frame</span>(<span class="dt">Solar.R=</span>Solar2, <span class="dt">Wind=</span><span class="dv">1</span><span class="op">:</span><span class="dv">20</span>))
-p3 =<span class="st"> </span><span class="kw">predict</span>(model2, <span class="kw">data.frame</span>(<span class="dt">Solar.R=</span>Solar3, <span class="dt">Wind=</span><span class="dv">1</span><span class="op">:</span><span class="dv">20</span>))</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p1</code></pre></div>
-<pre><code>##          1          2          3          4          5          6 
-##  89.370627  84.005541  78.640456  73.275370  67.910285  62.545199 
-##          7          8          9         10         11         12 
-##  57.180113  51.815028  46.449942  41.084856  35.719771  30.354685 
-##         13         14         15         16         17         18 
-##  24.989600  19.624514  14.259428   8.894343   3.529257  -1.835829 
-##         19         20 
-##  -7.200914 -12.566000</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(Ozone<span class="op">~</span>Wind, airquality, <span class="dt">col=</span><span class="st">&quot;grey&quot;</span>)
-<span class="kw">lines</span>(p1, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)
-<span class="kw">lines</span>(p2, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)
-<span class="kw">lines</span>(p3, <span class="dt">col=</span><span class="st">&quot;darkgreen&quot;</span>)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-20-1.png" width="576" /></p>
+<div id="qtl-analysis" class="section level1">
+<h1><span class="header-section-number">14</span> QTL analysis</h1>
+<div id="reference-6" class="section level2">
+<h2><span class="header-section-number">14.1</span> Reference</h2>
+<p>STAT/BMI 877: Statistical Methods for Molecular Biology: <a href="https://www.biostat.wisc.edu/~kendzior/STAT877/" class="uri">https://www.biostat.wisc.edu/~kendzior/STAT877/</a></p>
+<p>QTL Mapping and reproducible research: <a href="https://github.com/kbroman/Teaching_UWStatGen2019" class="uri">https://github.com/kbroman/Teaching_UWStatGen2019</a></p>
+<p>Karl Broman: <a href="http://kbroman.org/pages/teaching.html" class="uri">http://kbroman.org/pages/teaching.html</a></p>
 
 </div>
 </div>
@@ -310,8 +212,8 @@ p3 =<span class="st"> </span><span class="kw">predict</span>(model2, <span class
           </div>
         </div>
       </div>
-<a href="mrg.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references-and-resouces.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="plot-in-r.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

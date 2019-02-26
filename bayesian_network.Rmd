@@ -93,6 +93,9 @@ fit.the.model = function(data, alpha) {
 ```
 
 
-## Reference
+### Reference
 
 Analysis of the MAGIC population in Scutari et al., Genetics (2014): http://www.bnlearn.com/research/genetics14/.The contents of this page are licensed under the Creative Commons Attribution-Share Alike License. 
+
+
+

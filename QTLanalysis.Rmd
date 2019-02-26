@@ -1,0 +1,13 @@
+# QTL analysis
+
+
+
+
+## Reference
+
+STAT/BMI 877: Statistical Methods for Molecular Biology: https://www.biostat.wisc.edu/~kendzior/STAT877/
+
+QTL Mapping and reproducible research: https://github.com/kbroman/Teaching_UWStatGen2019
+
+Karl Broman: http://kbroman.org/pages/teaching.html
+
