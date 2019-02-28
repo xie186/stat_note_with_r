@@ -452,3 +452,133 @@ To https://github.com/xie186/stat_note_with_r.git
 ]0;/home/xie186/statistics_with_R$ [K$ 
 ]0;/home/xie186/statistics_with_R$ 
 ]0;/home/xie186/statistics_with_R$ git add .
+
+git commit]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git commit -k[K [Km ""A"d"d" "r"a"n"d"o"m" "a"c"e"[1P"[1P"[1P"r"e"a"d" "c"s"v" "f"i"l"e"s"
+
+
+
+[master 1cd8324] Add random read csv files
+ 141 files changed, 1476 insertions(+), 6 deletions(-)
+ rewrite .Rproj.user/8F4F4022/console06/INDEX001 (61%)
+ delete mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-24-1.png
+ delete mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-27-1.png
+ delete mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-32-1.png
+ delete mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-5-1.png
+ delete mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-7-1.png
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-10-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-11-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-12-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-13-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-14-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-15-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-16-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-17-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-18-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-19-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-2-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-20-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-21-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-22-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-23-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-24-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-25-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-26-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-27-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-28-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-29-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-29-2.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-30-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-31-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-32-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-33-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-34-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-34-2.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-36-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-37-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-38-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-4-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-40-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-5-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-7-1.png (100%)
+ rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-9-1.png (100%)
+ create mode 100644 bioinfBookXIE186.Rmd
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-11-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-14-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-16-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-17-1.png (100%)
+ create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-18-1.png
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-2-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-20-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-23-1.png (100%)
+ create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-24-1.png
+ rename _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-9-1.png => bioinfBookXIE186_files/figure-html/unnamed-chunk-25-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-26-1.png (100%)
+ create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-27-1.png
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-27-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-28-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-29-1.png (100%)
+ create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-3-1.png
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-31-1.png (100%)
+ create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-32-1.png
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-33-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-33-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-34-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-35-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-37-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-39-1.png (100%)
+ rename _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-3-1.png => bioinfBookXIE186_files/figure-html/unnamed-chunk-4-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-40-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-41-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-41-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-42-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-43-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-44-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-44-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-45-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-46-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-46-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-47-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-47-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-48-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-48-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-49-1.png (100%)
+ rename _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-4-1.png => bioinfBookXIE186_files/figure-html/unnamed-chunk-5-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-50-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-52-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-52-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-53-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-54-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-54-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-55-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-56-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-57-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-58-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-59-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-59-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-6-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-61-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-62-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-63-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-63-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-64-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-64-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-65-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-66-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-67-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-68-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-68-2.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-69-1.png (100%)
+ create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-7-1.png
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-70-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-71-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-72-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-73-1.png (100%)
+ rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-8-1.png (100%)
+ create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-9-1.png
+ create mode 100644 docs/multiple-test-corretion.html
+ create mode 100644 multiple_test_correction.Rmd
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ gut[K[Ki [Kt push ocommit -m "Add random read csv files"[C[C[C[C[C[Cadd .[K
