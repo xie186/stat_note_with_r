@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="multiple-linear-regression.html">
-<link rel="next" href="references.html">
+<link rel="prev" href="standard-deviation-vs-standard-error.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -211,16 +211,59 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references-and-resouces" class="section level1">
-<h1><span class="header-section-number">6</span> References and Resouces</h1>
+<div id="t-test" class="section level1">
+<h1><span class="header-section-number">18</span> T test</h1>
+<div id="calculate-t-statistic-step-by-step-in-r" class="section level2">
+<h2><span class="header-section-number">18.1</span> Calculate t-statistic step by step in R</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#load dataset</span>
+<span class="kw">library</span>(reshape2)</code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;reshape2&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:data.table&#39;:
+## 
+##     dcast, melt</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(tips)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#create tip percent variable</span>
+tips<span class="op">$</span>percent=tips<span class="op">$</span>tip<span class="op">/</span>tips<span class="op">$</span>total_bill</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Split dataset for ease</span>
+splits&lt;-<span class="kw">split</span>(tips, tips<span class="op">$</span>sex)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Save data sets</span>
+women&lt;-splits[[<span class="dv">1</span>]] 
+men&lt;-splits[[<span class="dv">2</span>]]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#variance by group sample size</span>
+var_women&lt;-<span class="kw">var</span>(women<span class="op">$</span>percent)<span class="op">/</span><span class="kw">length</span>(women<span class="op">$</span>percent)
+var_men&lt;-<span class="kw">var</span>(men<span class="op">$</span>percent)<span class="op">/</span><span class="kw">length</span>(men<span class="op">$</span>percent)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Sum</span>
+total_variance&lt;-var_women<span class="op">+</span>var_men</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Squre Root</span>
+sqrt_variance&lt;-<span class="kw">sqrt</span>(total_variance)
+
+<span class="co">#Group means by pooled variances</span>
+(<span class="kw">mean</span>(women<span class="op">$</span>percent)<span class="op">-</span><span class="kw">mean</span>(men<span class="op">$</span>percent))<span class="op">/</span>sqrt_variance</code></pre></div>
+<pre><code>## [1] 1.143277</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#T.test</span>
+<span class="kw">t.test</span>(percent<span class="op">~</span>sex, <span class="dt">data=</span>tips)</code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  percent by sex
+## t = 1.1433, df = 206.76, p-value = 0.2542
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -0.006404119  0.024084498
+## sample estimates:
+## mean in group Female   mean in group Male 
+##            0.1664907            0.1576505</code></pre>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="multiple-linear-regression.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="standard-deviation-vs-standard-error.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

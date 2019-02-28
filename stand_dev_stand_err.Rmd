@@ -1,0 +1,5 @@
+# Standard deviation vs Standard error
+
+## Reference
+
+https://datascienceplus.com/standard-deviation-vs-standard-error/

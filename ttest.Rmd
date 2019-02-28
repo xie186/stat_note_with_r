@@ -1,0 +1,49 @@
+# T test
+
+## Calculate t-statistic step by step in R
+
+
+```{r}
+#load dataset
+library(reshape2)
+data(tips)
+
+```
+
+```{r}
+#create tip percent variable
+tips$percent=tips$tip/tips$total_bill
+```
+
+```{r}
+#Split dataset for ease
+splits<-split(tips, tips$sex)
+
+```
+
+```{r}
+#Save data sets
+women<-splits[[1]] 
+men<-splits[[2]]
+```
+
+```{r}
+#variance by group sample size
+var_women<-var(women$percent)/length(women$percent)
+var_men<-var(men$percent)/length(men$percent)
+```
+
+```{r}
+#Sum
+total_variance<-var_women+var_men
+```
+
+```{r}
+#Squre Root
+sqrt_variance<-sqrt(total_variance)
+
+#Group means by pooled variances
+(mean(women$percent)-mean(men$percent))/sqrt_variance
+#T.test
+t.test(percent~sex, data=tips)
+```

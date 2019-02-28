@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="multiple-linear-regression.html">
-<link rel="next" href="references.html">
+<link rel="prev" href="random-forest.html">
+<link rel="next" href="pca.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -211,16 +211,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references-and-resouces" class="section level1">
-<h1><span class="header-section-number">6</span> References and Resouces</h1>
+<div id="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data" class="section level1">
+<h1><span class="header-section-number">13</span> The rationale for using negative binomial distribution to model read count in RNA-seq data</h1>
+<p>Several tools for DEG detection (including DESeq2 and eageR) model read counts as a negative binomial (NB) distribution.</p>
+<p>The nagative binomial distribtion, especitally in its alternative parameterization, can be used as an alternative to the Poisson distribution. It is espectially useful for discrete data over an unbounded positive range whose sample variance exceeds the sample mean. In such cases, the observations are overdispersed with respect to a Poisson distribution, for which the mean is equal to the variance. Hence a Poison distribution is not an appropriate model. Since the negative binomial distribution has one more parameter than the Poisson distribution, the second parameter can be used to adjust the variance independently of the mean.</p>
+<p>Discrete data over an unbounded positive range is one way of saying ‘integer counts’.</p>
+<p>The negative binomial distribution also arises as a continuous mixture of Poisson distributions (i.e. a compound probability distribution) where the mixing distribution of the Poisson rate is a gamma distribution.&quot; The other important bit of information to know is that read counts for a sample in theory follow a Binomial(n,p) distribution, where n is the total number of reads and p is the probability of a read mapping to a specific gene. However, the binomial distribution is computationally inconvenient, since it involves computing factorials, and with millions of reads in each sample, the Poisson distribution (with lambda = n*p) is an excellent approximation to the Binomial while being far more mathematically tractable. So the Poisson noise quantifies the counting uncertainty, while the gamma distribution quantifies the variation in gene expression between replicates. The mixture of the two yields the negative binomial. See also section 2 of <a href="http://www.statsci.org/smyth/pubs/edgeRChapterPreprint.pdf" class="uri">http://www.statsci.org/smyth/pubs/edgeRChapterPreprint.pdf</a></p>
+<div id="reference-6" class="section level2">
+<h2><span class="header-section-number">13.1</span> Reference</h2>
+<p>What’s the rationale for using the negative binomial distribution to model read: <a href="https://support.bioconductor.org/p/84832/" class="uri">https://support.bioconductor.org/p/84832/</a></p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="multiple-linear-regression.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="random-forest.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pca.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

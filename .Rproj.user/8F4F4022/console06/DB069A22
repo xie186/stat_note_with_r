@@ -47,4 +47,95 @@ nohup.out                                   [01;34mViewBSdocker[0m
 ]0;/home/xie186/maize_phasiRNA$ git remote -v
 origin	https://github.com/xie186/maize_phasiRNA.git (fetch)
 origin	https://github.com/xie186/maize_phasiRNA.git (push)
+
 ]0;/home/xie186/maize_phasiRNA$ 
+]0;/home/xie186/maize_phasiRNA$ ls
+[0m[01;34mdata[0m  Maize_phasiRNA.html   pheatmap.ipynb  [01;34mresults[0m  [01;34msoftware[0m
+[01;34mdocs[0m  Maize_phasiRNA.ipynb  README.md       [01;34mscripts[0m
+]0;/home/xie186/maize_phasiRNA$ 
+]0;/home/xie186/maize_phasiRNA$ 
+]0;/home/xie186/maize_phasiRNA$ 
+]0;/home/xie186/maize_phasiRNA$ pwd
+/home/xie186/maize_phasiRNA
+]0;/home/xie186/maize_phasiRNA$ 
+]0;/home/xie186/maize_phasiRNA$ cd $PRO
+$PROJECT         $PROMPT_COMMAND  
+$ cd $PRO
+$PROJECT         $PROMPT_COMMAND  
+$ cd $PROK[KJECT
+]0;/media/xie186/easystore$ 
+]0;/media/xie186/easystore$ ls
+[0m[01;32mcmd1_update.sh[0m  [34;42mSystem Volume Information[0m  [01;32mWD Discovery.exe[0m                [34;42mWIC[0m
+[01;32mreadme.txt[0m      [01;32mUser Manual.url[0m            [01;32mWD Discovery for Mac.dmg[0m
+[34;42m$RECYCLE.BIN[0m    [34;42mWD Discovery[0m               [34;42mWD Software Offline Installers[0m
+]0;/media/xie186/easystore$ 
+]0;/media/xie186/easystore$ c[Kcd ~/statistics_with_R/
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ ls
+01_R_intro.Rmd                                        intro_dplyr.Rmd
+02_correlation_in_R.Rmd                               LICENSE
+12_multi_linear_regression.Rmd                        linear_model.Rmd
+77_multiple_regresssion_with_an_interaction_term.Rmd  missing_values.Rmd
+99_reference_resouce.Rmd                              ml_random_forest.Rmd
+bayesian_network.Rmd                                  neg_binomial_count.Rmd
+[0m[01;34m_book[0m                                                 PCA.Rmd
+[01;34m_bookdown_files[0m                                       plot_in_R.Rmd
+bookdown-minimal.Rproj                                QTLanalysis.Rmd
+_bookdown.yml                                         README.md
+code.R                                                reference.bib
+correlation_test.Rmd                                  stand_dev_stand_err.Rmd
+[01;34mdata[0m                                                  ttest.Rmd
+[01;34mdocs[0m                                                  Workspace.RData
+index.Rmd
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ vi ordered+[K_Rmd.[K[K[K[KRmd,[K.txt[C[C[C[C[1P ordered_Rmd.txt[C[C[C[1P ordered_Rmd.txt[C[Cl ordered_Rmd.txt[C[C[Cs ordered_Rmd.txt[C[C[C[C[C ordered_Rmd.txt[C[C[C[C[C* ordered_Rmd.txt[C[C[C[C[C[CR ordered_Rmd.txt[C[C[C[C[C[C[Cm ordered_Rmd.txt[C[C[C[C[C[C[C[Cd ordered_Rmd.txt[C[C[C[C[C[C[C[C[C[C ordered_Rmd.txt[C[C[C[C[C[C[C[C[C[C> ordered_Rmd.txt[C[C[C[C[C[C[C[C[C[C[C> ordered_Rmd.txt[C[C[C[C[C[C[C[C[C[C[C[C
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ vi ordered_Rmd.txt 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ vi sc[K[Kper[K[K[K[K[K[Kmkdir scripts
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ cd scripts/
+]0;/home/xie186/statistics_with_R/scripts$ 
+]0;/home/xie186/statistics_with_R/scripts$ cd ..
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ vi scripts/rename_Rmd.pl
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ [K$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ ls
+01_R_intro.Rmd                                        correlation_test.Rmd    PCA.Rmd
+02_correlation_in_R.Rmd                               [0m[01;34mdata[0m                    plot_in_R.Rmd
+12_multi_linear_regression.Rmd                        [01;34mdocs[0m                    QTLanalysis.Rmd
+77_multiple_regresssion_with_an_interaction_term.Rmd  index.Rmd               README.md
+99_reference_resouce.Rmd                              intro_dplyr.Rmd         reference.bib
+bayesian_network.Rmd                                  LICENSE                 [01;34mscripts[0m
+[01;34m_book[0m                                                 linear_model.Rmd        stand_dev_stand_err.Rmd
+[01;34m_bookdown_files[0m                                       missing_values.Rmd      ttest.Rmd
+bookdown-minimal.Rproj                                ml_random_forest.Rmd    Workspace.RData
+_bookdown.yml                                         neg_binomial_count.Rmd
+code.R                                                ordered_Rmd.txt
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ vi ordered_Rmd.txt 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ ls
+01_R_intro.Rmd                                        correlation_test.Rmd    PCA.Rmd
+02_correlation_in_R.Rmd                               [0m[01;34mdata[0m                    plot_in_R.Rmd
+12_multi_linear_regression.Rmd                        [01;34mdocs[0m                    QTLanalysis.Rmd
+77_multiple_regresssion_with_an_interaction_term.Rmd  index.Rmd               README.md
+99_reference_resouce.Rmd                              intro_dplyr.Rmd         reference.bib
+bayesian_network.Rmd                                  LICENSE                 [01;34mscripts[0m
+[01;34m_book[0m                                                 linear_model.Rmd        stand_dev_stand_err.Rmd
+[01;34m_bookdown_files[0m                                       missing_values.Rmd      ttest.Rmd
+bookdown-minimal.Rproj                                ml_random_forest.Rmd    Workspace.RData
+_bookdown.yml                                         neg_binomial_count.Rmd
+code.R                                                ordered_Rmd.txt
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ pwd
+/home/xie186/statistics_with_R
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ [K$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git add .

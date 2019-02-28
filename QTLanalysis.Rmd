@@ -2,7 +2,6 @@
 
 
 
-
 ## Reference
 
 STAT/BMI 877: Statistical Methods for Molecular Biology: https://www.biostat.wisc.edu/~kendzior/STAT877/

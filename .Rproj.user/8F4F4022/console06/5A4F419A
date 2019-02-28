@@ -1,1036 +1,0 @@
-
-
-
-]0;/home/xie186/statistics_with_R$ git clone https://github.com/yihui/bookdown-minimal.git
-Cloning into 'bookdown-minimal'...
-remote: Enumerating objects: 14, done.[K
-remote: Total 14 (delta 0), reused 0 (delta 0), pack-reused 14[K
-Unpacking objects:   7% (1/14)   Unpacking objects:  14% (2/14)   Unpacking objects:  21% (3/14)   Unpacking objects:  28% (4/14)   Unpacking objects:  35% (5/14)   Unpacking objects:  42% (6/14)   Unpacking objects:  50% (7/14)   Unpacking objects:  57% (8/14)   Unpacking objects:  64% (9/14)   Unpacking objects:  71% (10/14)   Unpacking objects:  78% (11/14)   Unpacking objects:  85% (12/14)   Unpacking objects:  92% (13/14)   Unpacking objects: 100% (14/14)   Unpacking objects: 100% (14/14), done.
-Checking connectivity... done.
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ ls
-[0m[01;34mbookdown-minimal[0m  multi_linear_regression.html  PCA.Rmd        S2_multiple_regresssion_with_an_interaction_term.Rmd
-[01;34mdata[0m              multi_linear_regression.Rmd   plot_in_R.Rmd  statistics_with_R.Rproj
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ cd bookdown-minimal/
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ ls
-bookdown-minimal.Rproj  index.Rmd  LICENSE  README.md
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ 
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ rm -rf .git
-.git/       .gitignore  
-$ rm -rf .git
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ 
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ 
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ ls
-bookdown-minimal.Rproj  index.Rmd  LICENSE  README.md
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ 
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ 
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ mv * ../
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ 
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ 
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ ls
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ 
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ 
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ 
-]0;/home/xie186/statistics_with_R/bookdown-minimal$ cd ..
-]0;/home/xie186/statistics_with_R$ ls
-
-[0m[01;34mbookdown-minimal[0m        index.Rmd                     multi_linear_regression.Rmd  README.md
-bookdown-minimal.Rproj  LICENSE                       PCA.Rmd                      S2_multiple_regresssion_with_an_interaction_term.Rmd
-[01;34mdata[0m                    multi_linear_regression.html  plot_in_R.Rmd                statistics_with_R.Rproj
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ rm -rf bookdown-minimal
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ ls
-bookdown-minimal.Rproj  LICENSE                       PCA.Rmd        S2_multiple_regresssion_with_an_interaction_term.Rmd
-[0m[01;34mdata[0m                    multi_linear_regression.html  plot_in_R.Rmd  statistics_with_R.Rproj
-index.Rmd               multi_linear_regression.Rmd   README.md
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ pwd
-/home/xie186/statistics_with_R
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ ls
-bookdown-minimal.Rproj  LICENSE                       PCA.Rmd        S2_multiple_regresssion_with_an_interaction_term.Rmd
-[0m[01;34mdata[0m                    multi_linear_regression.html  plot_in_R.Rmd  statistics_with_R.Rproj
-index.Rmd               multi_linear_regression.Rmd   README.md
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ echo "# stat_note_with_r" >> README.md
-]0;/home/xie186/statistics_with_R$ git init
-Initialized empty Git repository in /home/xie186/statistics_with_R/.git/
-]0;/home/xie186/statistics_with_R$ git add README.md
-]0;/home/xie186/statistics_with_R$ git commit -m "first commit"
-[master (root-commit) d84cc90] first commit
- Committer: Shaojun Xie <xie186@tabomics.local>
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly:
-
-    git config --global user.name "Your Name"
-    git config --global user.email you@example.com
-
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 1 file changed, 8 insertions(+)
- create mode 100644 README.md
-]0;/home/xie186/statistics_with_R$ git remote add origin https://github.com/xie186/stat_note_with_r.git
-]0;/home/xie186/statistics_with_R$ git push -u origin master
-error: cannot run rpostback-askpass: No such file or directory
-Username for 'https://github.com': xie186
-error: cannot run rpostback-askpass: No such file or directory
-Password for 'https://xie186@github.com': 
-Counting objects: 3, done.
-Delta compression using up to 4 threads.
-Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
-Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 490 bytes | 0 bytes/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/xie186/stat_note_with_r.git
- * [new branch]      master -> master
-Branch master set up to track remote branch master from origin.
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git add .
-
-git commit -=m  m ]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git commit -m :[K""U"o"d"a"[1P"[1P"[1P"p"d"a"t"e"
-[master bff0b53] Update
- Committer: Shaojun Xie <xie186@tabomics.local>
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly:
-
-    git config --global user.name "Your Name"
-    git config --global user.email you@example.com
-
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 113 files changed, 3439 insertions(+)
- create mode 100644 .Rproj.user/8F4F4022/console06/5A4F419A
- create mode 100644 .Rproj.user/8F4F4022/console06/5A4F419A.env
- create mode 100644 .Rproj.user/8F4F4022/console06/DB069A22
- create mode 100644 .Rproj.user/8F4F4022/console06/DB069A22.env
- create mode 100644 .Rproj.user/8F4F4022/console06/INDEX001
- create mode 100644 .Rproj.user/8F4F4022/pcs/files-pane.pper
- create mode 100644 .Rproj.user/8F4F4022/pcs/source-pane.pper
- create mode 100644 .Rproj.user/8F4F4022/pcs/windowlayoutstate.pper
- create mode 100644 .Rproj.user/8F4F4022/pcs/workbench-pane.pper
- create mode 100644 .Rproj.user/8F4F4022/persistent-state
- create mode 100644 .Rproj.user/8F4F4022/saved_source_markers
- create mode 100644 .Rproj.user/8F4F4022/sources/prop/1BE8C2BD
- create mode 100644 .Rproj.user/8F4F4022/sources/prop/3EC47E26
- create mode 100644 .Rproj.user/8F4F4022/sources/prop/54EF3952
- create mode 100644 .Rproj.user/8F4F4022/sources/prop/6650AAEE
- create mode 100644 .Rproj.user/8F4F4022/sources/prop/6DDDEFFA
- create mode 100644 .Rproj.user/8F4F4022/sources/prop/9D44723B
- create mode 100644 .Rproj.user/8F4F4022/sources/prop/B660A67A
- create mode 100644 .Rproj.user/8F4F4022/sources/prop/INDEX
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2D80E47F
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2D80E47F-contents
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E13D092-contents
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E21E68C
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E21E68C-contents
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/5012530B
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/5012530B-contents
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/9B4F0203
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/9B4F0203-contents
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/AE4A4304-contents
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/B7545371
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/B7545371-contents
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/D20268C5-contents
- create mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/lock_file
- create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000003.metadata
- create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000003.png
- create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000003.snapshot
- create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/chunks.json
- create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/csetup_chunk/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/s/chunks.json
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c1h3lr4xk6ho5/000004.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c4xd9cmukbsab/000009.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c4xd9cmukbsab/00000b.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c4xd9cmukbsab/00000c.metadata
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c4xd9cmukbsab/00000c.png
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c4xd9cmukbsab/00000c.snapshot
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c73jsudoweal9/00000b.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c73jsudoweal9/00000c.metadata
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c73jsudoweal9/00000c.png
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c73jsudoweal9/00000c.snapshot
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c89cywye0o834/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/c8omxjw27oni1/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cbmrlfm7p34lt/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chlimp0ajzzwe/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/00000b.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/00000d.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/00000f.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/000011.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/000012.metadata
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/000012.png
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chtlzdsd46kse/000012.snapshot
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chunks.json
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cloditcu6riai/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp1y8035w8cyj/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp1y8035w8cyj/000004.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp1y8035w8cyj/000005.metadata
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp1y8035w8cyj/000005.png
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp1y8035w8cyj/000005.snapshot
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp62t93r9ejex/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp62t93r9ejex/000003.metadata
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp62t93r9ejex/000003.png
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cp62t93r9ejex/000003.snapshot
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/csetup_chunk/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cyx4l7v6rrffy/000004.csv
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cyx4l7v6rrffy/000005.metadata
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cyx4l7v6rrffy/000005.png
- create mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/cyx4l7v6rrffy/000005.snapshot
- create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chj8gnyb16af5/000004.csv
- create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chj8gnyb16af5/000005.metadata
- create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chj8gnyb16af5/000005.rdf
- create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chunks.json
- create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/csetup_chunk/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/cah4uoz9t424x/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/cah4uoz9t424x/000003.metadata
- create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/cah4uoz9t424x/000003.rdf
- create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/chunks.json
- create mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/csetup_chunk/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/8F4F402255aa6e11/chunks.json
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/c842yke67oj2f/000006.csv
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/c842yke67oj2f/000007.metadata
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/c842yke67oj2f/000007.rdf
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cbyp85edkz6fh/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cbyp85edkz6fh/000003.metadata
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cbyp85edkz6fh/000003.rdf
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/chunks.json
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cknfhlj9txtfq/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/csetup_chunk/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cw3o4b22bg0vg/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cw3o4b22bg0vg/000003.metadata
- create mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cw3o4b22bg0vg/000003.rdf
- create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
- create mode 100644 .Rproj.user/shared/notebooks/paths
- create mode 100644 LICENSE
- create mode 100644 PCA.Rmd
- create mode 100644 S2_multiple_regresssion_with_an_interaction_term.Rmd
- create mode 100644 bookdown-minimal.Rproj
- create mode 100644 data/galton.csv
- create mode 100644 data/global_meth_lev.tsv
- create mode 100644 index.Rmd
- create mode 100644 multi_linear_regression.Rmd
- create mode 100644 multi_linear_regression.html
- create mode 100644 plot_in_R.Rmd
- create mode 100644 statistics_with_R.Rproj
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ ls
-bookdown-minimal.Rproj  LICENSE                       PCA.Rmd        S2_multiple_regresssion_with_an_interaction_term.Rmd
-[0m[01;34mdata[0m                    multi_linear_regression.html  plot_in_R.Rmd  statistics_with_R.Rproj
-index.Rmd               multi_linear_regression.Rmd   README.md
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ ls
-bookdown-minimal.Rproj  LICENSE                       PCA.Rmd        S2_multiple_regresssion_with_an_interaction_term.Rmd
-[0m[01;34mdata[0m                    multi_linear_regression.html  plot_in_R.Rmd  statistics_with_R.Rproj
-index.Rmd               multi_linear_regression.Rmd   README.md
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ b[Klibrary()b)o)o)k)d)o)w)n)
-bash: syntax error near unexpected token `bookdown'
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ library(bookdown)[C[C[C[C[C[C[C[C[C[C
-bash: syntax error near unexpected token `bookdown'
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ library(bookdown)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)()")")b")l")[1P")o")o")k")d")o")w")n")
-bash: syntax error near unexpected token `"bookdown"'
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ ^M[Kinstall.packages("bookdown")
-bash: syntax error near unexpected token `"bookdown"'
-[K$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git commit -m ""^C
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git c[Kadd .
-
-
-g]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git commimt -m ""U"p"d"a"t"e"
-git: 'commimt' is not a git command. See 'git --help'.
-
-Did you mean this?
-	commit
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git commimt -m "Update"[1P
-
-
-[master c6b6848] Update
- Committer: Shaojun Xie <xie186@tabomics.local>
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly:
-
-    git config --global user.name "Your Name"
-    git config --global user.email you@example.com
-
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 110 files changed, 3611 insertions(+), 1409 deletions(-)
- rewrite .Rproj.user/8F4F4022/console06/INDEX001 (92%)
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E13D092-contents
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E21E68C
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/AE4A4304-contents
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/D20268C5-contents
- delete mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000002.csv
- delete mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000003.metadata
- delete mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000003.png
- delete mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/cgke6zuw2qofr/000003.snapshot
- rewrite .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/chunks.json (100%)
- delete mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/csetup_chunk/000002.csv
- rewrite .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/chunks.json (100%)
- delete mode 100644 .Rproj.user/shared/notebooks/915CB6F-S2_multiple_regresssion_with_an_interaction_term/1/s/csetup_chunk/000002.csv
- delete mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chj8gnyb16af5/000004.csv
- delete mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chj8gnyb16af5/000005.metadata
- delete mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chj8gnyb16af5/000005.rdf
- rewrite .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chunks.json (90%)
- delete mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/csetup_chunk/000002.csv
- rewrite .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/chunks.json (100%)
- delete mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/s/csetup_chunk/000002.csv
- rewrite .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/8F4F402255aa6e11/chunks.json (100%)
- rewrite .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/chunks.json (100%)
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/csetup_chunk/000002.csv
- create mode 100644 .gitignore
- create mode 100644 01_R_intro.Rmd
- create mode 100644 02_correlation_in_R.Rmd
- rewrite PCA.Rmd (97%)
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-11-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-12-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-13-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-14-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-15-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-16-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-17-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-18-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-19-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-2-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-21-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-22-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-24-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-26-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-28-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-30-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-9-1.png
- create mode 100644 _book/basic-systax.html
- create mode 100644 _book/index.html
- create mode 100644 _book/libs/gitbook-2.6.7/css/fontawesome/fontawesome-webfont.ttf
- create mode 100644 _book/libs/gitbook-2.6.7/css/plugin-bookdown.css
- create mode 100644 _book/libs/gitbook-2.6.7/css/plugin-fontsettings.css
- create mode 100644 _book/libs/gitbook-2.6.7/css/plugin-highlight.css
- create mode 100644 _book/libs/gitbook-2.6.7/css/plugin-search.css
- create mode 100644 _book/libs/gitbook-2.6.7/css/style.css
- create mode 100644 _book/libs/gitbook-2.6.7/js/app.min.js
- create mode 100644 _book/libs/gitbook-2.6.7/js/jquery.highlight.js
- create mode 100644 _book/libs/gitbook-2.6.7/js/lunr.js
- create mode 100644 _book/libs/gitbook-2.6.7/js/plugin-bookdown.js
- create mode 100644 _book/libs/gitbook-2.6.7/js/plugin-fontsettings.js
- create mode 100644 _book/libs/gitbook-2.6.7/js/plugin-search.js
- create mode 100644 _book/libs/gitbook-2.6.7/js/plugin-sharing.js
- create mode 100644 _book/libs/jquery-2.2.3/jquery.min.js
- create mode 100644 _book/mrg.html
- create mode 100644 _book/multiple-linear-regression.html
- create mode 100644 _book/pca.html
- create mode 100644 _book/plot-in-r.html
- create mode 100644 _book/search_index.json
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-11-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-12-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-13-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-14-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-15-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-16-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-17-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-18-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-19-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-2-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-21-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-22-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-24-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-26-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-28-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-30-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-9-1.png
- delete mode 100644 multi_linear_regression.html
- delete mode 100644 statistics_with_R.Rproj
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-[K$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ p[wd
-> 
-> c^C
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ cd .
-]0;/home/xie186/statistics_with_R$ ls
-01_R_intro.Rmd                                        [0m[01;34m_bookdown_files[0m         Investigate.html  _main.Rmd                    reference.bib
-02_correlation_in_R.Rmd                               bookdown-minimal.Rproj  Investigate.log   multi_linear_regression.Rmd  Workspace.RData
-77_multiple_regresssion_with_an_interaction_term.Rmd  code.R                  Investigate.Rmd   PCA.Rmd
-99_reference_resouce.Rmd                              [01;34mdata[0m                    Investigate.tex   plot_in_R.Rmd
-[01;34m_book[0m                                                 index.Rmd               LICENSE           README.md
-]0;/home/xie186/statistics_with_R$ cd ..
-]0;/home/xie186$ ls
-[0m[01;32mABI_all_SNP.vcf[0m                     [01;34mGGPred[0m                                      [01;34mpearDB_anno[0m                               [01;34mtbDocker[0m
-[01;34manaconda3[0m                           [01;34mgithub_book[0m                                 PEAR.ipynb                                [01;34mtbDogDoc[0m
-[01;34mbin[0m                                 [01;34migv[0m                                         [01;34mperl5[0m                                     [01;34mtbDogSNPchip[0m
-[01;34mbiodocker_viewbs_bak[0m                inline-supplementary-material-1.xlsx_0.ods  [01;34mPictures[0m                                  [01;34mTemplates[0m
-[01;34mconda-bld[0m                           [01;34mjikai_data[0m                                  [01;34mPublic[0m                                    [01;34mtest[0m
-[01;36mdanshen_RNA_seq_metabolomics.ipynb[0m  [01;34mjupyter_nb[0m                                  [01;34mR[0m                                         test1
-[01;36mDESeq2_time_series.ipynb[0m            [01;34mKivyMD-master[0m                               requirements.txt                          [01;34mtest_ara[0m
-[01;34mDesktop[0m                             [01;31mKivyMD-master.zip[0m                           [01;31mresult_for_Xie_BJXNG18.tar.gz[0m             [01;34mtest_crispr[0m
-Dockerfile_ViewBS                   [01;34mkivy_test[0m                                   Rplots.pdf                                test.sh
-[01;34mdocker_test[0m                         [01;34mlib[0m                                         [01;34msalvia_RNA-seq[0m                            [01;34mtip4bioinformatics[0m
-[01;34mDocuments[0m                           [01;34mmaize_phasiRNA[0m                              [01;34mSinogene[0m                                  Untitled1.ipynb
-[01;34mdog_snp[0m                             [01;34mminiconda2[0m                                  [01;34msnakemake_academy[0m                         untitled_1.ods
-[01;34mdog_snp_chip[0m                        [01;34mminiconda3[0m                                  [01;34msnap[0m                                      Untitled2.ipynb
-DogWGS.ipynb                        mRNA_Phloem_vs_Xylem.DE_ALL.xls_0.ods       [01;34msoftware[0m                                  Untitled.ipynb
-[01;34mDownloads[0m                           [01;34mMusic[0m                                       [01;34mstatistics_with_R[0m                         [01;34mVideos[0m
-examples.desktop                    [01;34mncbi[0m                                        TabOmics_GeCKOdata_map_stat.xlsx_0_1.ods  [01;34mViewBSdocker[0m
-FastqSummaryF1L1.txt                nohup.out                                   TabOmics_GeCKOdata_map_stat.xlsx_0.ods
-[01;31mG2-2_S2_L001_R1_001.fastq.gz[0m        note_danshen.ipynb                          TabOmics_GeCKOdata_map_stat.xlsx_1.ods
-]0;/home/xie186$ 
-]0;/home/xie186$ cp -r statistics_with_R/ bioinfo_with_perl
-
-
-
-
-]0;/home/xie186$ 
-]0;/home/xie186$ 
-]0;/home/xie186$ 
-]0;/home/xie186$ 
-]0;/home/xie186$ cd bioinfo_with_perl/
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ ls
-01_R_intro.Rmd                                        [0m[01;34m_bookdown_files[0m         Investigate.html  _main.Rmd                    reference.bib
-02_correlation_in_R.Rmd                               bookdown-minimal.Rproj  Investigate.log   multi_linear_regression.Rmd  Workspace.RData
-77_multiple_regresssion_with_an_interaction_term.Rmd  code.R                  Investigate.Rmd   PCA.Rmd
-99_reference_resouce.Rmd                              [01;34mdata[0m                    Investigate.tex   plot_in_R.Rmd
-[01;34m_book[0m                                                 index.Rmd               LICENSE           README.md
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ 
-
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ vi data/wine
-wine.csv            wine_data_desc.tsv  
-$ vi data/wine_data_desc.tsv 
-01_R_intro.Rmd                                        Investigate.Rmd
-02_correlation_in_R.Rmd                               Investigate.tex
-03_regexp.Rmd                                         kegg_compound_id2map.pl
-77_multiple_regresssion_with_an_interaction_term.Rmd  LICENSE
-99_reference_resouce.Rmd                              _main.Rmd
-_book/                                                multi_linear_regression.Rmd
-_bookdown_files/                                      PCA.Rmd
-bookdown-minimal.Rproj                                plot_in_R.Rmd
-code.R                                                .RData
-data/                                                 README.md
-.git/                                                 reference.bib
-.gitignore                                            .Rhistory
-index.Rmd                                             .Rproj.user/
-Investigate.html                                      scripts/
-Investigate.log                                       Workspace.RData
-$ vi data/wine_data_desc.tsv 
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ vi data/wine_data_desc.tsv ^C
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ ls
-01_R_intro.Rmd                                        [0m[01;34m_book[0m                   index.Rmd         kegg_compound_id2map.pl      plot_in_R.Rmd
-02_correlation_in_R.Rmd                               [01;34m_bookdown_files[0m         Investigate.html  LICENSE                      README.md
-03_regexp.Rmd                                         bookdown-minimal.Rproj  Investigate.log   _main.Rmd                    reference.bib
-77_multiple_regresssion_with_an_interaction_term.Rmd  code.R                  Investigate.Rmd   multi_linear_regression.Rmd  [01;34mscripts[0m
-99_reference_resouce.Rmd                              [01;34mdata[0m                    Investigate.tex   PCA.Rmd                      Workspace.RData
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ vi data/[K[K[K[K[K[K[K[Kpwd
-/home/xie186/bioinfo_with_perl
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ ca[K[Kcd ../[K[K[K[K[K[Kmv data/
-galton.csv                  global_meth_lev.tsv         regexp_kegg_compund_id.txt  wine.csv                    wine_data_desc.tsv
-$ mv data/wein[K[K[Kine_data_desc.tsv 
-01_R_intro.Rmd                                        Investigate.Rmd
-02_correlation_in_R.Rmd                               Investigate.tex
-03_regexp.Rmd                                         kegg_compound_id2map.pl
-77_multiple_regresssion_with_an_interaction_term.Rmd  LICENSE
-99_reference_resouce.Rmd                              _main.Rmd
-_book/                                                multi_linear_regression.Rmd
-_bookdown_files/                                      PCA.Rmd
-bookdown-minimal.Rproj                                plot_in_R.Rmd
-code.R                                                .RData
-data/                                                 README.md
-.git/                                                 reference.bib
-.gitignore                                            .Rhistory
-index.Rmd                                             .Rproj.user/
-Investigate.html                                      scripts/
-Investigate.log                                       Workspace.RData
-$ mv data/wine_data_desc.tsv ../../st[K[K[K[K[Kstatistics_with_R/data/
-]0;/home/xie186/bioinfo_with_perl$ 
-[K$ 
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ git add .
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ pwd
-/home/xie186/bioinfo_with_perl
-]0;/home/xie186/bioinfo_with_perl$ cd ..[K[K[K[K[Kgit ocmmi[K[K[K[K[Kcommit -m ""U"p"d"a"t"e"
-
-
-[master 20f4d1a] Update
- Committer: Shaojun Xie <xie186@tabomics.local>
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly:
-
-    git config --global user.name "Your Name"
-    git config --global user.email you@example.com
-
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 26 files changed, 432 insertions(+), 474 deletions(-)
- rewrite .Rproj.user/8F4F4022/console06/INDEX001 (93%)
- rewrite .Rproj.user/8F4F4022/persistent-state (97%)
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2D80E47F
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2D80E47F-contents
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E21E68C-contents
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/5012530B
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/5012530B-contents
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/9B4F0203
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/9B4F0203-contents
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/B7545371
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/B7545371-contents
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/lock_file
- create mode 100644 03_regexp.Rmd
- create mode 100644 data/regexp_kegg_compund_id.txt
- create mode 100644 data/wine.csv
- create mode 100644 kegg_compound_id2map.pl
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ 
-]0;/home/xie186/bioinfo_with_perl$ cd ..
-]0;/home/xie186$ ls
-[0m[01;32mABI_all_SNP.vcf[0m                             [01;34mjupyter_nb[0m                             [01;34msnakemake_academy[0m
-[01;34manaconda3[0m                                   [01;34mKivyMD-master[0m                          [01;34msnap[0m
-[01;34mbin[0m                                         [01;31mKivyMD-master.zip[0m                      [01;34msoftware[0m
-[01;34mbiodocker_viewbs_bak[0m                        [01;34mkivy_test[0m                              [01;34mstatistics_with_R[0m
-[01;34mbioinfo_with_perl[0m                           [01;34mlib[0m                                    TabOmics_GeCKOdata_map_stat.xlsx_0_1.ods
-[01;34mconda-bld[0m                                   [01;34mmaize_phasiRNA[0m                         TabOmics_GeCKOdata_map_stat.xlsx_0.ods
-[01;36mdanshen_RNA_seq_metabolomics.ipynb[0m          [01;34mminiconda2[0m                             TabOmics_GeCKOdata_map_stat.xlsx_1.ods
-[01;36mDESeq2_time_series.ipynb[0m                    [01;34mminiconda3[0m                             [01;34mtbDocker[0m
-[01;34mDesktop[0m                                     mRNA_Phloem_vs_Xylem.DE_ALL.xls_0.ods  [01;34mtbDogDoc[0m
-Dockerfile_ViewBS                           [01;34mMusic[0m                                  [01;34mtbDogSNPchip[0m
-[01;34mdocker_test[0m                                 [01;34mncbi[0m                                   [01;34mTemplates[0m
-[01;34mDocuments[0m                                   nohup.out                              [01;34mtest[0m
-[01;34mdog_snp[0m                                     note_danshen.ipynb                     test1
-[01;34mdog_snp_chip[0m                                [01;34mpearDB_anno[0m                            [01;34mtest_ara[0m
-DogWGS.ipynb                                PEAR.ipynb                             [01;34mtest_crispr[0m
-[01;34mDownloads[0m                                   [01;34mperl5[0m                                  test.sh
-examples.desktop                            [01;34mPictures[0m                               [01;34mtip4bioinformatics[0m
-FastqSummaryF1L1.txt                        [01;34mPublic[0m                                 Untitled1.ipynb
-[01;31mG2-2_S2_L001_R1_001.fastq.gz[0m                [01;34mR[0m                                      untitled_1.ods
-[01;34mGGPred[0m                                      requirements.txt                       Untitled2.ipynb
-[01;34mgithub_book[0m                                 [01;31mresult_for_Xie_BJXNG18.tar.gz[0m          Untitled.ipynb
-[01;34migv[0m                                         Rplots.pdf                             [01;34mVideos[0m
-inline-supplementary-material-1.xlsx_0.ods  [01;34msalvia_RNA-seq[0m                         [01;34mViewBSdocker[0m
-[01;34mjikai_data[0m                                  [01;34mSinogene[0m
-]0;/home/xie186$ cd statistics_with_R/
-]0;/home/xie186/statistics_with_R$ ls
-01_R_intro.Rmd                                        [0m[01;34m_book[0m                   [01;34mdata[0m                         PCA.Rmd        Workspace.RData
-02_correlation_in_R.Rmd                               [01;34m_bookdown_files[0m         index.Rmd                    plot_in_R.Rmd
-77_multiple_regresssion_with_an_interaction_term.Rmd  bookdown-minimal.Rproj  LICENSE                      README.md
-99_reference_resouce.Rmd                              code.R                  multi_linear_regression.Rmd  reference.bib
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git add .
-
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git oc[K[Kcommit -m ""U"p"d"a"t"e"
-
-[master cf03a27] Update
- Committer: Shaojun Xie <xie186@tabomics.local>
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly:
-
-    git config --global user.name "Your Name"
-    git config --global user.email you@example.com
-
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 64 files changed, 4089 insertions(+), 938 deletions(-)
- rewrite .Rproj.user/8F4F4022/console06/INDEX001 (93%)
- rewrite .Rproj.user/8F4F4022/persistent-state (97%)
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2D80E47F
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/2E21E68C-contents
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/9B4F0203
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/B7545371
- delete mode 100644 .Rproj.user/shared/notebooks/A4ACD872-plot_in_R/1/8F4F402255aa6e11/chunks.json
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/8F4F402255aa6e11/chunks.json
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-27-1.png
- rewrite _book/_main_files/figure-html/unnamed-chunk-28-1.png (99%)
- rewrite _book/_main_files/figure-html/unnamed-chunk-29-1.png (98%)
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-29-2.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-34-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-34-2.png
- copy _bookdown_files/_main_files/figure-html/unnamed-chunk-29-1.png => _book/_main_files/figure-html/unnamed-chunk-36-1.png (100%)
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-37-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-38-1.png
- create mode 100644 _book/_main_files/figure-html/unnamed-chunk-40-1.png
- create mode 100644 _book/visulization-of-pair-wise-correlation-in-r.html
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-27-1.png
- rewrite _bookdown_files/_main_files/figure-html/unnamed-chunk-28-1.png (99%)
- rewrite _bookdown_files/_main_files/figure-html/unnamed-chunk-29-1.png (98%)
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-29-2.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-34-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-34-2.png
- copy _book/_main_files/figure-html/unnamed-chunk-29-1.png => _bookdown_files/_main_files/figure-html/unnamed-chunk-36-1.png (100%)
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-37-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-38-1.png
- create mode 100644 _bookdown_files/_main_files/figure-html/unnamed-chunk-40-1.png
- delete mode 100644 _main.Rmd
- rename Investigate.Rmd => data/Investigate.Rmd (97%)
- rename Investigate.html => data/Investigate.html (100%)
- rename Investigate.log => data/Investigate.log (100%)
- rename Investigate.tex => data/Investigate.tex (100%)
- create mode 100644 data/wine.csv
- create mode 100644 data/wine_data_desc.tsv
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git push origin [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ pwd
-/home/xie186/statistics_with_R
-]0;/home/xie186/statistics_with_R$ 
-[K$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ cd data/
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ wget https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/msleep_ggplot2.csv
---2019-02-22 08:55:55--  https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/msleep_ggplot2.csv
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.184.133
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.184.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 5993 (5.9K) [text/plain]
-Saving to: ‘msleep_ggplot2.csv’
-
-msleep_ggplot2.csv                       0%[                                                                          ]       0  --.-KB/s               msleep_ggplot2.csv                     100%[=========================================================================>]   5.85K  --.-KB/s    in 0s      
-
-2019-02-22 08:55:55 (61.7 MB/s) - ‘msleep_ggplot2.csv’ saved [5993/5993]
-
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ pwd
-/home/xie186/statistics_with_R
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ ls
-01_R_intro.Rmd                                        [0m[01;34mdata[0m
-02_correlation_in_R.Rmd                               index.Rmd
-12_multi_linear_regression.Rmd                        LICENSE
-77_multiple_regresssion_with_an_interaction_term.Rmd  missing_values.Rmd
-99_reference_resouce.Rmd                              PCA.Rmd
-[01;34m_book[0m                                                 plot_in_R.Rmd
-[01;34m_bookdown_files[0m                                       README.md
-bookdown-minimal.Rproj                                reference.bib
-code.R                                                Workspace.RData
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git add .
-
-
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git commit -m ""D"e"a"l"l"i"n"g" "w"i"t"h" "m"i"s"s"i"n"g" "v"a"l"u"e"s"[1P
-
-
-*** Please tell me who you are.
-
-Run
-
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
-
-to set your account's default identity.
-Omit --global to set the identity only in this repository.
-
-fatal: unable to auto-detect email address (got 'xie186@way.(none)')
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git config --global user.email "[K
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ ^C
-]0;/home/xie186/statistics_with_R$ git config --global user.email [1P[1P[1P[1P[1P[1P[1@l[1@o[1@c[1@a[1@l[C[C[C[C[C[C[C[C[C[C[C[Cx[K""x"i"e"1"8"6"@"t"[1P"p"u"r"d"u"e"."e"d"u"
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git config --local user.email "xie186@purdue.edu"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P "xie186"[1P "xie186"[1P "xie186"[1P "xie186"[1P "xie186"n "xie186"a "xie186"m "xie186"e "xie186"
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git config --local user.name "xie186"email "xie186@purdue.edu"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18Pglobal user.email [C[C[C[C[C[C[C[Cmmit -m "Dealing with missing values"
-[master 9937db8] Dealing with missing values
- 30 files changed, 304 insertions(+), 49 deletions(-)
- rewrite .Rproj.user/8F4F4022/console06/INDEX001 (93%)
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/c842yke67oj2f/000006.csv
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/c842yke67oj2f/000007.metadata
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/c842yke67oj2f/000007.rdf
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cbyp85edkz6fh/000002.csv
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cbyp85edkz6fh/000003.metadata
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cbyp85edkz6fh/000003.rdf
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/chunks.json
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cknfhlj9txtfq/000002.csv
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cw3o4b22bg0vg/000002.csv
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cw3o4b22bg0vg/000003.metadata
- delete mode 100644 .Rproj.user/shared/notebooks/BD3E01F0-multi_linear_regression/1/s/cw3o4b22bg0vg/000003.rdf
- rename multi_linear_regression.Rmd => 12_multi_linear_regression.Rmd (100%)
- create mode 100644 data/msleep_ggplot2.csv
- create mode 100644 missing_values.Rmd
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git push origin master[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ pwd
-/home/xie186/statistics_with_R
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ [K$ 
-]0;/home/xie186/statistics_with_R$ 
-[K$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ ls
-01_R_intro.Rmd                                        bookdown-minimal.Rproj  linear_model.Rmd
-02_correlation_in_R.Rmd                               code.R                  missing_values.Rmd
-12_multi_linear_regression.Rmd                        correlation_test.Rmd    PCA.Rmd
-77_multiple_regresssion_with_an_interaction_term.Rmd  [0m[01;34mdata[0m                    plot_in_R.Rmd
-99_reference_resouce.Rmd                              index.Rmd               README.md
-[01;34m_book[0m                                                 intro_dplyr.Rmd         reference.bib
-[01;34m_bookdown_files[0m                                       LICENSE                 Workspace.RData
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git a[K[K[K[K[Kgit push orgi[K[King [K[K[Kgin master
-error: cannot run rpostback-askpass: No such file or directory
-Username for 'https://github.com': xie186
-error: cannot run rpostback-askpass: No such file or directory
-Password for 'https://xie186@github.com': 
-Counting objects: 251   Counting objects: 422, done.
-
-
-
-Delta compression using up to 4 threads.
-Compressing objects:   0% (1/346)   Compressing objects:   1% (4/346)   Compressing objects:   2% (7/346)   Compressing objects:   3% (11/346)   Compressing objects:   4% (14/346)   Compressing objects:   5% (18/346)   Compressing objects:   6% (21/346)   Compressing objects:   7% (25/346)   Compressing objects:   8% (28/346)   Compressing objects:   9% (32/346)   Compressing objects:  10% (35/346)   Compressing objects:  11% (39/346)   Compressing objects:  12% (42/346)   Compressing objects:  13% (45/346)   Compressing objects:  14% (49/346)   Compressing objects:  15% (52/346)   Compressing objects:  16% (56/346)   Compressing objects:  17% (59/346)   Compressing objects:  18% (63/346)   Compressing objects:  19% (66/346)   Compressing objects:  20% (70/346)   Compressing objects:  21% (73/346)   Compressing objects:  22% (77/346)   Compressing objects:  23% (80/346)   Compressing objects:  24% (84/346)   Compressing objects:  25% (87/346)   Compressing objects:  26% (90/346)   Compressing objects:  27% (94/346)   Compressing objects:  28% (97/346)   Compressing objects:  29% (101/346)   Compressing objects:  30% (104/346)   Compressing objects:  31% (108/346)   Compressing objects:  32% (111/346)   Compressing objects:  33% (115/346)   Compressing objects:  34% (118/346)   Compressing objects:  35% (122/346)   Compressing objects:  36% (125/346)   Compressing objects:  37% (129/346)   Compressing objects:  38% (132/346)   Compressing objects:  39% (135/346)   Compressing objects:  40% (139/346)   Compressing objects:  41% (142/346)   Compressing objects:  42% (146/346)   Compressing objects:  43% (149/346)   Compressing objects:  44% (153/346)   Compressing objects:  45% (156/346)   Compressing objects:  46% (160/346)   Compressing objects:  47% (163/346)   Compressing objects:  48% (167/346)   Compressing objects:  49% (170/346)   Compressing objects:  50% (173/346)   Compressing objects:  51% (177/346)   Compressing objects:  52% (180/346)   Compressing objects:  53% (184/346)   Compressing objects:  54% (187/346)   Compressing objects:  55% (191/346)   Compressing objects:  56% (194/346)   Compressing objects:  57% (198/346)   Compressing objects:  58% (201/346)   Compressing objects:  59% (205/346)   Compressing objects:  60% (208/346)   Compressing objects:  61% (212/346)   Compressing objects:  62% (215/346)   Compressing objects:  63% (218/346)   Compressing objects:  64% (222/346)   Compressing objects:  65% (225/346)   Compressing objects:  66% (229/346)   Compressing objects:  67% (232/346)   Compressing objects:  68% (236/346)   Compressing objects:  69% (239/346)   Compressing objects:  70% (243/346)   Compressing objects:  71% (246/346)   Compressing objects:  72% (250/346)   Compressing objects:  73% (253/346)   Compressing objects:  74% (257/346)   Compressing objects:  75% (260/346)   Compressing objects:  76% (263/346)   Compressing objects:  77% (267/346)   Compressing objects:  78% (270/346)   Compressing objects:  79% (274/346)   Compressing objects:  80% (277/346)   Compressing objects:  81% (281/346)   Compressing objects:  82% (284/346)   Compressing objects:  83% (288/346)   Compressing objects:  84% (291/346)   Compressing objects:  85% (295/346)   Compressing objects:  86% (298/346)   Compressing objects:  87% (302/346)   Compressing objects:  88% (305/346)   Compressing objects:  89% (308/346)   Compressing objects:  90% (312/346)   Compressing objects:  91% (315/346)   Compressing objects:  92% (319/346)   Compressing objects:  93% (322/346)   Compressing objects:  94% (326/346)   Compressing objects:  95% (329/346)   Compressing objects:  96% (333/346)   Compressing objects:  97% (336/346)   Compressing objects:  98% (340/346)   Compressing objects:  99% (343/346)   Compressing objects: 100% (346/346)   Compressing objects: 100% (346/346), done.
-Writing objects:   0% (1/422)   Writing objects:   1% (5/422)   Writing objects:   2% (9/422)   Writing objects:   3% (13/422)   Writing objects:   4% (17/422)   Writing objects:   5% (23/422)   Writing objects:   6% (26/422)   Writing objects:   7% (30/422)   Writing objects:   8% (34/422)   Writing objects:   9% (39/422)   Writing objects:  10% (44/422)   Writing objects:  11% (47/422)   Writing objects:  12% (51/422)   Writing objects:  13% (55/422)   Writing objects:  14% (60/422)   Writing objects:  15% (65/422)   Writing objects:  16% (68/422)   Writing objects:  17% (72/422)   Writing objects:  18% (76/422)   Writing objects:  19% (81/422)   Writing objects:  20% (85/422), 1.05 MiB | 1.50 MiB/s   Writing objects:  21% (89/422), 1.05 MiB | 1.50 MiB/s   Writing objects:  21% (92/422), 1.05 MiB | 1.50 MiB/s   Writing objects:  22% (93/422), 1.05 MiB | 1.50 MiB/s   Writing objects:  23% (98/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  24% (102/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  25% (106/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  26% (110/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  27% (114/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  28% (119/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  29% (123/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  30% (127/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  31% (131/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  32% (136/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  33% (140/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  34% (144/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  35% (148/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  36% (152/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  37% (157/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  38% (161/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  39% (165/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  40% (169/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  41% (174/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  42% (178/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  43% (182/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  44% (186/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  45% (190/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  46% (195/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  47% (199/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  48% (203/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  49% (207/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  50% (211/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  51% (216/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  52% (220/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  53% (225/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  54% (228/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  55% (233/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  56% (237/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  57% (241/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  58% (245/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  59% (249/422), 2.50 MiB | 2.05 MiB/s   Writing objects:  60% (254/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  61% (258/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  62% (262/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  63% (266/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  64% (271/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  65% (275/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  66% (279/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  67% (283/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  68% (287/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  69% (292/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  70% (296/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  71% (300/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  72% (304/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  73% (309/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  74% (313/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  75% (317/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  76% (321/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  77% (325/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  78% (330/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  79% (334/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  80% (338/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  81% (342/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  82% (347/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  82% (350/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  83% (351/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  84% (355/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  85% (359/422), 4.29 MiB | 2.49 MiB/s   Writing objects:  85% (360/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  86% (363/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  87% (368/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  88% (372/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  89% (376/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  90% (380/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  91% (385/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  92% (389/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  93% (393/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  94% (397/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  95% (401/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  96% (406/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  97% (410/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  98% (414/422), 8.81 MiB | 2.72 MiB/s   Writing objects:  99% (418/422), 8.81 MiB | 2.72 MiB/s   Writing objects: 100% (422/422), 8.81 MiB | 2.72 MiB/s   Writing objects: 100% (422/422), 9.53 MiB | 2.72 MiB/s, done.
-Total 422 (delta 131), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/131)   [Kremote: Resolving deltas:   3% (4/131)   [Kremote: Resolving deltas:   6% (8/131)   [Kremote: Resolving deltas:   9% (12/131)   [Kremote: Resolving deltas:  12% (16/131)   [Kremote: Resolving deltas:  13% (18/131)   [Kremote: Resolving deltas:  16% (22/131)   [Kremote: Resolving deltas:  19% (26/131)   [Kremote: Resolving deltas:  24% (32/131)   [Kremote: Resolving deltas:  27% (36/131)   [Kremote: Resolving deltas:  28% (37/131)   [Kremote: Resolving deltas:  29% (38/131)   [Kremote: Resolving deltas:  36% (48/131)   [Kremote: Resolving deltas:  38% (51/131)   [Kremote: Resolving deltas:  39% (52/131)   [Kremote: Resolving deltas:  41% (54/131)   [Kremote: Resolving deltas:  54% (72/131)   [Kremote: Resolving deltas:  57% (75/131)   [Kremote: Resolving deltas:  60% (79/131)   [Kremote: Resolving deltas:  61% (80/131)   [Kremote: Resolving deltas:  64% (85/131)   [Kremote: Resolving deltas:  79% (104/131)   [Kremote: Resolving deltas:  80% (106/131)   [Kremote: Resolving deltas:  82% (108/131)   [Kremote: Resolving deltas:  83% (109/131)   [Kremote: Resolving deltas:  87% (115/131)   [Kremote: Resolving deltas:  88% (116/131)   [Kremote: Resolving deltas:  89% (117/131)   [Kremote: Resolving deltas:  90% (118/131)   [Kremote: Resolving deltas:  91% (120/131)   [Kremote: Resolving deltas:  92% (121/131)   [Kremote: Resolving deltas:  94% (124/131)   [Kremote: Resolving deltas:  95% (125/131)   [Kremote: Resolving deltas:  96% (126/131)   [Kremote: Resolving deltas:  99% (130/131)   [Kremote: Resolving deltas: 100% (131/131)   [Kremote: Resolving deltas: 100% (131/131), done.[K
-To https://github.com/xie186/stat_note_with_r.git
-   d84cc90..9937db8  master -> master
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git remote -v
-origin	https://github.com/xie186/stat_note_with_r.git (fetch)
-origin	https://github.com/xie186/stat_note_with_r.git (push)
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ vi README.md 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git add .
-
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git commit -m ""U"p"d"a"t"e"
-
-
-[master 88349c4] Update
- 17 files changed, 220 insertions(+), 54 deletions(-)
- rewrite .Rproj.user/8F4F4022/console06/INDEX001 (93%)
- delete mode 100644 .Rproj.user/8F4F4022/sources/s-55aa6e11/5012530B
- delete mode 100644 .Rproj.user/shared/notebooks/4430466A-PCA/1/8F4F402255aa6e11/chunks.json
- rewrite README.md (95%)
- create mode 100644 correlation_test.Rmd
- create mode 100644 intro_dplyr.Rmd
- create mode 100644 linear_model.Rmd
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git push origin master
-error: cannot run rpostback-askpass: No such file or directory
-Username for 'https://github.com': xie186
-error: cannot run rpostback-askpass: No such file or directory
-Password for 'https://xie186@github.com': 
-Counting objects: 27, done.
-Delta compression using up to 4 threads.
-Compressing objects:   4% (1/22)   Compressing objects:   9% (2/22)   Compressing objects:  13% (3/22)   Compressing objects:  18% (4/22)   Compressing objects:  22% (5/22)   Compressing objects:  27% (6/22)   Compressing objects:  31% (7/22)   Compressing objects:  36% (8/22)   Compressing objects:  40% (9/22)   Compressing objects:  45% (10/22)   Compressing objects:  50% (11/22)   Compressing objects:  54% (12/22)   Compressing objects:  59% (13/22)   Compressing objects:  63% (14/22)   Compressing objects:  68% (15/22)   Compressing objects:  72% (16/22)   Compressing objects:  77% (17/22)   Compressing objects:  81% (18/22)   Compressing objects:  86% (19/22)   Compressing objects:  90% (20/22)   Compressing objects:  95% (21/22)   Compressing objects: 100% (22/22)   Compressing objects: 100% (22/22), done.
-Writing objects:   3% (1/27)   Writing objects:   7% (2/27)   Writing objects:  11% (3/27)   Writing objects:  14% (4/27)   Writing objects:  18% (5/27)   Writing objects:  22% (6/27)   Writing objects:  25% (7/27)   Writing objects:  29% (8/27)   Writing objects:  33% (9/27)   Writing objects:  37% (10/27)   Writing objects:  40% (11/27)   Writing objects:  44% (12/27)   Writing objects:  48% (13/27)   Writing objects:  51% (14/27)   Writing objects:  55% (15/27)   Writing objects:  59% (16/27)   Writing objects:  62% (17/27)   Writing objects:  66% (18/27)   Writing objects:  70% (19/27)   Writing objects:  74% (20/27)   Writing objects:  77% (21/27)   Writing objects:  81% (22/27)   Writing objects:  85% (23/27)   Writing objects:  88% (24/27)   Writing objects:  92% (25/27)   Writing objects:  96% (26/27)   Writing objects: 100% (27/27)   Writing objects: 100% (27/27), 6.04 KiB | 0 bytes/s, done.
-Total 27 (delta 10), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/10)   [Kremote: Resolving deltas:  10% (1/10)   [Kremote: Resolving deltas:  20% (2/10)   [Kremote: Resolving deltas:  30% (3/10)   [Kremote: Resolving deltas:  40% (4/10)   [Kremote: Resolving deltas:  50% (5/10)   [Kremote: Resolving deltas:  60% (6/10)   [Kremote: Resolving deltas:  70% (7/10)   [Kremote: Resolving deltas:  80% (8/10)   [Kremote: Resolving deltas:  90% (9/10)   [Kremote: Resolving deltas: 100% (10/10)   [Kremote: Resolving deltas: 100% (10/10), completed with 10 local objects.[K
-To https://github.com/xie186/stat_note_with_r.git
-   9937db8..88349c4  master -> master
-]0;/home/xie186/statistics_with_R$ [K$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 成都[K[Kcd data/
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ ls
-galton.csv           Investigate.log  msleep_ggplot2.csv
-global_meth_lev.tsv  Investigate.Rmd  wine.csv
-Investigate.html     Investigate.tex  wine_data_desc.tsv
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ wget http://www.bnlearn.com/research/genetics14/prepd-magic.txt.xz
---2019-02-25 20:55:27--  http://www.bnlearn.com/research/genetics14/prepd-magic.txt.xz
-Resolving www.bnlearn.com (www.bnlearn.com)... 176.58.124.98
-Connecting to www.bnlearn.com (www.bnlearn.com)|176.58.124.98|:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 394188 (385K) [application/octet-stream]
-Saving to: ‘prepd-magic.txt.xz’
-
-prepd-magic.txt.xz      0%[                          ]       0  --.-KB/s               prepd-magic.txt.xz     26%[=====>                    ] 102.92K   393KB/s               prepd-magic.txt.xz    100%[=========================>] 384.95K  1.04MB/s    in 0.4s    
-
-2019-02-25 20:55:28 (1.04 MB/s) - ‘prepd-magic.txt.xz’ saved [394188/394188]
-
-]0;/home/xie186/statistics_with_R/data$ tar zxvf http://www.bnlearn.com/research/genetics14/prepd-magic.txt.xz
-tar (child): Cannot connect to http: resolve failed
-
-gzip: stdin: unexpected end of file
-tar: Child returned status 128
-tar: Error is not recoverable: exiting now
-]0;/home/xie186/statistics_with_R/data$ installl[K.packages()")")n")[1P")b")n")l")e")a")r")n")
-bash: syntax error near unexpected token `"bnlearn"'
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ install.packages("bnlearn")[C[Ctar zxvf http://www.bnlearn.com/research/genetics14/prepd-magic.txt.xz[C[C^C
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ git add .
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ git comi[Kmit -m ""U"p"d"a"t"e"
-
-[master 0ef8f8f] Update
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 data/prepd-magic.txt.xz
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ git push origin master
-error: cannot run rpostback-askpass: No such file or directory
-Username for 'https://github.com': xie186
-error: cannot run rpostback-askpass: No such file or directory
-Password for 'https://xie186@github.com': 
-Counting objects: 4, done.
-Delta compression using up to 4 threads.
-Compressing objects:  25% (1/4)   Compressing objects:  50% (2/4)   Compressing objects:  75% (3/4)   Compressing objects: 100% (4/4)   Compressing objects: 100% (4/4), done.
-Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects: 100% (4/4)   Writing objects: 100% (4/4), 385.40 KiB | 0 bytes/s, done.
-Total 4 (delta 2), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
-To https://github.com/xie186/stat_note_with_r.git
-   88349c4..0ef8f8f  master -> master
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ git remote -v
-origin	https://github.com/xie186/stat_note_with_r.git (fetch)
-origin	https://github.com/xie186/stat_note_with_r.git (push)
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ ls
-galton.csv           Investigate.log  msleep_ggplot2.csv  wine_data_desc.tsv
-global_meth_lev.tsv  Investigate.Rmd  [0m[01;31mprepd-magic.txt.xz[0m
-Investigate.html     Investigate.tex  wine.csv
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ pwd
-/home/xie186/statistics_with_R/data
-]0;/home/xie186/statistics_with_R/data$ 
-]0;/home/xie186/statistics_with_R/data$ cd ..
-]0;/home/xie186/statistics_with_R$ ls
-01_R_intro.Rmd                                        [0m[01;34mdata[0m
-02_correlation_in_R.Rmd                               [01;34mdocs[0m
-12_multi_linear_regression.Rmd                        index.Rmd
-77_multiple_regresssion_with_an_interaction_term.Rmd  intro_dplyr.Rmd
-99_reference_resouce.Rmd                              LICENSE
-bayesian_network.Rmd                                  linear_model.Rmd
-[01;34m_book[0m                                                 missing_values.Rmd
-[01;34m_bookdown_files[0m                                       PCA.Rmd
-bookdown-minimal.Rproj                                plot_in_R.Rmd
-_bookdown.yml                                         README.md
-code.R                                                reference.bib
-correlation_test.Rmd                                  Workspace.RData
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git add .
-
-gi]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git commit -m ""U"p"d"a"t"e"
-
-[master f0a7506] Update
- 114 files changed, 14991 insertions(+), 6 deletions(-)
- create mode 100644 _bookdown.yml
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-11-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-14-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-16-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-2-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-20-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-23-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-26-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-27-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-27-2.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-28-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-29-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-32-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-33-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-33-2.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-34-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-35-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-37-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-39-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-40-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-41-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-41-2.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-43-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-45-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-46-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-46-2.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-47-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-47-2.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-48-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-49-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-50-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-52-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-52-2.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-54-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-55-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-56-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-58-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-8-1.png
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-9-1.png
- create mode 100644 bayesian_network.Rmd
- create mode 100644 docs/basic-systax.html
- create mode 100644 docs/bayesian-newwork-in-r.html
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-11-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-14-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-16-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-2-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-20-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-23-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-26-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-27-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-27-2.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-28-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-29-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-32-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-33-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-33-2.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-34-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-35-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-37-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-39-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-40-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-41-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-41-2.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-43-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-45-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-46-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-46-2.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-47-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-47-2.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-48-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-49-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-50-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-52-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-52-2.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-54-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-55-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-56-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-58-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-8-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-9-1.png
- create mode 100644 docs/correlation-test.html
- create mode 100644 docs/index.html
- create mode 100644 docs/joining-data-in-r-with-dplyr.html
- create mode 100644 docs/libs/gitbook-2.6.7/css/fontawesome/fontawesome-webfont.ttf
- create mode 100644 docs/libs/gitbook-2.6.7/css/plugin-bookdown.css
- create mode 100644 docs/libs/gitbook-2.6.7/css/plugin-fontsettings.css
- create mode 100644 docs/libs/gitbook-2.6.7/css/plugin-highlight.css
- create mode 100644 docs/libs/gitbook-2.6.7/css/plugin-search.css
- create mode 100644 docs/libs/gitbook-2.6.7/css/style.css
- create mode 100644 docs/libs/gitbook-2.6.7/js/app.min.js
- create mode 100644 docs/libs/gitbook-2.6.7/js/jquery.highlight.js
- create mode 100644 docs/libs/gitbook-2.6.7/js/lunr.js
- create mode 100644 docs/libs/gitbook-2.6.7/js/plugin-bookdown.js
- create mode 100644 docs/libs/gitbook-2.6.7/js/plugin-fontsettings.js
- create mode 100644 docs/libs/gitbook-2.6.7/js/plugin-search.js
- create mode 100644 docs/libs/gitbook-2.6.7/js/plugin-sharing.js
- create mode 100644 docs/libs/jquery-2.2.3/jquery.min.js
- create mode 100644 docs/linear-model.html
- create mode 100644 docs/mrg.html
- create mode 100644 docs/multiple-linear-regression.html
- create mode 100644 docs/pca.html
- create mode 100644 docs/plot-in-r.html
- create mode 100644 docs/references-and-resouces.html
- create mode 100644 docs/references.html
- create mode 100644 docs/search_index.json
- create mode 100644 docs/visulization-of-pair-wise-correlation-in-r.html
- create mode 100644 docs/working-with-missing-values.html
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git push origin master
-error: cannot run rpostback-askpass: No such file or directory
-Username for 'https://github.com': xie186
-error: cannot run rpostback-askpass: No such file or directory
-Password for 'https://xie186@github.com': 
-Counting objects: 43, done.
-Delta compression using up to 4 threads.
-Compressing objects:   2% (1/41)   Compressing objects:   4% (2/41)   Compressing objects:   7% (3/41)   Compressing objects:   9% (4/41)   Compressing objects:  12% (5/41)   Compressing objects:  14% (6/41)   Compressing objects:  17% (7/41)   Compressing objects:  19% (8/41)   Compressing objects:  21% (9/41)   Compressing objects:  24% (10/41)   Compressing objects:  26% (11/41)   Compressing objects:  29% (12/41)   Compressing objects:  31% (13/41)   Compressing objects:  34% (14/41)   Compressing objects:  36% (15/41)   Compressing objects:  39% (16/41)   Compressing objects:  41% (17/41)   Compressing objects:  43% (18/41)   Compressing objects:  46% (19/41)   Compressing objects:  48% (20/41)   Compressing objects:  51% (21/41)   Compressing objects:  53% (22/41)   Compressing objects:  56% (23/41)   Compressing objects:  58% (24/41)   Compressing objects:  60% (25/41)   Compressing objects:  63% (26/41)   Compressing objects:  65% (27/41)   Compressing objects:  68% (28/41)   Compressing objects:  70% (29/41)   Compressing objects:  73% (30/41)   Compressing objects:  75% (31/41)   Compressing objects:  78% (32/41)   Compressing objects:  80% (33/41)   Compressing objects:  82% (34/41)   Compressing objects:  85% (35/41)   Compressing objects:  87% (36/41)   Compressing objects:  90% (37/41)   Compressing objects:  92% (38/41)   Compressing objects:  95% (39/41)   Compressing objects:  97% (40/41)   Compressing objects: 100% (41/41)   Compressing objects: 100% (41/41), done.
-Writing objects:   2% (1/43)   Writing objects:   4% (2/43)   Writing objects:   6% (3/43)   Writing objects:   9% (4/43)   Writing objects:  11% (5/43)   Writing objects:  13% (6/43)   Writing objects:  16% (7/43)   Writing objects:  18% (8/43)   Writing objects:  20% (9/43)   Writing objects:  23% (10/43)   Writing objects:  25% (11/43)   Writing objects:  27% (12/43)   Writing objects:  30% (13/43)   Writing objects:  32% (14/43)   Writing objects:  34% (15/43)   Writing objects:  37% (16/43)   Writing objects:  39% (17/43)   Writing objects:  41% (18/43)   Writing objects:  44% (19/43)   Writing objects:  46% (20/43)   Writing objects:  48% (21/43)   Writing objects:  51% (22/43)   Writing objects:  53% (23/43)   Writing objects:  55% (24/43)   Writing objects:  58% (25/43)   Writing objects:  60% (26/43)   Writing objects:  62% (27/43)   Writing objects:  65% (28/43)   Writing objects:  67% (29/43)   Writing objects:  72% (31/43)   Writing objects:  74% (32/43)   Writing objects:  81% (35/43)   Writing objects:  83% (36/43)   Writing objects:  86% (37/43)   Writing objects:  88% (38/43)   Writing objects:  90% (39/43)   Writing objects:  93% (40/43)   Writing objects:  95% (41/43)   Writing objects:  97% (42/43)   Writing objects: 100% (43/43)   Writing objects: 100% (43/43), 339.08 KiB | 0 bytes/s, done.
-Total 43 (delta 22), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/22)   [Kremote: Resolving deltas:  50% (11/22)   [Kremote: Resolving deltas:  54% (12/22)   [Kremote: Resolving deltas:  59% (13/22)   [Kremote: Resolving deltas:  63% (14/22)   [Kremote: Resolving deltas:  68% (15/22)   [Kremote: Resolving deltas:  72% (16/22)   [Kremote: Resolving deltas:  77% (17/22)   [Kremote: Resolving deltas:  81% (18/22)   [Kremote: Resolving deltas:  86% (19/22)   [Kremote: Resolving deltas:  90% (20/22)   [Kremote: Resolving deltas:  95% (21/22)   [Kremote: Resolving deltas: 100% (22/22)   [Kremote: Resolving deltas: 100% (22/22), completed with 11 local objects.[K
-
-
-To https://github.com/xie186/stat_note_with_r.git
-   0ef8f8f..f0a7506  master -> master
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ vi README.md '
-> ^C
-]0;/home/xie186/statistics_with_R$ vi README.md '[K
-]0;/home/xie186/statistics_with_R$ git add .
-
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git commit -m ""U"p"["d"a"t"e"
-[master 6581901] Up[date
- 24 files changed, 513 insertions(+), 40 deletions(-)
- rewrite .Rproj.user/8F4F4022/console06/INDEX001 (80%)
- create mode 100644 QTLanalysis.Rmd
- create mode 100644 docs/qtl-analysis.html
- rewrite docs/search_index.json (73%)
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ giot [K[K[Kt push origin master
-error: cannot run rpostback-askpass: No such file or directory
-Username for 'https://github.com': xie186
-error: cannot run rpostback-askpass: No such file or directory
-Password for 'https://xie186@github.com': 
-Counting objects: 34, done.
-Delta compression using up to 4 threads.
-Compressing objects:   3% (1/33)   Compressing objects:   6% (2/33)   Compressing objects:   9% (3/33)   Compressing objects:  12% (4/33)   Compressing objects:  15% (5/33)   Compressing objects:  18% (6/33)   Compressing objects:  21% (7/33)   Compressing objects:  24% (8/33)   Compressing objects:  27% (9/33)   Compressing objects:  30% (10/33)   Compressing objects:  33% (11/33)   Compressing objects:  36% (12/33)   Compressing objects:  39% (13/33)   Compressing objects:  42% (14/33)   Compressing objects:  45% (15/33)   Compressing objects:  48% (16/33)   Compressing objects:  51% (17/33)   Compressing objects:  54% (18/33)   Compressing objects:  57% (19/33)   Compressing objects:  60% (20/33)   Compressing objects:  63% (21/33)   Compressing objects:  66% (22/33)   Compressing objects:  69% (23/33)   Compressing objects:  72% (24/33)   Compressing objects:  75% (25/33)   Compressing objects:  78% (26/33)   Compressing objects:  81% (27/33)   Compressing objects:  84% (28/33)   Compressing objects:  87% (29/33)   Compressing objects:  90% (30/33)   Compressing objects:  93% (31/33)   Compressing objects:  96% (32/33)   Compressing objects: 100% (33/33)   Compressing objects: 100% (33/33), done.
-Writing objects:   2% (1/34)   Writing objects:   5% (2/34)   Writing objects:   8% (3/34)   Writing objects:  11% (4/34)   Writing objects:  14% (5/34)   Writing objects:  17% (6/34)   Writing objects:  20% (7/34)   Writing objects:  23% (8/34)   Writing objects:  26% (9/34)   Writing objects:  29% (10/34)   Writing objects:  32% (11/34)   Writing objects:  35% (12/34)   Writing objects:  38% (13/34)   Writing objects:  41% (14/34)   Writing objects:  44% (15/34)   Writing objects:  47% (16/34)   Writing objects:  50% (17/34)   Writing objects:  52% (18/34)   Writing objects:  55% (19/34)   Writing objects:  58% (20/34)   Writing objects:  61% (21/34)   Writing objects:  64% (22/34)   Writing objects:  67% (23/34)   Writing objects:  70% (24/34)   Writing objects:  73% (25/34)   Writing objects:  76% (26/34)   Writing objects:  79% (27/34)   Writing objects:  82% (28/34)   Writing objects:  85% (29/34)   Writing objects:  88% (30/34)   Writing objects:  91% (31/34)   Writing objects:  94% (32/34)   Writing objects:  97% (33/34)   Writing objects: 100% (34/34)   Writing objects: 100% (34/34), 6.86 KiB | 0 bytes/s, done.
-Total 34 (delta 26), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/26)   [Kremote: Resolving deltas:   3% (1/26)   [Kremote: Resolving deltas:   7% (2/26)   [Kremote: Resolving deltas:  11% (3/26)   [Kremote: Resolving deltas:  15% (4/26)   [Kremote: Resolving deltas:  19% (5/26)   [Kremote: Resolving deltas:  23% (6/26)   [Kremote: Resolving deltas:  26% (7/26)   [Kremote: Resolving deltas:  30% (8/26)   [Kremote: Resolving deltas:  34% (9/26)   [Kremote: Resolving deltas:  38% (10/26)   [Kremote: Resolving deltas:  42% (11/26)   [Kremote: Resolving deltas:  46% (12/26)   [Kremote: Resolving deltas:  53% (14/26)   [Kremote: Resolving deltas:  57% (15/26)   [Kremote: Resolving deltas:  65% (17/26)   [Kremote: Resolving deltas:  69% (18/26)   [Kremote: Resolving deltas:  73% (19/26)   [Kremote: Resolving deltas:  76% (20/26)   [Kremote: Resolving deltas:  80% (21/26)   [Kremote: Resolving deltas:  84% (22/26)   [Kremote: Resolving deltas:  88% (23/26)   [Kremote: Resolving deltas:  92% (24/26)   [Kremote: Resolving deltas:  96% (25/26)   [Kremote: Resolving deltas: 100% (26/26)   [Kremote: Resolving deltas: 100% (26/26), completed with 24 local objects.[K
-To https://github.com/xie186/stat_note_with_r.git
-   f0a7506..6581901  master -> master
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ giot [K[K[Kt add .

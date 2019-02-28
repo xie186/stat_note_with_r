@@ -1,0 +1,32 @@
+## Introduction
+R_intro.Rmd
+
+
+## Data checking
+correlation_in_R.Rmd
+
+
+## Statistics
+
+linear_model.Rmd
+multi_linear_regression.Rmd
+multiple_regresssion_with_an_interaction_term.Rmd
+bayesian_network.Rmd
+correlation_test.Rmd
+
+## Data wrangling
+
+missing_values.Rmd
+intro_dplyr.Rmd
+
+## Machine learning
+ml_random_forest.Rmd
+neg_binomial_count.Rmd
+PCA.Rmd
+plot_in_R.Rmd
+QTLanalysis.Rmd
+stand_dev_stand_err.Rmd
+ttest.Rmd
+
+##
+reference_resouce.Rmd

@@ -1,0 +1,17 @@
+# The rationale for using negative binomial distribution to model read count in RNA-seq data
+
+
+Several tools for DEG detection (including DESeq2 and eageR) model read counts as a negative binomial (NB) distribution. 
+
+The nagative binomial distribtion, especitally in its alternative parameterization, can be used as an alternative to the Poisson distribution. It is espectially useful for discrete data over an unbounded positive range whose sample variance exceeds the sample mean. In such cases, the observations are overdispersed with respect to a Poisson distribution, for which the mean is equal to the variance. Hence a Poison distribution is not an appropriate model. Since the negative binomial distribution has one more parameter than the Poisson distribution, the second parameter can be used to adjust the variance independently of the mean. 
+
+Discrete data over an unbounded positive range is one way of saying 'integer counts'. 
+
+The negative binomial distribution also arises as a continuous mixture of Poisson distributions (i.e. a compound probability distribution) where the mixing distribution of the Poisson rate is a gamma distribution." The other important bit of information to know is that read counts for a sample in theory follow a Binomial(n,p) distribution, where n is the total number of reads and p is the probability of a read mapping to a specific gene. However, the binomial distribution is computationally inconvenient, since it involves computing factorials, and with millions of reads in each sample, the Poisson distribution (with lambda = n*p) is an excellent approximation to the Binomial while being far more mathematically tractable. So the Poisson noise quantifies the counting uncertainty, while the gamma distribution quantifies the variation in gene expression between replicates. The mixture of the two yields the negative binomial. See also section 2 of http://www.statsci.org/smyth/pubs/edgeRChapterPreprint.pdf
+
+
+
+## Reference
+
+What's the rationale for using the negative binomial distribution to model read: https://support.bioconductor.org/p/84832/
+
