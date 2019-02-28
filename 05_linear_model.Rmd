@@ -25,10 +25,6 @@ plot(father~height, data=tab_son)
 ```
 
 
-```{r}
-model = lm(father.son)
-summary(model)
-```
 
 
 

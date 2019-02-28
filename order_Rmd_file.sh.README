@@ -1,0 +1,1 @@
+ perl scripts/rename_Rmd.pl ordered_Rmd.txt  > order_Rmd_file.sh

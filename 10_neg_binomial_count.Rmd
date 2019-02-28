@@ -10,8 +10,15 @@ Discrete data over an unbounded positive range is one way of saying 'integer cou
 The negative binomial distribution also arises as a continuous mixture of Poisson distributions (i.e. a compound probability distribution) where the mixing distribution of the Poisson rate is a gamma distribution." The other important bit of information to know is that read counts for a sample in theory follow a Binomial(n,p) distribution, where n is the total number of reads and p is the probability of a read mapping to a specific gene. However, the binomial distribution is computationally inconvenient, since it involves computing factorials, and with millions of reads in each sample, the Poisson distribution (with lambda = n*p) is an excellent approximation to the Binomial while being far more mathematically tractable. So the Poisson noise quantifies the counting uncertainty, while the gamma distribution quantifies the variation in gene expression between replicates. The mixture of the two yields the negative binomial. See also section 2 of http://www.statsci.org/smyth/pubs/edgeRChapterPreprint.pdf
 
 
+## 
+
+
 
 ## Reference
 
 What's the rationale for using the negative binomial distribution to model read: https://support.bioconductor.org/p/84832/
 
+Why do we use the negative binomial distribution for analysing RNAseq data?: http://bridgeslab.sph.umich.edu/posts/why-do-we-use-the-negative-binomial-distribution-for-rnaseq
+
+
+R统计学(06): 负二项分布: https://mp.weixin.qq.com/s/QBkL8_cW6Lsm5U56SUmUoQ

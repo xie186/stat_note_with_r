@@ -1,0 +1,17 @@
+mv 00_R_intro.Rmd 00_R_intro.Rmd
+mv 01_plot_in_R.Rmd 01_plot_in_R.Rmd
+mv 02_correlation_in_R.Rmd 02_correlation_in_R.Rmd
+mv 03_stand_dev_stand_err.Rmd 03_stand_dev_stand_err.Rmd
+mv 04_ttest.Rmd 04_ttest.Rmd
+mv 05_linear_model.Rmd 05_linear_model.Rmd
+mv 06_multi_linear_regression.Rmd 06_multi_linear_regression.Rmd
+mv 07_multiple_regresssion_with_an_interaction_term.Rmd 07_multiple_regresssion_with_an_interaction_term.Rmd
+mv 08_bayesian_network.Rmd 08_bayesian_network.Rmd
+mv 09_correlation_test.Rmd 09_correlation_test.Rmd
+mv 10_neg_binomial_count.Rmd 10_neg_binomial_count.Rmd
+mv 11_missing_values.Rmd 11_missing_values.Rmd
+mv 12_intro_dplyr.Rmd 12_intro_dplyr.Rmd
+mv 13_PCA.Rmd 13_PCA.Rmd
+mv 14_ml_random_forest.Rmd 14_ml_random_forest.Rmd
+mv 15_QTLanalysis.Rmd 15_QTLanalysis.Rmd
+mv 16_reference_resouce.Rmd 16_reference_resouce.Rmd

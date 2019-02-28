@@ -139,3 +139,158 @@ code.R                                                ordered_Rmd.txt
 ]0;/home/xie186/statistics_with_R$ [K$ 
 ]0;/home/xie186/statistics_with_R$ 
 ]0;/home/xie186/statistics_with_R$ git add .
+
+
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git commit -m ""U"p"d"a"t"e"
+[master 6926b82] Update
+ 38 files changed, 1662 insertions(+), 1510 deletions(-)
+ delete mode 100644 .Rproj.user/8F4F4022/console06/5A4F419A
+ delete mode 100644 .Rproj.user/8F4F4022/console06/5A4F419A.env
+ rewrite .Rproj.user/8F4F4022/console06/INDEX001 (93%)
+ create mode 100644 docs/standard-deviation-vs-standard-error.html
+ create mode 100644 docs/t-test.html
+ create mode 100644 docs/the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html
+ create mode 100644 neg_binomial_count.Rmd
+ create mode 100644 ordered_Rmd.txt
+ create mode 100644 scripts/rename_Rmd.pl
+ create mode 100644 stand_dev_stand_err.Rmd
+ create mode 100644 ttest.Rmd
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git push orign [K[Kin master
+error: cannot run rpostback-askpass: No such file or directory
+Username for 'https://github.com': xie186
+error: cannot run rpostback-askpass: No such file or directory
+Password for 'https://xie186@github.com': 
+Counting objects: 49, done.
+Delta compression using up to 4 threads.
+Compressing objects:   2% (1/45)   Compressing objects:   4% (2/45)   Compressing objects:   6% (3/45)   Compressing objects:   8% (4/45)   Compressing objects:  11% (5/45)   Compressing objects:  13% (6/45)   Compressing objects:  15% (7/45)   Compressing objects:  17% (8/45)   Compressing objects:  20% (9/45)   Compressing objects:  22% (10/45)   Compressing objects:  24% (11/45)   Compressing objects:  26% (12/45)   Compressing objects:  28% (13/45)   Compressing objects:  31% (14/45)   Compressing objects:  33% (15/45)   Compressing objects:  35% (16/45)   Compressing objects:  37% (17/45)   Compressing objects:  40% (18/45)   Compressing objects:  42% (19/45)   Compressing objects:  44% (20/45)   Compressing objects:  46% (21/45)   Compressing objects:  48% (22/45)   Compressing objects:  51% (23/45)   Compressing objects:  53% (24/45)   Compressing objects:  55% (25/45)   Compressing objects:  57% (26/45)   Compressing objects:  60% (27/45)   Compressing objects:  62% (28/45)   Compressing objects:  64% (29/45)   Compressing objects:  66% (30/45)   Compressing objects:  68% (31/45)   Compressing objects:  71% (32/45)   Compressing objects:  73% (33/45)   Compressing objects:  75% (34/45)   Compressing objects:  77% (35/45)   Compressing objects:  80% (36/45)   Compressing objects:  82% (37/45)   Compressing objects:  84% (38/45)   Compressing objects:  86% (39/45)   Compressing objects:  88% (40/45)   Compressing objects:  91% (41/45)   Compressing objects:  93% (42/45)   Compressing objects:  95% (43/45)   Compressing objects:  97% (44/45)   Compressing objects: 100% (45/45)   Compressing objects: 100% (45/45), done.
+Writing objects:   2% (1/49)   Writing objects:   4% (2/49)   Writing objects:   6% (3/49)   Writing objects:   8% (4/49)   Writing objects:  10% (5/49)   Writing objects:  12% (6/49)   Writing objects:  14% (7/49)   Writing objects:  16% (8/49)   Writing objects:  18% (9/49)   Writing objects:  20% (10/49)   Writing objects:  22% (11/49)   Writing objects:  24% (12/49)   Writing objects:  26% (13/49)   Writing objects:  28% (14/49)   Writing objects:  30% (15/49)   Writing objects:  32% (16/49)   Writing objects:  34% (17/49)   Writing objects:  36% (18/49)   Writing objects:  38% (19/49)   Writing objects:  40% (20/49)   Writing objects:  42% (21/49)   Writing objects:  44% (22/49)   Writing objects:  46% (23/49)   Writing objects:  48% (24/49)   Writing objects:  51% (25/49)   Writing objects:  57% (28/49)   Writing objects:  59% (29/49)   Writing objects:  61% (30/49)   Writing objects:  63% (31/49)   Writing objects:  65% (32/49)   Writing objects:  67% (33/49)   Writing objects:  69% (34/49)   Writing objects:  73% (36/49)   Writing objects:  75% (37/49)   Writing objects:  77% (38/49)   Writing objects:  79% (39/49)   Writing objects:  81% (40/49)   Writing objects:  83% (41/49)   Writing objects:  85% (42/49)   Writing objects:  87% (43/49)   Writing objects:  89% (44/49)   Writing objects:  91% (45/49)   Writing objects:  93% (46/49)   Writing objects:  95% (47/49)   Writing objects:  97% (48/49)   Writing objects: 100% (49/49)   Writing objects: 100% (49/49), 20.64 KiB | 0 bytes/s, done.
+Total 49 (delta 33), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/33)   [Kremote: Resolving deltas:   3% (1/33)   [Kremote: Resolving deltas:   6% (2/33)   [Kremote: Resolving deltas:   9% (3/33)   [Kremote: Resolving deltas:  12% (4/33)   [Kremote: Resolving deltas:  15% (5/33)   [Kremote: Resolving deltas:  18% (6/33)   [Kremote: Resolving deltas:  21% (7/33)   [Kremote: Resolving deltas:  24% (8/33)   [Kremote: Resolving deltas:  27% (9/33)   [Kremote: Resolving deltas:  30% (10/33)   [Kremote: Resolving deltas:  33% (11/33)   [Kremote: Resolving deltas:  36% (12/33)   [Kremote: Resolving deltas:  42% (14/33)   [Kremote: Resolving deltas:  51% (17/33)   [Kremote: Resolving deltas:  69% (23/33)   [Kremote: Resolving deltas:  72% (24/33)   [Kremote: Resolving deltas:  75% (25/33)   [Kremote: Resolving deltas:  78% (26/33)   [Kremote: Resolving deltas:  81% (27/33)   [Kremote: Resolving deltas:  84% (28/33)   [Kremote: Resolving deltas:  90% (30/33)   [Kremote: Resolving deltas:  93% (31/33)   [Kremote: Resolving deltas:  96% (32/33)   [Kremote: Resolving deltas: 100% (33/33)   [Kremote: Resolving deltas: 100% (33/33), completed with 24 local objects.[K
+
+
+To https://github.com/xie186/stat_note_with_r.git
+   7074d76..6926b82  master -> master
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ gi[K[Kpowd[K[K[K[Kls
+01_R_intro.Rmd                                        LICENSE
+02_correlation_in_R.Rmd                               linear_model.Rmd
+12_multi_linear_regression.Rmd                        missing_values.Rmd
+77_multiple_regresssion_with_an_interaction_term.Rmd  ml_random_forest.Rmd
+99_reference_resouce.Rmd                              neg_binomial_count.Rmd
+bayesian_network.Rmd                                  ordered_Rmd.txt
+[0m[01;34m_book[0m                                                 PCA.Rmd
+[01;34m_bookdown_files[0m                                       plot_in_R.Rmd
+bookdown-minimal.Rproj                                QTLanalysis.Rmd
+_bookdown.yml                                         README.md
+code.R                                                reference.bib
+correlation_test.Rmd                                  [01;34mscripts[0m
+[01;34mdata[0m                                                  stand_dev_stand_err.Rmd
+[01;34mdocs[0m                                                  ttest.Rmd
+index.Rmd                                             Workspace.RData
+intro_dplyr.Rmd
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ [K$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ perl scripts/rename_Rmd.pl ordered_Rmd.txt 
+mv 01_R_intro.Rmd 00_R_intro.Rmd
+mv plot_in_R.Rmd 01_plot_in_R.Rmd
+mv 02_correlation_in_R.Rmd 02_correlation_in_R.Rmd
+mv stand_dev_stand_err.Rmd 03_stand_dev_stand_err.Rmd
+mv ttest.Rmd 04_ttest.Rmd
+mv linear_model.Rmd 05_linear_model.Rmd
+mv 12_multi_linear_regression.Rmd 06_multi_linear_regression.Rmd
+mv 77_multiple_regresssion_with_an_interaction_term.Rmd 07_multiple_regresssion_with_an_interaction_term.Rmd
+mv bayesian_network.Rmd 08_bayesian_network.Rmd
+mv correlation_test.Rmd 09_correlation_test.Rmd
+mv neg_binomial_count.Rmd 10_neg_binomial_count.Rmd
+mv missing_values.Rmd 11_missing_values.Rmd
+mv intro_dplyr.Rmd 12_intro_dplyr.Rmd
+mv PCA.Rmd 13_PCA.Rmd
+mv ml_random_forest.Rmd 14_ml_random_forest.Rmd
+mv QTLanalysis.Rmd 15_QTLanalysis.Rmd
+mv 99_reference_resouce.Rmd 16_reference_resouce.Rmd
+]0;/home/xie186/statistics_with_R$ perl scripts/rename_Rmd.pl ordered_Rmd.txt  > order_Rmd.[K_file.sh
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ vio[K QTLanalysis.Rmd
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ vi QTLanalysis.Rmd[C[C[Kvi order_Rmd_file.sh [K.README
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ sh order_Rmd_file.sh 
+mv: '02_correlation_in_R.Rmd' and '02_correlation_in_R.Rmd' are the same file
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ sh order_Rmd_file.sh [C[C[C[C[1P[1P[1@v[1@i
+]0;/home/xie186/statistics_with_R$ vi order_Rmd_file.sh [C[Csh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+mv: cannot stat '01_R_intro.Rmd': No such file or directory
+mv: cannot stat 'plot_in_R.Rmd': No such file or directory
+mv: cannot stat 'stand_dev_stand_err.Rmd': No such file or directory
+mv: cannot stat 'ttest.Rmd': No such file or directory
+mv: cannot stat 'linear_model.Rmd': No such file or directory
+mv: cannot stat '12_multi_linear_regression.Rmd': No such file or directory
+mv: cannot stat '77_multiple_regresssion_with_an_interaction_term.Rmd': No such file or directory
+mv: cannot stat 'bayesian_network.Rmd': No such file or directory
+mv: cannot stat 'correlation_test.Rmd': No such file or directory
+mv: cannot stat 'neg_binomial_count.Rmd': No such file or directory
+mv: cannot stat 'missing_values.Rmd': No such file or directory
+mv: cannot stat 'intro_dplyr.Rmd': No such file or directory
+mv: cannot stat 'PCA.Rmd': No such file or directory
+mv: cannot stat 'ml_random_forest.Rmd': No such file or directory
+mv: cannot stat 'QTLanalysis.Rmd': No such file or directory
+mv: cannot stat '99_reference_resouce.Rmd': No such file or directory
+]0;/home/xie186/statistics_with_R$ sh order_Rmd_file.sh [C[Cvi[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi order_Rmd_file.sh.README[C[C[C[C[C[9PQTLanalysis.Rmd[C[C[C[C[Corder_Rmd_file.sh.README[C[C[C[C[C[9PQTLanalysis.Rmd[C[Cperl scripts/rename_Rmd.pl ordered_Rmd.txt  > order_Rmd_file.sh
+]0;/home/xie186/statistics_with_R$ cat order_Rmd_file.sh
+mv 00_R_intro.Rmd 00_R_intro.Rmd
+mv 01_plot_in_R.Rmd 01_plot_in_R.Rmd
+mv 02_correlation_in_R.Rmd 02_correlation_in_R.Rmd
+mv 03_stand_dev_stand_err.Rmd 03_stand_dev_stand_err.Rmd
+mv 04_ttest.Rmd 04_ttest.Rmd
+mv 05_linear_model.Rmd 05_linear_model.Rmd
+mv 06_multi_linear_regression.Rmd 06_multi_linear_regression.Rmd
+mv 07_multiple_regresssion_with_an_interaction_term.Rmd 07_multiple_regresssion_with_an_interaction_term.Rmd
+mv 08_bayesian_network.Rmd 08_bayesian_network.Rmd
+mv 09_correlation_test.Rmd 09_correlation_test.Rmd
+mv 10_neg_binomial_count.Rmd 10_neg_binomial_count.Rmd
+mv 11_missing_values.Rmd 11_missing_values.Rmd
+mv 12_intro_dplyr.Rmd 12_intro_dplyr.Rmd
+mv 13_PCA.Rmd 13_PCA.Rmd
+mv 14_ml_random_forest.Rmd 14_ml_random_forest.Rmd
+mv 15_QTLanalysis.Rmd 15_QTLanalysis.Rmd
+mv 16_reference_resouce.Rmd 16_reference_resouce.Rmd
+]0;/home/xie186/statistics_with_R$ cat order_Rmd_file.sh[C[C[C[C[C[1P order_Rmd_file.sh[C[C[C[C[1P order_Rmd_file.sh[C[C[C[1P order_Rmd_file.sh[C[Cs order_Rmd_file.sh[C[C[Cj order_Rmd_file.sh[C[C[C[C[1P order_Rmd_file.sh[C[C[Ch order_Rmd_file.sh[C[C[C[C
+mv: '00_R_intro.Rmd' and '00_R_intro.Rmd' are the same file
+mv: '01_plot_in_R.Rmd' and '01_plot_in_R.Rmd' are the same file
+mv: '02_correlation_in_R.Rmd' and '02_correlation_in_R.Rmd' are the same file
+mv: '03_stand_dev_stand_err.Rmd' and '03_stand_dev_stand_err.Rmd' are the same file
+mv: '04_ttest.Rmd' and '04_ttest.Rmd' are the same file
+mv: '05_linear_model.Rmd' and '05_linear_model.Rmd' are the same file
+mv: '06_multi_linear_regression.Rmd' and '06_multi_linear_regression.Rmd' are the same file
+mv: '07_multiple_regresssion_with_an_interaction_term.Rmd' and '07_multiple_regresssion_with_an_interaction_term.Rmd' are the same file
+mv: '08_bayesian_network.Rmd' and '08_bayesian_network.Rmd' are the same file
+mv: '09_correlation_test.Rmd' and '09_correlation_test.Rmd' are the same file
+mv: '10_neg_binomial_count.Rmd' and '10_neg_binomial_count.Rmd' are the same file
+mv: '11_missing_values.Rmd' and '11_missing_values.Rmd' are the same file
+mv: '12_intro_dplyr.Rmd' and '12_intro_dplyr.Rmd' are the same file
+mv: '13_PCA.Rmd' and '13_PCA.Rmd' are the same file
+mv: '14_ml_random_forest.Rmd' and '14_ml_random_forest.Rmd' are the same file
+mv: '15_QTLanalysis.Rmd' and '15_QTLanalysis.Rmd' are the same file
+mv: '16_reference_resouce.Rmd' and '16_reference_resouce.Rmd' are the same file
+]0;/home/xie186/statistics_with_R$ [K$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git add [K[K[K[K[K[K[K[K
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git add[K$ git add[K[K[K[K[K[K[Kgit remote -v
+origin	https://github.com/xie186/stat_note_with_r.git (fetch)
+origin	https://github.com/xie186/stat_note_with_r.git (push)
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ git add .
