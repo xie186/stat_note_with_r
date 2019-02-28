@@ -10,7 +10,38 @@ Discrete data over an unbounded positive range is one way of saying 'integer cou
 The negative binomial distribution also arises as a continuous mixture of Poisson distributions (i.e. a compound probability distribution) where the mixing distribution of the Poisson rate is a gamma distribution." The other important bit of information to know is that read counts for a sample in theory follow a Binomial(n,p) distribution, where n is the total number of reads and p is the probability of a read mapping to a specific gene. However, the binomial distribution is computationally inconvenient, since it involves computing factorials, and with millions of reads in each sample, the Poisson distribution (with lambda = n*p) is an excellent approximation to the Binomial while being far more mathematically tractable. So the Poisson noise quantifies the counting uncertainty, while the gamma distribution quantifies the variation in gene expression between replicates. The mixture of the two yields the negative binomial. See also section 2 of http://www.statsci.org/smyth/pubs/edgeRChapterPreprint.pdf
 
 
-## 
+![](https://user-images.githubusercontent.com/20909751/53537996-f12bbb00-3ad9-11e9-97a9-6dc35195a50a.png)
+
+
+## Negative binomial in R
+
+
+
+```{r}
+set.seed(100)
+# 1) n: number of number of observations.
+# 2) size: target for number of successful trials, or dispersion parameter (the shape parameter of the gamma mixing distribution). Must be strictly positive, need not be integer.
+# 3) prob: probability of success in each trial. 0 < prob <= 1.
+obs_nb <- rnbinom(100000, 5, 0.5)
+obs_pios <- rpois(10000, mean(obs_nb))
+table(obs_nb)
+table(obs_pios)
+```
+
+```{r}
+hist(obs_nb, breaks = 1000)
+```
+
+```{r}
+hist(obs_pios, breaks = 1000)
+```
+
+```{r}
+var(obs_nb)
+var(obs_pios)
+```
+
+Here we can clearly see that the variance (measure of variation.) in the simulated data with Poisson distribution () is higher than that with negative binomial distribtuon. 
 
 
 

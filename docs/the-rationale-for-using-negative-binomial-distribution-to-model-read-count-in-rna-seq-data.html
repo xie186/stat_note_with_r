@@ -149,11 +149,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="11.1" data-path="correlation-test.html"><a href="correlation-test.html#reference-4"><i class="fa fa-check"></i><b>11.1</b> Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><i class="fa fa-check"></i><b>12</b> The rationale for using negative binomial distribution to model read count in RNA-seq data</a><ul>
-<li class="chapter" data-level="12.1" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#section-4"><i class="fa fa-check"></i><b>12.1</b> </a></li>
+<li class="chapter" data-level="12.1" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#negative-binomial-in-r"><i class="fa fa-check"></i><b>12.1</b> Negative binomial in R</a></li>
 <li class="chapter" data-level="12.2" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#reference-5"><i class="fa fa-check"></i><b>12.2</b> Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html"><i class="fa fa-check"></i><b>13</b> Working with missing values</a><ul>
-<li class="chapter" data-level="13.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#section-5"><i class="fa fa-check"></i><b>13.1</b> </a></li>
+<li class="chapter" data-level="13.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#section-4"><i class="fa fa-check"></i><b>13.1</b> </a></li>
 <li class="chapter" data-level="13.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summaryize-the-missing-values"><i class="fa fa-check"></i><b>13.2</b> Summaryize the missing values</a><ul>
 <li class="chapter" data-level="13.2.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summarize-the-missing-values-using-mice-package"><i class="fa fa-check"></i><b>13.2.1</b> Summarize the missing values using <code>mice</code> package</a></li>
 <li class="chapter" data-level="13.2.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summarize-the-missing-values-using-vim-packages"><i class="fa fa-check"></i><b>13.2.2</b> Summarize the missing values using <code>VIM</code> packages</a></li>
@@ -181,7 +181,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="15.7" data-path="pca.html"><a href="pca.html#pca-on-wine-data"><i class="fa fa-check"></i><b>15.7</b> PCA on <code>wine</code> data</a><ul>
 <li class="chapter" data-level="15.7.1" data-path="pca.html"><a href="pca.html#read-the-wine-data"><i class="fa fa-check"></i><b>15.7.1</b> Read the <code>wine</code> data</a></li>
 <li class="chapter" data-level="15.7.2" data-path="pca.html"><a href="pca.html#description-of-each-column"><i class="fa fa-check"></i><b>15.7.2</b> Description of each column</a></li>
-<li class="chapter" data-level="15.7.3" data-path="pca.html"><a href="pca.html#section-6"><i class="fa fa-check"></i><b>15.7.3</b> </a></li>
+<li class="chapter" data-level="15.7.3" data-path="pca.html"><a href="pca.html#section-5"><i class="fa fa-check"></i><b>15.7.3</b> </a></li>
 </ul></li>
 <li class="chapter" data-level="15.8" data-path="pca.html"><a href="pca.html#references"><i class="fa fa-check"></i><b>15.8</b> References</a></li>
 </ul></li>
@@ -217,8 +217,41 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>The nagative binomial distribtion, especitally in its alternative parameterization, can be used as an alternative to the Poisson distribution. It is espectially useful for discrete data over an unbounded positive range whose sample variance exceeds the sample mean. In such cases, the observations are overdispersed with respect to a Poisson distribution, for which the mean is equal to the variance. Hence a Poison distribution is not an appropriate model. Since the negative binomial distribution has one more parameter than the Poisson distribution, the second parameter can be used to adjust the variance independently of the mean.</p>
 <p>Discrete data over an unbounded positive range is one way of saying ‘integer counts’.</p>
 <p>The negative binomial distribution also arises as a continuous mixture of Poisson distributions (i.e. a compound probability distribution) where the mixing distribution of the Poisson rate is a gamma distribution.&quot; The other important bit of information to know is that read counts for a sample in theory follow a Binomial(n,p) distribution, where n is the total number of reads and p is the probability of a read mapping to a specific gene. However, the binomial distribution is computationally inconvenient, since it involves computing factorials, and with millions of reads in each sample, the Poisson distribution (with lambda = n*p) is an excellent approximation to the Binomial while being far more mathematically tractable. So the Poisson noise quantifies the counting uncertainty, while the gamma distribution quantifies the variation in gene expression between replicates. The mixture of the two yields the negative binomial. See also section 2 of <a href="http://www.statsci.org/smyth/pubs/edgeRChapterPreprint.pdf" class="uri">http://www.statsci.org/smyth/pubs/edgeRChapterPreprint.pdf</a></p>
-<div id="section-4" class="section level2">
-<h2><span class="header-section-number">12.1</span> </h2>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/20909751/53537996-f12bbb00-3ad9-11e9-97a9-6dc35195a50a.png" />
+
+</div>
+<div id="negative-binomial-in-r" class="section level2">
+<h2><span class="header-section-number">12.1</span> Negative binomial in R</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">100</span>)
+<span class="co"># 1) n: number of number of observations.</span>
+<span class="co"># 2) size: target for number of successful trials, or dispersion parameter (the shape parameter of the gamma mixing distribution). Must be strictly positive, need not be integer.</span>
+<span class="co"># 3) prob: probability of success in each trial. 0 &lt; prob &lt;= 1.</span>
+obs_nb &lt;-<span class="st"> </span><span class="kw">rnbinom</span>(<span class="dv">100000</span>, <span class="dv">5</span>, <span class="fl">0.5</span>)
+obs_pios &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class="dv">10000</span>, <span class="kw">mean</span>(obs_nb))
+<span class="kw">table</span>(obs_nb)</code></pre></div>
+<pre><code>## obs_nb
+##     0     1     2     3     4     5     6     7     8     9    10    11 
+##  3039  7651 11590 13833 13598 12468 10303  8098  6055  4377  3094  2078 
+##    12    13    14    15    16    17    18    19    20    21    22    23 
+##  1329   956   583   364   224   150    77    50    37    22     7     7 
+##    24    25    27    28    29 
+##     5     1     2     1     1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(obs_pios)</code></pre></div>
+<pre><code>## obs_pios
+##    0    1    2    3    4    5    6    7    8    9   10   11   12   13   14 
+##   65  360  833 1434 1696 1706 1433 1096  672  388  170   86   45    9    6 
+##   15 
+##    1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(obs_nb, <span class="dt">breaks =</span> <span class="dv">1000</span>)</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-43-1.png" width="576" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(obs_pios, <span class="dt">breaks =</span> <span class="dv">1000</span>)</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-44-1.png" width="576" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(obs_nb)</code></pre></div>
+<pre><code>## [1] 9.949713</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(obs_pios)</code></pre></div>
+<pre><code>## [1] 5.11018</code></pre>
+<p>Here we can clearly see that the variance (measure of variation.) in the simulated data with Poisson distribution () is higher than that with negative binomial distribtuon.</p>
 </div>
 <div id="reference-5" class="section level2">
 <h2><span class="header-section-number">12.2</span> Reference</h2>
