@@ -1,0 +1,25 @@
+# Transformation of data
+
+
+## Log transformation 
+
+The log transformation is the most popular among the different types of transformations used to transform skewed dat to approximately conform to normality. If the original data follows a log-normal distribution or approximately so, then the log-transformed data follows a normal or near normal distribution.
+
+
+We use log2 (and not log10) is that fold changes might happen on a smaller scale than the thousands/millions/billions that make log10 transformations useful in visualizations. For a long time, a two-fold change was the "gold standard" of a significant change from baseline. If FC was less than that, it might be due to experimental error. Thus, the log2 was used (instead of log10, or natural log, or some other base system).
+
+
+### The rationale of using log2 transformation 
+
+```{r}
+dat <- read.table("data/yeast_DESeq2_DEG.tab", header = T)
+```
+
+
+
+
+### Reference
+
+Log-transformation and its implications for data analysis: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4120293/
+
+Dumb question about LogFC: https://www.reddit.com/r/labrats/comments/7odtki/dumb_question_about_logfc/

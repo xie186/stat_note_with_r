@@ -20,6 +20,7 @@ multiple_regresssion_with_an_interaction_term.Rmd
 bayesian_network.Rmd
 correlation_test.Rmd
 neg_binomial_count.Rmd
+multiple_test_correction.Rmd
 
 ## Data wrangling
 

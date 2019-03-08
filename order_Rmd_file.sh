@@ -9,9 +9,10 @@ mv 07_multiple_regresssion_with_an_interaction_term.Rmd 07_multiple_regresssion_
 mv 08_bayesian_network.Rmd 08_bayesian_network.Rmd
 mv 09_correlation_test.Rmd 09_correlation_test.Rmd
 mv 10_neg_binomial_count.Rmd 10_neg_binomial_count.Rmd
-mv 11_missing_values.Rmd 11_missing_values.Rmd
-mv 12_intro_dplyr.Rmd 12_intro_dplyr.Rmd
-mv 13_PCA.Rmd 13_PCA.Rmd
-mv 14_ml_random_forest.Rmd 14_ml_random_forest.Rmd
-mv 15_QTLanalysis.Rmd 15_QTLanalysis.Rmd
-mv 16_reference_resouce.Rmd 16_reference_resouce.Rmd
+mv 11_multiple_test_correction.Rmd 11_multiple_test_correction.Rmd
+mv 12_missing_values.Rmd 12_missing_values.Rmd
+mv 13_intro_dplyr.Rmd 13_intro_dplyr.Rmd
+mv 14_PCA.Rmd 14_PCA.Rmd
+mv 15_ml_random_forest.Rmd 15_ml_random_forest.Rmd
+mv 16_QTLanalysis.Rmd 16_QTLanalysis.Rmd
+mv 17_reference_resouce.Rmd 17_reference_resouce.Rmd

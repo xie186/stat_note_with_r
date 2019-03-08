@@ -1,0 +1,231 @@
+# (PART) Machine learning {-}
+
+
+# PCA 
+
+PCA reduces the dimensionality of a multivariate data to two or three principal components, that can be visualized graphically, with minimal loss of information.
+
+PCA is veru useful whne the varianle with the data set are highly correlated. Correlation indicates that there is redundancy in the data. Due to this redundancy, PCA can be used to reduce the original variable into smaller number of new variabeles, nameing principal components. 
+
+## Read data
+
+```{r}
+```
+
+```{r}
+iris_tab <- read.csv("https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/d546eaee765268bf2f487608c537c05e22e4b221/iris.csv")
+```
+
+## Head data
+
+```{r}
+head(iris_tab)
+```
+
+## Summary of the data
+
+```{r}
+summary(iris_tab)
+```
+
+
+## Check the distribution of the data
+
+```{r}
+hist(iris_tab$sepal_length)
+```
+
+
+
+## Eigendecomposition - Computing Eigenvectors and Eigenvalues
+
+In linear algebra, an `eigenvector` is a non-zero vector that changes by only a scalar factor when that linear transformation is applied to it.
+
+The eigenvectors and eigenvalues of a covariance (or correlation) matrix represent the "core" of a PCA: The eigenvectors (principal components) determine the directions of the new feature space, and the eigenvalues determine their magnitude. In other words, the eigenvalues explain the variance of the data along the new feature axes.
+
+### Covariance Matrix
+
+The classic approach to PCA is to perform the eigendecomposition on the covariance matrix $\Sigma$, which is a $d \times d$ matrix where each element represents the covariance between two features. The covariance between two features is calculated as follows:
+
+$\sigma_{jk} = \frac{1}{n-1}\sum_{i=1}^{N}\left(  x_{ij}-\bar{x}_j \right)  \left( x_{ik}-\bar{x}_k \right).$
+
+We can summarize the calculation of the covariance matrix via the following matrix equation:   
+
+$\Sigma = \frac{1}{n-1} \left( (\mathbf{X} - \mathbf{\bar{x}})^T\;(\mathbf{X} - \mathbf{\bar{x}}) \right)$  
+where $\mathbf{\bar{x}}$ is the mean vector 
+$\mathbf{\bar{x}} = \sum\limits_{i=1}^n x_{i}.$  
+
+The mean vector is a $d$-dimensional vector where each value in this vector represents the sample mean of a feature column in the dataset.
+
+
+```{r}
+cov_mat<-cor(iris_tab[,1:4])
+cov_mat
+```
+
+```{r}
+#install.packages("corrplot")
+library(corrplot)
+corrplot(cov_mat)
+```
+
+
+## PCA with two variables
+
+
+```{r}
+new_data = as.data.frame(cbind(petal_length = iris_tab$petal_length, petal_width = iris_tab$petal_width))
+head(new_data)
+plot(new_data$petal_length, new_data$petal_width)
+```
+
+
+
+```{r}
+#install.packages("FactoMineR")
+library("FactoMineR")
+pc_2var_res = PCA(new_data)
+print(pc_2var_res)
+```
+
+
+```{r}
+#install.packages("FactoInvestigate")
+#library(FactoInvestigate)
+#Investigate(pc_2var_res, document = "pdf_document")
+```
+
+
+
+
+
+Next, we perform an eigendecomposition on the covariance matrix:
+
+```{r}
+eigen(cov_mat)
+```
+
+
+
+## PCA on `wine` data
+
+### Read the `wine` data
+
+```{r}
+wine <- read.csv("data/wine.csv", header=T)
+knitr::kable(wine)
+```
+
+### Description of each column
+
+```{r}
+wine_desc <- read.table("data/wine_data_desc.tsv", sep="\t", header = T)
+knitr::kable(wine_desc)
+```
+
+
+```{r}
+library(corrplot)
+dim(wine)
+wine_x<-wine[, 2:14]
+cor_matrix<-cor(wine_x)
+
+# method = "square", ellipse, number, shade, color, pie
+# type = upper, lower, full(default)
+corrplot(cor_matrix, method="circle", type = "upper")
+corrplot.mixed(cor_matrix)
+
+```
+
+### Example 
+
+Depends on the goal of your analysis. Some common practices, some of which are mentioned in whuber's link:
+
+Standardizing is usually done when the variables on which the PCA is performed are not measured on the same scale. Note that standardizing implies assigning equal importance to all variables.
+If they are not measured on the same scale and you choose to work on the non standardized variables, it is often the case that each PC is dominated by a single variable and you just get a sort of ordering of the variables by their variance. (One of the loadings of each (early) component will be close to +1 or -1.)
+The two methods often lead to different results, as you have experienced.
+
+Intuitive example:
+
+Suppose you have two variables: the height of a tree and the girth of the same tree. We will convert the volume to a factor: a tree will be high in volume if its volume is bigger than 20 cubic feet, and low in volume otherwise. We will use the trees dataset which comes preloaded in R
+
+```{r}
+data(trees)
+tree.girth<-trees[,1]
+tree.height<-trees[,2]
+tree.vol<-as.factor(ifelse(trees[,3]>20,"high","low"))
+```
+Now suppose that the height was actually measured in miles instead of feet.
+
+```{r}
+tree.height<-tree.height/5280
+tree<-cbind(tree.height,tree.girth)
+
+#do the PCA
+tree.pca<-princomp(tree)
+summary(tree.pca)
+```
+
+The first component explains almost 100% of the variability in the data. The loadings:
+
+```{r}
+loadings(tree.pca)
+```
+
+```{r}
+biplot(tree.pca,xlabs=tree.vol,col=c("grey","red"))
+```
+
+We see that trees high in volume tend to have a high tree girth, but the three height doesn't give any information on tree volume. This is likely wrong and the consequence of the two different unit measures.
+
+We could use the same units, or we could standardize the variables. I expect both will lead to a more balanced picture of the variability. Of course in this case one can argue that the variables should have the same unit but not be standardized, which may be a valid argument, were it not that we are measuring two different things. (When we would be measuring the weight of the tree and the girth of the tree, the scale on which both should be measured is no longer very clear. In this case we have a clear argument to work on the standardized variables.)
+
+```{r}
+tree.height<-tree.height*5280
+tree<-cbind(tree.height,tree.girth)
+
+#do the PCA
+tree.pca<-princomp(tree)
+summary(tree.pca)
+
+loadings(tree.pca)
+biplot(tree.pca,xlabs=tree.vol,col=c("grey","red"))
+```
+
+We now see that trees which are tall and have a big girth, are high in volume (bottom left corner), compared to low girth and low height for low volume trees (upper right corner). This intuitively makes sense.
+
+If one watches closely, however, we see that the contrast between high/low volume is strongest in the girth direction and not in the height direction. Let's see what happens when we standardize:
+
+```{r}
+tree<-scale(tree,center=F,scale=T)
+tree.pca<-princomp(tree)
+summary(tree.pca)
+loadings(tree.pca)
+biplot(tree.pca,xlabs=tree.vol,col=c("grey","red"))
+
+```
+
+Indeed, the girth now explains the majority of the difference in high and low volume trees! (The length of the arrow in the biplot is indicatory of the variance in the original variable.) So even if things are measured on the same scale, standardizing may be useful. Not standardizing may be recommended when we are for example comparing the length of different species of trees because this is exactly the same measurement.
+
+
+## References
+
+https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html#about-iris
+
+How to read PCA biplots and scree plots: https://blog.bioturing.com/2018/06/18/how-to-read-pca-biplots-and-scree-plots/
+
+Principal Component Analysis (PCA): 
+https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/index
+
+Exploratory Multivariate Analysis by Example using R:
+http://factominer.free.fr/course/index.html
+
+https://github.com/gabi493/ADEI/blob/master/Husson%20F.%20et%20al.%20-%20Exploratory%20Multivariate%20Analysis%20by%20Example%20-%20Using%20R%20-%202011.pdf
+
+
+Three Tips for Principal Component Analysis: 
+https://www.theanalysisfactor.com/tips-principal-component-analysis/
+
+
+Not normalizing data before PCA gives better explained variance ratio?: 
+https://stats.stackexchange.com/questions/105592/not-normalizing-data-before-pca-gives-better-explained-variance-ratio

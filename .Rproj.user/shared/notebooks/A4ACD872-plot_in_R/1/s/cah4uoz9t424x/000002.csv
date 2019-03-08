@@ -1,3 +1,0 @@
-"0","## Data from  https://github.com/thomas-haslwanter/statsintro_python/blob/master/ISP/Code_Quantlets/08_TestsMeanValues/anovaOneway/galton.csv"
-"0","tab<-read.csv(""data/galton.csv"")"
-"0","head(tab)"

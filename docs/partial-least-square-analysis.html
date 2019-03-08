@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Notes of R for Bioinformatics</title>
+  <meta name="description" content="Notes of R for Bioinformatics">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Notes of R for Bioinformatics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Notes of R for Bioinformatics" />
+  
+  
+  
+
+<meta name="author" content="Shaojun Xie">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="transformation-of-data.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="part"><span><b>I Introduction</b></span></li>
+<li class="chapter" data-level="1" data-path="basic-systax.html"><a href="basic-systax.html"><i class="fa fa-check"></i><b>1</b> Basic systax</a><ul>
+<li class="chapter" data-level="1.1" data-path="basic-systax.html"><a href="basic-systax.html#setup"><i class="fa fa-check"></i><b>1.1</b> Setup</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="basic-systax.html"><a href="basic-systax.html#install-packages"><i class="fa fa-check"></i><b>1.1.1</b> Install packages</a></li>
+<li class="chapter" data-level="1.1.2" data-path="basic-systax.html"><a href="basic-systax.html#install"><i class="fa fa-check"></i><b>1.1.2</b> Install</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="basic-systax.html"><a href="basic-systax.html#data-type"><i class="fa fa-check"></i><b>1.2</b> Data type</a></li>
+<li class="chapter" data-level="1.3" data-path="basic-systax.html"><a href="basic-systax.html#data-structures"><i class="fa fa-check"></i><b>1.3</b> Data structures</a></li>
+<li class="chapter" data-level="1.4" data-path="basic-systax.html"><a href="basic-systax.html#read-from-and-write-into-files"><i class="fa fa-check"></i><b>1.4</b> Read from and write into files</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="basic-systax.html"><a href="basic-systax.html#read-random-rows-from-a-huge-file"><i class="fa fa-check"></i><b>1.4.1</b> Read Random Rows from A Huge File</a></li>
+<li class="chapter" data-level="1.4.2" data-path="basic-systax.html"><a href="basic-systax.html#reference"><i class="fa fa-check"></i><b>1.4.2</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="basic-systax.html"><a href="basic-systax.html#functions"><i class="fa fa-check"></i><b>1.5</b> Functions</a></li>
+<li class="chapter" data-level="1.6" data-path="basic-systax.html"><a href="basic-systax.html#control-structure"><i class="fa fa-check"></i><b>1.6</b> Control structure</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="plot-in-r.html"><a href="plot-in-r.html"><i class="fa fa-check"></i><b>2</b> Plot in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="plot-in-r.html"><a href="plot-in-r.html#read-the-data"><i class="fa fa-check"></i><b>2.1</b> Read the data</a></li>
+<li class="chapter" data-level="2.2" data-path="plot-in-r.html"><a href="plot-in-r.html#line-plot"><i class="fa fa-check"></i><b>2.2</b> Line plot</a></li>
+<li class="chapter" data-level="2.3" data-path="plot-in-r.html"><a href="plot-in-r.html#basic-line-plot"><i class="fa fa-check"></i><b>2.3</b> Basic line plot</a></li>
+<li class="chapter" data-level="2.4" data-path="plot-in-r.html"><a href="plot-in-r.html#color-the-dots-based-on-the-sex-information"><i class="fa fa-check"></i><b>2.4</b> Color the dots based on the <code>sex</code> information</a></li>
+<li class="chapter" data-level="2.5" data-path="plot-in-r.html"><a href="plot-in-r.html#section"><i class="fa fa-check"></i><b>2.5</b> </a></li>
+<li class="chapter" data-level="2.6" data-path="plot-in-r.html"><a href="plot-in-r.html#draw-a-circle-in-r"><i class="fa fa-check"></i><b>2.6</b> Draw a circle in R</a></li>
+<li class="chapter" data-level="2.7" data-path="plot-in-r.html"><a href="plot-in-r.html#network"><i class="fa fa-check"></i><b>2.7</b> Network</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="plot-in-r.html"><a href="plot-in-r.html#section-1"><i class="fa fa-check"></i><b>2.7.1</b> </a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>3</b> Correlation</a><ul>
+<li class="chapter" data-level="3.1" data-path="correlation.html"><a href="correlation.html#visulization-of-pair-wise-correlation-in-r"><i class="fa fa-check"></i><b>3.1</b> Visulization of pair-wise correlation in R</a></li>
+<li class="chapter" data-level="3.2" data-path="correlation.html"><a href="correlation.html#correlation-and-p-values-of-all-combinations-of-all-rows-of-two-matrices"><i class="fa fa-check"></i><b>3.2</b> Correlation and p-values of all combinations of all rows of two matrices</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="correlation.html"><a href="correlation.html#prepare-the-data"><i class="fa fa-check"></i><b>3.2.1</b> Prepare the data</a></li>
+<li class="chapter" data-level="3.2.2" data-path="correlation.html"><a href="correlation.html#another-way-to-do-this-is-to-use-corr.test"><i class="fa fa-check"></i><b>3.2.2</b> Another way to do this is to use <code>corr.test</code></a></li>
+<li class="chapter" data-level="3.2.3" data-path="correlation.html"><a href="correlation.html#read-data"><i class="fa fa-check"></i><b>3.2.3</b> Read data</a></li>
+<li class="chapter" data-level="3.2.4" data-path="correlation.html"><a href="correlation.html#calculate-the-correlation-advance"><i class="fa fa-check"></i><b>3.2.4</b> Calculate the correlation (Advance)</a></li>
+<li class="chapter" data-level="3.2.5" data-path="correlation.html"><a href="correlation.html#reference-2"><i class="fa fa-check"></i><b>3.2.5</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="correlation.html"><a href="correlation.html#different-ways-to-visulize-correlation"><i class="fa fa-check"></i><b>3.3</b> Different ways to visulize correlation</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="correlation.html"><a href="correlation.html#display-correlation-using-chart.correlation-in-performanceanalytics"><i class="fa fa-check"></i><b>3.3.1</b> Display correlation using <code>chart.Correlation</code> in <code>PerformanceAnalytics</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="correlation.html"><a href="correlation.html#reference-3"><i class="fa fa-check"></i><b>3.4</b> Reference</a></li>
+</ul></li>
+<li class="part"><span><b>II Statistics</b></span></li>
+<li class="chapter" data-level="4" data-path="standard-deviation-vs-standard-error.html"><a href="standard-deviation-vs-standard-error.html"><i class="fa fa-check"></i><b>4</b> Standard deviation vs Standard error</a><ul>
+<li class="chapter" data-level="4.1" data-path="standard-deviation-vs-standard-error.html"><a href="standard-deviation-vs-standard-error.html#reference-4"><i class="fa fa-check"></i><b>4.1</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="t-test.html"><a href="t-test.html"><i class="fa fa-check"></i><b>5</b> T test</a><ul>
+<li class="chapter" data-level="5.1" data-path="t-test.html"><a href="t-test.html#calculate-t-statistic-step-by-step-in-r"><i class="fa fa-check"></i><b>5.1</b> Calculate t-statistic step by step in R</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="t-test.html"><a href="t-test.html#section-2"><i class="fa fa-check"></i><b>5.1.1</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="t-test.html"><a href="t-test.html#calculate-the-standard-deviation-in-r"><i class="fa fa-check"></i><b>5.2</b> Calculate the standard deviation in R</a></li>
+<li class="chapter" data-level="5.3" data-path="t-test.html"><a href="t-test.html#reference-5"><i class="fa fa-check"></i><b>5.3</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="linear-model.html"><a href="linear-model.html"><i class="fa fa-check"></i><b>6</b> Linear model</a><ul>
+<li class="chapter" data-level="6.1" data-path="linear-model.html"><a href="linear-model.html#section-3"><i class="fa fa-check"></i><b>6.1</b> </a></li>
+<li class="chapter" data-level="6.2" data-path="linear-model.html"><a href="linear-model.html#extract-male-data"><i class="fa fa-check"></i><b>6.2</b> Extract male data</a></li>
+<li class="chapter" data-level="6.3" data-path="linear-model.html"><a href="linear-model.html#reference-6"><i class="fa fa-check"></i><b>6.3</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>7</b> MRG</a><ul>
+<li class="chapter" data-level="7.1" data-path="mrg.html"><a href="mrg.html#read-the-data-1"><i class="fa fa-check"></i><b>7.1</b> Read the data</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>8</b> Multiple linear regression</a><ul>
+<li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-4"><i class="fa fa-check"></i><b>8.1</b> </a></li>
+<li class="chapter" data-level="8.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-5"><i class="fa fa-check"></i><b>8.2</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html"><i class="fa fa-check"></i><b>9</b> Bayesian newwork in R</a><ul>
+<li class="chapter" data-level="9.1" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#practical-experiments"><i class="fa fa-check"></i><b>9.1</b> Practical experiments</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#analysis-of-the-magic-population-in-scutari-et-al.-genetics-2014"><i class="fa fa-check"></i><b>9.1.1</b> Analysis of the MAGIC population in Scutari et al., Genetics (2014)</a></li>
+<li class="chapter" data-level="9.1.2" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#reference-7"><i class="fa fa-check"></i><b>9.1.2</b> Reference</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><i class="fa fa-check"></i><b>10</b> The rationale for using negative binomial distribution to model read count in RNA-seq data</a><ul>
+<li class="chapter" data-level="10.1" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#negative-binomial-in-r"><i class="fa fa-check"></i><b>10.1</b> Negative binomial in R</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#real-data"><i class="fa fa-check"></i><b>10.1.1</b> Real data</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#reference-8"><i class="fa fa-check"></i><b>10.2</b> Reference</a></li>
+<li class="chapter" data-level="10.3" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#batch-effect"><i class="fa fa-check"></i><b>10.3</b> Batch effect</a></li>
+<li class="chapter" data-level="10.4" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#reference-9"><i class="fa fa-check"></i><b>10.4</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="multiple-test-corretion.html"><a href="multiple-test-corretion.html"><i class="fa fa-check"></i><b>11</b> Multiple test corretion</a></li>
+<li class="chapter" data-level="12" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html"><i class="fa fa-check"></i><b>12</b> Working with missing values</a><ul>
+<li class="chapter" data-level="12.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#section-6"><i class="fa fa-check"></i><b>12.1</b> </a></li>
+<li class="chapter" data-level="12.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summaryize-the-missing-values"><i class="fa fa-check"></i><b>12.2</b> Summaryize the missing values</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summarize-the-missing-values-using-mice-package"><i class="fa fa-check"></i><b>12.2.1</b> Summarize the missing values using <code>mice</code> package</a></li>
+<li class="chapter" data-level="12.2.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summarize-the-missing-values-using-vim-packages"><i class="fa fa-check"></i><b>12.2.2</b> Summarize the missing values using <code>VIM</code> packages</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#delete-columnsrows-with-more-that-x-missing"><i class="fa fa-check"></i><b>12.3</b> Delete columns/rows with more that x% missing</a></li>
+<li class="chapter" data-level="12.4" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#imputing-the-data"><i class="fa fa-check"></i><b>12.4</b> Imputing the data</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#imputing-the-data-with-row-wise-mean"><i class="fa fa-check"></i><b>12.4.1</b> Imputing the data with row-wise mean</a></li>
+<li class="chapter" data-level="12.4.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#imputing-the-data-with-row-wise-mean-using-mice"><i class="fa fa-check"></i><b>12.4.2</b> Imputing the data with row-wise mean using <code>mice</code></a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#reference-10"><i class="fa fa-check"></i><b>12.5</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>13</b> Data wrangling</a><ul>
+<li class="chapter" data-level="13.1" data-path="data-wrangling.html"><a href="data-wrangling.html#section-7"><i class="fa fa-check"></i><b>13.1</b> </a></li>
+<li class="chapter" data-level="13.2" data-path="data-wrangling.html"><a href="data-wrangling.html#joining-data-in-r-with-dplyr"><i class="fa fa-check"></i><b>13.2</b> Joining Data in R with dplyr</a><ul>
+<li class="chapter" data-level="13.2.1" data-path="data-wrangling.html"><a href="data-wrangling.html#whats-covered"><i class="fa fa-check"></i><b>13.2.1</b> Whats Covered</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="data-wrangling.html"><a href="data-wrangling.html#reference-11"><i class="fa fa-check"></i><b>13.3</b> Reference</a></li>
+</ul></li>
+<li class="part"><span><b>III Machine learning</b></span></li>
+<li class="chapter" data-level="14" data-path="pca.html"><a href="pca.html"><i class="fa fa-check"></i><b>14</b> PCA</a><ul>
+<li class="chapter" data-level="14.1" data-path="pca.html"><a href="pca.html#read-data-1"><i class="fa fa-check"></i><b>14.1</b> Read data</a></li>
+<li class="chapter" data-level="14.2" data-path="pca.html"><a href="pca.html#head-data"><i class="fa fa-check"></i><b>14.2</b> Head data</a></li>
+<li class="chapter" data-level="14.3" data-path="pca.html"><a href="pca.html#summary-of-the-data"><i class="fa fa-check"></i><b>14.3</b> Summary of the data</a></li>
+<li class="chapter" data-level="14.4" data-path="pca.html"><a href="pca.html#check-the-distribution-of-the-data"><i class="fa fa-check"></i><b>14.4</b> Check the distribution of the data</a></li>
+<li class="chapter" data-level="14.5" data-path="pca.html"><a href="pca.html#eigendecomposition---computing-eigenvectors-and-eigenvalues"><i class="fa fa-check"></i><b>14.5</b> Eigendecomposition - Computing Eigenvectors and Eigenvalues</a><ul>
+<li class="chapter" data-level="14.5.1" data-path="pca.html"><a href="pca.html#covariance-matrix"><i class="fa fa-check"></i><b>14.5.1</b> Covariance Matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="pca.html"><a href="pca.html#pca-with-two-variables"><i class="fa fa-check"></i><b>14.6</b> PCA with two variables</a></li>
+<li class="chapter" data-level="14.7" data-path="pca.html"><a href="pca.html#pca-on-wine-data"><i class="fa fa-check"></i><b>14.7</b> PCA on <code>wine</code> data</a><ul>
+<li class="chapter" data-level="14.7.1" data-path="pca.html"><a href="pca.html#read-the-wine-data"><i class="fa fa-check"></i><b>14.7.1</b> Read the <code>wine</code> data</a></li>
+<li class="chapter" data-level="14.7.2" data-path="pca.html"><a href="pca.html#description-of-each-column"><i class="fa fa-check"></i><b>14.7.2</b> Description of each column</a></li>
+<li class="chapter" data-level="14.7.3" data-path="pca.html"><a href="pca.html#example"><i class="fa fa-check"></i><b>14.7.3</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="pca.html"><a href="pca.html#references"><i class="fa fa-check"></i><b>14.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="random-forest.html"><a href="random-forest.html"><i class="fa fa-check"></i><b>15</b> Random forest</a><ul>
+<li class="chapter" data-level="15.1" data-path="random-forest.html"><a href="random-forest.html#practical-experiments-1"><i class="fa fa-check"></i><b>15.1</b> Practical experiments</a><ul>
+<li class="chapter" data-level="15.1.1" data-path="random-forest.html"><a href="random-forest.html#random-forest-for-prediction-of-iris"><i class="fa fa-check"></i><b>15.1.1</b> Random forest for prediction of iris</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="qtl-analysis.html"><a href="qtl-analysis.html"><i class="fa fa-check"></i><b>16</b> QTL analysis</a><ul>
+<li class="chapter" data-level="16.1" data-path="qtl-analysis.html"><a href="qtl-analysis.html#reference-12"><i class="fa fa-check"></i><b>16.1</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="17" data-path="transformation-of-data.html"><a href="transformation-of-data.html"><i class="fa fa-check"></i><b>17</b> Transformation of data</a><ul>
+<li class="chapter" data-level="17.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#log-transformation"><i class="fa fa-check"></i><b>17.1</b> Log transformation</a><ul>
+<li class="chapter" data-level="17.1.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#the-rationale-of-using-log2-transformation"><i class="fa fa-check"></i><b>17.1.1</b> The rationale of using log2 transformation</a></li>
+<li class="chapter" data-level="17.1.2" data-path="transformation-of-data.html"><a href="transformation-of-data.html#reference-13"><i class="fa fa-check"></i><b>17.1.2</b> Reference</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html"><i class="fa fa-check"></i><b>18</b> Partial least square analysis</a><ul>
+<li class="chapter" data-level="18.1" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#prepare-the-data-1"><i class="fa fa-check"></i><b>18.1</b> Prepare the data</a></li>
+<li class="chapter" data-level="18.2" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#principal-component-analysis-pca"><i class="fa fa-check"></i><b>18.2</b> Principal Component Analysis (PCA)</a></li>
+<li class="chapter" data-level="18.3" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#partial-least-squares-pls-and-pls-da"><i class="fa fa-check"></i><b>18.3</b> Partial least-squares: PLS and PLS-DA</a></li>
+<li class="chapter" data-level="18.4" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#reference-14"><i class="fa fa-check"></i><b>18.4</b> Reference</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes of R for Bioinformatics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="partial-least-square-analysis" class="section level1">
+<h1><span class="header-section-number">18</span> Partial least square analysis</h1>
+<div id="prepare-the-data-1" class="section level2">
+<h2><span class="header-section-number">18.1</span> Prepare the data</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ropls)
+<span class="kw">data</span>(sacurine)
+<span class="kw">names</span>(sacurine)</code></pre></div>
+<pre><code>## [1] &quot;dataMatrix&quot;       &quot;sampleMetadata&quot;   &quot;variableMetadata&quot;</code></pre>
+<p>We attach sacurine to the search path and display a summary of the content of the dataMatrix, sampleMetadata and variableMetadata with the strF Function of the ropls package (see also str):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">attach</span>(sacurine)
+<span class="kw">strF</span>(dataMatrix)</code></pre></div>
+<pre><code>##        dim  class    mode typeof   size NAs  min mean median max
+##  183 x 109 matrix numeric double 0.2 Mb   0 -0.3  4.2    4.3   6
+##        (2-methoxyethoxy)propanoic acid isomer (gamma)Glu-Leu/Ile ...
+## HU_011                            3.019766011        3.888479324 ...
+## HU_014                             3.81433889        4.277148905 ...
+## ...                                       ...                ... ...
+## HU_208                            3.748127215        4.523763202 ...
+## HU_209                            4.208859398        4.675880567 ...
+##        Valerylglycine isomer 2  Xanthosine
+## HU_011             3.889078716 4.075879575
+## HU_014             4.181765852 4.195761901
+## ...                        ...         ...
+## HU_208             4.634338821 4.487781609
+## HU_209              4.47194762 4.222953354</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(dataMatrix)</code></pre></div>
+<pre><code>##        (2-methoxyethoxy)propanoic acid isomer (gamma)Glu-Leu/Ile
+## HU_011                               3.019766           3.888479
+## HU_014                               3.814339           4.277149
+## HU_015                               3.519691           4.195649
+## HU_017                               2.562183           4.323760
+## HU_018                               3.781922           4.629329
+## HU_019                               4.161074           4.412266
+##        1-Methyluric acid 1-Methylxanthine 1,3-Dimethyluric acid
+## HU_011          3.869006         3.717259              3.535461
+## HU_014          3.837704         3.776851              3.932581
+## HU_015          4.102254         4.291665              3.955376
+## HU_017          4.538520         4.432216              4.228491
+## HU_018          4.178829         4.117360              4.005545
+## HU_019          4.516805         4.562052              4.320582
+##        1,7-Dimethyluric acid 2-acetamido-4-methylphenyl acetate
+## HU_011              3.325199                           4.204754
+## HU_014              4.025125                           5.181858
+## HU_015              3.972904                           3.885680
+## HU_017              4.109927                           4.237915
+## HU_018              4.024092                           1.852994
+## HU_019              4.326856                           4.080681
+##        2-Aminoadipic acid 2-Hydroxybenzyl alcohol 2-Isopropylmalic acid
+## HU_011           4.080204                4.560049              3.466916
+## HU_014           4.359246                3.158212              3.942746
+## HU_015           4.249111                4.290525              3.539600
+## HU_017           4.231404                3.644976              3.152084
+## HU_018           4.323679                4.095923              4.490116
+## HU_019           4.244485                4.428005              4.156567
+##        2-Methylhippuric acid 2,2-Dimethylglutaric acid
+## HU_011              4.297716                  3.799720
+## HU_014              3.833793                  4.192342
+## HU_015              4.199262                  4.146924
+## HU_017              3.865260                  4.233270
+## HU_018              4.271223                  4.755177
+## HU_019              3.831930                  4.333599
+##        3-Hydroxybenzyl alcohol 3-Hydroxyphenylacetic acid
+## HU_011                3.502958                   4.672721
+## HU_014                4.370053                   4.490127
+## HU_015                3.990814                   4.416155
+## HU_017                4.151260                   3.960912
+## HU_018                4.373425                   4.247532
+## HU_019                1.446237                   4.164327
+##        3-Indole carboxylic acid glucuronide 3-Methyl-2-oxovaleric acid
+## HU_011                             3.548979                   3.956110
+## HU_014                             4.344955                   4.062870
+## HU_015                             4.174503                   4.420565
+## HU_017                             4.688053                   4.146152
+## HU_018                             3.276676                   4.351114
+## HU_019                             4.206905                   4.341494
+##        3-Methylcrotonylglycine 3,3-Dimethylglutaric acid
+## HU_011                4.204465                  4.223994
+## HU_014                4.055144                  4.486961
+## HU_015                4.148095                  4.137063
+## HU_017                4.193130                  4.200239
+## HU_018                4.225720                  4.569052
+## HU_019                4.127074                  4.195226
+##        3,4-Dihydroxybenzeneacetic acid
+## HU_011                        3.400454
+## HU_014                        4.366695
+## HU_015                        3.965742
+## HU_017                        4.121298
+## HU_018                        4.373747
+## HU_019                        2.320550
+##        3,5-dihydroxybenzoic acid/3,4-dihydroxybenzoic acid
+## HU_011                                            4.494138
+## HU_014                                            4.118021
+## HU_015                                            4.284274
+## HU_017                                            4.118248
+## HU_018                                            4.077463
+## HU_019                                            4.107163
+##        3,7-Dimethyluric acid 4-Acetamidobutanoic acid isomer 2
+## HU_011              4.233820                          4.046984
+## HU_014              3.596651                          4.218431
+## HU_015              3.954022                          3.995719
+## HU_017              3.995039                          4.006450
+## HU_018              3.908515                          4.564357
+## HU_019              4.720603                          4.193068
+##        4-Acetamidobutanoic acid isomer 3 4-Hydroxybenzoic acid
+## HU_011                          3.964380              4.581811
+## HU_014                          4.087865              4.675483
+## HU_015                          4.031485              4.248248
+## HU_017                          3.884681              4.171788
+## HU_018                          4.347509              4.660293
+## HU_019                          4.040541              4.335561
+##        4-Methylhippuric acid/3-Methylhippuric acid
+## HU_011                                    3.242186
+## HU_014                                    3.838007
+## HU_015                                    4.723900
+## HU_017                                    3.617350
+## HU_018                                    4.285848
+## HU_019                                    3.430342
+##        5-Hydroxyindoleacetic acid 5-Sulfosalicylic acid
+## HU_011                   4.307545              4.023477
+## HU_014                   4.402027              4.083692
+## HU_015                   3.975413              4.232119
+## HU_017                   4.168655              3.088972
+## HU_018                   4.502182              4.142686
+## HU_019                   4.281092              3.950241
+##        6-(2-hydroxyethoxy)-6-oxohexanoic acid
+## HU_011                               3.758640
+## HU_014                               4.329163
+## HU_015                               3.994170
+## HU_017                               4.436174
+## HU_018                               4.442814
+## HU_019                               4.260599
+##        6-(carboxymethoxy)-hexanoic acid 9-Methylxanthine
+## HU_011                         3.445392         4.403909
+## HU_014                         3.999589         4.211293
+## HU_015                         4.039267         4.073960
+## HU_017                         4.084428         4.257367
+## HU_018                         4.527800         3.662754
+## HU_019                         4.114818         4.262501
+##        Acetaminophen glucuronide Acetylphenylalanine
+## HU_011                1.64620136            4.169514
+## HU_014                0.09467123            4.515993
+## HU_015               -0.15947672            4.083460
+## HU_017                0.32143853            3.767910
+## HU_018                1.76127463            4.187942
+## HU_019                4.62568088            4.292496
+##        alpha-N-Phenylacetyl-glutamine Aminosalicyluric acid
+## HU_011                       4.406638              4.125306
+## HU_014                       4.362682              3.942512
+## HU_015                       4.101540              4.004895
+## HU_017                       4.173137              4.277246
+## HU_018                       4.332330              4.307816
+## HU_019                       4.366653              3.908610
+##        Asp-Leu/Ile isomer 1 Asp-Leu/Ile isomer 2 Aspartic acid
+## HU_011             3.565669             3.706871      4.262679
+## HU_014             3.852859             3.624547      4.278906
+## HU_015             3.879881             3.965623      4.225658
+## HU_017             3.564683             4.000451      4.476138
+## HU_018             4.710114             4.414012      4.460986
+## HU_019             4.551170             4.417869      4.545151
+##        Azelaic acid Benzoic acid isomer Chenodeoxycholic acid isomer
+## HU_011     4.419660            3.867245                     3.507941
+## HU_014     4.331720            4.830236                     3.925771
+## HU_015     4.105070            3.371990                     4.765679
+## HU_017     4.017999            3.724525                     4.058410
+## HU_018     4.320763            4.593359                     4.379709
+## HU_019     4.641622            4.475130                     4.120224
+##        Cinnamoylglycine Citric acid Dehydroepiandrosterone 3-glucuronide
+## HU_011         3.981493    4.077505                             4.276799
+## HU_014         3.381453    4.418117                             3.781079
+## HU_015         3.773393    4.179830                             4.039523
+## HU_017         4.213982    4.218916                             3.960037
+## HU_018         2.636678    4.294479                             4.178258
+## HU_019         4.071694    4.386380                             4.018968
+##        Dehydroepiandrosterone sulfate Deoxyhexose Dimethylguanosine
+## HU_011                       4.462774    3.760569          4.052598
+## HU_014                       3.806104    3.809186          4.269907
+## HU_015                       3.193502    4.226145          4.197532
+## HU_017                       4.165680    3.997357          4.350023
+## HU_018                       4.363253    4.084736          4.408429
+## HU_019                       3.986997    4.296965          4.310144
+##           FMNH2 Fumaric acid Gentisic acid  Glu-Val
+## HU_011 3.565083     3.567561      4.300974 3.706666
+## HU_014 4.208395     3.840097      4.584677 4.310927
+## HU_015 4.034409     4.384064      4.764176 4.289509
+## HU_017 4.233037     3.416630      4.062663 4.376818
+## HU_018 4.597364     4.091964      4.431808 4.721889
+## HU_019 4.199745     4.012107      4.238883 4.392128
+##        Gluconic acid and/or isomers Glucuronic acid and/or isomers
+## HU_011                     4.288424                       4.271366
+## HU_014                     4.586464                       4.701159
+## HU_015                     4.096407                       4.123025
+## HU_017                     4.743170                       4.593438
+## HU_018                     4.614798                       4.461186
+## HU_019                     4.334139                       4.461209
+##        Glyceric acid Glycocholic acid isomer 2 Glycocholic acid isomer 3
+## HU_011      3.928441                  3.536033                  3.467331
+## HU_014      4.286770                  4.157624                  4.170019
+## HU_015      4.273123                  4.298947                  4.045842
+## HU_017      4.606753                  2.519658                  2.687939
+## HU_018      4.641004                  4.743202                  4.763984
+## HU_019      4.429628                  3.395705                  3.371074
+##        Heptylmalonic acid Hexanoylglycine Hippuric acid
+## HU_011           4.299342        3.700495      4.281181
+## HU_014           4.587917        4.288872      4.274765
+## HU_015           4.245115        4.154405      4.030601
+## HU_017           4.101909        4.076289      4.437759
+## HU_018           4.270874        4.575928      4.105510
+## HU_019           4.417992        3.904992      4.297234
+##        Hydroxybenzyl alcohol isomer Hydroxyphenyllactic acid
+## HU_011                     4.238096                 3.959217
+## HU_014                     3.602194                 4.774698
+## HU_015                     3.948782                 3.457264
+## HU_017                     3.368220                 3.805230
+## HU_018                     4.324214                 4.567749
+## HU_019                     4.043065                 4.413443
+##        Hydroxysuberic acid isomer 1 Hydroxysuberic acid isomer 2
+## HU_011                     4.144705                     4.295285
+## HU_014                     3.914818                     4.351692
+## HU_015                     4.118942                     4.050348
+## HU_017                     4.016532                     4.476785
+## HU_018                     4.513977                     4.474938
+## HU_019                     4.522243                     4.145574
+##        Isovalerylalanine isomer Ketoleucine Kynurenic acid Malic acid
+## HU_011                 3.878689    3.522784       4.012747   3.534347
+## HU_014                 4.167564    3.861882       4.068847   4.069774
+## HU_015                 4.427536    3.839057       4.157414   3.696515
+## HU_017                 4.377871    4.034678       4.392389   3.940602
+## HU_018                 4.700258    4.078886       4.296854   4.231243
+## HU_019                 4.067620    4.030812       4.323642   4.333562
+##        Methoxysalicylic acid isomer
+## HU_011                     4.060952
+## HU_014                     4.112547
+## HU_015                     4.288847
+## HU_017                     4.458437
+## HU_018                     4.189123
+## HU_019                     4.562835
+##        Methyl (hydroxymethyl)pyrrolidine-carboxylate/Methyl (hydroxy)piperidine-carboxylate
+## HU_011                                                                             3.899313
+## HU_014                                                                             4.233935
+## HU_015                                                                             4.520556
+## HU_017                                                                             4.355592
+## HU_018                                                                             4.407202
+## HU_019                                                                             4.232537
+##        Methylinosine Mevalonic acid isomer 1 Monoethyl phthalate
+## HU_011      3.979667                3.329769            4.186150
+## HU_014      4.191845                4.018856            3.347641
+## HU_015      4.362143                1.551281            3.824039
+## HU_017      4.272384                2.800934            3.091728
+## HU_018      4.487805                4.112110            3.655938
+## HU_019      4.378914                4.144182            4.240828
+##        N-Acetyl-aspartic acid N-Acetylisoleucine N-Acetylleucine
+## HU_011               4.117673           4.093393        3.411936
+## HU_014               4.428008           4.306259        4.478246
+## HU_015               4.205715           4.268660        4.266854
+## HU_017               4.385727           4.017203        4.027337
+## HU_018               4.253549           4.114619        3.237244
+## HU_019               4.363792           4.483260        4.370739
+##        N-Acetyltryptophan N-Acetyltryptophan isomer 3
+## HU_011           3.792115                    4.559495
+## HU_014           4.484242                    4.038887
+## HU_015           4.254061                    4.333962
+## HU_017           3.645018                    4.621739
+## HU_018           4.193701                    3.276002
+## HU_019           4.221705                    4.174604
+##        N2-Acetylaminoadipic acid N4-Acetylcytidine Nicotinuric acid isomer
+## HU_011                  3.631931          4.361610                3.848278
+## HU_014                  4.493698          4.518477                4.441710
+## HU_015                  3.904043          3.885826                4.240330
+## HU_017                  3.997636          4.496160                4.343148
+## HU_018                  4.330822          4.685971                4.044958
+## HU_019                  4.210520          4.468025                4.452897
+##        Ortho-Hydroxyphenylacetic acid Oxoglutaric acid p-Anisic acid
+## HU_011                       3.870825         2.997953      3.841620
+## HU_014                       4.658541         3.993253      4.678148
+## HU_015                       4.001141         3.482831      3.455275
+## HU_017                       4.296011         3.947712      2.890224
+## HU_018                       4.679458         3.955677      3.247603
+## HU_019                       4.295495         4.195985      3.952277
+##        p-Hydroxyhippuric acid p-Hydroxymandelic acid
+## HU_011               4.198435               4.140949
+## HU_014               4.621760               3.818508
+## HU_015               3.835598               4.221860
+## HU_017               4.166668               4.421014
+## HU_018               4.592458               4.703186
+## HU_019               4.114812               4.096616
+##        p-Hydroxyphenylacetic acid Pantothenic acid  Pentose
+## HU_011                   4.057362         4.367247 4.119872
+## HU_014                   3.867961         4.483832 4.219938
+## HU_015                   4.198771         4.281965 4.354551
+## HU_017                   4.138231         4.201390 4.294260
+## HU_018                   4.348636         4.367093 4.465690
+## HU_019                   4.181577         4.121433 4.250880
+##        Phe-Tyr-Asp (and isomers) Porphobilinogen Pyridoxic acid isomer 1
+## HU_011                  4.379156        3.873927                4.264819
+## HU_014                  4.227932        4.181048                4.103788
+## HU_015                  4.004176        4.136767                3.887147
+## HU_017                  4.214129        4.162675                3.856186
+## HU_018                  4.154741        4.461157                4.602857
+## HU_019                  4.340768        4.170573                4.069686
+##        Pyridylacetylglycine Pyrocatechol sulfate Pyroglutamic acid
+## HU_011             4.042992             4.452942          4.013843
+## HU_014             4.210327             4.281094          4.188313
+## HU_015             4.099646             4.239741          4.202476
+## HU_017             4.309022             4.186333          4.209444
+## HU_018             4.386013             4.060466          4.246487
+## HU_019             4.398879             4.282089          4.184347
+##        Pyrroledicarboxylic acid Pyruvic acid Quinic acid Salicylic acid
+## HU_011                 3.854579     3.229445    4.128023       3.925518
+## HU_014                 4.059364     3.843606    4.168761       4.035196
+## HU_015                 4.426634     3.555714    4.295171       4.588327
+## HU_017                 3.763358     3.766176    4.533188       3.847885
+## HU_018                 3.828249     3.985018    3.685546       3.695891
+## HU_019                 4.317047     3.911799    4.459420       4.100363
+##        Sebacic acid Suberic acid Sulfosalicylic acid isomer  Taurine
+## HU_011     4.298555     4.283358                   4.724543 4.294956
+## HU_014     4.316859     4.521646                   3.968791 5.143374
+## HU_015     4.387094     4.159625                   3.946592 4.525365
+## HU_017     4.026013     4.125570                   3.560990 4.821052
+## HU_018     4.516985     4.452634                   4.320034 4.544508
+## HU_019     4.547073     4.535423                   4.480640 3.999298
+##        Testosterone glucuronide Tetrahydrohippuric acid
+## HU_011                 4.292437                3.409692
+## HU_014                 3.467556                4.766827
+## HU_015                 4.325043                3.407598
+## HU_017                 4.306862                4.522244
+## HU_018                 4.589208                4.296404
+## HU_019                 4.010066                3.764092
+##        Threo-3-Phenylserine Threonic acid/Erythronic acid Tryptophan
+## HU_011             4.274910                      4.313963   4.006518
+## HU_014             4.153934                      4.473729   4.421590
+## HU_015             3.457296                      4.124348   4.438306
+## HU_017             3.927525                      4.558518   4.542105
+## HU_018             4.246966                      4.446222   4.217120
+## HU_019             4.269736                      4.367592   4.558531
+##        Valerylglycine isomer 1 Valerylglycine isomer 2 Xanthosine
+## HU_011                4.016261                3.889079   4.075880
+## HU_014                3.881005                4.181766   4.195762
+## HU_015                4.187176                4.254695   4.124493
+## HU_017                4.147544                4.290660   4.250258
+## HU_018                4.104498                4.138196   4.361709
+## HU_019                4.065452                4.300930   4.199196</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sampleMetadata</code></pre></div>
+<pre><code>##         age   bmi gender
+## HU_011 29.0 19.75      M
+## HU_014 59.0 22.64      F
+## HU_015 42.0 22.72      M
+## HU_017 41.0 23.03      M
+## HU_018 34.0 20.96      M
+## HU_019 35.0 23.41      M
+## HU_020 59.0 17.10      M
+## HU_021 34.0 23.36      M
+## HU_022 51.0 28.23      F
+## HU_023 51.0 29.55      M
+## HU_024 57.0 29.86      M
+## HU_025 53.0 21.60      M
+## HU_026 34.0 23.46      F
+## HU_027 37.0 24.82      M
+## HU_028 41.0 23.92      F
+## HU_029 37.0 27.78      M
+## HU_030 49.0 25.88      M
+## HU_031 25.0 20.76      M
+## HU_032 38.0 24.09      F
+## HU_033 44.0 18.36      F
+## HU_034 52.0 23.37      M
+## HU_035 37.0 20.70      F
+## HU_036 47.0 29.51      M
+## HU_037 35.0 25.62      M
+## HU_038 52.0 22.72      M
+## HU_039 45.0 24.90      M
+## HU_040 24.0 26.54      M
+## HU_041 28.0 23.67      M
+## HU_042 36.0 19.75      M
+## HU_043 42.0 29.04      M
+## HU_044 57.0 25.46      F
+## HU_045 46.0 20.81      F
+## HU_046 35.0 24.84      M
+## HU_047 43.0 25.00      F
+## HU_048 39.0 19.49      F
+## HU_049 50.0 27.85      M
+## HU_050 30.0 24.21      M
+## HU_051 24.0 23.23      F
+## HU_052 51.0 20.06      F
+## HU_053 49.0 25.88      M
+## HU_054 29.0 20.76      M
+## HU_055 58.0 24.89      F
+## HU_056 41.0 21.15      M
+## HU_057 57.0 27.16      M
+## HU_058 45.0 26.70      M
+## HU_060 55.0 28.72      F
+## HU_061 44.0 25.35      F
+## HU_062 34.0 22.22      M
+## HU_063 35.0 21.01      F
+## HU_064 32.0 21.94      F
+## HU_065 54.0 21.87      M
+## HU_066 25.0 22.53      F
+## HU_067 40.0 19.31      F
+## HU_068 37.0 27.22      F
+## HU_069 39.0 24.38      M
+## HU_070 58.0 18.71      M
+## HU_072 47.0 27.13      M
+## HU_073 35.0 25.38      M
+## HU_074 42.0 20.94      F
+## HU_075 38.0 21.05      M
+## HU_076 47.0 26.70      M
+## HU_077 27.0 21.15      M
+## HU_078 46.0 25.18      M
+## HU_079 47.0 23.55      M
+## HU_080 21.0 19.72      F
+## HU_081 25.0 17.84      F
+## HU_082 49.0 23.15      M
+## HU_083 50.0 29.76      M
+## HU_084 62.0 23.80      F
+## HU_085 23.0 22.86      M
+## HU_086 33.0 23.51      M
+## HU_087 38.0 23.80      F
+## HU_088 50.0 21.78      F
+## HU_089 31.0 23.70      M
+## HU_090 46.0 19.79      M
+## HU_091 61.0 26.12      M
+## HU_092 40.0 21.83      M
+## HU_093 53.0 21.71      M
+## HU_094 32.0 23.29      M
+## HU_095 27.0 27.33      M
+## HU_097 50.0 26.78      M
+## HU_098 46.0 20.45      M
+## HU_099 23.0 21.30      M
+## HU_100 47.0 21.22      F
+## HU_101 39.0 23.70      M
+## HU_102 59.0 24.03      F
+## HU_103 49.0 26.79      M
+## HU_105 47.0 22.96      M
+## HU_106 42.0 27.34      M
+## HU_107 46.0 24.22      M
+## HU_108 25.0 23.81      M
+## HU_109 32.0 22.68      M
+## HU_110 50.0 20.90      F
+## HU_112 55.0 25.36      M
+## HU_113 44.0 23.05      M
+## HU_114 58.0 29.38      M
+## HU_115 46.0 27.24      F
+## HU_116 28.0 20.96      F
+## HU_117 24.0 22.86      M
+## HU_118 30.0 21.64      F
+## HU_119 50.0 24.44      F
+## HU_120 32.0 23.88      F
+## HU_121 26.0 20.57      M
+## HU_122 48.0 23.03      M
+## HU_123 49.0 24.39      M
+## HU_124 34.0 22.22      M
+## HU_125 58.0 25.47      M
+## HU_126 45.0 24.70      M
+## HU_127 45.0 25.62      M
+## HU_129 47.0 29.32      M
+## HU_130 33.0 26.06      M
+## HU_131 42.0 23.12      M
+## HU_132 38.0 26.67      F
+## HU_133 53.0 25.43      M
+## HU_134 48.0 22.89      M
+## HU_135 31.0 24.93      M
+## HU_136 52.0 20.81      F
+## HU_137 28.0 22.22      M
+## HU_138 42.0 21.88      M
+## HU_139 47.0 23.03      M
+## HU_140 49.0 26.59      M
+## HU_142 25.0 20.98      M
+## HU_143 52.0 23.15      F
+## HU_144 38.0 29.54      M
+## HU_145 27.0 29.09      M
+## HU_146 42.0 24.21      M
+## HU_147 60.0 31.74      M
+## HU_148 55.0 30.48      F
+## HU_149 35.0 19.49      F
+## HU_150 49.0 27.24      F
+## HU_152 26.0 17.58      F
+## HU_154 35.0 27.71      F
+## HU_155 48.0 20.45      F
+## HU_156 36.0 16.85      F
+## HU_157 43.0 21.95      F
+## HU_158 50.0 25.48      F
+## HU_159 37.0 21.72      F
+## HU_160 31.0 24.17      F
+## HU_162 50.0 29.03      F
+## HU_163 49.0 23.15      F
+## HU_164 45.0 25.63      F
+## HU_166 40.0 19.72      F
+## HU_167 55.0 20.57      F
+## HU_168 37.0 20.76      F
+## HU_169 53.0 19.14      F
+## HU_170 50.0 24.61      F
+## HU_171 29.0 21.37      F
+## HU_172 55.0 21.36      F
+## HU_173 55.0 20.28      F
+## HU_174 42.0 31.64      F
+## HU_175 35.0 21.26      F
+## HU_177 59.0 28.58      F
+## HU_179 33.0 26.57      F
+## HU_180 53.0 23.74      F
+## HU_181 49.0 22.46      F
+## HU_182 43.0 23.74      F
+## HU_183 46.0 19.13      F
+## HU_184 37.0 25.33      F
+## HU_185 42.0 21.09      F
+## HU_186 44.0 22.10      F
+## HU_187 21.0 19.95      F
+## HU_188 22.0 24.22      F
+## HU_189 39.0 19.43      F
+## HU_190 28.0 25.93      M
+## HU_191 36.0 26.12      M
+## HU_192 31.0 24.22      M
+## HU_193 35.0 21.78      F
+## HU_194 40.0 28.04      F
+## HU_195 26.0 18.42      F
+## HU_196 27.0 21.10      F
+## HU_197 26.0 20.72      M
+## HU_198 35.0 22.98      M
+## HU_199 33.0 21.04      M
+## HU_200 46.0 23.89      M
+## HU_201 34.0 20.24      M
+## HU_202 42.0 28.06      M
+## HU_203 25.0 19.95      F
+## HU_204 31.0 29.06      M
+## HU_205 33.0 28.37      M
+## HU_206 45.0 22.15      F
+## HU_207 33.0 19.47      F
+## HU_208 27.0 18.61      F
+## HU_209 17.5 21.48      F</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(sampleMetadata)</code></pre></div>
+<pre><code>##       age            bmi        gender 
+##  Min.   :17.5   Min.   :16.85   M:100  
+##  1st Qu.:33.0   1st Qu.:21.12   F: 83  
+##  Median :42.0   Median :23.36          
+##  Mean   :40.9   Mean   :23.61          
+##  3rd Qu.:49.0   3rd Qu.:25.62          
+##  Max.   :62.0   Max.   :31.74</code></pre>
+</div>
+<div id="principal-component-analysis-pca" class="section level2">
+<h2><span class="header-section-number">18.2</span> Principal Component Analysis (PCA)</h2>
+<p>We perform a PCA on the dataMatrix matrix (samples as rows, variables as columns), with the opls method:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sacurine.pca &lt;-<span class="st"> </span><span class="kw">opls</span>(dataMatrix)</code></pre></div>
+<pre><code>## PCA
+## 183 samples x 109 variables
+## standard scaling of predictors
+##       R2X(cum) pre ort
+## Total    0.501   8   0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">genderFc &lt;-<span class="st"> </span>sampleMetadata[, <span class="st">&quot;gender&quot;</span>]
+<span class="kw">plot</span>(sacurine.pca, <span class="dt">typeVc =</span> <span class="st">&quot;x-score&quot;</span>,
+<span class="dt">parAsColFcVn =</span> genderFc, <span class="dt">parEllipsesL =</span> <span class="ot">TRUE</span>)</code></pre></div>
+</div>
+<div id="partial-least-squares-pls-and-pls-da" class="section level2">
+<h2><span class="header-section-number">18.3</span> Partial least-squares: PLS and PLS-DA</h2>
+<p>For PLS (and OPLS), the Y response(s) must be provided to the opls method. Y can be either a numeric vector (respectively matrix) for single (respectively multiple) (O)PLS regression, or a character factor for (O)PLS-DA classification as in the following example with the gender qualitative response:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sacurine.plsda &lt;-<span class="st"> </span><span class="kw">opls</span>(dataMatrix, genderFc)</code></pre></div>
+<pre><code>## PLS-DA
+## 183 samples x 109 variables and 1 response
+## standard scaling of predictors and response(s)
+##       R2X(cum) R2Y(cum) Q2(cum) RMSEE pre ort pR2Y  pQ2
+## Total    0.275     0.73   0.584 0.262   3   0 0.05 0.05</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">genderFc</code></pre></div>
+<pre><code>##   [1] M F M M M M M M F M M M F M F M M M F F M F M M M M M M M M F F M F F
+##  [36] M M F F M M F M M M F F M F F M F F F M M M M F M M M M M F F M M F M
+##  [71] M F F M M M M M M M M M M F M F M M M M M M F M M M F F M F F F M M M
+## [106] M M M M M M M F M M M F M M M M M F M M M M F F F F F F F F F F F F F
+## [141] F F F F F F F F F F F F F F F F F F F F F F F M M M F F F F M M M M M
+## [176] M F M M F F F F
+## Levels: M F</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(dataMatrix)</code></pre></div>
+<pre><code>##        (2-methoxyethoxy)propanoic acid isomer (gamma)Glu-Leu/Ile
+## HU_011                               3.019766           3.888479
+## HU_014                               3.814339           4.277149
+## HU_015                               3.519691           4.195649
+## HU_017                               2.562183           4.323760
+## HU_018                               3.781922           4.629329
+## HU_019                               4.161074           4.412266
+##        1-Methyluric acid 1-Methylxanthine 1,3-Dimethyluric acid
+## HU_011          3.869006         3.717259              3.535461
+## HU_014          3.837704         3.776851              3.932581
+## HU_015          4.102254         4.291665              3.955376
+## HU_017          4.538520         4.432216              4.228491
+## HU_018          4.178829         4.117360              4.005545
+## HU_019          4.516805         4.562052              4.320582
+##        1,7-Dimethyluric acid 2-acetamido-4-methylphenyl acetate
+## HU_011              3.325199                           4.204754
+## HU_014              4.025125                           5.181858
+## HU_015              3.972904                           3.885680
+## HU_017              4.109927                           4.237915
+## HU_018              4.024092                           1.852994
+## HU_019              4.326856                           4.080681
+##        2-Aminoadipic acid 2-Hydroxybenzyl alcohol 2-Isopropylmalic acid
+## HU_011           4.080204                4.560049              3.466916
+## HU_014           4.359246                3.158212              3.942746
+## HU_015           4.249111                4.290525              3.539600
+## HU_017           4.231404                3.644976              3.152084
+## HU_018           4.323679                4.095923              4.490116
+## HU_019           4.244485                4.428005              4.156567
+##        2-Methylhippuric acid 2,2-Dimethylglutaric acid
+## HU_011              4.297716                  3.799720
+## HU_014              3.833793                  4.192342
+## HU_015              4.199262                  4.146924
+## HU_017              3.865260                  4.233270
+## HU_018              4.271223                  4.755177
+## HU_019              3.831930                  4.333599
+##        3-Hydroxybenzyl alcohol 3-Hydroxyphenylacetic acid
+## HU_011                3.502958                   4.672721
+## HU_014                4.370053                   4.490127
+## HU_015                3.990814                   4.416155
+## HU_017                4.151260                   3.960912
+## HU_018                4.373425                   4.247532
+## HU_019                1.446237                   4.164327
+##        3-Indole carboxylic acid glucuronide 3-Methyl-2-oxovaleric acid
+## HU_011                             3.548979                   3.956110
+## HU_014                             4.344955                   4.062870
+## HU_015                             4.174503                   4.420565
+## HU_017                             4.688053                   4.146152
+## HU_018                             3.276676                   4.351114
+## HU_019                             4.206905                   4.341494
+##        3-Methylcrotonylglycine 3,3-Dimethylglutaric acid
+## HU_011                4.204465                  4.223994
+## HU_014                4.055144                  4.486961
+## HU_015                4.148095                  4.137063
+## HU_017                4.193130                  4.200239
+## HU_018                4.225720                  4.569052
+## HU_019                4.127074                  4.195226
+##        3,4-Dihydroxybenzeneacetic acid
+## HU_011                        3.400454
+## HU_014                        4.366695
+## HU_015                        3.965742
+## HU_017                        4.121298
+## HU_018                        4.373747
+## HU_019                        2.320550
+##        3,5-dihydroxybenzoic acid/3,4-dihydroxybenzoic acid
+## HU_011                                            4.494138
+## HU_014                                            4.118021
+## HU_015                                            4.284274
+## HU_017                                            4.118248
+## HU_018                                            4.077463
+## HU_019                                            4.107163
+##        3,7-Dimethyluric acid 4-Acetamidobutanoic acid isomer 2
+## HU_011              4.233820                          4.046984
+## HU_014              3.596651                          4.218431
+## HU_015              3.954022                          3.995719
+## HU_017              3.995039                          4.006450
+## HU_018              3.908515                          4.564357
+## HU_019              4.720603                          4.193068
+##        4-Acetamidobutanoic acid isomer 3 4-Hydroxybenzoic acid
+## HU_011                          3.964380              4.581811
+## HU_014                          4.087865              4.675483
+## HU_015                          4.031485              4.248248
+## HU_017                          3.884681              4.171788
+## HU_018                          4.347509              4.660293
+## HU_019                          4.040541              4.335561
+##        4-Methylhippuric acid/3-Methylhippuric acid
+## HU_011                                    3.242186
+## HU_014                                    3.838007
+## HU_015                                    4.723900
+## HU_017                                    3.617350
+## HU_018                                    4.285848
+## HU_019                                    3.430342
+##        5-Hydroxyindoleacetic acid 5-Sulfosalicylic acid
+## HU_011                   4.307545              4.023477
+## HU_014                   4.402027              4.083692
+## HU_015                   3.975413              4.232119
+## HU_017                   4.168655              3.088972
+## HU_018                   4.502182              4.142686
+## HU_019                   4.281092              3.950241
+##        6-(2-hydroxyethoxy)-6-oxohexanoic acid
+## HU_011                               3.758640
+## HU_014                               4.329163
+## HU_015                               3.994170
+## HU_017                               4.436174
+## HU_018                               4.442814
+## HU_019                               4.260599
+##        6-(carboxymethoxy)-hexanoic acid 9-Methylxanthine
+## HU_011                         3.445392         4.403909
+## HU_014                         3.999589         4.211293
+## HU_015                         4.039267         4.073960
+## HU_017                         4.084428         4.257367
+## HU_018                         4.527800         3.662754
+## HU_019                         4.114818         4.262501
+##        Acetaminophen glucuronide Acetylphenylalanine
+## HU_011                1.64620136            4.169514
+## HU_014                0.09467123            4.515993
+## HU_015               -0.15947672            4.083460
+## HU_017                0.32143853            3.767910
+## HU_018                1.76127463            4.187942
+## HU_019                4.62568088            4.292496
+##        alpha-N-Phenylacetyl-glutamine Aminosalicyluric acid
+## HU_011                       4.406638              4.125306
+## HU_014                       4.362682              3.942512
+## HU_015                       4.101540              4.004895
+## HU_017                       4.173137              4.277246
+## HU_018                       4.332330              4.307816
+## HU_019                       4.366653              3.908610
+##        Asp-Leu/Ile isomer 1 Asp-Leu/Ile isomer 2 Aspartic acid
+## HU_011             3.565669             3.706871      4.262679
+## HU_014             3.852859             3.624547      4.278906
+## HU_015             3.879881             3.965623      4.225658
+## HU_017             3.564683             4.000451      4.476138
+## HU_018             4.710114             4.414012      4.460986
+## HU_019             4.551170             4.417869      4.545151
+##        Azelaic acid Benzoic acid isomer Chenodeoxycholic acid isomer
+## HU_011     4.419660            3.867245                     3.507941
+## HU_014     4.331720            4.830236                     3.925771
+## HU_015     4.105070            3.371990                     4.765679
+## HU_017     4.017999            3.724525                     4.058410
+## HU_018     4.320763            4.593359                     4.379709
+## HU_019     4.641622            4.475130                     4.120224
+##        Cinnamoylglycine Citric acid Dehydroepiandrosterone 3-glucuronide
+## HU_011         3.981493    4.077505                             4.276799
+## HU_014         3.381453    4.418117                             3.781079
+## HU_015         3.773393    4.179830                             4.039523
+## HU_017         4.213982    4.218916                             3.960037
+## HU_018         2.636678    4.294479                             4.178258
+## HU_019         4.071694    4.386380                             4.018968
+##        Dehydroepiandrosterone sulfate Deoxyhexose Dimethylguanosine
+## HU_011                       4.462774    3.760569          4.052598
+## HU_014                       3.806104    3.809186          4.269907
+## HU_015                       3.193502    4.226145          4.197532
+## HU_017                       4.165680    3.997357          4.350023
+## HU_018                       4.363253    4.084736          4.408429
+## HU_019                       3.986997    4.296965          4.310144
+##           FMNH2 Fumaric acid Gentisic acid  Glu-Val
+## HU_011 3.565083     3.567561      4.300974 3.706666
+## HU_014 4.208395     3.840097      4.584677 4.310927
+## HU_015 4.034409     4.384064      4.764176 4.289509
+## HU_017 4.233037     3.416630      4.062663 4.376818
+## HU_018 4.597364     4.091964      4.431808 4.721889
+## HU_019 4.199745     4.012107      4.238883 4.392128
+##        Gluconic acid and/or isomers Glucuronic acid and/or isomers
+## HU_011                     4.288424                       4.271366
+## HU_014                     4.586464                       4.701159
+## HU_015                     4.096407                       4.123025
+## HU_017                     4.743170                       4.593438
+## HU_018                     4.614798                       4.461186
+## HU_019                     4.334139                       4.461209
+##        Glyceric acid Glycocholic acid isomer 2 Glycocholic acid isomer 3
+## HU_011      3.928441                  3.536033                  3.467331
+## HU_014      4.286770                  4.157624                  4.170019
+## HU_015      4.273123                  4.298947                  4.045842
+## HU_017      4.606753                  2.519658                  2.687939
+## HU_018      4.641004                  4.743202                  4.763984
+## HU_019      4.429628                  3.395705                  3.371074
+##        Heptylmalonic acid Hexanoylglycine Hippuric acid
+## HU_011           4.299342        3.700495      4.281181
+## HU_014           4.587917        4.288872      4.274765
+## HU_015           4.245115        4.154405      4.030601
+## HU_017           4.101909        4.076289      4.437759
+## HU_018           4.270874        4.575928      4.105510
+## HU_019           4.417992        3.904992      4.297234
+##        Hydroxybenzyl alcohol isomer Hydroxyphenyllactic acid
+## HU_011                     4.238096                 3.959217
+## HU_014                     3.602194                 4.774698
+## HU_015                     3.948782                 3.457264
+## HU_017                     3.368220                 3.805230
+## HU_018                     4.324214                 4.567749
+## HU_019                     4.043065                 4.413443
+##        Hydroxysuberic acid isomer 1 Hydroxysuberic acid isomer 2
+## HU_011                     4.144705                     4.295285
+## HU_014                     3.914818                     4.351692
+## HU_015                     4.118942                     4.050348
+## HU_017                     4.016532                     4.476785
+## HU_018                     4.513977                     4.474938
+## HU_019                     4.522243                     4.145574
+##        Isovalerylalanine isomer Ketoleucine Kynurenic acid Malic acid
+## HU_011                 3.878689    3.522784       4.012747   3.534347
+## HU_014                 4.167564    3.861882       4.068847   4.069774
+## HU_015                 4.427536    3.839057       4.157414   3.696515
+## HU_017                 4.377871    4.034678       4.392389   3.940602
+## HU_018                 4.700258    4.078886       4.296854   4.231243
+## HU_019                 4.067620    4.030812       4.323642   4.333562
+##        Methoxysalicylic acid isomer
+## HU_011                     4.060952
+## HU_014                     4.112547
+## HU_015                     4.288847
+## HU_017                     4.458437
+## HU_018                     4.189123
+## HU_019                     4.562835
+##        Methyl (hydroxymethyl)pyrrolidine-carboxylate/Methyl (hydroxy)piperidine-carboxylate
+## HU_011                                                                             3.899313
+## HU_014                                                                             4.233935
+## HU_015                                                                             4.520556
+## HU_017                                                                             4.355592
+## HU_018                                                                             4.407202
+## HU_019                                                                             4.232537
+##        Methylinosine Mevalonic acid isomer 1 Monoethyl phthalate
+## HU_011      3.979667                3.329769            4.186150
+## HU_014      4.191845                4.018856            3.347641
+## HU_015      4.362143                1.551281            3.824039
+## HU_017      4.272384                2.800934            3.091728
+## HU_018      4.487805                4.112110            3.655938
+## HU_019      4.378914                4.144182            4.240828
+##        N-Acetyl-aspartic acid N-Acetylisoleucine N-Acetylleucine
+## HU_011               4.117673           4.093393        3.411936
+## HU_014               4.428008           4.306259        4.478246
+## HU_015               4.205715           4.268660        4.266854
+## HU_017               4.385727           4.017203        4.027337
+## HU_018               4.253549           4.114619        3.237244
+## HU_019               4.363792           4.483260        4.370739
+##        N-Acetyltryptophan N-Acetyltryptophan isomer 3
+## HU_011           3.792115                    4.559495
+## HU_014           4.484242                    4.038887
+## HU_015           4.254061                    4.333962
+## HU_017           3.645018                    4.621739
+## HU_018           4.193701                    3.276002
+## HU_019           4.221705                    4.174604
+##        N2-Acetylaminoadipic acid N4-Acetylcytidine Nicotinuric acid isomer
+## HU_011                  3.631931          4.361610                3.848278
+## HU_014                  4.493698          4.518477                4.441710
+## HU_015                  3.904043          3.885826                4.240330
+## HU_017                  3.997636          4.496160                4.343148
+## HU_018                  4.330822          4.685971                4.044958
+## HU_019                  4.210520          4.468025                4.452897
+##        Ortho-Hydroxyphenylacetic acid Oxoglutaric acid p-Anisic acid
+## HU_011                       3.870825         2.997953      3.841620
+## HU_014                       4.658541         3.993253      4.678148
+## HU_015                       4.001141         3.482831      3.455275
+## HU_017                       4.296011         3.947712      2.890224
+## HU_018                       4.679458         3.955677      3.247603
+## HU_019                       4.295495         4.195985      3.952277
+##        p-Hydroxyhippuric acid p-Hydroxymandelic acid
+## HU_011               4.198435               4.140949
+## HU_014               4.621760               3.818508
+## HU_015               3.835598               4.221860
+## HU_017               4.166668               4.421014
+## HU_018               4.592458               4.703186
+## HU_019               4.114812               4.096616
+##        p-Hydroxyphenylacetic acid Pantothenic acid  Pentose
+## HU_011                   4.057362         4.367247 4.119872
+## HU_014                   3.867961         4.483832 4.219938
+## HU_015                   4.198771         4.281965 4.354551
+## HU_017                   4.138231         4.201390 4.294260
+## HU_018                   4.348636         4.367093 4.465690
+## HU_019                   4.181577         4.121433 4.250880
+##        Phe-Tyr-Asp (and isomers) Porphobilinogen Pyridoxic acid isomer 1
+## HU_011                  4.379156        3.873927                4.264819
+## HU_014                  4.227932        4.181048                4.103788
+## HU_015                  4.004176        4.136767                3.887147
+## HU_017                  4.214129        4.162675                3.856186
+## HU_018                  4.154741        4.461157                4.602857
+## HU_019                  4.340768        4.170573                4.069686
+##        Pyridylacetylglycine Pyrocatechol sulfate Pyroglutamic acid
+## HU_011             4.042992             4.452942          4.013843
+## HU_014             4.210327             4.281094          4.188313
+## HU_015             4.099646             4.239741          4.202476
+## HU_017             4.309022             4.186333          4.209444
+## HU_018             4.386013             4.060466          4.246487
+## HU_019             4.398879             4.282089          4.184347
+##        Pyrroledicarboxylic acid Pyruvic acid Quinic acid Salicylic acid
+## HU_011                 3.854579     3.229445    4.128023       3.925518
+## HU_014                 4.059364     3.843606    4.168761       4.035196
+## HU_015                 4.426634     3.555714    4.295171       4.588327
+## HU_017                 3.763358     3.766176    4.533188       3.847885
+## HU_018                 3.828249     3.985018    3.685546       3.695891
+## HU_019                 4.317047     3.911799    4.459420       4.100363
+##        Sebacic acid Suberic acid Sulfosalicylic acid isomer  Taurine
+## HU_011     4.298555     4.283358                   4.724543 4.294956
+## HU_014     4.316859     4.521646                   3.968791 5.143374
+## HU_015     4.387094     4.159625                   3.946592 4.525365
+## HU_017     4.026013     4.125570                   3.560990 4.821052
+## HU_018     4.516985     4.452634                   4.320034 4.544508
+## HU_019     4.547073     4.535423                   4.480640 3.999298
+##        Testosterone glucuronide Tetrahydrohippuric acid
+## HU_011                 4.292437                3.409692
+## HU_014                 3.467556                4.766827
+## HU_015                 4.325043                3.407598
+## HU_017                 4.306862                4.522244
+## HU_018                 4.589208                4.296404
+## HU_019                 4.010066                3.764092
+##        Threo-3-Phenylserine Threonic acid/Erythronic acid Tryptophan
+## HU_011             4.274910                      4.313963   4.006518
+## HU_014             4.153934                      4.473729   4.421590
+## HU_015             3.457296                      4.124348   4.438306
+## HU_017             3.927525                      4.558518   4.542105
+## HU_018             4.246966                      4.446222   4.217120
+## HU_019             4.269736                      4.367592   4.558531
+##        Valerylglycine isomer 1 Valerylglycine isomer 2 Xanthosine
+## HU_011                4.016261                3.889079   4.075880
+## HU_014                3.881005                4.181766   4.195762
+## HU_015                4.187176                4.254695   4.124493
+## HU_017                4.147544                4.290660   4.250258
+## HU_018                4.104498                4.138196   4.361709
+## HU_019                4.065452                4.300930   4.199196</code></pre>
+</div>
+<div id="reference-14" class="section level2">
+<h2><span class="header-section-number">18.4</span> Reference</h2>
+<p><a href="https://bioconductor.org/packages/release/bioc/vignettes/ropls/inst/doc/ropls-vignette.html#4_hands-on" class="uri">https://bioconductor.org/packages/release/bioc/vignettes/ropls/inst/doc/ropls-vignette.html#4_hands-on</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="transformation-of-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

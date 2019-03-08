@@ -1,23 +1,104 @@
+# Correlation 
 
-# Visulization of pair-wise correlation in R
 
+
+## Visulization of pair-wise correlation in R
+
+
+
+## Correlation and p-values of all combinations of all rows of two matrices
+
+### Prepare the data
+
+```{r}
+bac1 <- c(1,2,3,4,5)
+bac2 <- c(2,3,4,5,1)
+bac3 <- c(4,5,1,2,3)
+bac4 <- c(5,1,2,3,4)
+bac <- as.data.frame(cbind(bac1, bac2, bac3, bac4 ))
+colnames(bac) <- c("station1", "station2", "station3", "station4")
+rownames(bac) <- c("bac1", "bac2", "bac3", "bac4", "bac5")
+
+fac1 <- c(1,2,3,4,5,6)
+fac2 <- c(2,3,4,5,1,6)
+fac3<- c(3,4,5,1,2,1)
+fac4<- c(4,5,1,2,3, 6)
+fac <- as.data.frame(cbind(fac1, fac2, fac3, fac4))
+colnames(fac) <- c("station1", "station2", "station3", "station4")
+rownames(fac) <- c("fac1", "fac2", "fac3", "fac4", "fac5", "fac6")
+
+bac
+fac
+```
+
+
+
+
+### Another way to do this is to use `corr.test`
+
+You can just pass the full matrices to the `cor` function (or psych::corr.test)and it takes care of finding the correlation of the relevant columns.
+
+
+
+```{r}
+#install.packages("psych")
+library(reshape2)
+#cor.eff<-cor(t(fac), t(bac))
+#coreff <- reshape2::melt(cor.eff)
+pval <- psych::corr.test(t(fac), t(bac), adjust="fdr")
+pval
+cor_pval<- merge(melt(pval$r, value.name="cor"), melt(pval$p, value.name="p-value"), by=c("Var1", "Var2"))
+head(cor_pval)
+
+```
+
+
+### Read data
+
+```
+data/cor_data_metablomics.txt         
+data/cor_data_transcriptome.txt
+
+```
+
+
+### Calculate the correlation (Advance)
+
+
+```{r}
+tbac <- data.frame(t(bac))
+tfac <- data.frame(t(fac))
+
+f <- function (x, y) cor(x, y)
+pval <- function(x, y) cor.test(x, y)$p.val
+
+tab <- outer(tfac, tbac, Vectorize(f))
+tabp<-outer(tfac, tbac, Vectorize(pval))
+
+as.data.frame.table(tabp)
+```
+
+### Reference
+
+Correlation/p values of all combinations of all rows of two matrices: https://stackoverflow.com/questions/41793219/correlation-p-values-of-all-combinations-of-all-rows-of-two-matrices
+
+
+
+## Different ways to visulize correlation
+
+### Display correlation using `chart.Correlation` in `PerformanceAnalytics`
 
 ```{r}
 library(datasets)
 data(iris)
-head(iris)
-summary(iris)
-```
-
-
-
-
-```{r}
 library("PerformanceAnalytics")
-
 chart.Correlation(iris[, 1:4], histogram=TRUE, pch=19)
 ```
 
+```{r}
+library(corrplot)
+corrplot.mixed(cor(iris[, 1:4]), order="original", tl.col="black")
+```
 
 ## Reference
 
@@ -25,3 +106,10 @@ chart.Correlation(iris[, 1:4], histogram=TRUE, pch=19)
 Seven Easy Graphs to Visualize Correlation Matrices in R: http://jamesmarquezportfolio.com/correlation_matrices_in_r.html
 
 Example 9.17: (much) better pairs plots: https://www.r-bloggers.com/example-9-17-much-better-pairs-plots/
+
+
+Introduction to Correlation: https://rpubs.com/aaronsc32/linear-relationship-pearson-r-correlation
+
+
+Spearman Rank Correlation: https://rstudio-pubs-static.s3.amazonaws.com/191093_4169c5282eb145a491a5b1924941a6ba.html
+

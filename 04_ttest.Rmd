@@ -47,3 +47,78 @@ sqrt_variance<-sqrt(total_variance)
 #T.test
 t.test(percent~sex, data=tips)
 ```
+
+
+### 
+
+Your data set is probably not the best illustrative example in terms of normality assumption... but anyway, here is some quick R code to reproduce some of the calculation of t.test().
+
+#### Equal variances
+
+```{r}
+head(tips)
+t.test(percent ~ sex, data=tips, var.equal=TRUE)
+
+x1 <- tips$percent[tips$sex == "Female"]
+x2 <- tips$percent[tips$sex == "Male"]
+n1 <- length(x1)
+n2 <- length(x2)
+
+var.pooled <- weighted.mean(x=c(var(x1), var(x2)), w=c(n1 - 1, n2 - 1))
+
+t <- (mean(x1) - mean(x2)) / sqrt(var.pooled / n1 + var.pooled / n2)
+t
+df <- n1 + n2 - 2
+df
+```
+
+
+
+
+#### Unequal variance
+
+```{r}
+t.test(percent ~ sex, data=tips, var.equal=FALSE)
+# Welch Two Sample t-test
+# 
+# data:  percent by sex
+# t = 1.1433, df = 206.759, p-value = 0.2542
+# alternative hypothesis: true difference in means is not equal to 0
+# 95 percent confidence interval:
+#   -0.006404119  0.024084498
+# sample estimates:
+#   mean in group Female   mean in group Male 
+# 0.1664907            0.1576505 
+
+x1 <- tips$percent[tips$sex == "Female"]
+x2 <- tips$percent[tips$sex == "Male"]
+n1 <- length(x1)
+n2 <- length(x2)
+
+t <- (mean(x1) - mean(x2)) / sqrt(var(x1) / n1 + var(x2) / n2)
+t
+# [1] 1.143277
+df.num <- (var(x1) / n1 + var(x2) / n2)^2
+df.denom <- var(x1)^2 / (n1^2 * (n1 - 1)) + var(x2)^2 / (n2^2 * (n2 - 1))
+df <- df.num / df.denom
+df
+# [1] 206.7587
+```
+
+
+## Calculate the standard deviation in R
+
+$variance = \frac{sum((x-mean(x))^2)}{(length(x)-1)}$
+
+
+```{r}
+a <- c(179,160,136,227)
+sd(a)
+sqrt(sum((a-mean(a))^2/(length(a)-1)))
+```
+
+
+## Reference
+
+
+Calculate t-statistic step by step in R: https://stats.stackexchange.com/questions/141593/calculate-t-statistic-step-by-step-in-r

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Notes of R for Bioinformatics</title>
+  <meta name="description" content="Notes of R for Bioinformatics">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Notes of R for Bioinformatics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Notes of R for Bioinformatics" />
+  
+  
+  
+
+<meta name="author" content="Shaojun Xie">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="references-1.html">
+<link rel="next" href="partial-least-square-analysis.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="part"><span><b>I Introduction</b></span></li>
+<li class="chapter" data-level="1" data-path="basic-systax.html"><a href="basic-systax.html"><i class="fa fa-check"></i><b>1</b> Basic systax</a><ul>
+<li class="chapter" data-level="1.1" data-path="basic-systax.html"><a href="basic-systax.html#setup"><i class="fa fa-check"></i><b>1.1</b> Setup</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="basic-systax.html"><a href="basic-systax.html#install-packages"><i class="fa fa-check"></i><b>1.1.1</b> Install packages</a></li>
+<li class="chapter" data-level="1.1.2" data-path="basic-systax.html"><a href="basic-systax.html#install"><i class="fa fa-check"></i><b>1.1.2</b> Install</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="basic-systax.html"><a href="basic-systax.html#data-type"><i class="fa fa-check"></i><b>1.2</b> Data type</a></li>
+<li class="chapter" data-level="1.3" data-path="basic-systax.html"><a href="basic-systax.html#data-structures"><i class="fa fa-check"></i><b>1.3</b> Data structures</a></li>
+<li class="chapter" data-level="1.4" data-path="basic-systax.html"><a href="basic-systax.html#read-from-and-write-into-files"><i class="fa fa-check"></i><b>1.4</b> Read from and write into files</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="basic-systax.html"><a href="basic-systax.html#read-random-rows-from-a-huge-file"><i class="fa fa-check"></i><b>1.4.1</b> Read Random Rows from A Huge File</a></li>
+<li class="chapter" data-level="1.4.2" data-path="basic-systax.html"><a href="basic-systax.html#reference"><i class="fa fa-check"></i><b>1.4.2</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="basic-systax.html"><a href="basic-systax.html#functions"><i class="fa fa-check"></i><b>1.5</b> Functions</a></li>
+<li class="chapter" data-level="1.6" data-path="basic-systax.html"><a href="basic-systax.html#control-structure"><i class="fa fa-check"></i><b>1.6</b> Control structure</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="plot-in-r.html"><a href="plot-in-r.html"><i class="fa fa-check"></i><b>2</b> Plot in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="plot-in-r.html"><a href="plot-in-r.html#read-the-data"><i class="fa fa-check"></i><b>2.1</b> Read the data</a></li>
+<li class="chapter" data-level="2.2" data-path="plot-in-r.html"><a href="plot-in-r.html#line-plot"><i class="fa fa-check"></i><b>2.2</b> Line plot</a></li>
+<li class="chapter" data-level="2.3" data-path="plot-in-r.html"><a href="plot-in-r.html#basic-line-plot"><i class="fa fa-check"></i><b>2.3</b> Basic line plot</a></li>
+<li class="chapter" data-level="2.4" data-path="plot-in-r.html"><a href="plot-in-r.html#color-the-dots-based-on-the-sex-information"><i class="fa fa-check"></i><b>2.4</b> Color the dots based on the <code>sex</code> information</a></li>
+<li class="chapter" data-level="2.5" data-path="plot-in-r.html"><a href="plot-in-r.html#section"><i class="fa fa-check"></i><b>2.5</b> </a></li>
+<li class="chapter" data-level="2.6" data-path="plot-in-r.html"><a href="plot-in-r.html#draw-a-circle-in-r"><i class="fa fa-check"></i><b>2.6</b> Draw a circle in R</a></li>
+<li class="chapter" data-level="2.7" data-path="plot-in-r.html"><a href="plot-in-r.html#network"><i class="fa fa-check"></i><b>2.7</b> Network</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="plot-in-r.html"><a href="plot-in-r.html#section-1"><i class="fa fa-check"></i><b>2.7.1</b> </a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>3</b> Correlation</a><ul>
+<li class="chapter" data-level="3.1" data-path="correlation.html"><a href="correlation.html#visulization-of-pair-wise-correlation-in-r"><i class="fa fa-check"></i><b>3.1</b> Visulization of pair-wise correlation in R</a></li>
+<li class="chapter" data-level="3.2" data-path="correlation.html"><a href="correlation.html#correlation-and-p-values-of-all-combinations-of-all-rows-of-two-matrices"><i class="fa fa-check"></i><b>3.2</b> Correlation and p-values of all combinations of all rows of two matrices</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="correlation.html"><a href="correlation.html#prepare-the-data"><i class="fa fa-check"></i><b>3.2.1</b> Prepare the data</a></li>
+<li class="chapter" data-level="3.2.2" data-path="correlation.html"><a href="correlation.html#another-way-to-do-this-is-to-use-corr.test"><i class="fa fa-check"></i><b>3.2.2</b> Another way to do this is to use <code>corr.test</code></a></li>
+<li class="chapter" data-level="3.2.3" data-path="correlation.html"><a href="correlation.html#read-data"><i class="fa fa-check"></i><b>3.2.3</b> Read data</a></li>
+<li class="chapter" data-level="3.2.4" data-path="correlation.html"><a href="correlation.html#calculate-the-correlation-advance"><i class="fa fa-check"></i><b>3.2.4</b> Calculate the correlation (Advance)</a></li>
+<li class="chapter" data-level="3.2.5" data-path="correlation.html"><a href="correlation.html#reference-2"><i class="fa fa-check"></i><b>3.2.5</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="correlation.html"><a href="correlation.html#different-ways-to-visulize-correlation"><i class="fa fa-check"></i><b>3.3</b> Different ways to visulize correlation</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="correlation.html"><a href="correlation.html#display-correlation-using-chart.correlation-in-performanceanalytics"><i class="fa fa-check"></i><b>3.3.1</b> Display correlation using <code>chart.Correlation</code> in <code>PerformanceAnalytics</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="correlation.html"><a href="correlation.html#reference-3"><i class="fa fa-check"></i><b>3.4</b> Reference</a></li>
+</ul></li>
+<li class="part"><span><b>II Statistics</b></span></li>
+<li class="chapter" data-level="4" data-path="standard-deviation-vs-standard-error.html"><a href="standard-deviation-vs-standard-error.html"><i class="fa fa-check"></i><b>4</b> Standard deviation vs Standard error</a><ul>
+<li class="chapter" data-level="4.1" data-path="standard-deviation-vs-standard-error.html"><a href="standard-deviation-vs-standard-error.html#reference-4"><i class="fa fa-check"></i><b>4.1</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="t-test.html"><a href="t-test.html"><i class="fa fa-check"></i><b>5</b> T test</a><ul>
+<li class="chapter" data-level="5.1" data-path="t-test.html"><a href="t-test.html#calculate-t-statistic-step-by-step-in-r"><i class="fa fa-check"></i><b>5.1</b> Calculate t-statistic step by step in R</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="t-test.html"><a href="t-test.html#section-2"><i class="fa fa-check"></i><b>5.1.1</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="t-test.html"><a href="t-test.html#calculate-the-standard-deviation-in-r"><i class="fa fa-check"></i><b>5.2</b> Calculate the standard deviation in R</a></li>
+<li class="chapter" data-level="5.3" data-path="t-test.html"><a href="t-test.html#reference-5"><i class="fa fa-check"></i><b>5.3</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="linear-model.html"><a href="linear-model.html"><i class="fa fa-check"></i><b>6</b> Linear model</a><ul>
+<li class="chapter" data-level="6.1" data-path="linear-model.html"><a href="linear-model.html#section-3"><i class="fa fa-check"></i><b>6.1</b> </a></li>
+<li class="chapter" data-level="6.2" data-path="linear-model.html"><a href="linear-model.html#extract-male-data"><i class="fa fa-check"></i><b>6.2</b> Extract male data</a></li>
+<li class="chapter" data-level="6.3" data-path="linear-model.html"><a href="linear-model.html#reference-6"><i class="fa fa-check"></i><b>6.3</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>7</b> MRG</a><ul>
+<li class="chapter" data-level="7.1" data-path="mrg.html"><a href="mrg.html#read-the-data-1"><i class="fa fa-check"></i><b>7.1</b> Read the data</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>8</b> Multiple linear regression</a><ul>
+<li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-4"><i class="fa fa-check"></i><b>8.1</b> </a></li>
+<li class="chapter" data-level="8.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-5"><i class="fa fa-check"></i><b>8.2</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html"><i class="fa fa-check"></i><b>9</b> Bayesian newwork in R</a><ul>
+<li class="chapter" data-level="9.1" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#practical-experiments"><i class="fa fa-check"></i><b>9.1</b> Practical experiments</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#analysis-of-the-magic-population-in-scutari-et-al.-genetics-2014"><i class="fa fa-check"></i><b>9.1.1</b> Analysis of the MAGIC population in Scutari et al., Genetics (2014)</a></li>
+<li class="chapter" data-level="9.1.2" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#reference-7"><i class="fa fa-check"></i><b>9.1.2</b> Reference</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><i class="fa fa-check"></i><b>10</b> The rationale for using negative binomial distribution to model read count in RNA-seq data</a><ul>
+<li class="chapter" data-level="10.1" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#negative-binomial-in-r"><i class="fa fa-check"></i><b>10.1</b> Negative binomial in R</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#real-data"><i class="fa fa-check"></i><b>10.1.1</b> Real data</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#reference-8"><i class="fa fa-check"></i><b>10.2</b> Reference</a></li>
+<li class="chapter" data-level="10.3" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#batch-effect"><i class="fa fa-check"></i><b>10.3</b> Batch effect</a></li>
+<li class="chapter" data-level="10.4" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#reference-9"><i class="fa fa-check"></i><b>10.4</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="multiple-test-corretion.html"><a href="multiple-test-corretion.html"><i class="fa fa-check"></i><b>11</b> Multiple test corretion</a></li>
+<li class="chapter" data-level="12" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html"><i class="fa fa-check"></i><b>12</b> Working with missing values</a><ul>
+<li class="chapter" data-level="12.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#section-6"><i class="fa fa-check"></i><b>12.1</b> </a></li>
+<li class="chapter" data-level="12.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summaryize-the-missing-values"><i class="fa fa-check"></i><b>12.2</b> Summaryize the missing values</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summarize-the-missing-values-using-mice-package"><i class="fa fa-check"></i><b>12.2.1</b> Summarize the missing values using <code>mice</code> package</a></li>
+<li class="chapter" data-level="12.2.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summarize-the-missing-values-using-vim-packages"><i class="fa fa-check"></i><b>12.2.2</b> Summarize the missing values using <code>VIM</code> packages</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#delete-columnsrows-with-more-that-x-missing"><i class="fa fa-check"></i><b>12.3</b> Delete columns/rows with more that x% missing</a></li>
+<li class="chapter" data-level="12.4" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#imputing-the-data"><i class="fa fa-check"></i><b>12.4</b> Imputing the data</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#imputing-the-data-with-row-wise-mean"><i class="fa fa-check"></i><b>12.4.1</b> Imputing the data with row-wise mean</a></li>
+<li class="chapter" data-level="12.4.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#imputing-the-data-with-row-wise-mean-using-mice"><i class="fa fa-check"></i><b>12.4.2</b> Imputing the data with row-wise mean using <code>mice</code></a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#reference-10"><i class="fa fa-check"></i><b>12.5</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>13</b> Data wrangling</a><ul>
+<li class="chapter" data-level="13.1" data-path="data-wrangling.html"><a href="data-wrangling.html#section-7"><i class="fa fa-check"></i><b>13.1</b> </a></li>
+<li class="chapter" data-level="13.2" data-path="data-wrangling.html"><a href="data-wrangling.html#joining-data-in-r-with-dplyr"><i class="fa fa-check"></i><b>13.2</b> Joining Data in R with dplyr</a><ul>
+<li class="chapter" data-level="13.2.1" data-path="data-wrangling.html"><a href="data-wrangling.html#whats-covered"><i class="fa fa-check"></i><b>13.2.1</b> Whats Covered</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="data-wrangling.html"><a href="data-wrangling.html#reference-11"><i class="fa fa-check"></i><b>13.3</b> Reference</a></li>
+</ul></li>
+<li class="part"><span><b>III Machine learning</b></span></li>
+<li class="chapter" data-level="14" data-path="pca.html"><a href="pca.html"><i class="fa fa-check"></i><b>14</b> PCA</a><ul>
+<li class="chapter" data-level="14.1" data-path="pca.html"><a href="pca.html#read-data-1"><i class="fa fa-check"></i><b>14.1</b> Read data</a></li>
+<li class="chapter" data-level="14.2" data-path="pca.html"><a href="pca.html#head-data"><i class="fa fa-check"></i><b>14.2</b> Head data</a></li>
+<li class="chapter" data-level="14.3" data-path="pca.html"><a href="pca.html#summary-of-the-data"><i class="fa fa-check"></i><b>14.3</b> Summary of the data</a></li>
+<li class="chapter" data-level="14.4" data-path="pca.html"><a href="pca.html#check-the-distribution-of-the-data"><i class="fa fa-check"></i><b>14.4</b> Check the distribution of the data</a></li>
+<li class="chapter" data-level="14.5" data-path="pca.html"><a href="pca.html#eigendecomposition---computing-eigenvectors-and-eigenvalues"><i class="fa fa-check"></i><b>14.5</b> Eigendecomposition - Computing Eigenvectors and Eigenvalues</a><ul>
+<li class="chapter" data-level="14.5.1" data-path="pca.html"><a href="pca.html#covariance-matrix"><i class="fa fa-check"></i><b>14.5.1</b> Covariance Matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="pca.html"><a href="pca.html#pca-with-two-variables"><i class="fa fa-check"></i><b>14.6</b> PCA with two variables</a></li>
+<li class="chapter" data-level="14.7" data-path="pca.html"><a href="pca.html#pca-on-wine-data"><i class="fa fa-check"></i><b>14.7</b> PCA on <code>wine</code> data</a><ul>
+<li class="chapter" data-level="14.7.1" data-path="pca.html"><a href="pca.html#read-the-wine-data"><i class="fa fa-check"></i><b>14.7.1</b> Read the <code>wine</code> data</a></li>
+<li class="chapter" data-level="14.7.2" data-path="pca.html"><a href="pca.html#description-of-each-column"><i class="fa fa-check"></i><b>14.7.2</b> Description of each column</a></li>
+<li class="chapter" data-level="14.7.3" data-path="pca.html"><a href="pca.html#example"><i class="fa fa-check"></i><b>14.7.3</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="pca.html"><a href="pca.html#references"><i class="fa fa-check"></i><b>14.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="random-forest.html"><a href="random-forest.html"><i class="fa fa-check"></i><b>15</b> Random forest</a><ul>
+<li class="chapter" data-level="15.1" data-path="random-forest.html"><a href="random-forest.html#practical-experiments-1"><i class="fa fa-check"></i><b>15.1</b> Practical experiments</a><ul>
+<li class="chapter" data-level="15.1.1" data-path="random-forest.html"><a href="random-forest.html#random-forest-for-prediction-of-iris"><i class="fa fa-check"></i><b>15.1.1</b> Random forest for prediction of iris</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="qtl-analysis.html"><a href="qtl-analysis.html"><i class="fa fa-check"></i><b>16</b> QTL analysis</a><ul>
+<li class="chapter" data-level="16.1" data-path="qtl-analysis.html"><a href="qtl-analysis.html#reference-12"><i class="fa fa-check"></i><b>16.1</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="17" data-path="transformation-of-data.html"><a href="transformation-of-data.html"><i class="fa fa-check"></i><b>17</b> Transformation of data</a><ul>
+<li class="chapter" data-level="17.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#log-transformation"><i class="fa fa-check"></i><b>17.1</b> Log transformation</a><ul>
+<li class="chapter" data-level="17.1.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#the-rationale-of-using-log2-transformation"><i class="fa fa-check"></i><b>17.1.1</b> The rationale of using log2 transformation</a></li>
+<li class="chapter" data-level="17.1.2" data-path="transformation-of-data.html"><a href="transformation-of-data.html#reference-13"><i class="fa fa-check"></i><b>17.1.2</b> Reference</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html"><i class="fa fa-check"></i><b>18</b> Partial least square analysis</a><ul>
+<li class="chapter" data-level="18.1" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#prepare-the-data-1"><i class="fa fa-check"></i><b>18.1</b> Prepare the data</a></li>
+<li class="chapter" data-level="18.2" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#principal-component-analysis-pca"><i class="fa fa-check"></i><b>18.2</b> Principal Component Analysis (PCA)</a></li>
+<li class="chapter" data-level="18.3" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#partial-least-squares-pls-and-pls-da"><i class="fa fa-check"></i><b>18.3</b> Partial least-squares: PLS and PLS-DA</a></li>
+<li class="chapter" data-level="18.4" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#reference-14"><i class="fa fa-check"></i><b>18.4</b> Reference</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes of R for Bioinformatics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="transformation-of-data" class="section level1">
+<h1><span class="header-section-number">17</span> Transformation of data</h1>
+<div id="log-transformation" class="section level2">
+<h2><span class="header-section-number">17.1</span> Log transformation</h2>
+<p>The log transformation is the most popular among the different types of transformations used to transform skewed dat to approximately conform to normality. If the original data follows a log-normal distribution or approximately so, then the log-transformed data follows a normal or near normal distribution.</p>
+<p>We use log2 (and not log10) is that fold changes might happen on a smaller scale than the thousands/millions/billions that make log10 transformations useful in visualizations. For a long time, a two-fold change was the “gold standard” of a significant change from baseline. If FC was less than that, it might be due to experimental error. Thus, the log2 was used (instead of log10, or natural log, or some other base system).</p>
+<div id="the-rationale-of-using-log2-transformation" class="section level3">
+<h3><span class="header-section-number">17.1.1</span> The rationale of using log2 transformation</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dat &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;data/yeast_DESeq2_DEG.tab&quot;</span>, <span class="dt">header =</span> T)</code></pre></div>
+</div>
+<div id="reference-13" class="section level3">
+<h3><span class="header-section-number">17.1.2</span> Reference</h3>
+<p>Log-transformation and its implications for data analysis: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4120293/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4120293/</a></p>
+<p>Dumb question about LogFC: <a href="https://www.reddit.com/r/labrats/comments/7odtki/dumb_question_about_logfc/" class="uri">https://www.reddit.com/r/labrats/comments/7odtki/dumb_question_about_logfc/</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="references-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="partial-least-square-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+# Partial least square analysis
+
+## Prepare the data
+
+
+```{r}
+library(ropls)
+data(sacurine)
+names(sacurine)
+```
+
+
+We attach sacurine to the search path and display a summary of the content of the dataMatrix, sampleMetadata and variableMetadata with the strF Function of the ropls package (see also str):
+
+```{r}
+attach(sacurine)
+strF(dataMatrix)
+head(dataMatrix)
+```
+
+
+```{r}
+sampleMetadata
+```
+
+
+```{r}
+summary(sampleMetadata)
+```
+
+## Principal Component Analysis (PCA)
+
+We perform a PCA on the dataMatrix matrix (samples as rows, variables as columns), with the opls method:
+
+```{r}
+sacurine.pca <- opls(dataMatrix)
+
+```
+
+
+```{r}
+genderFc <- sampleMetadata[, "gender"]
+plot(sacurine.pca, typeVc = "x-score",
+parAsColFcVn = genderFc, parEllipsesL = TRUE)
+
+```
+
+## Partial least-squares: PLS and PLS-DA
+
+For PLS (and OPLS), the Y response(s) must be provided to the opls method. Y can be either a numeric vector (respectively matrix) for single (respectively multiple) (O)PLS regression, or a character factor for (O)PLS-DA classification as in the following example with the gender qualitative response:
+
+```{r}
+sacurine.plsda <- opls(dataMatrix, genderFc)
+
+```
+
+
+```{r}
+genderFc
+```
+
+```{r}
+head(dataMatrix)
+```
+## Reference 
+
+https://bioconductor.org/packages/release/bioc/vignettes/ropls/inst/doc/ropls-vignette.html#4_hands-on

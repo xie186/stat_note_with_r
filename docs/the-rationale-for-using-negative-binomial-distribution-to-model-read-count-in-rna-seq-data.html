@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Statistics notes for Bioinformatics in R</title>
-  <meta name="description" content="Statistics notes for Bioinformatics in R">
+  <title>Notes of R for Bioinformatics</title>
+  <meta name="description" content="Notes of R for Bioinformatics">
   <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="Statistics notes for Bioinformatics in R" />
+  <meta property="og:title" content="Notes of R for Bioinformatics" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Statistics notes for Bioinformatics in R" />
+  <meta name="twitter:title" content="Notes of R for Bioinformatics" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="correlation-test.html">
-<link rel="next" href="working-with-missing-values.html">
+<link rel="prev" href="bayesian-newwork-in-r.html">
+<link rel="next" href="multiple-test-corretion.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -99,7 +99,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="" data-path="support-me.html"><a href="support-me.html"><i class="fa fa-check"></i>Support me</a></li>
+<li class="part"><span><b>I Introduction</b></span></li>
 <li class="chapter" data-level="1" data-path="basic-systax.html"><a href="basic-systax.html"><i class="fa fa-check"></i><b>1</b> Basic systax</a><ul>
 <li class="chapter" data-level="1.1" data-path="basic-systax.html"><a href="basic-systax.html#setup"><i class="fa fa-check"></i><b>1.1</b> Setup</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="basic-systax.html"><a href="basic-systax.html#install-packages"><i class="fa fa-check"></i><b>1.1.1</b> Install packages</a></li>
@@ -121,43 +121,64 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.4" data-path="plot-in-r.html"><a href="plot-in-r.html#color-the-dots-based-on-the-sex-information"><i class="fa fa-check"></i><b>2.4</b> Color the dots based on the <code>sex</code> information</a></li>
 <li class="chapter" data-level="2.5" data-path="plot-in-r.html"><a href="plot-in-r.html#section"><i class="fa fa-check"></i><b>2.5</b> </a></li>
 <li class="chapter" data-level="2.6" data-path="plot-in-r.html"><a href="plot-in-r.html#draw-a-circle-in-r"><i class="fa fa-check"></i><b>2.6</b> Draw a circle in R</a></li>
+<li class="chapter" data-level="2.7" data-path="plot-in-r.html"><a href="plot-in-r.html#network"><i class="fa fa-check"></i><b>2.7</b> Network</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="plot-in-r.html"><a href="plot-in-r.html#section-1"><i class="fa fa-check"></i><b>2.7.1</b> </a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="visulization-of-pair-wise-correlation-in-r.html"><a href="visulization-of-pair-wise-correlation-in-r.html"><i class="fa fa-check"></i><b>3</b> Visulization of pair-wise correlation in R</a><ul>
-<li class="chapter" data-level="3.1" data-path="visulization-of-pair-wise-correlation-in-r.html"><a href="visulization-of-pair-wise-correlation-in-r.html#reference-1"><i class="fa fa-check"></i><b>3.1</b> Reference</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>3</b> Correlation</a><ul>
+<li class="chapter" data-level="3.1" data-path="correlation.html"><a href="correlation.html#visulization-of-pair-wise-correlation-in-r"><i class="fa fa-check"></i><b>3.1</b> Visulization of pair-wise correlation in R</a></li>
+<li class="chapter" data-level="3.2" data-path="correlation.html"><a href="correlation.html#correlation-and-p-values-of-all-combinations-of-all-rows-of-two-matrices"><i class="fa fa-check"></i><b>3.2</b> Correlation and p-values of all combinations of all rows of two matrices</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="correlation.html"><a href="correlation.html#prepare-the-data"><i class="fa fa-check"></i><b>3.2.1</b> Prepare the data</a></li>
+<li class="chapter" data-level="3.2.2" data-path="correlation.html"><a href="correlation.html#another-way-to-do-this-is-to-use-corr.test"><i class="fa fa-check"></i><b>3.2.2</b> Another way to do this is to use <code>corr.test</code></a></li>
+<li class="chapter" data-level="3.2.3" data-path="correlation.html"><a href="correlation.html#read-data"><i class="fa fa-check"></i><b>3.2.3</b> Read data</a></li>
+<li class="chapter" data-level="3.2.4" data-path="correlation.html"><a href="correlation.html#calculate-the-correlation-advance"><i class="fa fa-check"></i><b>3.2.4</b> Calculate the correlation (Advance)</a></li>
+<li class="chapter" data-level="3.2.5" data-path="correlation.html"><a href="correlation.html#reference-2"><i class="fa fa-check"></i><b>3.2.5</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="correlation.html"><a href="correlation.html#different-ways-to-visulize-correlation"><i class="fa fa-check"></i><b>3.3</b> Different ways to visulize correlation</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="correlation.html"><a href="correlation.html#display-correlation-using-chart.correlation-in-performanceanalytics"><i class="fa fa-check"></i><b>3.3.1</b> Display correlation using <code>chart.Correlation</code> in <code>PerformanceAnalytics</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="correlation.html"><a href="correlation.html#reference-3"><i class="fa fa-check"></i><b>3.4</b> Reference</a></li>
+</ul></li>
+<li class="part"><span><b>II Statistics</b></span></li>
 <li class="chapter" data-level="4" data-path="standard-deviation-vs-standard-error.html"><a href="standard-deviation-vs-standard-error.html"><i class="fa fa-check"></i><b>4</b> Standard deviation vs Standard error</a><ul>
-<li class="chapter" data-level="4.1" data-path="standard-deviation-vs-standard-error.html"><a href="standard-deviation-vs-standard-error.html#reference-2"><i class="fa fa-check"></i><b>4.1</b> Reference</a></li>
+<li class="chapter" data-level="4.1" data-path="standard-deviation-vs-standard-error.html"><a href="standard-deviation-vs-standard-error.html#reference-4"><i class="fa fa-check"></i><b>4.1</b> Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="t-test.html"><a href="t-test.html"><i class="fa fa-check"></i><b>5</b> T test</a><ul>
-<li class="chapter" data-level="5.1" data-path="t-test.html"><a href="t-test.html#calculate-t-statistic-step-by-step-in-r"><i class="fa fa-check"></i><b>5.1</b> Calculate t-statistic step by step in R</a></li>
+<li class="chapter" data-level="5.1" data-path="t-test.html"><a href="t-test.html#calculate-t-statistic-step-by-step-in-r"><i class="fa fa-check"></i><b>5.1</b> Calculate t-statistic step by step in R</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="t-test.html"><a href="t-test.html#section-2"><i class="fa fa-check"></i><b>5.1.1</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="t-test.html"><a href="t-test.html#calculate-the-standard-deviation-in-r"><i class="fa fa-check"></i><b>5.2</b> Calculate the standard deviation in R</a></li>
+<li class="chapter" data-level="5.3" data-path="t-test.html"><a href="t-test.html#reference-5"><i class="fa fa-check"></i><b>5.3</b> Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="linear-model.html"><a href="linear-model.html"><i class="fa fa-check"></i><b>6</b> Linear model</a><ul>
-<li class="chapter" data-level="6.1" data-path="linear-model.html"><a href="linear-model.html#section-1"><i class="fa fa-check"></i><b>6.1</b> </a></li>
+<li class="chapter" data-level="6.1" data-path="linear-model.html"><a href="linear-model.html#section-3"><i class="fa fa-check"></i><b>6.1</b> </a></li>
 <li class="chapter" data-level="6.2" data-path="linear-model.html"><a href="linear-model.html#extract-male-data"><i class="fa fa-check"></i><b>6.2</b> Extract male data</a></li>
-<li class="chapter" data-level="6.3" data-path="linear-model.html"><a href="linear-model.html#reference-3"><i class="fa fa-check"></i><b>6.3</b> Reference</a></li>
+<li class="chapter" data-level="6.3" data-path="linear-model.html"><a href="linear-model.html#reference-6"><i class="fa fa-check"></i><b>6.3</b> Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>7</b> MRG</a><ul>
 <li class="chapter" data-level="7.1" data-path="mrg.html"><a href="mrg.html#read-the-data-1"><i class="fa fa-check"></i><b>7.1</b> Read the data</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>8</b> Multiple linear regression</a><ul>
-<li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-2"><i class="fa fa-check"></i><b>8.1</b> </a></li>
-<li class="chapter" data-level="8.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-3"><i class="fa fa-check"></i><b>8.2</b> </a></li>
+<li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-4"><i class="fa fa-check"></i><b>8.1</b> </a></li>
+<li class="chapter" data-level="8.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-5"><i class="fa fa-check"></i><b>8.2</b> </a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html"><i class="fa fa-check"></i><b>9</b> Bayesian newwork in R</a><ul>
 <li class="chapter" data-level="9.1" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#practical-experiments"><i class="fa fa-check"></i><b>9.1</b> Practical experiments</a><ul>
 <li class="chapter" data-level="9.1.1" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#analysis-of-the-magic-population-in-scutari-et-al.-genetics-2014"><i class="fa fa-check"></i><b>9.1.1</b> Analysis of the MAGIC population in Scutari et al., Genetics (2014)</a></li>
-<li class="chapter" data-level="9.1.2" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#reference-4"><i class="fa fa-check"></i><b>9.1.2</b> Reference</a></li>
+<li class="chapter" data-level="9.1.2" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#reference-7"><i class="fa fa-check"></i><b>9.1.2</b> Reference</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="correlation-test.html"><a href="correlation-test.html"><i class="fa fa-check"></i><b>10</b> Correlation test</a><ul>
-<li class="chapter" data-level="10.1" data-path="correlation-test.html"><a href="correlation-test.html#reference-5"><i class="fa fa-check"></i><b>10.1</b> Reference</a></li>
+<li class="chapter" data-level="10" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><i class="fa fa-check"></i><b>10</b> The rationale for using negative binomial distribution to model read count in RNA-seq data</a><ul>
+<li class="chapter" data-level="10.1" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#negative-binomial-in-r"><i class="fa fa-check"></i><b>10.1</b> Negative binomial in R</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#real-data"><i class="fa fa-check"></i><b>10.1.1</b> Real data</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><i class="fa fa-check"></i><b>11</b> The rationale for using negative binomial distribution to model read count in RNA-seq data</a><ul>
-<li class="chapter" data-level="11.1" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#negative-binomial-in-r"><i class="fa fa-check"></i><b>11.1</b> Negative binomial in R</a></li>
-<li class="chapter" data-level="11.2" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#reference-6"><i class="fa fa-check"></i><b>11.2</b> Reference</a></li>
+<li class="chapter" data-level="10.2" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#reference-8"><i class="fa fa-check"></i><b>10.2</b> Reference</a></li>
+<li class="chapter" data-level="10.3" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#batch-effect"><i class="fa fa-check"></i><b>10.3</b> Batch effect</a></li>
+<li class="chapter" data-level="10.4" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#reference-9"><i class="fa fa-check"></i><b>10.4</b> Reference</a></li>
 </ul></li>
+<li class="chapter" data-level="11" data-path="multiple-test-corretion.html"><a href="multiple-test-corretion.html"><i class="fa fa-check"></i><b>11</b> Multiple test corretion</a></li>
 <li class="chapter" data-level="12" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html"><i class="fa fa-check"></i><b>12</b> Working with missing values</a><ul>
-<li class="chapter" data-level="12.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#section-4"><i class="fa fa-check"></i><b>12.1</b> </a></li>
+<li class="chapter" data-level="12.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#section-6"><i class="fa fa-check"></i><b>12.1</b> </a></li>
 <li class="chapter" data-level="12.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summaryize-the-missing-values"><i class="fa fa-check"></i><b>12.2</b> Summaryize the missing values</a><ul>
 <li class="chapter" data-level="12.2.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summarize-the-missing-values-using-mice-package"><i class="fa fa-check"></i><b>12.2.1</b> Summarize the missing values using <code>mice</code> package</a></li>
 <li class="chapter" data-level="12.2.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summarize-the-missing-values-using-vim-packages"><i class="fa fa-check"></i><b>12.2.2</b> Summarize the missing values using <code>VIM</code> packages</a></li>
@@ -167,14 +188,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="12.4.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#imputing-the-data-with-row-wise-mean"><i class="fa fa-check"></i><b>12.4.1</b> Imputing the data with row-wise mean</a></li>
 <li class="chapter" data-level="12.4.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#imputing-the-data-with-row-wise-mean-using-mice"><i class="fa fa-check"></i><b>12.4.2</b> Imputing the data with row-wise mean using <code>mice</code></a></li>
 </ul></li>
-<li class="chapter" data-level="12.5" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#reference-7"><i class="fa fa-check"></i><b>12.5</b> Reference</a></li>
+<li class="chapter" data-level="12.5" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#reference-10"><i class="fa fa-check"></i><b>12.5</b> Reference</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="joining-data-in-r-with-dplyr.html"><a href="joining-data-in-r-with-dplyr.html"><i class="fa fa-check"></i><b>13</b> Joining Data in R with dplyr</a><ul>
-<li class="chapter" data-level="13.1" data-path="joining-data-in-r-with-dplyr.html"><a href="joining-data-in-r-with-dplyr.html#whats-covered"><i class="fa fa-check"></i><b>13.1</b> Whats Covered</a></li>
-<li class="chapter" data-level="13.2" data-path="joining-data-in-r-with-dplyr.html"><a href="joining-data-in-r-with-dplyr.html#reference-8"><i class="fa fa-check"></i><b>13.2</b> Reference</a></li>
+<li class="chapter" data-level="13" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>13</b> Data wrangling</a><ul>
+<li class="chapter" data-level="13.1" data-path="data-wrangling.html"><a href="data-wrangling.html#section-7"><i class="fa fa-check"></i><b>13.1</b> </a></li>
+<li class="chapter" data-level="13.2" data-path="data-wrangling.html"><a href="data-wrangling.html#joining-data-in-r-with-dplyr"><i class="fa fa-check"></i><b>13.2</b> Joining Data in R with dplyr</a><ul>
+<li class="chapter" data-level="13.2.1" data-path="data-wrangling.html"><a href="data-wrangling.html#whats-covered"><i class="fa fa-check"></i><b>13.2.1</b> Whats Covered</a></li>
 </ul></li>
+<li class="chapter" data-level="13.3" data-path="data-wrangling.html"><a href="data-wrangling.html#reference-11"><i class="fa fa-check"></i><b>13.3</b> Reference</a></li>
+</ul></li>
+<li class="part"><span><b>III Machine learning</b></span></li>
 <li class="chapter" data-level="14" data-path="pca.html"><a href="pca.html"><i class="fa fa-check"></i><b>14</b> PCA</a><ul>
-<li class="chapter" data-level="14.1" data-path="pca.html"><a href="pca.html#read-data"><i class="fa fa-check"></i><b>14.1</b> Read data</a></li>
+<li class="chapter" data-level="14.1" data-path="pca.html"><a href="pca.html#read-data-1"><i class="fa fa-check"></i><b>14.1</b> Read data</a></li>
 <li class="chapter" data-level="14.2" data-path="pca.html"><a href="pca.html#head-data"><i class="fa fa-check"></i><b>14.2</b> Head data</a></li>
 <li class="chapter" data-level="14.3" data-path="pca.html"><a href="pca.html#summary-of-the-data"><i class="fa fa-check"></i><b>14.3</b> Summary of the data</a></li>
 <li class="chapter" data-level="14.4" data-path="pca.html"><a href="pca.html#check-the-distribution-of-the-data"><i class="fa fa-check"></i><b>14.4</b> Check the distribution of the data</a></li>
@@ -185,7 +210,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="14.7" data-path="pca.html"><a href="pca.html#pca-on-wine-data"><i class="fa fa-check"></i><b>14.7</b> PCA on <code>wine</code> data</a><ul>
 <li class="chapter" data-level="14.7.1" data-path="pca.html"><a href="pca.html#read-the-wine-data"><i class="fa fa-check"></i><b>14.7.1</b> Read the <code>wine</code> data</a></li>
 <li class="chapter" data-level="14.7.2" data-path="pca.html"><a href="pca.html#description-of-each-column"><i class="fa fa-check"></i><b>14.7.2</b> Description of each column</a></li>
-<li class="chapter" data-level="14.7.3" data-path="pca.html"><a href="pca.html#section-5"><i class="fa fa-check"></i><b>14.7.3</b> </a></li>
+<li class="chapter" data-level="14.7.3" data-path="pca.html"><a href="pca.html#example"><i class="fa fa-check"></i><b>14.7.3</b> Example</a></li>
 </ul></li>
 <li class="chapter" data-level="14.8" data-path="pca.html"><a href="pca.html#references"><i class="fa fa-check"></i><b>14.8</b> References</a></li>
 </ul></li>
@@ -195,10 +220,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="qtl-analysis.html"><a href="qtl-analysis.html"><i class="fa fa-check"></i><b>16</b> QTL analysis</a><ul>
-<li class="chapter" data-level="16.1" data-path="qtl-analysis.html"><a href="qtl-analysis.html#reference-9"><i class="fa fa-check"></i><b>16.1</b> Reference</a></li>
+<li class="chapter" data-level="16.1" data-path="qtl-analysis.html"><a href="qtl-analysis.html#reference-12"><i class="fa fa-check"></i><b>16.1</b> Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="17" data-path="multiple-test-corretion.html"><a href="multiple-test-corretion.html"><i class="fa fa-check"></i><b>17</b> Multiple test corretion</a></li>
+<li class="chapter" data-level="17" data-path="transformation-of-data.html"><a href="transformation-of-data.html"><i class="fa fa-check"></i><b>17</b> Transformation of data</a><ul>
+<li class="chapter" data-level="17.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#log-transformation"><i class="fa fa-check"></i><b>17.1</b> Log transformation</a><ul>
+<li class="chapter" data-level="17.1.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#the-rationale-of-using-log2-transformation"><i class="fa fa-check"></i><b>17.1.1</b> The rationale of using log2 transformation</a></li>
+<li class="chapter" data-level="17.1.2" data-path="transformation-of-data.html"><a href="transformation-of-data.html#reference-13"><i class="fa fa-check"></i><b>17.1.2</b> Reference</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html"><i class="fa fa-check"></i><b>18</b> Partial least square analysis</a><ul>
+<li class="chapter" data-level="18.1" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#prepare-the-data-1"><i class="fa fa-check"></i><b>18.1</b> Prepare the data</a></li>
+<li class="chapter" data-level="18.2" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#principal-component-analysis-pca"><i class="fa fa-check"></i><b>18.2</b> Principal Component Analysis (PCA)</a></li>
+<li class="chapter" data-level="18.3" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#partial-least-squares-pls-and-pls-da"><i class="fa fa-check"></i><b>18.3</b> Partial least-squares: PLS and PLS-DA</a></li>
+<li class="chapter" data-level="18.4" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#reference-14"><i class="fa fa-check"></i><b>18.4</b> Reference</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -208,7 +244,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics notes for Bioinformatics in R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes of R for Bioinformatics</a>
           </h1>
         </div>
 
@@ -217,7 +253,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data" class="section level1">
-<h1><span class="header-section-number">11</span> The rationale for using negative binomial distribution to model read count in RNA-seq data</h1>
+<h1><span class="header-section-number">10</span> The rationale for using negative binomial distribution to model read count in RNA-seq data</h1>
 <p>Several tools for DEG detection (including DESeq2 and eageR) model read counts as a negative binomial (NB) distribution.</p>
 <p>The nagative binomial distribtion, especitally in its alternative parameterization, can be used as an alternative to the Poisson distribution. It is espectially useful for discrete data over an unbounded positive range whose sample variance exceeds the sample mean. In such cases, the observations are overdispersed with respect to a Poisson distribution, for which the mean is equal to the variance. Hence a Poison distribution is not an appropriate model. Since the negative binomial distribution has one more parameter than the Poisson distribution, the second parameter can be used to adjust the variance independently of the mean.</p>
 <p>Discrete data over an unbounded positive range is one way of saying ‘integer counts’.</p>
@@ -226,8 +262,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <img src="https://user-images.githubusercontent.com/20909751/53537996-f12bbb00-3ad9-11e9-97a9-6dc35195a50a.png" />
 
 </div>
+<p>If differential expresssion detection is our goal, we need to keep in mind that we model the distribution of counts for a given gene across replicates; we don’t model the dsitrution of an individual samples. So for DE detection, we are not concerned with shape of distribution of counts or the whole organisms at all. Poisson is a single parameter dist’n, with mean=variance. That assumption, which is really an approximation to the binomial, is suitable only for the variability associated with sampling the same DNA population (e.g. if you sequence multiple lanes of the same DNA, and assume no lane-specific effects, etc.). But if there is variation between your replicates (e.g. lab mice, people, etc.), the Poisson assumption will tend to underestimate the variance and any differences you observe (e.g. testing the null hypothesis that two groups have the same mean expression) will be overstated. This explaination is from the co-author of edgeR (<a href="https://www.biostars.org/p/6028/" class="uri">https://www.biostars.org/p/6028/</a>).</p>
 <div id="negative-binomial-in-r" class="section level2">
-<h2><span class="header-section-number">11.1</span> Negative binomial in R</h2>
+<h2><span class="header-section-number">10.1</span> Negative binomial in R</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">100</span>)
 <span class="co"># 1) n: number of number of observations.</span>
 <span class="co"># 2) size: target for number of successful trials, or dispersion parameter (the shape parameter of the gamma mixing distribution). Must be strictly positive, need not be integer.</span>
@@ -249,20 +286,72 @@ obs_pios &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class
 ##   15 
 ##    1</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(obs_nb, <span class="dt">breaks =</span> <span class="dv">1000</span>)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-44-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-52-1.png" width="576" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(obs_pios, <span class="dt">breaks =</span> <span class="dv">1000</span>)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-45-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-53-1.png" width="576" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(obs_nb)</code></pre></div>
 <pre><code>## [1] 9.949713</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(obs_pios)</code></pre></div>
 <pre><code>## [1] 5.11018</code></pre>
 <p>Here we can clearly see that the variance (measure of variation.) in the simulated data with Poisson distribution () is higher than that with negative binomial distribtuon.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">n =<span class="st"> </span><span class="dv">10000</span>
+dist_nb =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)
+<span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n){
+    obs_nb_tem &lt;-<span class="st"> </span><span class="kw">rnbinom</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="fl">0.5</span>)
+    dist_nb[i] =<span class="st"> </span><span class="kw">var</span>(obs_nb_tem)<span class="op">/</span><span class="kw">mean</span>(obs_nb_tem)
+}
+<span class="kw">hist</span>(dist_nb)</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-55-1.png" width="576" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">n =<span class="st"> </span><span class="dv">10000</span>
+dist_pios =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)
+<span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n){
+    obs_pois_tem &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class="dv">3</span>, <span class="dv">5</span>)
+    dist_pios[i] =<span class="st"> </span><span class="kw">var</span>(obs_pois_tem)<span class="op">/</span><span class="kw">mean</span>(obs_pois_tem)
+}
+<span class="kw">hist</span>(dist_pios)</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-56-1.png" width="576" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(dist_nb <span class="op">-</span><span class="st"> </span>dist_pios, <span class="dt">breaks=</span><span class="dv">100</span>, <span class="dt">col =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="dt">border =</span> <span class="ot">NA</span>)
+<span class="kw">abline</span>(<span class="dt">v=</span><span class="dv">0</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">lty=</span><span class="st">&quot;dashed&quot;</span>)</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-57-1.png" width="576" /></p>
+<div id="real-data" class="section level3">
+<h3><span class="header-section-number">10.1.1</span> Real data</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">read_count =<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;data/yeast_EV_DNMT3B_count.tab&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">head=</span>T)
+read_count_sub =<span class="st"> </span>read_count[, <span class="kw">c</span>(<span class="dv">4</span><span class="op">:</span><span class="dv">6</span>)]
+<span class="kw">head</span>(read_count_sub)</code></pre></div>
+<pre><code>##   DNMT3B_2 DNMT3B_3 DNMT3B_4
+## 1      717      948     1039
+## 2      392      386      403
+## 3        0        0        1
+## 4      106       55       33
+## 5      477      418      366
+## 6      285      187      138</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mean_var_diff &lt;-<span class="st"> </span><span class="kw">apply</span>(read_count_sub, <span class="dv">1</span>, var) <span class="op">-</span><span class="st">  </span><span class="kw">apply</span>(read_count_sub, <span class="dv">1</span>, mean) 
+<span class="kw">summary</span>(mean_var_diff)</code></pre></div>
+<pre><code>##       Min.    1st Qu.     Median       Mean    3rd Qu.       Max. 
+##      -6078          1        623    1058496       5794 2026890302</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mean_var_diff,<span class="dt">breaks=</span><span class="dv">100000</span>,<span class="dt">xlim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">50000</span>,<span class="dv">100000</span>))</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-58-1.png" width="576" /></p>
 </div>
-<div id="reference-6" class="section level2">
-<h2><span class="header-section-number">11.2</span> Reference</h2>
+</div>
+<div id="reference-8" class="section level2">
+<h2><span class="header-section-number">10.2</span> Reference</h2>
 <p>What’s the rationale for using the negative binomial distribution to model read: <a href="https://support.bioconductor.org/p/84832/" class="uri">https://support.bioconductor.org/p/84832/</a></p>
 <p>Why do we use the negative binomial distribution for analysing RNAseq data?: <a href="http://bridgeslab.sph.umich.edu/posts/why-do-we-use-the-negative-binomial-distribution-for-rnaseq" class="uri">http://bridgeslab.sph.umich.edu/posts/why-do-we-use-the-negative-binomial-distribution-for-rnaseq</a></p>
 <p>R统计学(06): 负二项分布: <a href="https://mp.weixin.qq.com/s/QBkL8_cW6Lsm5U56SUmUoQ" class="uri">https://mp.weixin.qq.com/s/QBkL8_cW6Lsm5U56SUmUoQ</a></p>
+</div>
+<div id="batch-effect" class="section level2">
+<h2><span class="header-section-number">10.3</span> Batch effect</h2>
+<p>Batch effects are sub-groups of measurements that have qualitatively different behaviour across conditions and are unrelated to the biological or scientific variables in a study. For example, batch effects may occur if a subset of experiments was run on Monday and another set on Tuesday, if two technicians were responsible for different subsets of the experiments or if two different lots of reagents, chips or instruments were used. These effects are not exclusive to high-throughput biology and genomics research1, and batch effects also affect low-dimensional molecular measurements, such as northern blots and quantitative PCR.</p>
+<p>batch effects occur because measurements are affected by laboratory conditions, reagent lots and personnel differences.</p>
+<p>1.1 Data simulation We downloaded an RNA-seq dataset from online for Zebrafish. This is a standard count data from RNA-seq experiment. These data are available as part of the zebrafishRNASeq Bioconductor package. (<a href="https://bioconductor.org/packages/release/data/experiment/html/zebrafishRNASeq.html" class="uri">https://bioconductor.org/packages/release/data/experiment/html/zebrafishRNASeq.html</a>) We first filter low expressed genes and only keep genes with more than 5 counts in at least two samples, and then check the dispersion of counts data by plotting the variance against the mean of the zebrafish dataset. Based on the higher dispersion usually existing in count data, we assume a zero inflated negative binomial distribution and estimate the parameters from the zebrafish data. We then use the R package of “ polyester” [24] to simulate 2 RNA-seq datasets by using the same dispersion parameters (mean and variance) from the zebrafish dataset, thus to mimic the real situation in a common RNA-seq experiment.</p>
+<p>For the data simulation step, we simulate 10, 000 genes on 20 samples. These 20 samples are simulated on 2 batches, with 5 cases and 5 controls on each batch. So there will be 2 kinds of factors on each of the 10, 000 genes: group factor (case/control status) and batch factor (batch 1/2). The DEGs detected could be caused by either of these 2 factors.</p>
+<p>For dataset 1, we simulate the group factor (case/control) on 0 gene (i.e., 0 gene will be detected as differentially expressed due to case/control status), and batch factor on 10, 000 genes (i.e., if any of these 10, 000 genes are detected as differentially expressed, that will only be caused by batch factor, not by sample phenotype of case/control status). In this case, the DEGs will be false positive signals because of the existence of batch effect and absence of case/control difference.</p>
+<p>In second case, we generate a dataset 2 with random batch effects on case and control samples (i.e., the phenotype factors are not balanced between case and control samples in each batch and batch factor have different impact on case samples and control samples). For the genes, the group factors (case and control) are simulated on 3000 genes and batch factors are simulated on 5000 genes using R package of “ polyester” respectively. Finally, among all the 10, 000 genes, 1000 genes are with group factor only, 2000 genes are with both group and batch factors, 3000 genes are with batch factor only, and the rest 4000 genes have either group factor or batch factor. The 3000 genes with batch factor only are defined as control genes, so that we can test the impact of batch effects and the performance of each method in removing batch effects).</p>
+</div>
+<div id="reference-9" class="section level2">
+<h2><span class="header-section-number">10.4</span> Reference</h2>
+<p>Simulation of batch effect data: <a href="https://www.biorxiv.org/content/biorxiv/suppl/2017/12/15/234344.DC1/234344-1.pdf" class="uri">https://www.biorxiv.org/content/biorxiv/suppl/2017/12/15/234344.DC1/234344-1.pdf</a></p>
+<p>Evaluation of Methods in Removing Batch Effects on RNA-seq Data: <a href="http://www.tran-med.com/article/2016/2411-2917-2-1-3.html#outline_anchor_4" class="uri">http://www.tran-med.com/article/2016/2411-2917-2-1-3.html#outline_anchor_4</a></p>
 
 </div>
 </div>
@@ -271,8 +360,8 @@ obs_pios &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class
           </div>
         </div>
       </div>
-<a href="correlation-test.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="working-with-missing-values.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bayesian-newwork-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="multiple-test-corretion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Statistics notes for Bioinformatics in R</title>
-  <meta name="description" content="Statistics notes for Bioinformatics in R">
+  <title>Notes of R for Bioinformatics</title>
+  <meta name="description" content="Notes of R for Bioinformatics">
   <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="Statistics notes for Bioinformatics in R" />
+  <meta property="og:title" content="Notes of R for Bioinformatics" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Statistics notes for Bioinformatics in R" />
+  <meta name="twitter:title" content="Notes of R for Bioinformatics" />
   
   
   
@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="joining-data-in-r-with-dplyr.html">
+<link rel="prev" href="data-wrangling.html">
 <link rel="next" href="random-forest.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -99,7 +99,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="" data-path="support-me.html"><a href="support-me.html"><i class="fa fa-check"></i>Support me</a></li>
+<li class="part"><span><b>I Introduction</b></span></li>
 <li class="chapter" data-level="1" data-path="basic-systax.html"><a href="basic-systax.html"><i class="fa fa-check"></i><b>1</b> Basic systax</a><ul>
 <li class="chapter" data-level="1.1" data-path="basic-systax.html"><a href="basic-systax.html#setup"><i class="fa fa-check"></i><b>1.1</b> Setup</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="basic-systax.html"><a href="basic-systax.html#install-packages"><i class="fa fa-check"></i><b>1.1.1</b> Install packages</a></li>
@@ -121,43 +121,64 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.4" data-path="plot-in-r.html"><a href="plot-in-r.html#color-the-dots-based-on-the-sex-information"><i class="fa fa-check"></i><b>2.4</b> Color the dots based on the <code>sex</code> information</a></li>
 <li class="chapter" data-level="2.5" data-path="plot-in-r.html"><a href="plot-in-r.html#section"><i class="fa fa-check"></i><b>2.5</b> </a></li>
 <li class="chapter" data-level="2.6" data-path="plot-in-r.html"><a href="plot-in-r.html#draw-a-circle-in-r"><i class="fa fa-check"></i><b>2.6</b> Draw a circle in R</a></li>
+<li class="chapter" data-level="2.7" data-path="plot-in-r.html"><a href="plot-in-r.html#network"><i class="fa fa-check"></i><b>2.7</b> Network</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="plot-in-r.html"><a href="plot-in-r.html#section-1"><i class="fa fa-check"></i><b>2.7.1</b> </a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="visulization-of-pair-wise-correlation-in-r.html"><a href="visulization-of-pair-wise-correlation-in-r.html"><i class="fa fa-check"></i><b>3</b> Visulization of pair-wise correlation in R</a><ul>
-<li class="chapter" data-level="3.1" data-path="visulization-of-pair-wise-correlation-in-r.html"><a href="visulization-of-pair-wise-correlation-in-r.html#reference-1"><i class="fa fa-check"></i><b>3.1</b> Reference</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>3</b> Correlation</a><ul>
+<li class="chapter" data-level="3.1" data-path="correlation.html"><a href="correlation.html#visulization-of-pair-wise-correlation-in-r"><i class="fa fa-check"></i><b>3.1</b> Visulization of pair-wise correlation in R</a></li>
+<li class="chapter" data-level="3.2" data-path="correlation.html"><a href="correlation.html#correlation-and-p-values-of-all-combinations-of-all-rows-of-two-matrices"><i class="fa fa-check"></i><b>3.2</b> Correlation and p-values of all combinations of all rows of two matrices</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="correlation.html"><a href="correlation.html#prepare-the-data"><i class="fa fa-check"></i><b>3.2.1</b> Prepare the data</a></li>
+<li class="chapter" data-level="3.2.2" data-path="correlation.html"><a href="correlation.html#another-way-to-do-this-is-to-use-corr.test"><i class="fa fa-check"></i><b>3.2.2</b> Another way to do this is to use <code>corr.test</code></a></li>
+<li class="chapter" data-level="3.2.3" data-path="correlation.html"><a href="correlation.html#read-data"><i class="fa fa-check"></i><b>3.2.3</b> Read data</a></li>
+<li class="chapter" data-level="3.2.4" data-path="correlation.html"><a href="correlation.html#calculate-the-correlation-advance"><i class="fa fa-check"></i><b>3.2.4</b> Calculate the correlation (Advance)</a></li>
+<li class="chapter" data-level="3.2.5" data-path="correlation.html"><a href="correlation.html#reference-2"><i class="fa fa-check"></i><b>3.2.5</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="correlation.html"><a href="correlation.html#different-ways-to-visulize-correlation"><i class="fa fa-check"></i><b>3.3</b> Different ways to visulize correlation</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="correlation.html"><a href="correlation.html#display-correlation-using-chart.correlation-in-performanceanalytics"><i class="fa fa-check"></i><b>3.3.1</b> Display correlation using <code>chart.Correlation</code> in <code>PerformanceAnalytics</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="correlation.html"><a href="correlation.html#reference-3"><i class="fa fa-check"></i><b>3.4</b> Reference</a></li>
+</ul></li>
+<li class="part"><span><b>II Statistics</b></span></li>
 <li class="chapter" data-level="4" data-path="standard-deviation-vs-standard-error.html"><a href="standard-deviation-vs-standard-error.html"><i class="fa fa-check"></i><b>4</b> Standard deviation vs Standard error</a><ul>
-<li class="chapter" data-level="4.1" data-path="standard-deviation-vs-standard-error.html"><a href="standard-deviation-vs-standard-error.html#reference-2"><i class="fa fa-check"></i><b>4.1</b> Reference</a></li>
+<li class="chapter" data-level="4.1" data-path="standard-deviation-vs-standard-error.html"><a href="standard-deviation-vs-standard-error.html#reference-4"><i class="fa fa-check"></i><b>4.1</b> Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="t-test.html"><a href="t-test.html"><i class="fa fa-check"></i><b>5</b> T test</a><ul>
-<li class="chapter" data-level="5.1" data-path="t-test.html"><a href="t-test.html#calculate-t-statistic-step-by-step-in-r"><i class="fa fa-check"></i><b>5.1</b> Calculate t-statistic step by step in R</a></li>
+<li class="chapter" data-level="5.1" data-path="t-test.html"><a href="t-test.html#calculate-t-statistic-step-by-step-in-r"><i class="fa fa-check"></i><b>5.1</b> Calculate t-statistic step by step in R</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="t-test.html"><a href="t-test.html#section-2"><i class="fa fa-check"></i><b>5.1.1</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="t-test.html"><a href="t-test.html#calculate-the-standard-deviation-in-r"><i class="fa fa-check"></i><b>5.2</b> Calculate the standard deviation in R</a></li>
+<li class="chapter" data-level="5.3" data-path="t-test.html"><a href="t-test.html#reference-5"><i class="fa fa-check"></i><b>5.3</b> Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="linear-model.html"><a href="linear-model.html"><i class="fa fa-check"></i><b>6</b> Linear model</a><ul>
-<li class="chapter" data-level="6.1" data-path="linear-model.html"><a href="linear-model.html#section-1"><i class="fa fa-check"></i><b>6.1</b> </a></li>
+<li class="chapter" data-level="6.1" data-path="linear-model.html"><a href="linear-model.html#section-3"><i class="fa fa-check"></i><b>6.1</b> </a></li>
 <li class="chapter" data-level="6.2" data-path="linear-model.html"><a href="linear-model.html#extract-male-data"><i class="fa fa-check"></i><b>6.2</b> Extract male data</a></li>
-<li class="chapter" data-level="6.3" data-path="linear-model.html"><a href="linear-model.html#reference-3"><i class="fa fa-check"></i><b>6.3</b> Reference</a></li>
+<li class="chapter" data-level="6.3" data-path="linear-model.html"><a href="linear-model.html#reference-6"><i class="fa fa-check"></i><b>6.3</b> Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>7</b> MRG</a><ul>
 <li class="chapter" data-level="7.1" data-path="mrg.html"><a href="mrg.html#read-the-data-1"><i class="fa fa-check"></i><b>7.1</b> Read the data</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>8</b> Multiple linear regression</a><ul>
-<li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-2"><i class="fa fa-check"></i><b>8.1</b> </a></li>
-<li class="chapter" data-level="8.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-3"><i class="fa fa-check"></i><b>8.2</b> </a></li>
+<li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-4"><i class="fa fa-check"></i><b>8.1</b> </a></li>
+<li class="chapter" data-level="8.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-5"><i class="fa fa-check"></i><b>8.2</b> </a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html"><i class="fa fa-check"></i><b>9</b> Bayesian newwork in R</a><ul>
 <li class="chapter" data-level="9.1" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#practical-experiments"><i class="fa fa-check"></i><b>9.1</b> Practical experiments</a><ul>
 <li class="chapter" data-level="9.1.1" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#analysis-of-the-magic-population-in-scutari-et-al.-genetics-2014"><i class="fa fa-check"></i><b>9.1.1</b> Analysis of the MAGIC population in Scutari et al., Genetics (2014)</a></li>
-<li class="chapter" data-level="9.1.2" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#reference-4"><i class="fa fa-check"></i><b>9.1.2</b> Reference</a></li>
+<li class="chapter" data-level="9.1.2" data-path="bayesian-newwork-in-r.html"><a href="bayesian-newwork-in-r.html#reference-7"><i class="fa fa-check"></i><b>9.1.2</b> Reference</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="correlation-test.html"><a href="correlation-test.html"><i class="fa fa-check"></i><b>10</b> Correlation test</a><ul>
-<li class="chapter" data-level="10.1" data-path="correlation-test.html"><a href="correlation-test.html#reference-5"><i class="fa fa-check"></i><b>10.1</b> Reference</a></li>
+<li class="chapter" data-level="10" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><i class="fa fa-check"></i><b>10</b> The rationale for using negative binomial distribution to model read count in RNA-seq data</a><ul>
+<li class="chapter" data-level="10.1" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#negative-binomial-in-r"><i class="fa fa-check"></i><b>10.1</b> Negative binomial in R</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#real-data"><i class="fa fa-check"></i><b>10.1.1</b> Real data</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><i class="fa fa-check"></i><b>11</b> The rationale for using negative binomial distribution to model read count in RNA-seq data</a><ul>
-<li class="chapter" data-level="11.1" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#negative-binomial-in-r"><i class="fa fa-check"></i><b>11.1</b> Negative binomial in R</a></li>
-<li class="chapter" data-level="11.2" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#reference-6"><i class="fa fa-check"></i><b>11.2</b> Reference</a></li>
+<li class="chapter" data-level="10.2" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#reference-8"><i class="fa fa-check"></i><b>10.2</b> Reference</a></li>
+<li class="chapter" data-level="10.3" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#batch-effect"><i class="fa fa-check"></i><b>10.3</b> Batch effect</a></li>
+<li class="chapter" data-level="10.4" data-path="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html"><a href="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data.html#reference-9"><i class="fa fa-check"></i><b>10.4</b> Reference</a></li>
 </ul></li>
+<li class="chapter" data-level="11" data-path="multiple-test-corretion.html"><a href="multiple-test-corretion.html"><i class="fa fa-check"></i><b>11</b> Multiple test corretion</a></li>
 <li class="chapter" data-level="12" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html"><i class="fa fa-check"></i><b>12</b> Working with missing values</a><ul>
-<li class="chapter" data-level="12.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#section-4"><i class="fa fa-check"></i><b>12.1</b> </a></li>
+<li class="chapter" data-level="12.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#section-6"><i class="fa fa-check"></i><b>12.1</b> </a></li>
 <li class="chapter" data-level="12.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summaryize-the-missing-values"><i class="fa fa-check"></i><b>12.2</b> Summaryize the missing values</a><ul>
 <li class="chapter" data-level="12.2.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summarize-the-missing-values-using-mice-package"><i class="fa fa-check"></i><b>12.2.1</b> Summarize the missing values using <code>mice</code> package</a></li>
 <li class="chapter" data-level="12.2.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#summarize-the-missing-values-using-vim-packages"><i class="fa fa-check"></i><b>12.2.2</b> Summarize the missing values using <code>VIM</code> packages</a></li>
@@ -167,14 +188,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="12.4.1" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#imputing-the-data-with-row-wise-mean"><i class="fa fa-check"></i><b>12.4.1</b> Imputing the data with row-wise mean</a></li>
 <li class="chapter" data-level="12.4.2" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#imputing-the-data-with-row-wise-mean-using-mice"><i class="fa fa-check"></i><b>12.4.2</b> Imputing the data with row-wise mean using <code>mice</code></a></li>
 </ul></li>
-<li class="chapter" data-level="12.5" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#reference-7"><i class="fa fa-check"></i><b>12.5</b> Reference</a></li>
+<li class="chapter" data-level="12.5" data-path="working-with-missing-values.html"><a href="working-with-missing-values.html#reference-10"><i class="fa fa-check"></i><b>12.5</b> Reference</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="joining-data-in-r-with-dplyr.html"><a href="joining-data-in-r-with-dplyr.html"><i class="fa fa-check"></i><b>13</b> Joining Data in R with dplyr</a><ul>
-<li class="chapter" data-level="13.1" data-path="joining-data-in-r-with-dplyr.html"><a href="joining-data-in-r-with-dplyr.html#whats-covered"><i class="fa fa-check"></i><b>13.1</b> Whats Covered</a></li>
-<li class="chapter" data-level="13.2" data-path="joining-data-in-r-with-dplyr.html"><a href="joining-data-in-r-with-dplyr.html#reference-8"><i class="fa fa-check"></i><b>13.2</b> Reference</a></li>
+<li class="chapter" data-level="13" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>13</b> Data wrangling</a><ul>
+<li class="chapter" data-level="13.1" data-path="data-wrangling.html"><a href="data-wrangling.html#section-7"><i class="fa fa-check"></i><b>13.1</b> </a></li>
+<li class="chapter" data-level="13.2" data-path="data-wrangling.html"><a href="data-wrangling.html#joining-data-in-r-with-dplyr"><i class="fa fa-check"></i><b>13.2</b> Joining Data in R with dplyr</a><ul>
+<li class="chapter" data-level="13.2.1" data-path="data-wrangling.html"><a href="data-wrangling.html#whats-covered"><i class="fa fa-check"></i><b>13.2.1</b> Whats Covered</a></li>
 </ul></li>
+<li class="chapter" data-level="13.3" data-path="data-wrangling.html"><a href="data-wrangling.html#reference-11"><i class="fa fa-check"></i><b>13.3</b> Reference</a></li>
+</ul></li>
+<li class="part"><span><b>III Machine learning</b></span></li>
 <li class="chapter" data-level="14" data-path="pca.html"><a href="pca.html"><i class="fa fa-check"></i><b>14</b> PCA</a><ul>
-<li class="chapter" data-level="14.1" data-path="pca.html"><a href="pca.html#read-data"><i class="fa fa-check"></i><b>14.1</b> Read data</a></li>
+<li class="chapter" data-level="14.1" data-path="pca.html"><a href="pca.html#read-data-1"><i class="fa fa-check"></i><b>14.1</b> Read data</a></li>
 <li class="chapter" data-level="14.2" data-path="pca.html"><a href="pca.html#head-data"><i class="fa fa-check"></i><b>14.2</b> Head data</a></li>
 <li class="chapter" data-level="14.3" data-path="pca.html"><a href="pca.html#summary-of-the-data"><i class="fa fa-check"></i><b>14.3</b> Summary of the data</a></li>
 <li class="chapter" data-level="14.4" data-path="pca.html"><a href="pca.html#check-the-distribution-of-the-data"><i class="fa fa-check"></i><b>14.4</b> Check the distribution of the data</a></li>
@@ -185,7 +210,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="14.7" data-path="pca.html"><a href="pca.html#pca-on-wine-data"><i class="fa fa-check"></i><b>14.7</b> PCA on <code>wine</code> data</a><ul>
 <li class="chapter" data-level="14.7.1" data-path="pca.html"><a href="pca.html#read-the-wine-data"><i class="fa fa-check"></i><b>14.7.1</b> Read the <code>wine</code> data</a></li>
 <li class="chapter" data-level="14.7.2" data-path="pca.html"><a href="pca.html#description-of-each-column"><i class="fa fa-check"></i><b>14.7.2</b> Description of each column</a></li>
-<li class="chapter" data-level="14.7.3" data-path="pca.html"><a href="pca.html#section-5"><i class="fa fa-check"></i><b>14.7.3</b> </a></li>
+<li class="chapter" data-level="14.7.3" data-path="pca.html"><a href="pca.html#example"><i class="fa fa-check"></i><b>14.7.3</b> Example</a></li>
 </ul></li>
 <li class="chapter" data-level="14.8" data-path="pca.html"><a href="pca.html#references"><i class="fa fa-check"></i><b>14.8</b> References</a></li>
 </ul></li>
@@ -195,10 +220,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="qtl-analysis.html"><a href="qtl-analysis.html"><i class="fa fa-check"></i><b>16</b> QTL analysis</a><ul>
-<li class="chapter" data-level="16.1" data-path="qtl-analysis.html"><a href="qtl-analysis.html#reference-9"><i class="fa fa-check"></i><b>16.1</b> Reference</a></li>
+<li class="chapter" data-level="16.1" data-path="qtl-analysis.html"><a href="qtl-analysis.html#reference-12"><i class="fa fa-check"></i><b>16.1</b> Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="17" data-path="multiple-test-corretion.html"><a href="multiple-test-corretion.html"><i class="fa fa-check"></i><b>17</b> Multiple test corretion</a></li>
+<li class="chapter" data-level="17" data-path="transformation-of-data.html"><a href="transformation-of-data.html"><i class="fa fa-check"></i><b>17</b> Transformation of data</a><ul>
+<li class="chapter" data-level="17.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#log-transformation"><i class="fa fa-check"></i><b>17.1</b> Log transformation</a><ul>
+<li class="chapter" data-level="17.1.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#the-rationale-of-using-log2-transformation"><i class="fa fa-check"></i><b>17.1.1</b> The rationale of using log2 transformation</a></li>
+<li class="chapter" data-level="17.1.2" data-path="transformation-of-data.html"><a href="transformation-of-data.html#reference-13"><i class="fa fa-check"></i><b>17.1.2</b> Reference</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html"><i class="fa fa-check"></i><b>18</b> Partial least square analysis</a><ul>
+<li class="chapter" data-level="18.1" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#prepare-the-data-1"><i class="fa fa-check"></i><b>18.1</b> Prepare the data</a></li>
+<li class="chapter" data-level="18.2" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#principal-component-analysis-pca"><i class="fa fa-check"></i><b>18.2</b> Principal Component Analysis (PCA)</a></li>
+<li class="chapter" data-level="18.3" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#partial-least-squares-pls-and-pls-da"><i class="fa fa-check"></i><b>18.3</b> Partial least-squares: PLS and PLS-DA</a></li>
+<li class="chapter" data-level="18.4" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#reference-14"><i class="fa fa-check"></i><b>18.4</b> Reference</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -208,7 +244,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics notes for Bioinformatics in R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes of R for Bioinformatics</a>
           </h1>
         </div>
 
@@ -220,7 +256,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1><span class="header-section-number">14</span> PCA</h1>
 <p>PCA reduces the dimensionality of a multivariate data to two or three principal components, that can be visualized graphically, with minimal loss of information.</p>
 <p>PCA is veru useful whne the varianle with the data set are highly correlated. Correlation indicates that there is redundancy in the data. Due to this redundancy, PCA can be used to reduce the original variable into smaller number of new variabeles, nameing principal components.</p>
-<div id="read-data" class="section level2">
+<div id="read-data-1" class="section level2">
 <h2><span class="header-section-number">14.1</span> Read data</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris_tab &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/d546eaee765268bf2f487608c537c05e22e4b221/iris.csv&quot;</span>)</code></pre></div>
 </div>
@@ -256,7 +292,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="check-the-distribution-of-the-data" class="section level2">
 <h2><span class="header-section-number">14.4</span> Check the distribution of the data</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(iris_tab<span class="op">$</span>sepal_length)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-60-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-73-1.png" width="576" /></p>
 </div>
 <div id="eigendecomposition---computing-eigenvectors-and-eigenvalues" class="section level2">
 <h2><span class="header-section-number">14.5</span> Eigendecomposition - Computing Eigenvectors and Eigenvalues</h2>
@@ -278,10 +314,9 @@ cov_mat</code></pre></div>
 ## petal_length    0.8717542  -0.4205161    1.0000000   0.9627571
 ## petal_width     0.8179536  -0.3565441    0.9627571   1.0000000</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;corrplot&quot;)</span>
-<span class="kw">library</span>(corrplot)</code></pre></div>
-<pre><code>## corrplot 0.84 loaded</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">corrplot</span>(cov_mat)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-62-1.png" width="576" /></p>
+<span class="kw">library</span>(corrplot)
+<span class="kw">corrplot</span>(cov_mat)</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-75-1.png" width="576" /></p>
 </div>
 </div>
 <div id="pca-with-two-variables" class="section level2">
@@ -296,11 +331,11 @@ cov_mat</code></pre></div>
 ## 5          1.4         0.2
 ## 6          1.7         0.4</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(new_data<span class="op">$</span>petal_length, new_data<span class="op">$</span>petal_width)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-63-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-76-1.png" width="576" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;FactoMineR&quot;)</span>
 <span class="kw">library</span>(<span class="st">&quot;FactoMineR&quot;</span>)
 pc_2var_res =<span class="st"> </span><span class="kw">PCA</span>(new_data)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-64-1.png" width="576" /><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-64-2.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-77-1.png" width="576" /><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-77-2.png" width="576" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(pc_2var_res)</code></pre></div>
 <pre><code>## **Results for the Principal Component Analysis (PCA)**
 ## The analysis was performed on 150 individuals, described by 2 variables
@@ -3294,12 +3329,98 @@ cor_matrix&lt;-<span class="kw">cor</span>(wine_x)
 <span class="co"># method = &quot;square&quot;, ellipse, number, shade, color, pie</span>
 <span class="co"># type = upper, lower, full(default)</span>
 <span class="kw">corrplot</span>(cor_matrix, <span class="dt">method=</span><span class="st">&quot;circle&quot;</span>, <span class="dt">type =</span> <span class="st">&quot;upper&quot;</span>)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-69-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-82-1.png" width="576" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">corrplot.mixed</span>(cor_matrix)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-69-2.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-82-2.png" width="576" /></p>
 </div>
-<div id="section-5" class="section level3">
-<h3><span class="header-section-number">14.7.3</span> </h3>
+<div id="example" class="section level3">
+<h3><span class="header-section-number">14.7.3</span> Example</h3>
+<p>Depends on the goal of your analysis. Some common practices, some of which are mentioned in whuber’s link:</p>
+<p>Standardizing is usually done when the variables on which the PCA is performed are not measured on the same scale. Note that standardizing implies assigning equal importance to all variables. If they are not measured on the same scale and you choose to work on the non standardized variables, it is often the case that each PC is dominated by a single variable and you just get a sort of ordering of the variables by their variance. (One of the loadings of each (early) component will be close to +1 or -1.) The two methods often lead to different results, as you have experienced.</p>
+<p>Intuitive example:</p>
+<p>Suppose you have two variables: the height of a tree and the girth of the same tree. We will convert the volume to a factor: a tree will be high in volume if its volume is bigger than 20 cubic feet, and low in volume otherwise. We will use the trees dataset which comes preloaded in R</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(trees)
+tree.girth&lt;-trees[,<span class="dv">1</span>]
+tree.height&lt;-trees[,<span class="dv">2</span>]
+tree.vol&lt;-<span class="kw">as.factor</span>(<span class="kw">ifelse</span>(trees[,<span class="dv">3</span>]<span class="op">&gt;</span><span class="dv">20</span>,<span class="st">&quot;high&quot;</span>,<span class="st">&quot;low&quot;</span>))</code></pre></div>
+<p>Now suppose that the height was actually measured in miles instead of feet.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tree.height&lt;-tree.height<span class="op">/</span><span class="dv">5280</span>
+tree&lt;-<span class="kw">cbind</span>(tree.height,tree.girth)
+
+<span class="co">#do the PCA</span>
+tree.pca&lt;-<span class="kw">princomp</span>(tree)
+<span class="kw">summary</span>(tree.pca)</code></pre></div>
+<pre><code>## Importance of components:
+##                           Comp.1       Comp.2
+## Standard deviation     3.0871086 1.014551e-03
+## Proportion of Variance 0.9999999 1.080050e-07
+## Cumulative Proportion  0.9999999 1.000000e+00</code></pre>
+<p>The first component explains almost 100% of the variability in the data. The loadings:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">loadings</span>(tree.pca)</code></pre></div>
+<pre><code>## 
+## Loadings:
+##             Comp.1 Comp.2
+## tree.height        -1    
+## tree.girth   1           
+## 
+##                Comp.1 Comp.2
+## SS loadings       1.0    1.0
+## Proportion Var    0.5    0.5
+## Cumulative Var    0.5    1.0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biplot</span>(tree.pca,<span class="dt">xlabs=</span>tree.vol,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre></div>
+<pre><code>## Warning in arrows(0, 0, y[, 1L] * 0.8, y[, 2L] * 0.8, col = col[2L], length
+## = arrow.len): zero-length arrow is of indeterminate angle and so skipped</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-86-1.png" width="576" /></p>
+<p>We see that trees high in volume tend to have a high tree girth, but the three height doesn’t give any information on tree volume. This is likely wrong and the consequence of the two different unit measures.</p>
+<p>We could use the same units, or we could standardize the variables. I expect both will lead to a more balanced picture of the variability. Of course in this case one can argue that the variables should have the same unit but not be standardized, which may be a valid argument, were it not that we are measuring two different things. (When we would be measuring the weight of the tree and the girth of the tree, the scale on which both should be measured is no longer very clear. In this case we have a clear argument to work on the standardized variables.)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tree.height&lt;-tree.height<span class="op">*</span><span class="dv">5280</span>
+tree&lt;-<span class="kw">cbind</span>(tree.height,tree.girth)
+
+<span class="co">#do the PCA</span>
+tree.pca&lt;-<span class="kw">princomp</span>(tree)
+<span class="kw">summary</span>(tree.pca)</code></pre></div>
+<pre><code>## Importance of components:
+##                           Comp.1    Comp.2
+## Standard deviation     6.5088696 2.5407042
+## Proportion of Variance 0.8677775 0.1322225
+## Cumulative Proportion  0.8677775 1.0000000</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">loadings</span>(tree.pca)</code></pre></div>
+<pre><code>## 
+## Loadings:
+##             Comp.1 Comp.2
+## tree.height -0.956  0.293
+## tree.girth  -0.293 -0.956
+## 
+##                Comp.1 Comp.2
+## SS loadings       1.0    1.0
+## Proportion Var    0.5    0.5
+## Cumulative Var    0.5    1.0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biplot</span>(tree.pca,<span class="dt">xlabs=</span>tree.vol,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-87-1.png" width="576" /></p>
+<p>We now see that trees which are tall and have a big girth, are high in volume (bottom left corner), compared to low girth and low height for low volume trees (upper right corner). This intuitively makes sense.</p>
+<p>If one watches closely, however, we see that the contrast between high/low volume is strongest in the girth direction and not in the height direction. Let’s see what happens when we standardize:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tree&lt;-<span class="kw">scale</span>(tree,<span class="dt">center=</span>F,<span class="dt">scale=</span>T)
+tree.pca&lt;-<span class="kw">princomp</span>(tree)
+<span class="kw">summary</span>(tree.pca)</code></pre></div>
+<pre><code>## Importance of components:
+##                           Comp.1     Comp.2
+## Standard deviation     0.2275561 0.06779544
+## Proportion of Variance 0.9184749 0.08152510
+## Cumulative Proportion  0.9184749 1.00000000</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">loadings</span>(tree.pca)</code></pre></div>
+<pre><code>## 
+## Loadings:
+##             Comp.1 Comp.2
+## tree.height  0.203 -0.979
+## tree.girth   0.979  0.203
+## 
+##                Comp.1 Comp.2
+## SS loadings       1.0    1.0
+## Proportion Var    0.5    0.5
+## Cumulative Var    0.5    1.0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biplot</span>(tree.pca,<span class="dt">xlabs=</span>tree.vol,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre></div>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-88-1.png" width="576" /></p>
+<p>Indeed, the girth now explains the majority of the difference in high and low volume trees! (The length of the arrow in the biplot is indicatory of the variance in the original variable.) So even if things are measured on the same scale, standardizing may be useful. Not standardizing may be recommended when we are for example comparing the length of different species of trees because this is exactly the same measurement.</p>
 </div>
 </div>
 <div id="references" class="section level2">
@@ -3309,6 +3430,8 @@ cor_matrix&lt;-<span class="kw">cor</span>(wine_x)
 <p>Principal Component Analysis (PCA): <a href="https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/index" class="uri">https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/index</a></p>
 <p>Exploratory Multivariate Analysis by Example using R: <a href="http://factominer.free.fr/course/index.html" class="uri">http://factominer.free.fr/course/index.html</a></p>
 <p><a href="https://github.com/gabi493/ADEI/blob/master/Husson%20F.%20et%20al.%20-%20Exploratory%20Multivariate%20Analysis%20by%20Example%20-%20Using%20R%20-%202011.pdf">https://github.com/gabi493/ADEI/blob/master/Husson%20F.%20et%20al.%20-%20Exploratory%20Multivariate%20Analysis%20by%20Example%20-%20Using%20R%20-%202011.pdf</a></p>
+<p>Three Tips for Principal Component Analysis: <a href="https://www.theanalysisfactor.com/tips-principal-component-analysis/" class="uri">https://www.theanalysisfactor.com/tips-principal-component-analysis/</a></p>
+<p>Not normalizing data before PCA gives better explained variance ratio?: <a href="https://stats.stackexchange.com/questions/105592/not-normalizing-data-before-pca-gives-better-explained-variance-ratio" class="uri">https://stats.stackexchange.com/questions/105592/not-normalizing-data-before-pca-gives-better-explained-variance-ratio</a></p>
 
 </div>
 </div>
@@ -3317,7 +3440,7 @@ cor_matrix&lt;-<span class="kw">cor</span>(wine_x)
           </div>
         </div>
       </div>
-<a href="joining-data-in-r-with-dplyr.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-wrangling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="random-forest.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
