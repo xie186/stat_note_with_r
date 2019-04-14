@@ -10,7 +10,9 @@ while(<LIST>){
     next if !/Rmd/ || /#/;
     my @file = <*$_>;
     my $index = sprintf("%02d", $i);
-    print "mv @file $index\_$_\n";
+    my $new_file = $_;
+    $new_file =~ s/^\d+_//g;
+    print "mv $file[0] $index\_$new_file\n";
     ++$i;
 }
 

@@ -1,43 +1,28 @@
-## Introduction
-R_intro.Rmd
-
-## Figure
-plot_in_R.Rmd
-
-
-## Data checking
-correlation_in_R.Rmd
-
-
-## Statistics
-
-stand_dev_stand_err.Rmd
-ttest.Rmd
-
-linear_model.Rmd
-multi_linear_regression.Rmd
-multiple_regresssion_with_an_interaction_term.Rmd
-bayesian_network.Rmd
-correlation_test.Rmd
-neg_binomial_count.Rmd
-multiple_test_correction.Rmd
-
-## Data wrangling
-
-missing_values.Rmd
-intro_dplyr.Rmd
-
-## Machine learning
-### Unsuperwided
-PCA.Rmd
-
-### Superwised
-ml_random_forest.Rmd
-
-## Real world problem
-
-QTLanalysis.Rmd
-
-
-## Reference
-reference_resouce.Rmd
+00_R_intro.Rmd
+01_plot_in_R.Rmd
+02_correlation_in_R.Rmd
+03_stand_dev_stand_err.Rmd
+04_ttest.Rmd
+05_linear_model.Rmd
+06_multi_linear_regression.Rmd
+07_multiple_regresssion_with_an_interaction_term.Rmd
+08_bayesian_network.Rmd
+09_correlation_test.Rmd
+10_neg_binomial_count.Rmd
+11_multiple_test_correction.Rmd
+12_missing_values.Rmd
+13_intro_dplyr.Rmd
+14_PCA.Rmd
+15_ml_random_forest.Rmd
+16_QTLanalysis.Rmd
+17_reference_resouce.Rmd
+18_bayesian_modeling.Rmd
+19_data_transformation.Rmd
+20_goodmess_of_fit.Rmd
+21_overdispersion.Rmd
+22_package_manage.Rmd
+23_permutation_combinaiton.Rmd
+24_pls_da.Rmd
+25_scale.Rmd
+26_web_scraping.Rmd
+# index.Rmd
