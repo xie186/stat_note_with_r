@@ -32,7 +32,7 @@ This book includes the notes I have during the use of R as a Bioinformatician.
 ```{r echo=FALSE}
 
 # https://stackoverflow.com/questions/4090169/elegant-way-to-check-for-missing-packages-and-install-them
-list.of.packages <- c("combinat",  "LaF", "igraph", "network", "sna", "visNetwork", "threejs", "ndtv", "RColorBrewer", "png", "networkD3", "animation", "maps", "geosphere", "RColorBrewer", "png", "animation", "visNetwork", "threejs", "networkD3", "ndtv", "maps", "geosphere", "psych", "UsingR", "bnlearn", "", "bnlearn", "mice", "VIM", "dplyr", "corrplot", "FactoMineR", "FactoInvestigate", "AppliedPredictiveModeling", "caret", "ellipse", "", "combinat", "RISmed", "manipulate", "lme4")
+list.of.packages <- c("bookdown", "combinat",  "LaF", "igraph", "network", "sna", "visNetwork", "threejs", "ndtv", "RColorBrewer", "png", "networkD3", "animation", "maps", "geosphere", "RColorBrewer", "png", "animation", "visNetwork", "threejs", "networkD3", "ndtv", "maps", "geosphere", "psych", "UsingR", "bnlearn", "", "bnlearn", "mice", "VIM", "dplyr", "corrplot", "FactoMineR", "FactoInvestigate", "PerformanceAnalytics", "AppliedPredictiveModeling", "caret", "ellipse", "", "combinat", "RISmed", "manipulate", "lme4")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages, dependencies = T)
 

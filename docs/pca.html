@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Notes of R for Bioinformatics</title>
-  <meta name="description" content="Notes of R for Bioinformatics">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <title>14 PCA | Notes of R for Bioinformatics</title>
+  <meta name="description" content="14 PCA | Notes of R for Bioinformatics">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Notes of R for Bioinformatics" />
+  <meta property="og:title" content="14 PCA | Notes of R for Bioinformatics" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes of R for Bioinformatics" />
+  <meta name="twitter:title" content="14 PCA | Notes of R for Bioinformatics" />
   
   
   
@@ -35,6 +35,7 @@
 <link rel="next" href="random-forest.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
@@ -49,41 +50,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 </head>
@@ -159,6 +186,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="7" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>7</b> MRG</a><ul>
 <li class="chapter" data-level="7.1" data-path="mrg.html"><a href="mrg.html#read-the-data-1"><i class="fa fa-check"></i><b>7.1</b> Read the data</a></li>
+<li class="chapter" data-level="7.2" data-path="mrg.html"><a href="mrg.html#mixed-linear-model"><i class="fa fa-check"></i><b>7.2</b> Mixed linear model</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>8</b> Multiple linear regression</a><ul>
 <li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-4"><i class="fa fa-check"></i><b>8.1</b> </a></li>
@@ -225,25 +253,39 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="16.1" data-path="qtl-analysis.html"><a href="qtl-analysis.html#reference-13"><i class="fa fa-check"></i><b>16.1</b> Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="17" data-path="transformation-of-data.html"><a href="transformation-of-data.html"><i class="fa fa-check"></i><b>17</b> Transformation of data</a><ul>
-<li class="chapter" data-level="17.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#log-transformation"><i class="fa fa-check"></i><b>17.1</b> Log transformation</a><ul>
-<li class="chapter" data-level="17.1.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#the-rationale-of-using-log2-transformation"><i class="fa fa-check"></i><b>17.1.1</b> The rationale of using log2 transformation</a></li>
-<li class="chapter" data-level="17.1.2" data-path="transformation-of-data.html"><a href="transformation-of-data.html#reference-14"><i class="fa fa-check"></i><b>17.1.2</b> Reference</a></li>
+<li class="chapter" data-level="17" data-path="doing-bayesian-statistics-in-r.html"><a href="doing-bayesian-statistics-in-r.html"><i class="fa fa-check"></i><b>17</b> Doing Bayesian statistics in R</a><ul>
+<li class="chapter" data-level="17.1" data-path="doing-bayesian-statistics-in-r.html"><a href="doing-bayesian-statistics-in-r.html#reference-14"><i class="fa fa-check"></i><b>17.1</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="transformation-of-data.html"><a href="transformation-of-data.html"><i class="fa fa-check"></i><b>18</b> Transformation of data</a><ul>
+<li class="chapter" data-level="18.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#log-transformation"><i class="fa fa-check"></i><b>18.1</b> Log transformation</a><ul>
+<li class="chapter" data-level="18.1.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#the-rationale-of-using-log2-transformation"><i class="fa fa-check"></i><b>18.1.1</b> The rationale of using log2 transformation</a></li>
+<li class="chapter" data-level="18.1.2" data-path="transformation-of-data.html"><a href="transformation-of-data.html#reference-15"><i class="fa fa-check"></i><b>18.1.2</b> Reference</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="18" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html"><i class="fa fa-check"></i><b>18</b> Partial least square analysis</a><ul>
-<li class="chapter" data-level="18.1" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#prepare-the-data-1"><i class="fa fa-check"></i><b>18.1</b> Prepare the data</a></li>
-<li class="chapter" data-level="18.2" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#principal-component-analysis-pca"><i class="fa fa-check"></i><b>18.2</b> Principal Component Analysis (PCA)</a></li>
-<li class="chapter" data-level="18.3" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#partial-least-squares-pls-and-pls-da"><i class="fa fa-check"></i><b>18.3</b> Partial least-squares: PLS and PLS-DA</a></li>
-<li class="chapter" data-level="18.4" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#reference-15"><i class="fa fa-check"></i><b>18.4</b> Reference</a></li>
+<li class="chapter" data-level="19" data-path="goodness-of-fit-in-r.html"><a href="goodness-of-fit-in-r.html"><i class="fa fa-check"></i><b>19</b> Goodness of fit in R</a><ul>
+<li class="chapter" data-level="19.1" data-path="goodness-of-fit-in-r.html"><a href="goodness-of-fit-in-r.html#reference-16"><i class="fa fa-check"></i><b>19.1</b> Reference</a></li>
 </ul></li>
-<li class="chapter" data-level="19" data-path="scale.html"><a href="scale.html"><i class="fa fa-check"></i><b>19</b> Scale</a><ul>
-<li class="chapter" data-level="19.1" data-path="scale.html"><a href="scale.html#reference-16"><i class="fa fa-check"></i><b>19.1</b> Reference</a></li>
+<li class="chapter" data-level="20" data-path="overdispersion.html"><a href="overdispersion.html"><i class="fa fa-check"></i><b>20</b> Overdispersion</a><ul>
+<li class="chapter" data-level="20.1" data-path="overdispersion.html"><a href="overdispersion.html#recognising-and-testing-for-overdispersion"><i class="fa fa-check"></i><b>20.1</b> Recognising (and testing for) overdispersion</a></li>
+<li class="chapter" data-level="20.2" data-path="overdispersion.html"><a href="overdispersion.html#refefernce"><i class="fa fa-check"></i><b>20.2</b> Refefernce</a></li>
 </ul></li>
-<li class="chapter" data-level="20" data-path="web-scraping.html"><a href="web-scraping.html"><i class="fa fa-check"></i><b>20</b> Web scraping</a><ul>
-<li class="chapter" data-level="20.1" data-path="web-scraping.html"><a href="web-scraping.html#download-content-from-ncbi-databases-using-rismed"><i class="fa fa-check"></i><b>20.1</b> Download Content from NCBI Databases using <code>RISmed</code></a><ul>
-<li class="chapter" data-level="20.1.1" data-path="web-scraping.html"><a href="web-scraping.html#search-author-name"><i class="fa fa-check"></i><b>20.1.1</b> Search author name</a></li>
-<li class="chapter" data-level="20.1.2" data-path="web-scraping.html"><a href="web-scraping.html#search-keyword"><i class="fa fa-check"></i><b>20.1.2</b> Search keyword</a></li>
+<li class="chapter" data-level="21" data-path="package-management.html"><a href="package-management.html"><i class="fa fa-check"></i><b>21</b> Package management</a></li>
+<li class="chapter" data-level="22" data-path="permutation-and-combination.html"><a href="permutation-and-combination.html"><i class="fa fa-check"></i><b>22</b> Permutation and combination</a><ul>
+<li class="chapter" data-level="22.1" data-path="permutation-and-combination.html"><a href="permutation-and-combination.html#reference-17"><i class="fa fa-check"></i><b>22.1</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html"><i class="fa fa-check"></i><b>23</b> Partial least square analysis</a><ul>
+<li class="chapter" data-level="23.1" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#prepare-the-data-1"><i class="fa fa-check"></i><b>23.1</b> Prepare the data</a></li>
+<li class="chapter" data-level="23.2" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#principal-component-analysis-pca"><i class="fa fa-check"></i><b>23.2</b> Principal Component Analysis (PCA)</a></li>
+<li class="chapter" data-level="23.3" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#partial-least-squares-pls-and-pls-da"><i class="fa fa-check"></i><b>23.3</b> Partial least-squares: PLS and PLS-DA</a></li>
+<li class="chapter" data-level="23.4" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#reference-18"><i class="fa fa-check"></i><b>23.4</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="scale.html"><a href="scale.html"><i class="fa fa-check"></i><b>24</b> Scale</a><ul>
+<li class="chapter" data-level="24.1" data-path="scale.html"><a href="scale.html#reference-19"><i class="fa fa-check"></i><b>24.1</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="web-scraping.html"><a href="web-scraping.html"><i class="fa fa-check"></i><b>25</b> Web scraping</a><ul>
+<li class="chapter" data-level="25.1" data-path="web-scraping.html"><a href="web-scraping.html#download-content-from-ncbi-databases-using-rismed"><i class="fa fa-check"></i><b>25.1</b> Download Content from NCBI Databases using <code>RISmed</code></a><ul>
+<li class="chapter" data-level="25.1.1" data-path="web-scraping.html"><a href="web-scraping.html#search-author-name"><i class="fa fa-check"></i><b>25.1.1</b> Search author name</a></li>
+<li class="chapter" data-level="25.1.2" data-path="web-scraping.html"><a href="web-scraping.html#search-keyword"><i class="fa fa-check"></i><b>25.1.2</b> Search keyword</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -269,11 +311,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>PCA is veru useful whne the varianle with the data set are highly correlated. Correlation indicates that there is redundancy in the data. Due to this redundancy, PCA can be used to reduce the original variable into smaller number of new variabeles, nameing principal components.</p>
 <div id="read-data-1" class="section level2">
 <h2><span class="header-section-number">14.1</span> Read data</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris_tab &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/d546eaee765268bf2f487608c537c05e22e4b221/iris.csv&quot;</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">iris_tab &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/d546eaee765268bf2f487608c537c05e22e4b221/iris.csv&quot;</span>)</code></pre>
 </div>
 <div id="head-data" class="section level2">
 <h2><span class="header-section-number">14.2</span> Head data</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(iris_tab)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(iris_tab)</code></pre>
 <pre><code>##   sepal_length sepal_width petal_length petal_width species
 ## 1          5.1         3.5          1.4         0.2  setosa
 ## 2          4.9         3.0          1.4         0.2  setosa
@@ -284,7 +326,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="summary-of-the-data" class="section level2">
 <h2><span class="header-section-number">14.3</span> Summary of the data</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(iris_tab)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(iris_tab)</code></pre>
 <pre><code>##   sepal_length    sepal_width     petal_length    petal_width   
 ##  Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
 ##  1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
@@ -302,8 +344,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="check-the-distribution-of-the-data" class="section level2">
 <h2><span class="header-section-number">14.4</span> Check the distribution of the data</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(iris_tab<span class="op">$</span>sepal_length)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-73-1.png" width="576" /></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(iris_tab<span class="op">$</span>sepal_length)</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-74-1.png" width="576" /></p>
 </div>
 <div id="eigendecomposition---computing-eigenvectors-and-eigenvalues" class="section level2">
 <h2><span class="header-section-number">14.5</span> Eigendecomposition - Computing Eigenvectors and Eigenvalues</h2>
@@ -315,25 +357,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><span class="math inline">\(\sigma_{jk} = \frac{1}{n-1}\sum_{i=1}^{N}\left( x_{ij}-\bar{x}_j \right) \left( x_{ik}-\bar{x}_k \right).\)</span></p>
 <p>We can summarize the calculation of the covariance matrix via the following matrix equation:</p>
 <p><span class="math inline">\(\Sigma = \frac{1}{n-1} \left( (\mathbf{X} - \mathbf{\bar{x}})^T\;(\mathbf{X} - \mathbf{\bar{x}}) \right)\)</span><br />
-where <span class="math inline">\(\mathbf{\bar{x}}\)</span> is the mean vector <span class="math inline">\(\mathbf{\bar{x}} = \sum\limits_{i=1}^n x_{i}.\)</span></p>
+where <span class="math inline">\(\mathbf{\bar{x}}\)</span> is the mean vector
+<span class="math inline">\(\mathbf{\bar{x}} = \sum\limits_{i=1}^n x_{i}.\)</span></p>
 <p>The mean vector is a <span class="math inline">\(d\)</span>-dimensional vector where each value in this vector represents the sample mean of a feature column in the dataset.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cov_mat&lt;-<span class="kw">cor</span>(iris_tab[,<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>])
-cov_mat</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">cov_mat&lt;-<span class="kw">cor</span>(iris_tab[,<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>])
+cov_mat</code></pre>
 <pre><code>##              sepal_length sepal_width petal_length petal_width
 ## sepal_length    1.0000000  -0.1093692    0.8717542   0.8179536
 ## sepal_width    -0.1093692   1.0000000   -0.4205161  -0.3565441
 ## petal_length    0.8717542  -0.4205161    1.0000000   0.9627571
 ## petal_width     0.8179536  -0.3565441    0.9627571   1.0000000</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;corrplot&quot;)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;corrplot&quot;)</span>
 <span class="kw">library</span>(corrplot)
-<span class="kw">corrplot</span>(cov_mat)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-75-1.png" width="576" /></p>
+<span class="kw">corrplot</span>(cov_mat)</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-76-1.png" width="576" /></p>
 </div>
 </div>
 <div id="pca-with-two-variables" class="section level2">
 <h2><span class="header-section-number">14.6</span> PCA with two variables</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">new_data =<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">cbind</span>(<span class="dt">petal_length =</span> iris_tab<span class="op">$</span>petal_length, <span class="dt">petal_width =</span> iris_tab<span class="op">$</span>petal_width))
-<span class="kw">head</span>(new_data)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">new_data =<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">cbind</span>(<span class="dt">petal_length =</span> iris_tab<span class="op">$</span>petal_length, <span class="dt">petal_width =</span> iris_tab<span class="op">$</span>petal_width))
+<span class="kw">head</span>(new_data)</code></pre>
 <pre><code>##   petal_length petal_width
 ## 1          1.4         0.2
 ## 2          1.4         0.2
@@ -341,13 +384,13 @@ cov_mat</code></pre></div>
 ## 4          1.5         0.2
 ## 5          1.4         0.2
 ## 6          1.7         0.4</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(new_data<span class="op">$</span>petal_length, new_data<span class="op">$</span>petal_width)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-76-1.png" width="576" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;FactoMineR&quot;)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(new_data<span class="op">$</span>petal_length, new_data<span class="op">$</span>petal_width)</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-77-1.png" width="576" /></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;FactoMineR&quot;)</span>
 <span class="kw">library</span>(<span class="st">&quot;FactoMineR&quot;</span>)
-pc_2var_res =<span class="st"> </span><span class="kw">PCA</span>(new_data)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-77-1.png" width="576" /><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-77-2.png" width="576" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(pc_2var_res)</code></pre></div>
+pc_2var_res =<span class="st"> </span><span class="kw">PCA</span>(new_data)</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-78-1.png" width="576" /><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-78-2.png" width="576" /></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(pc_2var_res)</code></pre>
 <pre><code>## **Results for the Principal Component Analysis (PCA)**
 ## The analysis was performed on 150 individuals, described by 2 variables
 ## *The results are available in the following objects:
@@ -368,11 +411,11 @@ pc_2var_res =<span class="st"> </span><span class="kw">PCA</span>(new_data)</cod
 ## 13 &quot;$call$ecart.type&quot; &quot;standard error of the variables&quot;    
 ## 14 &quot;$call$row.w&quot;      &quot;weights for the individuals&quot;        
 ## 15 &quot;$call$col.w&quot;      &quot;weights for the variables&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;FactoInvestigate&quot;)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;FactoInvestigate&quot;)</span>
 <span class="co">#library(FactoInvestigate)</span>
-<span class="co">#Investigate(pc_2var_res, document = &quot;pdf_document&quot;)</span></code></pre></div>
+<span class="co">#Investigate(pc_2var_res, document = &quot;pdf_document&quot;)</span></code></pre>
 <p>Next, we perform an eigendecomposition on the covariance matrix:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">eigen</span>(cov_mat)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">eigen</span>(cov_mat)</code></pre>
 <pre><code>## eigen() decomposition
 ## $values
 ## [1] 2.91081808 0.92122093 0.14735328 0.02060771
@@ -388,8 +431,8 @@ pc_2var_res =<span class="st"> </span><span class="kw">PCA</span>(new_data)</cod
 <h2><span class="header-section-number">14.7</span> PCA on <code>wine</code> data</h2>
 <div id="read-the-wine-data" class="section level3">
 <h3><span class="header-section-number">14.7.1</span> Read the <code>wine</code> data</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">wine &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;data/wine.csv&quot;</span>, <span class="dt">header=</span>T)
-knitr<span class="op">::</span><span class="kw">kable</span>(wine)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">wine &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;data/wine.csv&quot;</span>, <span class="dt">header=</span>T)
+knitr<span class="op">::</span><span class="kw">kable</span>(wine)</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -3263,8 +3306,8 @@ knitr<span class="op">::</span><span class="kw">kable</span>(wine)</code></pre><
 </div>
 <div id="description-of-each-column" class="section level3">
 <h3><span class="header-section-number">14.7.2</span> Description of each column</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">wine_desc &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;data/wine_data_desc.tsv&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">header =</span> T)
-knitr<span class="op">::</span><span class="kw">kable</span>(wine_desc)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">wine_desc &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;data/wine_data_desc.tsv&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">header =</span> T)
+knitr<span class="op">::</span><span class="kw">kable</span>(wine_desc)</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -3331,106 +3374,108 @@ knitr<span class="op">::</span><span class="kw">kable</span>(wine_desc)</code></
 </tr>
 </tbody>
 </table>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(corrplot)
-<span class="kw">dim</span>(wine)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(corrplot)
+<span class="kw">dim</span>(wine)</code></pre>
 <pre><code>## [1] 178  14</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">wine_x&lt;-wine[, <span class="dv">2</span><span class="op">:</span><span class="dv">14</span>]
+<pre class="sourceCode r"><code class="sourceCode r">wine_x&lt;-wine[, <span class="dv">2</span><span class="op">:</span><span class="dv">14</span>]
 cor_matrix&lt;-<span class="kw">cor</span>(wine_x)
 
 <span class="co"># method = &quot;square&quot;, ellipse, number, shade, color, pie</span>
 <span class="co"># type = upper, lower, full(default)</span>
-<span class="kw">corrplot</span>(cor_matrix, <span class="dt">method=</span><span class="st">&quot;circle&quot;</span>, <span class="dt">type =</span> <span class="st">&quot;upper&quot;</span>)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-82-1.png" width="576" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">corrplot.mixed</span>(cor_matrix)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-82-2.png" width="576" /></p>
+<span class="kw">corrplot</span>(cor_matrix, <span class="dt">method=</span><span class="st">&quot;circle&quot;</span>, <span class="dt">type =</span> <span class="st">&quot;upper&quot;</span>)</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-83-1.png" width="576" /></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">corrplot.mixed</span>(cor_matrix)</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-83-2.png" width="576" /></p>
 </div>
 <div id="example" class="section level3">
 <h3><span class="header-section-number">14.7.3</span> Example</h3>
 <p>Depends on the goal of your analysis. Some common practices, some of which are mentioned in whuber’s link:</p>
-<p>Standardizing is usually done when the variables on which the PCA is performed are not measured on the same scale. Note that standardizing implies assigning equal importance to all variables. If they are not measured on the same scale and you choose to work on the non standardized variables, it is often the case that each PC is dominated by a single variable and you just get a sort of ordering of the variables by their variance. (One of the loadings of each (early) component will be close to +1 or -1.) The two methods often lead to different results, as you have experienced.</p>
+<p>Standardizing is usually done when the variables on which the PCA is performed are not measured on the same scale. Note that standardizing implies assigning equal importance to all variables.
+If they are not measured on the same scale and you choose to work on the non standardized variables, it is often the case that each PC is dominated by a single variable and you just get a sort of ordering of the variables by their variance. (One of the loadings of each (early) component will be close to +1 or -1.)
+The two methods often lead to different results, as you have experienced.</p>
 <p>Intuitive example:</p>
 <p>Suppose you have two variables: the height of a tree and the girth of the same tree. We will convert the volume to a factor: a tree will be high in volume if its volume is bigger than 20 cubic feet, and low in volume otherwise. We will use the trees dataset which comes preloaded in R</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(trees)
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(trees)
 tree.girth&lt;-trees[,<span class="dv">1</span>]
 tree.height&lt;-trees[,<span class="dv">2</span>]
-tree.vol&lt;-<span class="kw">as.factor</span>(<span class="kw">ifelse</span>(trees[,<span class="dv">3</span>]<span class="op">&gt;</span><span class="dv">20</span>,<span class="st">&quot;high&quot;</span>,<span class="st">&quot;low&quot;</span>))</code></pre></div>
+tree.vol&lt;-<span class="kw">as.factor</span>(<span class="kw">ifelse</span>(trees[,<span class="dv">3</span>]<span class="op">&gt;</span><span class="dv">20</span>,<span class="st">&quot;high&quot;</span>,<span class="st">&quot;low&quot;</span>))</code></pre>
 <p>Now suppose that the height was actually measured in miles instead of feet.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tree.height&lt;-tree.height<span class="op">/</span><span class="dv">5280</span>
+<pre class="sourceCode r"><code class="sourceCode r">tree.height&lt;-tree.height<span class="op">/</span><span class="dv">5280</span>
 tree&lt;-<span class="kw">cbind</span>(tree.height,tree.girth)
 
 <span class="co">#do the PCA</span>
 tree.pca&lt;-<span class="kw">princomp</span>(tree)
-<span class="kw">summary</span>(tree.pca)</code></pre></div>
+<span class="kw">summary</span>(tree.pca)</code></pre>
 <pre><code>## Importance of components:
 ##                           Comp.1       Comp.2
 ## Standard deviation     3.0871086 1.014551e-03
 ## Proportion of Variance 0.9999999 1.080050e-07
 ## Cumulative Proportion  0.9999999 1.000000e+00</code></pre>
 <p>The first component explains almost 100% of the variability in the data. The loadings:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">loadings</span>(tree.pca)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">loadings</span>(tree.pca)</code></pre>
 <pre><code>## 
 ## Loadings:
 ##             Comp.1 Comp.2
-## tree.height        -1    
-## tree.girth   1           
+## tree.height        1     
+## tree.girth  1            
 ## 
 ##                Comp.1 Comp.2
 ## SS loadings       1.0    1.0
 ## Proportion Var    0.5    0.5
 ## Cumulative Var    0.5    1.0</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biplot</span>(tree.pca,<span class="dt">xlabs=</span>tree.vol,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biplot</span>(tree.pca,<span class="dt">xlabs=</span>tree.vol,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre>
 <pre><code>## Warning in arrows(0, 0, y[, 1L] * 0.8, y[, 2L] * 0.8, col = col[2L], length
 ## = arrow.len): zero-length arrow is of indeterminate angle and so skipped</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-86-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-87-1.png" width="576" /></p>
 <p>We see that trees high in volume tend to have a high tree girth, but the three height doesn’t give any information on tree volume. This is likely wrong and the consequence of the two different unit measures.</p>
 <p>We could use the same units, or we could standardize the variables. I expect both will lead to a more balanced picture of the variability. Of course in this case one can argue that the variables should have the same unit but not be standardized, which may be a valid argument, were it not that we are measuring two different things. (When we would be measuring the weight of the tree and the girth of the tree, the scale on which both should be measured is no longer very clear. In this case we have a clear argument to work on the standardized variables.)</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tree.height&lt;-tree.height<span class="op">*</span><span class="dv">5280</span>
+<pre class="sourceCode r"><code class="sourceCode r">tree.height&lt;-tree.height<span class="op">*</span><span class="dv">5280</span>
 tree&lt;-<span class="kw">cbind</span>(tree.height,tree.girth)
 
 <span class="co">#do the PCA</span>
 tree.pca&lt;-<span class="kw">princomp</span>(tree)
-<span class="kw">summary</span>(tree.pca)</code></pre></div>
+<span class="kw">summary</span>(tree.pca)</code></pre>
 <pre><code>## Importance of components:
 ##                           Comp.1    Comp.2
 ## Standard deviation     6.5088696 2.5407042
 ## Proportion of Variance 0.8677775 0.1322225
 ## Cumulative Proportion  0.8677775 1.0000000</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">loadings</span>(tree.pca)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">loadings</span>(tree.pca)</code></pre>
 <pre><code>## 
 ## Loadings:
 ##             Comp.1 Comp.2
-## tree.height -0.956  0.293
-## tree.girth  -0.293 -0.956
+## tree.height  0.956  0.293
+## tree.girth   0.293 -0.956
 ## 
 ##                Comp.1 Comp.2
 ## SS loadings       1.0    1.0
 ## Proportion Var    0.5    0.5
 ## Cumulative Var    0.5    1.0</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biplot</span>(tree.pca,<span class="dt">xlabs=</span>tree.vol,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-87-1.png" width="576" /></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biplot</span>(tree.pca,<span class="dt">xlabs=</span>tree.vol,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-88-1.png" width="576" /></p>
 <p>We now see that trees which are tall and have a big girth, are high in volume (bottom left corner), compared to low girth and low height for low volume trees (upper right corner). This intuitively makes sense.</p>
 <p>If one watches closely, however, we see that the contrast between high/low volume is strongest in the girth direction and not in the height direction. Let’s see what happens when we standardize:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tree&lt;-<span class="kw">scale</span>(tree,<span class="dt">center=</span>F,<span class="dt">scale=</span>T)
+<pre class="sourceCode r"><code class="sourceCode r">tree&lt;-<span class="kw">scale</span>(tree,<span class="dt">center=</span>F,<span class="dt">scale=</span>T)
 tree.pca&lt;-<span class="kw">princomp</span>(tree)
-<span class="kw">summary</span>(tree.pca)</code></pre></div>
+<span class="kw">summary</span>(tree.pca)</code></pre>
 <pre><code>## Importance of components:
 ##                           Comp.1     Comp.2
 ## Standard deviation     0.2275561 0.06779544
 ## Proportion of Variance 0.9184749 0.08152510
 ## Cumulative Proportion  0.9184749 1.00000000</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">loadings</span>(tree.pca)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">loadings</span>(tree.pca)</code></pre>
 <pre><code>## 
 ## Loadings:
 ##             Comp.1 Comp.2
-## tree.height  0.203 -0.979
-## tree.girth   0.979  0.203
+## tree.height  0.203  0.979
+## tree.girth   0.979 -0.203
 ## 
 ##                Comp.1 Comp.2
 ## SS loadings       1.0    1.0
 ## Proportion Var    0.5    0.5
 ## Cumulative Var    0.5    1.0</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biplot</span>(tree.pca,<span class="dt">xlabs=</span>tree.vol,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-88-1.png" width="576" /></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biplot</span>(tree.pca,<span class="dt">xlabs=</span>tree.vol,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-89-1.png" width="576" /></p>
 <p>Indeed, the girth now explains the majority of the difference in high and low volume trees! (The length of the arrow in the biplot is indicatory of the variance in the original variable.) So even if things are measured on the same scale, standardizing may be useful. Not standardizing may be recommended when we are for example comparing the length of different species of trees because this is exactly the same measurement.</p>
 </div>
 </div>
@@ -3438,11 +3483,15 @@ tree.pca&lt;-<span class="kw">princomp</span>(tree)
 <h2><span class="header-section-number">14.8</span> References</h2>
 <p><a href="https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html#about-iris" class="uri">https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html#about-iris</a></p>
 <p>How to read PCA biplots and scree plots: <a href="https://blog.bioturing.com/2018/06/18/how-to-read-pca-biplots-and-scree-plots/" class="uri">https://blog.bioturing.com/2018/06/18/how-to-read-pca-biplots-and-scree-plots/</a></p>
-<p>Principal Component Analysis (PCA): <a href="https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/index" class="uri">https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/index</a></p>
-<p>Exploratory Multivariate Analysis by Example using R: <a href="http://factominer.free.fr/course/index.html" class="uri">http://factominer.free.fr/course/index.html</a></p>
-<p><a href="https://github.com/gabi493/ADEI/blob/master/Husson%20F.%20et%20al.%20-%20Exploratory%20Multivariate%20Analysis%20by%20Example%20-%20Using%20R%20-%202011.pdf">https://github.com/gabi493/ADEI/blob/master/Husson%20F.%20et%20al.%20-%20Exploratory%20Multivariate%20Analysis%20by%20Example%20-%20Using%20R%20-%202011.pdf</a></p>
-<p>Three Tips for Principal Component Analysis: <a href="https://www.theanalysisfactor.com/tips-principal-component-analysis/" class="uri">https://www.theanalysisfactor.com/tips-principal-component-analysis/</a></p>
-<p>Not normalizing data before PCA gives better explained variance ratio?: <a href="https://stats.stackexchange.com/questions/105592/not-normalizing-data-before-pca-gives-better-explained-variance-ratio" class="uri">https://stats.stackexchange.com/questions/105592/not-normalizing-data-before-pca-gives-better-explained-variance-ratio</a></p>
+<p>Principal Component Analysis (PCA):
+<a href="https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/index" class="uri">https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/index</a></p>
+<p>Exploratory Multivariate Analysis by Example using R:
+<a href="http://factominer.free.fr/course/index.html" class="uri">http://factominer.free.fr/course/index.html</a></p>
+<p><a href="https://github.com/gabi493/ADEI/blob/master/Husson%20F.%20et%20al.%20-%20Exploratory%20Multivariate%20Analysis%20by%20Example%20-%20Using%20R%20-%202011.pdf" class="uri">https://github.com/gabi493/ADEI/blob/master/Husson%20F.%20et%20al.%20-%20Exploratory%20Multivariate%20Analysis%20by%20Example%20-%20Using%20R%20-%202011.pdf</a></p>
+<p>Three Tips for Principal Component Analysis:
+<a href="https://www.theanalysisfactor.com/tips-principal-component-analysis/" class="uri">https://www.theanalysisfactor.com/tips-principal-component-analysis/</a></p>
+<p>Not normalizing data before PCA gives better explained variance ratio?:
+<a href="https://stats.stackexchange.com/questions/105592/not-normalizing-data-before-pca-gives-better-explained-variance-ratio" class="uri">https://stats.stackexchange.com/questions/105592/not-normalizing-data-before-pca-gives-better-explained-variance-ratio</a></p>
 
 </div>
 </div>
@@ -3472,7 +3521,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -3482,6 +3531,10 @@ gitbook.start({
 "size": 2
 },
 "edit": {
+"link": null,
+"text": null
+},
+"history": {
 "link": null,
 "text": null
 },
@@ -3498,8 +3551,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

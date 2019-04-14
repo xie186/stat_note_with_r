@@ -13,12 +13,14 @@ library(MCMCpack)
 library(R2WinBUGS)
 ```
 
-```{r}
+```
 library(manipulate)
 
 p <- seq(from=0.005, to=0.995, by=0.005)
 
-manipulate( # requires RStudio
+
+##  requires RStudio. It seems that in Rstudio Clould. This could not be ran. 
+manipulate(
   {plot(p, dbeta(p, alpha.hyper, beta.hyper),
         col="blue", lwd=2, type="l", las=1, bty="n",
         ylim=c(0, 8), ylab="density",

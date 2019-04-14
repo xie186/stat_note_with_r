@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Notes of R for Bioinformatics</title>
-  <meta name="description" content="Notes of R for Bioinformatics">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <title>3 Correlation | Notes of R for Bioinformatics</title>
+  <meta name="description" content="3 Correlation | Notes of R for Bioinformatics">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Notes of R for Bioinformatics" />
+  <meta property="og:title" content="3 Correlation | Notes of R for Bioinformatics" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes of R for Bioinformatics" />
+  <meta name="twitter:title" content="3 Correlation | Notes of R for Bioinformatics" />
   
   
   
@@ -35,6 +35,7 @@
 <link rel="next" href="standard-deviation-vs-standard-error.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
@@ -49,41 +50,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 </head>
@@ -159,6 +186,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="7" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>7</b> MRG</a><ul>
 <li class="chapter" data-level="7.1" data-path="mrg.html"><a href="mrg.html#read-the-data-1"><i class="fa fa-check"></i><b>7.1</b> Read the data</a></li>
+<li class="chapter" data-level="7.2" data-path="mrg.html"><a href="mrg.html#mixed-linear-model"><i class="fa fa-check"></i><b>7.2</b> Mixed linear model</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>8</b> Multiple linear regression</a><ul>
 <li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-4"><i class="fa fa-check"></i><b>8.1</b> </a></li>
@@ -225,25 +253,39 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="16.1" data-path="qtl-analysis.html"><a href="qtl-analysis.html#reference-13"><i class="fa fa-check"></i><b>16.1</b> Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="17" data-path="transformation-of-data.html"><a href="transformation-of-data.html"><i class="fa fa-check"></i><b>17</b> Transformation of data</a><ul>
-<li class="chapter" data-level="17.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#log-transformation"><i class="fa fa-check"></i><b>17.1</b> Log transformation</a><ul>
-<li class="chapter" data-level="17.1.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#the-rationale-of-using-log2-transformation"><i class="fa fa-check"></i><b>17.1.1</b> The rationale of using log2 transformation</a></li>
-<li class="chapter" data-level="17.1.2" data-path="transformation-of-data.html"><a href="transformation-of-data.html#reference-14"><i class="fa fa-check"></i><b>17.1.2</b> Reference</a></li>
+<li class="chapter" data-level="17" data-path="doing-bayesian-statistics-in-r.html"><a href="doing-bayesian-statistics-in-r.html"><i class="fa fa-check"></i><b>17</b> Doing Bayesian statistics in R</a><ul>
+<li class="chapter" data-level="17.1" data-path="doing-bayesian-statistics-in-r.html"><a href="doing-bayesian-statistics-in-r.html#reference-14"><i class="fa fa-check"></i><b>17.1</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="transformation-of-data.html"><a href="transformation-of-data.html"><i class="fa fa-check"></i><b>18</b> Transformation of data</a><ul>
+<li class="chapter" data-level="18.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#log-transformation"><i class="fa fa-check"></i><b>18.1</b> Log transformation</a><ul>
+<li class="chapter" data-level="18.1.1" data-path="transformation-of-data.html"><a href="transformation-of-data.html#the-rationale-of-using-log2-transformation"><i class="fa fa-check"></i><b>18.1.1</b> The rationale of using log2 transformation</a></li>
+<li class="chapter" data-level="18.1.2" data-path="transformation-of-data.html"><a href="transformation-of-data.html#reference-15"><i class="fa fa-check"></i><b>18.1.2</b> Reference</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="18" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html"><i class="fa fa-check"></i><b>18</b> Partial least square analysis</a><ul>
-<li class="chapter" data-level="18.1" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#prepare-the-data-1"><i class="fa fa-check"></i><b>18.1</b> Prepare the data</a></li>
-<li class="chapter" data-level="18.2" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#principal-component-analysis-pca"><i class="fa fa-check"></i><b>18.2</b> Principal Component Analysis (PCA)</a></li>
-<li class="chapter" data-level="18.3" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#partial-least-squares-pls-and-pls-da"><i class="fa fa-check"></i><b>18.3</b> Partial least-squares: PLS and PLS-DA</a></li>
-<li class="chapter" data-level="18.4" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#reference-15"><i class="fa fa-check"></i><b>18.4</b> Reference</a></li>
+<li class="chapter" data-level="19" data-path="goodness-of-fit-in-r.html"><a href="goodness-of-fit-in-r.html"><i class="fa fa-check"></i><b>19</b> Goodness of fit in R</a><ul>
+<li class="chapter" data-level="19.1" data-path="goodness-of-fit-in-r.html"><a href="goodness-of-fit-in-r.html#reference-16"><i class="fa fa-check"></i><b>19.1</b> Reference</a></li>
 </ul></li>
-<li class="chapter" data-level="19" data-path="scale.html"><a href="scale.html"><i class="fa fa-check"></i><b>19</b> Scale</a><ul>
-<li class="chapter" data-level="19.1" data-path="scale.html"><a href="scale.html#reference-16"><i class="fa fa-check"></i><b>19.1</b> Reference</a></li>
+<li class="chapter" data-level="20" data-path="overdispersion.html"><a href="overdispersion.html"><i class="fa fa-check"></i><b>20</b> Overdispersion</a><ul>
+<li class="chapter" data-level="20.1" data-path="overdispersion.html"><a href="overdispersion.html#recognising-and-testing-for-overdispersion"><i class="fa fa-check"></i><b>20.1</b> Recognising (and testing for) overdispersion</a></li>
+<li class="chapter" data-level="20.2" data-path="overdispersion.html"><a href="overdispersion.html#refefernce"><i class="fa fa-check"></i><b>20.2</b> Refefernce</a></li>
 </ul></li>
-<li class="chapter" data-level="20" data-path="web-scraping.html"><a href="web-scraping.html"><i class="fa fa-check"></i><b>20</b> Web scraping</a><ul>
-<li class="chapter" data-level="20.1" data-path="web-scraping.html"><a href="web-scraping.html#download-content-from-ncbi-databases-using-rismed"><i class="fa fa-check"></i><b>20.1</b> Download Content from NCBI Databases using <code>RISmed</code></a><ul>
-<li class="chapter" data-level="20.1.1" data-path="web-scraping.html"><a href="web-scraping.html#search-author-name"><i class="fa fa-check"></i><b>20.1.1</b> Search author name</a></li>
-<li class="chapter" data-level="20.1.2" data-path="web-scraping.html"><a href="web-scraping.html#search-keyword"><i class="fa fa-check"></i><b>20.1.2</b> Search keyword</a></li>
+<li class="chapter" data-level="21" data-path="package-management.html"><a href="package-management.html"><i class="fa fa-check"></i><b>21</b> Package management</a></li>
+<li class="chapter" data-level="22" data-path="permutation-and-combination.html"><a href="permutation-and-combination.html"><i class="fa fa-check"></i><b>22</b> Permutation and combination</a><ul>
+<li class="chapter" data-level="22.1" data-path="permutation-and-combination.html"><a href="permutation-and-combination.html#reference-17"><i class="fa fa-check"></i><b>22.1</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html"><i class="fa fa-check"></i><b>23</b> Partial least square analysis</a><ul>
+<li class="chapter" data-level="23.1" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#prepare-the-data-1"><i class="fa fa-check"></i><b>23.1</b> Prepare the data</a></li>
+<li class="chapter" data-level="23.2" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#principal-component-analysis-pca"><i class="fa fa-check"></i><b>23.2</b> Principal Component Analysis (PCA)</a></li>
+<li class="chapter" data-level="23.3" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#partial-least-squares-pls-and-pls-da"><i class="fa fa-check"></i><b>23.3</b> Partial least-squares: PLS and PLS-DA</a></li>
+<li class="chapter" data-level="23.4" data-path="partial-least-square-analysis.html"><a href="partial-least-square-analysis.html#reference-18"><i class="fa fa-check"></i><b>23.4</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="scale.html"><a href="scale.html"><i class="fa fa-check"></i><b>24</b> Scale</a><ul>
+<li class="chapter" data-level="24.1" data-path="scale.html"><a href="scale.html#reference-19"><i class="fa fa-check"></i><b>24.1</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="web-scraping.html"><a href="web-scraping.html"><i class="fa fa-check"></i><b>25</b> Web scraping</a><ul>
+<li class="chapter" data-level="25.1" data-path="web-scraping.html"><a href="web-scraping.html#download-content-from-ncbi-databases-using-rismed"><i class="fa fa-check"></i><b>25.1</b> Download Content from NCBI Databases using <code>RISmed</code></a><ul>
+<li class="chapter" data-level="25.1.1" data-path="web-scraping.html"><a href="web-scraping.html#search-author-name"><i class="fa fa-check"></i><b>25.1.1</b> Search author name</a></li>
+<li class="chapter" data-level="25.1.2" data-path="web-scraping.html"><a href="web-scraping.html#search-keyword"><i class="fa fa-check"></i><b>25.1.2</b> Search keyword</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -272,7 +314,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2><span class="header-section-number">3.2</span> Correlation and p-values of all combinations of all rows of two matrices</h2>
 <div id="prepare-the-data" class="section level3">
 <h3><span class="header-section-number">3.2.1</span> Prepare the data</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">bac1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)
+<pre class="sourceCode r"><code class="sourceCode r">bac1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)
 bac2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">1</span>)
 bac3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)
 bac4 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)
@@ -288,14 +330,14 @@ fac &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span cl
 <span class="kw">colnames</span>(fac) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;station1&quot;</span>, <span class="st">&quot;station2&quot;</span>, <span class="st">&quot;station3&quot;</span>, <span class="st">&quot;station4&quot;</span>)
 <span class="kw">rownames</span>(fac) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;fac1&quot;</span>, <span class="st">&quot;fac2&quot;</span>, <span class="st">&quot;fac3&quot;</span>, <span class="st">&quot;fac4&quot;</span>, <span class="st">&quot;fac5&quot;</span>, <span class="st">&quot;fac6&quot;</span>)
 
-bac</code></pre></div>
+bac</code></pre>
 <pre><code>##      station1 station2 station3 station4
 ## bac1        1        2        4        5
 ## bac2        2        3        5        1
 ## bac3        3        4        1        2
 ## bac4        4        5        2        3
 ## bac5        5        1        3        4</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fac</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">fac</code></pre>
 <pre><code>##      station1 station2 station3 station4
 ## fac1        1        2        3        4
 ## fac2        2        3        4        5
@@ -307,12 +349,12 @@ bac</code></pre></div>
 <div id="another-way-to-do-this-is-to-use-corr.test" class="section level3">
 <h3><span class="header-section-number">3.2.2</span> Another way to do this is to use <code>corr.test</code></h3>
 <p>You can just pass the full matrices to the <code>cor</code> function (or psych::corr.test)and it takes care of finding the correlation of the relevant columns.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;psych&quot;)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;psych&quot;)</span>
 <span class="kw">library</span>(reshape2)
 <span class="co">#cor.eff&lt;-cor(t(fac), t(bac))</span>
 <span class="co">#coreff &lt;- reshape2::melt(cor.eff)</span>
 pval &lt;-<span class="st"> </span>psych<span class="op">::</span><span class="kw">corr.test</span>(<span class="kw">t</span>(fac), <span class="kw">t</span>(bac), <span class="dt">adjust=</span><span class="st">&quot;fdr&quot;</span>)
-pval</code></pre></div>
+pval</code></pre>
 <pre><code>## Call:psych::corr.test(x = t(fac), y = t(bac), adjust = &quot;fdr&quot;)
 ## Correlation matrix 
 ##       bac1  bac2  bac3  bac4  bac5
@@ -334,8 +376,8 @@ pval</code></pre></div>
 ## fac6 0.92 0.52 0.68 0.68 0.92
 ## 
 ##  To see confidence intervals of the correlations, print with the short=FALSE option</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cor_pval&lt;-<span class="st"> </span><span class="kw">merge</span>(<span class="kw">melt</span>(pval<span class="op">$</span>r, <span class="dt">value.name=</span><span class="st">&quot;cor&quot;</span>), <span class="kw">melt</span>(pval<span class="op">$</span>p, <span class="dt">value.name=</span><span class="st">&quot;p-value&quot;</span>), <span class="dt">by=</span><span class="kw">c</span>(<span class="st">&quot;Var1&quot;</span>, <span class="st">&quot;Var2&quot;</span>))
-<span class="kw">head</span>(cor_pval)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">cor_pval&lt;-<span class="st"> </span><span class="kw">merge</span>(<span class="kw">melt</span>(pval<span class="op">$</span>r, <span class="dt">value.name=</span><span class="st">&quot;cor&quot;</span>), <span class="kw">melt</span>(pval<span class="op">$</span>p, <span class="dt">value.name=</span><span class="st">&quot;p-value&quot;</span>), <span class="dt">by=</span><span class="kw">c</span>(<span class="st">&quot;Var1&quot;</span>, <span class="st">&quot;Var2&quot;</span>))
+<span class="kw">head</span>(cor_pval)</code></pre>
 <pre><code>##   Var1 Var2         cor   p-value
 ## 1 fac1 bac1  0.98994949 0.0753788
 ## 2 fac1 bac2 -0.07559289 0.9244071
@@ -352,7 +394,7 @@ data/cor_data_transcriptome.txt
 </div>
 <div id="calculate-the-correlation-advance" class="section level3">
 <h3><span class="header-section-number">3.2.4</span> Calculate the correlation (Advance)</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tbac &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">t</span>(bac))
+<pre class="sourceCode r"><code class="sourceCode r">tbac &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">t</span>(bac))
 tfac &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">t</span>(fac))
 
 f &lt;-<span class="st"> </span><span class="cf">function</span> (x, y) <span class="kw">cor</span>(x, y)
@@ -361,7 +403,7 @@ pval &lt;-<span class="st"> </span><span class="cf">function</span>(x, y) <span 
 tab &lt;-<span class="st"> </span><span class="kw">outer</span>(tfac, tbac, <span class="kw">Vectorize</span>(f))
 tabp&lt;-<span class="kw">outer</span>(tfac, tbac, <span class="kw">Vectorize</span>(pval))
 
-<span class="kw">as.data.frame.table</span>(tabp)</code></pre></div>
+<span class="kw">as.data.frame.table</span>(tabp)</code></pre>
 <pre><code>##    Var1 Var2       Freq
 ## 1  fac1 bac1 0.01005051
 ## 2  fac2 bac1 0.01005051
@@ -403,9 +445,9 @@ tabp&lt;-<span class="kw">outer</span>(tfac, tbac, <span class="kw">Vectorize</s
 <h2><span class="header-section-number">3.3</span> Different ways to visulize correlation</h2>
 <div id="display-correlation-using-chart.correlation-in-performanceanalytics" class="section level3">
 <h3><span class="header-section-number">3.3.1</span> Display correlation using <code>chart.Correlation</code> in <code>PerformanceAnalytics</code></h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(datasets)
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(datasets)
 <span class="kw">data</span>(iris)
-<span class="kw">library</span>(<span class="st">&quot;PerformanceAnalytics&quot;</span>)</code></pre></div>
+<span class="kw">library</span>(<span class="st">&quot;PerformanceAnalytics&quot;</span>)</code></pre>
 <pre><code>## Loading required package: xts</code></pre>
 <pre><code>## Loading required package: zoo</code></pre>
 <pre><code>## 
@@ -418,11 +460,11 @@ tabp&lt;-<span class="kw">outer</span>(tfac, tbac, <span class="kw">Vectorize</s
 <pre><code>## The following object is masked from &#39;package:graphics&#39;:
 ## 
 ##     legend</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">chart.Correlation</span>(iris[, <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], <span class="dt">histogram=</span><span class="ot">TRUE</span>, <span class="dt">pch=</span><span class="dv">19</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">chart.Correlation</span>(iris[, <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], <span class="dt">histogram=</span><span class="ot">TRUE</span>, <span class="dt">pch=</span><span class="dv">19</span>)</code></pre>
 <p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-13-1.png" width="576" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(corrplot)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(corrplot)</code></pre>
 <pre><code>## corrplot 0.84 loaded</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">corrplot.mixed</span>(<span class="kw">cor</span>(iris[, <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>]), <span class="dt">order=</span><span class="st">&quot;original&quot;</span>, <span class="dt">tl.col=</span><span class="st">&quot;black&quot;</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">corrplot.mixed</span>(<span class="kw">cor</span>(iris[, <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>]), <span class="dt">order=</span><span class="st">&quot;original&quot;</span>, <span class="dt">tl.col=</span><span class="st">&quot;black&quot;</span>)</code></pre>
 <p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-14-1.png" width="576" /></p>
 </div>
 </div>
@@ -464,7 +506,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -474,6 +516,10 @@ gitbook.start({
 "size": 2
 },
 "edit": {
+"link": null,
+"text": null
+},
+"history": {
 "link": null,
 "text": null
 },
@@ -490,8 +536,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;
