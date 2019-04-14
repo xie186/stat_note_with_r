@@ -1,0 +1,52 @@
+# Scale
+
+scale, with default settings, will calculate the mean and standard deviation of the entire vector, then "scale" each element by those values by subtracting the mean and dividing by the sd. (If you use  scale(x, scale=FALSE), it will only subtract the mean but not divide by the std deviation.)
+
+
+
+
+```{r}
+   set.seed(1)
+   x <- runif(7)
+
+   # Manually scaling
+   (x - mean(x)) / sd(x)
+
+   scale(x)
+```
+
+The Scale() Function
+The scale() function makes use of the following arguments.
+
+x: a numeric object
+center: if TRUE, the objects’ column means are subtracted from the values in those columns (ignoring NAs); if FALSE, centering is not performed
+scale: if TRUE, the centered column values are divided by the column’s standard deviation (when center is also TRUE; otherwise, the root mean square is used); if FALSE, scaling is not performed
+Centering Variables
+Normally, to center a variable, you would subtract the mean of all data points from each individual data point. With scale(), this can be accomplished in one simple call.
+
+scale() function centers and/or scales the columns of a numeric matrix.
+
+Normally, to create z-scores (standardized scores) from a variable, you would subtract the mean of all data points from each individual data point, then divide those points by the standard deviation of all points. Again, this can be accomplished in one call using scale().
+
+> #generate z-scores for variable A using the scale() function
+> scale(A, center = TRUE, scale = TRUE)
+
+
+
+scale(x, center = TRUE, scale = TRUE)
+
+x: numeric matrix
+center: either a logical value or a numeric vector of length equal to the number of columns of x
+scale: either a logical value or a numeric vector of length equal to the number of columns of x
+
+```{r}
+x <- matrix(1:9,3,3)
+scale(x)
+x
+```
+
+## Reference
+
+https://www.r-bloggers.com/r-tutorial-series-centering-variables-and-generating-z-scores-with-the-scale-function/
+
+https://stackoverflow.com/questions/20256028/understanding-scale-in-r

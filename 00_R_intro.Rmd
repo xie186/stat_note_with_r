@@ -1,9 +1,36 @@
 # (PART) Introduction {-}
 
+# Introduction of R
 
-# Basic systax
+I started to use R to generate figures for the project data. For example, I developed [`ViewBS`](https://github.com/xie186/ViewBS) to visualize whole genome bisulfite sequencing data. In ViewBS, I use R
+
+
+
+
+
+
+Learning objectivesLearning Objectives
+
+✓ Become comfortable with RStudio (a graphical interface for R)
+
+✓ Fluently interact with R using RStudio
+
+✓ Become familiar with R syntax
+
+✓ Understand data structures in R
+
+✓ Inspect and manipulate data structures
+
+✓ Install packages and use functions in R 
+
+✓ Visualize data using simple and complex plotting methods
 
 ## Setup
+
+
+
+## Basic systax
+
 
 ### Install packages
 
@@ -47,6 +74,15 @@ Read Random Rows from A Huge CSV File: https://www.r-bloggers.com/read-random-ro
 
 
 ## Control structure
+
+
+
+## Reference
+
+Introduction to R: https://wiki.harvard.edu/confluence/display/hbctraining/Introduction+to+R
+
+
+R graphics with ggplot2 workshop notes: http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html
 
 
 

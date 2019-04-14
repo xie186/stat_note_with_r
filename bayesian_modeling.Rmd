@@ -1,0 +1,34 @@
+# Doing Bayesian statistics in R
+
+R has tons of excellent packages for Bayesian data analysis.
+
+CRAN Task View: Bayesian Inference http://cran.r-project.org/web/views/Bayesian.html
+
+```{r eval=F}
+library(R.utils)
+library(rstan)
+library(R2jags)
+library(manipulate)
+library(MCMCpack)
+library(R2WinBUGS)
+```
+
+```{r}
+library(manipulate)
+
+p <- seq(from=0.005, to=0.995, by=0.005)
+
+manipulate( # requires RStudio
+  {plot(p, dbeta(p, alpha.hyper, beta.hyper),
+        col="blue", lwd=2, type="l", las=1, bty="n",
+        ylim=c(0, 8), ylab="density",
+        main="Beta prior distribution")
+    polygon(c(p, rev(p)), c(dbeta(p, alpha.hyper, beta.hyper),
+                            rep(0, length(p))), col=rgb(0, 0, 1, 0.2), border=NA)},
+  alpha.hyper=slider(0.1, 10, step=0.1, initial=1),
+  beta.hyper=slider(0.1, 10, step=0.1, initial=1))
+```
+## Reference
+
+
+https://github.com/dlinzer/BayesBARUG/blob/master/Linzer-BayesBARUG.R

@@ -1,0 +1,68 @@
+# Web scraping
+
+
+## Download Content from NCBI Databases using `RISmed`
+
+### Search author name
+
+```{r}
+#install the RISmed package
+#install.packages("RISmed")
+library(RISmed)
+```
+
+```{r}
+#now let's look up this dude called Shaojun Xie
+res <- EUtilsSummary('Shaojun Xie', type='esearch', db='pubmed')
+ 
+summary(res)
+ 
+#what are the PubMed ids for the Author Shaojun Xie?
+QueryId(res)
+
+ 
+#limit by date
+res2 <- EUtilsSummary('Shaojun Xie', type='esearch', db='pubmed', mindate='2010', maxdate='2019')
+ 
+summary(res2)
+
+#three publications in 2012
+QueryId(res2)
+
+```
+
+
+
+### Search keyword
+
+
+```{r}
+#first how many total articles containing retrotransposon
+str_key = 'WGBS'
+res3 <- EUtilsSummary(str_key, type='esearch', db='pubmed', mindate='2008', maxdate='2018')
+ 
+summary(res3)
+
+ 
+#if you only want the number of articles
+QueryCount(res3)
+ 
+#tally each year beginning at 1970
+#In order not to overload the E-utility servers, NCBI recommends that users post no more than three
+#URL requests per second and limit large jobs to either weekends or between 9:00 PM and 5:00 AM
+#Eastern time during weekdays. Failure to comply with this policy may result in an IP address being
+#blocked from accessing NCBI.
+ 
+tally <- array()
+x <- 1
+for (i in 2016:2018){
+  Sys.sleep(1)
+  r <- EUtilsSummary(str_key, type='esearch', db='pubmed', mindate=i, maxdate=i)
+  tally[x] <- QueryCount(r)
+  x <- x + 1
+}
+ 
+names(tally) <- 2016:2018
+max(tally)
+barplot(tally, las=2, ylim=c(0,max(tally)), main="Number of PubMed articles")
+```

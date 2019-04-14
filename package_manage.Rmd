@@ -1,0 +1,13 @@
+# Package management
+
+
+I use the following script to reinstall all packages my packages from my personal site library for R 3.4:
+
+```{r}
+## get the 
+installed <- rownames(installed.packages())
+pkgs <- dir("~/R/x86_64-pc-linux-gnu-library/3.4")
+new <- setdiff(pkgs, installed)
+new
+install.packages(new)
+```

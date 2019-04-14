@@ -1,0 +1,22 @@
+# Overdispersion
+
+
+Overdispersion describes the observation that variation is higher than would be expected.
+
+
+## Recognising (and testing for) overdispersion
+
+```{r}
+library(lme4)
+data(grouseticks)
+summary(grouseticks)
+```
+
+
+## Refefernce
+
+https://biometry.github.io/APES/LectureNotes/2016-JAGS/Overdispersion/OverdispersionJAGS.pdf
+
+https://newonlinecourses.science.psu.edu/stat504/node/162/
+
+

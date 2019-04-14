@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="bayesian-newwork-in-r.html">
-<link rel="next" href="multiple-test-corretion.html">
+<link rel="prev" href="index.html">
+<link rel="next" href="plot-in-r.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -263,106 +263,76 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-rationale-for-using-negative-binomial-distribution-to-model-read-count-in-rna-seq-data" class="section level1">
-<h1><span class="header-section-number">10</span> The rationale for using negative binomial distribution to model read count in RNA-seq data</h1>
-<p>Several tools for DEG detection (including DESeq2 and eageR) model read counts as a negative binomial (NB) distribution.</p>
-<p>The nagative binomial distribtion, especitally in its alternative parameterization, can be used as an alternative to the Poisson distribution. It is espectially useful for discrete data over an unbounded positive range whose sample variance exceeds the sample mean. In such cases, the observations are overdispersed with respect to a Poisson distribution, for which the mean is equal to the variance. Hence a Poison distribution is not an appropriate model. Since the negative binomial distribution has one more parameter than the Poisson distribution, the second parameter can be used to adjust the variance independently of the mean.</p>
-<p>Discrete data over an unbounded positive range is one way of saying ‘integer counts’.</p>
-<p>The negative binomial distribution also arises as a continuous mixture of Poisson distributions (i.e. a compound probability distribution) where the mixing distribution of the Poisson rate is a gamma distribution.&quot; The other important bit of information to know is that read counts for a sample in theory follow a Binomial(n,p) distribution, where n is the total number of reads and p is the probability of a read mapping to a specific gene. However, the binomial distribution is computationally inconvenient, since it involves computing factorials, and with millions of reads in each sample, the Poisson distribution (with lambda = n*p) is an excellent approximation to the Binomial while being far more mathematically tractable. So the Poisson noise quantifies the counting uncertainty, while the gamma distribution quantifies the variation in gene expression between replicates. The mixture of the two yields the negative binomial. See also section 2 of <a href="http://www.statsci.org/smyth/pubs/edgeRChapterPreprint.pdf" class="uri">http://www.statsci.org/smyth/pubs/edgeRChapterPreprint.pdf</a></p>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/20909751/53537996-f12bbb00-3ad9-11e9-97a9-6dc35195a50a.png" />
+<div id="introduction-of-r" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction of R</h1>
+<p>I started to use R to generate figures for the project data. For example, I developed <a href="https://github.com/xie186/ViewBS"><code>ViewBS</code></a> to visualize whole genome bisulfite sequencing data. In ViewBS, I use R</p>
+<p>Learning objectivesLearning Objectives</p>
+<p>✓ Become comfortable with RStudio (a graphical interface for R)</p>
+<p>✓ Fluently interact with R using RStudio</p>
+<p>✓ Become familiar with R syntax</p>
+<p>✓ Understand data structures in R</p>
+<p>✓ Inspect and manipulate data structures</p>
+<p>✓ Install packages and use functions in R</p>
+<p>✓ Visualize data using simple and complex plotting methods</p>
+<div id="setup" class="section level2">
+<h2><span class="header-section-number">1.1</span> Setup</h2>
+</div>
+<div id="basic-systax" class="section level2">
+<h2><span class="header-section-number">1.2</span> Basic systax</h2>
+<div id="install-packages" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Install packages</h3>
+</div>
+<div id="install" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Install</h3>
+<div id="getting-help-on-functions-and-packages" class="section level4">
+<h4><span class="header-section-number">1.2.2.1</span> Getting help on functions and packages</h4>
+</div>
+</div>
+</div>
+<div id="data-type" class="section level2">
+<h2><span class="header-section-number">1.3</span> Data type</h2>
+</div>
+<div id="data-structures" class="section level2">
+<h2><span class="header-section-number">1.4</span> Data structures</h2>
+<p>R has multiple data structures. If you are familiar with excel you can think of data structures as building blocks of a table and the table itself, and a table is similar to a sheet in excel. Most of the time you will deal with tabular data sets, you will manipulate them, take sub-sections of them. It is essential to know what are the common data structures in R and how they can be used. R deals with named data structures, this means you can give names to data structures and manipulate or operate on them using those names.</p>
+</div>
+<div id="read-from-and-write-into-files" class="section level2">
+<h2><span class="header-section-number">1.5</span> Read from and write into files</h2>
+<div id="read-random-rows-from-a-huge-file" class="section level3">
+<h3><span class="header-section-number">1.5.1</span> Read Random Rows from A Huge File</h3>
+<blockquote>
+<blockquote>
+<p>Given R data frames stored in the memory, sometimes it is beneficial to sample and examine the data in a large-size csv file before importing into the data frame. To the best of my knowledge, there is no off-shelf R function performing such data sampling with a relatively low computing cost. Therefore, I drafted two utility functions serving this particular purpose, one with the LaF library and the other with the reticulate library by leveraging the power of Python. While the first function is more efficient and samples 3 records out of 336,776 in about 100 milliseconds, the second one is more for fun and a showcase of the reticulate package.</p>
+</blockquote>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;LaF&quot;)</span>
+<span class="kw">library</span>(LaF)
+sample1 &lt;-<span class="st"> </span><span class="cf">function</span>(file, n) {
+  lf &lt;-<span class="st"> </span><span class="kw">laf_open</span>(<span class="kw">detect_dm_csv</span>(file, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">factor_fraction =</span> <span class="op">-</span><span class="dv">1</span>))
+  <span class="kw">return</span>(<span class="kw">read_lines</span>(lf, <span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(lf), n)))
+}
 
+<span class="kw">sample1</span>(<span class="st">&quot;data/galton.csv&quot;</span>, <span class="dv">3</span>)</code></pre></div>
+<pre><code>##   family father mother sex height nkids
+## 1    133     68   65.5   F   65.2     7
+## 2    163     67   65.5   F   65.5     5
+## 3     38     71   66.0   M   68.5     6</code></pre>
 </div>
-<p>If differential expresssion detection is our goal, we need to keep in mind that we model the distribution of counts for a given gene across replicates; we don’t model the dsitrution of an individual samples. So for DE detection, we are not concerned with shape of distribution of counts or the whole organisms at all. Poisson is a single parameter dist’n, with mean=variance. That assumption, which is really an approximation to the binomial, is suitable only for the variability associated with sampling the same DNA population (e.g. if you sequence multiple lanes of the same DNA, and assume no lane-specific effects, etc.). But if there is variation between your replicates (e.g. lab mice, people, etc.), the Poisson assumption will tend to underestimate the variance and any differences you observe (e.g. testing the null hypothesis that two groups have the same mean expression) will be overstated. This explaination is from the co-author of edgeR (<a href="https://www.biostars.org/p/6028/" class="uri">https://www.biostars.org/p/6028/</a>).</p>
-<div id="negative-binomial-in-r" class="section level2">
-<h2><span class="header-section-number">10.1</span> Negative binomial in R</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">100</span>)
-<span class="co"># 1) n: number of number of observations.</span>
-<span class="co"># 2) size: target for number of successful trials, or dispersion parameter (the shape parameter of the gamma mixing distribution). Must be strictly positive, need not be integer.</span>
-<span class="co"># 3) prob: probability of success in each trial. 0 &lt; prob &lt;= 1.</span>
-obs_nb &lt;-<span class="st"> </span><span class="kw">rnbinom</span>(<span class="dv">100000</span>, <span class="dv">5</span>, <span class="fl">0.5</span>)
-obs_pios &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class="dv">10000</span>, <span class="kw">mean</span>(obs_nb))
-<span class="kw">table</span>(obs_nb)</code></pre></div>
-<pre><code>## obs_nb
-##     0     1     2     3     4     5     6     7     8     9    10    11 
-##  3039  7651 11590 13833 13598 12468 10303  8098  6055  4377  3094  2078 
-##    12    13    14    15    16    17    18    19    20    21    22    23 
-##  1329   956   583   364   224   150    77    50    37    22     7     7 
-##    24    25    27    28    29 
-##     5     1     2     1     1</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(obs_pios)</code></pre></div>
-<pre><code>## obs_pios
-##    0    1    2    3    4    5    6    7    8    9   10   11   12   13   14 
-##   65  360  833 1434 1696 1706 1433 1096  672  388  170   86   45    9    6 
-##   15 
-##    1</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(obs_nb, <span class="dt">breaks =</span> <span class="dv">1000</span>)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-52-1.png" width="576" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(obs_pios, <span class="dt">breaks =</span> <span class="dv">1000</span>)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-53-1.png" width="576" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(obs_nb)</code></pre></div>
-<pre><code>## [1] 9.949713</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(obs_pios)</code></pre></div>
-<pre><code>## [1] 5.11018</code></pre>
-<p>Here we can clearly see that the variance (measure of variation.) in the simulated data with Poisson distribution () is higher than that with negative binomial distribtuon.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">n =<span class="st"> </span><span class="dv">10000</span>
-dist_nb =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)
-<span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n){
-    obs_nb_tem &lt;-<span class="st"> </span><span class="kw">rnbinom</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="fl">0.5</span>)
-    dist_nb[i] =<span class="st"> </span><span class="kw">var</span>(obs_nb_tem)<span class="op">/</span><span class="kw">mean</span>(obs_nb_tem)
-}
-<span class="kw">hist</span>(dist_nb)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-55-1.png" width="576" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">n =<span class="st"> </span><span class="dv">10000</span>
-dist_pios =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)
-<span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n){
-    obs_pois_tem &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class="dv">3</span>, <span class="dv">5</span>)
-    dist_pios[i] =<span class="st"> </span><span class="kw">var</span>(obs_pois_tem)<span class="op">/</span><span class="kw">mean</span>(obs_pois_tem)
-}
-<span class="kw">hist</span>(dist_pios)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-56-1.png" width="576" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(dist_nb <span class="op">-</span><span class="st"> </span>dist_pios, <span class="dt">breaks=</span><span class="dv">100</span>, <span class="dt">col =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="dt">border =</span> <span class="ot">NA</span>)
-<span class="kw">abline</span>(<span class="dt">v=</span><span class="dv">0</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">lty=</span><span class="st">&quot;dashed&quot;</span>)</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-57-1.png" width="576" /></p>
-<div id="real-data" class="section level3">
-<h3><span class="header-section-number">10.1.1</span> Real data</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">read_count =<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;data/yeast_EV_DNMT3B_count.tab&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">head=</span>T)
-read_count_sub =<span class="st"> </span>read_count[, <span class="kw">c</span>(<span class="dv">4</span><span class="op">:</span><span class="dv">6</span>)]
-<span class="kw">head</span>(read_count_sub)</code></pre></div>
-<pre><code>##   DNMT3B_2 DNMT3B_3 DNMT3B_4
-## 1      717      948     1039
-## 2      392      386      403
-## 3        0        0        1
-## 4      106       55       33
-## 5      477      418      366
-## 6      285      187      138</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mean_var_diff &lt;-<span class="st"> </span><span class="kw">apply</span>(read_count_sub, <span class="dv">1</span>, var) <span class="op">-</span><span class="st">  </span><span class="kw">apply</span>(read_count_sub, <span class="dv">1</span>, mean) 
-<span class="kw">summary</span>(mean_var_diff)</code></pre></div>
-<pre><code>##       Min.    1st Qu.     Median       Mean    3rd Qu.       Max. 
-##      -6078          1        623    1058496       5794 2026890302</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mean_var_diff,<span class="dt">breaks=</span><span class="dv">100000</span>,<span class="dt">xlim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">50000</span>,<span class="dv">100000</span>))</code></pre></div>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-58-1.png" width="576" /></p>
+<div id="reference" class="section level3">
+<h3><span class="header-section-number">1.5.2</span> Reference</h3>
+<p>Read Random Rows from A Huge CSV File: <a href="https://www.r-bloggers.com/read-random-rows-from-a-huge-csv-file/" class="uri">https://www.r-bloggers.com/read-random-rows-from-a-huge-csv-file/</a></p>
 </div>
 </div>
-<div id="reference-9" class="section level2">
-<h2><span class="header-section-number">10.2</span> Reference</h2>
-<p>What’s the rationale for using the negative binomial distribution to model read: <a href="https://support.bioconductor.org/p/84832/" class="uri">https://support.bioconductor.org/p/84832/</a></p>
-<p>Why do we use the negative binomial distribution for analysing RNAseq data?: <a href="http://bridgeslab.sph.umich.edu/posts/why-do-we-use-the-negative-binomial-distribution-for-rnaseq" class="uri">http://bridgeslab.sph.umich.edu/posts/why-do-we-use-the-negative-binomial-distribution-for-rnaseq</a></p>
-<p>R统计学(06): 负二项分布: <a href="https://mp.weixin.qq.com/s/QBkL8_cW6Lsm5U56SUmUoQ" class="uri">https://mp.weixin.qq.com/s/QBkL8_cW6Lsm5U56SUmUoQ</a></p>
+<div id="functions" class="section level2">
+<h2><span class="header-section-number">1.6</span> Functions</h2>
 </div>
-<div id="batch-effect" class="section level2">
-<h2><span class="header-section-number">10.3</span> Batch effect</h2>
-<p>Batch effects are sub-groups of measurements that have qualitatively different behaviour across conditions and are unrelated to the biological or scientific variables in a study. For example, batch effects may occur if a subset of experiments was run on Monday and another set on Tuesday, if two technicians were responsible for different subsets of the experiments or if two different lots of reagents, chips or instruments were used. These effects are not exclusive to high-throughput biology and genomics research1, and batch effects also affect low-dimensional molecular measurements, such as northern blots and quantitative PCR.</p>
-<p>batch effects occur because measurements are affected by laboratory conditions, reagent lots and personnel differences.</p>
-<p>1.1 Data simulation We downloaded an RNA-seq dataset from online for Zebrafish. This is a standard count data from RNA-seq experiment. These data are available as part of the zebrafishRNASeq Bioconductor package. (<a href="https://bioconductor.org/packages/release/data/experiment/html/zebrafishRNASeq.html" class="uri">https://bioconductor.org/packages/release/data/experiment/html/zebrafishRNASeq.html</a>) We first filter low expressed genes and only keep genes with more than 5 counts in at least two samples, and then check the dispersion of counts data by plotting the variance against the mean of the zebrafish dataset. Based on the higher dispersion usually existing in count data, we assume a zero inflated negative binomial distribution and estimate the parameters from the zebrafish data. We then use the R package of “ polyester” [24] to simulate 2 RNA-seq datasets by using the same dispersion parameters (mean and variance) from the zebrafish dataset, thus to mimic the real situation in a common RNA-seq experiment.</p>
-<p>For the data simulation step, we simulate 10, 000 genes on 20 samples. These 20 samples are simulated on 2 batches, with 5 cases and 5 controls on each batch. So there will be 2 kinds of factors on each of the 10, 000 genes: group factor (case/control status) and batch factor (batch 1/2). The DEGs detected could be caused by either of these 2 factors.</p>
-<p>For dataset 1, we simulate the group factor (case/control) on 0 gene (i.e., 0 gene will be detected as differentially expressed due to case/control status), and batch factor on 10, 000 genes (i.e., if any of these 10, 000 genes are detected as differentially expressed, that will only be caused by batch factor, not by sample phenotype of case/control status). In this case, the DEGs will be false positive signals because of the existence of batch effect and absence of case/control difference.</p>
-<p>In second case, we generate a dataset 2 with random batch effects on case and control samples (i.e., the phenotype factors are not balanced between case and control samples in each batch and batch factor have different impact on case samples and control samples). For the genes, the group factors (case and control) are simulated on 3000 genes and batch factors are simulated on 5000 genes using R package of “ polyester” respectively. Finally, among all the 10, 000 genes, 1000 genes are with group factor only, 2000 genes are with both group and batch factors, 3000 genes are with batch factor only, and the rest 4000 genes have either group factor or batch factor. The 3000 genes with batch factor only are defined as control genes, so that we can test the impact of batch effects and the performance of each method in removing batch effects).</p>
+<div id="control-structure" class="section level2">
+<h2><span class="header-section-number">1.7</span> Control structure</h2>
 </div>
-<div id="reference-10" class="section level2">
-<h2><span class="header-section-number">10.4</span> Reference</h2>
-<p>Simulation of batch effect data: <a href="https://www.biorxiv.org/content/biorxiv/suppl/2017/12/15/234344.DC1/234344-1.pdf" class="uri">https://www.biorxiv.org/content/biorxiv/suppl/2017/12/15/234344.DC1/234344-1.pdf</a></p>
-<p>Evaluation of Methods in Removing Batch Effects on RNA-seq Data: <a href="http://www.tran-med.com/article/2016/2411-2917-2-1-3.html#outline_anchor_4" class="uri">http://www.tran-med.com/article/2016/2411-2917-2-1-3.html#outline_anchor_4</a></p>
+<div id="reference-1" class="section level2">
+<h2><span class="header-section-number">1.8</span> Reference</h2>
+<p>Introduction to R: <a href="https://wiki.harvard.edu/confluence/display/hbctraining/Introduction+to+R" class="uri">https://wiki.harvard.edu/confluence/display/hbctraining/Introduction+to+R</a></p>
+<p>R graphics with ggplot2 workshop notes: <a href="http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html" class="uri">http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html</a></p>
 
 </div>
 </div>
@@ -371,8 +341,8 @@ read_count_sub =<span class="st"> </span>read_count[, <span class="kw">c</span>(
           </div>
         </div>
       </div>
-<a href="bayesian-newwork-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="multiple-test-corretion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="plot-in-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

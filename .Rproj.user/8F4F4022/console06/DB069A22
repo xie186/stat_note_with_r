@@ -1,467 +1,4 @@
 
- rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-40-1.png (100%)
- rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-5-1.png (100%)
- rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-7-1.png (100%)
- rename {_bookdown_files/_main_files => _main_files}/figure-html/unnamed-chunk-9-1.png (100%)
- create mode 100644 bioinfBookXIE186.Rmd
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-11-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-14-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-16-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-17-1.png (100%)
- create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-18-1.png
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-2-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-20-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-23-1.png (100%)
- create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-24-1.png
- rename _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-9-1.png => bioinfBookXIE186_files/figure-html/unnamed-chunk-25-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-26-1.png (100%)
- create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-27-1.png
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-27-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-28-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-29-1.png (100%)
- create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-3-1.png
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-31-1.png (100%)
- create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-32-1.png
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-33-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-33-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-34-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-35-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-37-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-39-1.png (100%)
- rename _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-3-1.png => bioinfBookXIE186_files/figure-html/unnamed-chunk-4-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-40-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-41-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-41-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-42-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-43-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-44-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-44-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-45-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-46-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-46-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-47-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-47-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-48-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-48-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-49-1.png (100%)
- rename _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-4-1.png => bioinfBookXIE186_files/figure-html/unnamed-chunk-5-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-50-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-52-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-52-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-53-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-54-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-54-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-55-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-56-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-57-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-58-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-59-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-59-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-6-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-61-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-62-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-63-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-63-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-64-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-64-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-65-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-66-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-67-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-68-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-68-2.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-69-1.png (100%)
- create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-7-1.png
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-70-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-71-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-72-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-73-1.png (100%)
- rename {_bookdown_files/bioinfBookXIE186_files => bioinfBookXIE186_files}/figure-html/unnamed-chunk-8-1.png (100%)
- create mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-9-1.png
- create mode 100644 docs/multiple-test-corretion.html
- create mode 100644 multiple_test_correction.Rmd
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ gut[K[Ki [Kt push ocommit -m "Add random read csv files"[C[C[C[C[C[Cadd .[K
-]0;/home/xie186/statistics_with_R$ git add .commit -m "Add random read csv files"[C[C[C[C[C[Cadd .[Kpush origin master[C[C[C[C[C[Cadd .[Kcommit -m "Add random read csv files"
-[master 9fb6ad5] Add random read csv files
- 173 files changed, 441 insertions(+), 1313 deletions(-)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-10-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-11-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-12-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-13-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-14-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-15-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-16-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-17-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-18-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-19-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-2-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-20-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-21-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-22-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-23-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-24-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-25-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-26-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-27-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-28-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-29-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-29-2.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-30-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-31-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-32-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-33-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-34-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-34-2.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-36-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-37-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-38-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-4-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-40-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-5-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-7-1.png (100%)
- rename {_main_files => _bookdown_files/_main_files}/figure-html/unnamed-chunk-9-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-11-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-14-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-16-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-17-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-18-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-2-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-20-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-23-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-24-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-25-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-26-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-27-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-27-2.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-28-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-29-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-3-1.png (100%)
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-30-1.png
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-31-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-32-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-33-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-33-2.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-34-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-35-1.png (100%)
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-36-1.png
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-37-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-39-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-4-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-40-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-41-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-41-2.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-42-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-43-1.png (100%)
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-44-1.png
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-44-2.png (100%)
- copy docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-44-1.png => _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-45-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-46-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-46-2.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-47-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-47-2.png (100%)
- copy docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-32-1.png => _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-48-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-48-2.png (100%)
- copy docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-48-1.png => _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-49-1.png (100%)
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-49-2.png
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-5-1.png (100%)
- rename docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-49-1.png => _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-50-1.png (100%)
- rename docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-50-1.png => _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-51-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-52-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-52-2.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-53-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-54-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-54-2.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-55-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-56-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-57-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-58-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-59-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-59-2.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-6-1.png (100%)
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-60-1.png
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-61-1.png (100%)
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-62-1.png
- copy docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-62-1.png => _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-63-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-63-2.png (100%)
- rename docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-63-1.png => _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-64-1.png (100%)
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-64-2.png
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-65-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-66-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-67-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-68-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-68-2.png (100%)
- rename docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-64-1.png => _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-69-1.png (100%)
- copy docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-64-2.png => _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-69-2.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-7-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-70-1.png (100%)
- create mode 100644 _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-71-1.png
- copy docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-71-1.png => _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-72-1.png (100%)
- rename docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-72-1.png => _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-73-1.png (100%)
- rename docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-73-1.png => _bookdown_files/bioinfBookXIE186_files/figure-html/unnamed-chunk-74-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-8-1.png (100%)
- rename {bioinfBookXIE186_files => _bookdown_files/bioinfBookXIE186_files}/figure-html/unnamed-chunk-9-1.png (100%)
- delete mode 100644 bioinfBookXIE186.Rmd
- delete mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-45-1.png
- delete mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-48-1.png
- delete mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-49-1.png
- delete mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-69-1.png
- delete mode 100644 bioinfBookXIE186_files/figure-html/unnamed-chunk-73-1.png
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-18-1.png
- rewrite docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-24-1.png (92%)
- copy docs/bioinfBookXIE186_files/figure-html/{unnamed-chunk-9-1.png => unnamed-chunk-25-1.png} (100%)
- rewrite docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-27-1.png (98%)
- rewrite docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-3-1.png (99%)
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-30-1.png
- rewrite docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-32-1.png (97%)
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-36-1.png
- copy docs/bioinfBookXIE186_files/figure-html/{unnamed-chunk-3-1.png => unnamed-chunk-4-1.png} (100%)
- rewrite docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-44-1.png (93%)
- rename bioinfBookXIE186_files/figure-html/unnamed-chunk-44-1.png => docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-45-1.png (100%)
- rewrite docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-48-1.png (99%)
- copy docs/bioinfBookXIE186_files/figure-html/{unnamed-chunk-27-1.png => unnamed-chunk-49-1.png} (100%)
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-49-2.png
- rename docs/bioinfBookXIE186_files/figure-html/{unnamed-chunk-4-1.png => unnamed-chunk-5-1.png} (100%)
- rename docs/bioinfBookXIE186_files/figure-html/{unnamed-chunk-45-1.png => unnamed-chunk-50-1.png} (100%)
- rename bioinfBookXIE186_files/figure-html/unnamed-chunk-50-1.png => docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-51-1.png (100%)
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-60-1.png
- rewrite docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-62-1.png (98%)
- rename bioinfBookXIE186_files/figure-html/unnamed-chunk-62-1.png => docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-63-1.png (100%)
- rename bioinfBookXIE186_files/figure-html/unnamed-chunk-63-1.png => docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-64-1.png (100%)
- rewrite docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-64-2.png (99%)
- rename bioinfBookXIE186_files/figure-html/unnamed-chunk-64-1.png => docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-69-1.png (100%)
- rename bioinfBookXIE186_files/figure-html/unnamed-chunk-64-2.png => docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-69-2.png (100%)
- create mode 100644 docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-7-1.png
- rewrite docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-71-1.png (97%)
- rename bioinfBookXIE186_files/figure-html/unnamed-chunk-71-1.png => docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-72-1.png (100%)
- rename bioinfBookXIE186_files/figure-html/unnamed-chunk-72-1.png => docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-73-1.png (100%)
- rename docs/bioinfBookXIE186_files/figure-html/{unnamed-chunk-69-1.png => unnamed-chunk-74-1.png} (100%)
- rewrite docs/bioinfBookXIE186_files/figure-html/unnamed-chunk-9-1.png (96%)
-]0;/home/xie186/statistics_with_R$ git commit -m "Add random read csv files"[C[C[C[C[C[Cadd .[Kcommit -m "Add random read csv files"[C[C[C[C[C[Cadd .[Kpush origin master
-error: cannot run rpostback-askpass: No such file or directory
-Username for 'https://github.com': xie186
-error: cannot run rpostback-askpass: No such file or directory
-Password for 'https://xie186@github.com': 
-Counting objects: 69, done.
-Delta compression using up to 4 threads.
-Compressing objects:   1% (1/65)   Compressing objects:   3% (2/65)   Compressing objects:   4% (3/65)   Compressing objects:   6% (4/65)   Compressing objects:   7% (5/65)   Compressing objects:   9% (6/65)   Compressing objects:  10% (7/65)   Compressing objects:  12% (8/65)   Compressing objects:  13% (9/65)   Compressing objects:  15% (10/65)   Compressing objects:  16% (11/65)   Compressing objects:  18% (12/65)   Compressing objects:  20% (13/65)   Compressing objects:  21% (14/65)   Compressing objects:  23% (15/65)   Compressing objects:  24% (16/65)   Compressing objects:  26% (17/65)   Compressing objects:  27% (18/65)   Compressing objects:  29% (19/65)   Compressing objects:  30% (20/65)   Compressing objects:  32% (21/65)   Compressing objects:  33% (22/65)   Compressing objects:  35% (23/65)   Compressing objects:  36% (24/65)   Compressing objects:  38% (25/65)   Compressing objects:  40% (26/65)   Compressing objects:  41% (27/65)   Compressing objects:  43% (28/65)   Compressing objects:  44% (29/65)   Compressing objects:  46% (30/65)   Compressing objects:  47% (31/65)   Compressing objects:  49% (32/65)   Compressing objects:  50% (33/65)   Compressing objects:  52% (34/65)   Compressing objects:  53% (35/65)   Compressing objects:  55% (36/65)   Compressing objects:  56% (37/65)   Compressing objects:  58% (38/65)   Compressing objects:  60% (39/65)   Compressing objects:  61% (40/65)   Compressing objects:  63% (41/65)   Compressing objects:  64% (42/65)   Compressing objects:  66% (43/65)   Compressing objects:  67% (44/65)   Compressing objects:  69% (45/65)   Compressing objects:  70% (46/65)   Compressing objects:  72% (47/65)   Compressing objects:  73% (48/65)   Compressing objects:  75% (49/65)   Compressing objects:  76% (50/65)   Compressing objects:  78% (51/65)   Compressing objects:  80% (52/65)   Compressing objects:  81% (53/65)   Compressing objects:  83% (54/65)   Compressing objects:  84% (55/65)   Compressing objects:  86% (56/65)   Compressing objects:  87% (57/65)   Compressing objects:  89% (58/65)   Compressing objects:  90% (59/65)   Compressing objects:  92% (60/65)   Compressing objects:  93% (61/65)   Compressing objects:  95% (62/65)   Compressing objects:  96% (63/65)   Compressing objects:  98% (64/65)   Compressing objects: 100% (65/65)   Compressing objects: 100% (65/65), done.
-Writing objects:   1% (1/69)   Writing objects:   2% (2/69)   Writing objects:   5% (4/69)   Writing objects:   7% (5/69)   Writing objects:   8% (6/69)   Writing objects:  10% (7/69)   Writing objects:  11% (8/69)   Writing objects:  13% (9/69)   Writing objects:  14% (10/69)   Writing objects:  15% (11/69)   Writing objects:  17% (12/69)   Writing objects:  18% (13/69)   Writing objects:  20% (14/69)   Writing objects:  21% (15/69)   Writing objects:  23% (16/69)   Writing objects:  24% (17/69)   Writing objects:  26% (18/69)   Writing objects:  27% (19/69)   Writing objects:  28% (20/69)   Writing objects:  30% (21/69)   Writing objects:  31% (22/69)   Writing objects:  33% (23/69)   Writing objects:  34% (24/69)   Writing objects:  36% (25/69)   Writing objects:  37% (26/69)   Writing objects:  39% (27/69)   Writing objects:  40% (28/69)   Writing objects:  43% (30/69)   Writing objects:  44% (31/69)   Writing objects:  46% (32/69)   Writing objects:  47% (33/69)   Writing objects:  49% (34/69)   Writing objects:  50% (35/69)   Writing objects:  52% (36/69)   Writing objects:  53% (37/69)   Writing objects:  55% (38/69)   Writing objects:  56% (39/69)   Writing objects:  57% (40/69)   Writing objects:  59% (41/69)   Writing objects:  60% (42/69)   Writing objects:  62% (43/69)   Writing objects:  63% (44/69)   Writing objects:  65% (45/69)   Writing objects:  66% (46/69)   Writing objects:  68% (47/69)   Writing objects:  69% (48/69)   Writing objects:  71% (49/69)   Writing objects:  72% (50/69)   Writing objects:  73% (51/69)   Writing objects:  75% (52/69)   Writing objects:  76% (53/69)   Writing objects:  78% (54/69)   Writing objects:  79% (55/69)   Writing objects:  81% (56/69)   Writing objects:  82% (57/69)   Writing objects:  84% (58/69)   Writing objects:  85% (59/69)   Writing objects:  86% (60/69)   Writing objects:  88% (61/69)   Writing objects:  89% (62/69)   Writing objects:  91% (63/69)   Writing objects:  92% (64/69)   Writing objects:  94% (65/69)   Writing objects:  95% (66/69)   Writing objects:  97% (67/69)   Writing objects:  98% (68/69)   Writing objects: 100% (69/69)   Writing objects: 100% (69/69), 27.15 KiB | 0 bytes/s, done.
-Total 69 (delta 54), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/54)   [Kremote: Resolving deltas:   3% (2/54)   [Kremote: Resolving deltas:   7% (4/54)   [Kremote: Resolving deltas:  11% (6/54)   [Kremote: Resolving deltas:  12% (7/54)   [Kremote: Resolving deltas:  14% (8/54)   [Kremote: Resolving deltas:  16% (9/54)   [Kremote: Resolving deltas:  18% (10/54)   [Kremote: Resolving deltas:  20% (11/54)   [Kremote: Resolving deltas:  24% (13/54)   [Kremote: Resolving deltas:  27% (15/54)   [Kremote: Resolving deltas:  31% (17/54)   [Kremote: Resolving deltas:  38% (21/54)   [Kremote: Resolving deltas:  42% (23/54)   [Kremote: Resolving deltas:  46% (25/54)   [Kremote: Resolving deltas:  50% (27/54)   [Kremote: Resolving deltas:  53% (29/54)   [Kremote: Resolving deltas:  57% (31/54)   [Kremote: Resolving deltas:  64% (35/54)   [Kremote: Resolving deltas:  68% (37/54)   [Kremote: Resolving deltas:  72% (39/54)   [Kremote: Resolving deltas:  75% (41/54)   [Kremote: Resolving deltas:  79% (43/54)   [Kremote: Resolving deltas:  83% (45/54)   [Kremote: Resolving deltas:  87% (47/54)   [Kremote: Resolving deltas:  90% (49/54)   [Kremote: Resolving deltas:  94% (51/54)   [Kremote: Resolving deltas:  98% (53/54)   [Kremote: Resolving deltas: 100% (54/54)   [Kremote: Resolving deltas: 100% (54/54), completed with 28 local objects.[K
-To https://github.com/xie186/stat_note_with_r.git
-   472c441..9fb6ad5  master -> master
-]0;/home/xie186/statistics_with_R$ [K$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git add .
-
-
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git commit -m ""U"p"d"a"t"e"
-
-
-g[master 34e08b4] Update
- 27 files changed, 2038 insertions(+), 1549 deletions(-)
- rewrite docs/search_index.json (72%)
- create mode 100644 docs/support-me.html
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git push origin master
-error: cannot run rpostback-askpass: No such file or directory
-Username for 'https://github.com': xie186
-error: cannot run rpostback-askpass: No such file or directory
-Password for 'https://xie186@github.com': 
-Counting objects: 37, done.
-Delta compression using up to 4 threads.
-Compressing objects:   2% (1/36)   Compressing objects:   5% (2/36)   Compressing objects:   8% (3/36)   Compressing objects:  11% (4/36)   Compressing objects:  13% (5/36)   Compressing objects:  16% (6/36)   Compressing objects:  19% (7/36)   Compressing objects:  22% (8/36)   Compressing objects:  25% (9/36)   Compressing objects:  27% (10/36)   Compressing objects:  30% (11/36)   Compressing objects:  33% (12/36)   Compressing objects:  36% (13/36)   Compressing objects:  38% (14/36)   Compressing objects:  41% (15/36)   Compressing objects:  44% (16/36)   Compressing objects:  47% (17/36)   Compressing objects:  50% (18/36)   Compressing objects:  52% (19/36)   Compressing objects:  55% (20/36)   Compressing objects:  58% (21/36)   Compressing objects:  61% (22/36)   Compressing objects:  63% (23/36)   Compressing objects:  66% (24/36)   Compressing objects:  69% (25/36)   Compressing objects:  72% (26/36)   Compressing objects:  75% (27/36)   Compressing objects:  77% (28/36)   Compressing objects:  80% (29/36)   Compressing objects:  83% (30/36)   Compressing objects:  86% (31/36)   Compressing objects:  88% (32/36)   Compressing objects:  91% (33/36)   Compressing objects:  94% (34/36)   Compressing objects:  97% (35/36)   Compressing objects: 100% (36/36)   Compressing objects: 100% (36/36), done.
-Writing objects:   2% (1/37)   Writing objects:   5% (2/37)   Writing objects:   8% (3/37)   Writing objects:  10% (4/37)   Writing objects:  13% (5/37)   Writing objects:  16% (6/37)   Writing objects:  18% (7/37)   Writing objects:  21% (8/37)   Writing objects:  24% (9/37)   Writing objects:  27% (10/37)   Writing objects:  29% (11/37)   Writing objects:  32% (12/37)   Writing objects:  35% (13/37)   Writing objects:  37% (14/37)   Writing objects:  40% (15/37)   Writing objects:  43% (16/37)   Writing objects:  45% (17/37)   Writing objects:  54% (20/37)   Writing objects:  56% (21/37)   Writing objects:  59% (22/37)   Writing objects:  62% (23/37)   Writing objects:  64% (24/37)   Writing objects:  67% (25/37)   Writing objects:  70% (26/37)   Writing objects:  72% (27/37)   Writing objects:  75% (28/37)   Writing objects:  78% (29/37)   Writing objects:  81% (30/37)   Writing objects:  83% (31/37)   Writing objects:  86% (32/37)   Writing objects:  89% (33/37)   Writing objects:  91% (34/37)   Writing objects:  94% (35/37)   Writing objects:  97% (36/37)   Writing objects: 100% (37/37)   Writing objects: 100% (37/37), 27.43 KiB | 0 bytes/s, done.
-Total 37 (delta 31), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/31)   [Kremote: Resolving deltas:   3% (1/31)   [Kremote: Resolving deltas:   6% (2/31)   [Kremote: Resolving deltas:   9% (3/31)   [Kremote: Resolving deltas:  12% (4/31)   [Kremote: Resolving deltas:  16% (5/31)   [Kremote: Resolving deltas:  19% (6/31)   [Kremote: Resolving deltas:  22% (7/31)   [Kremote: Resolving deltas:  25% (8/31)   [Kremote: Resolving deltas:  29% (9/31)   [Kremote: Resolving deltas:  35% (11/31)   [Kremote: Resolving deltas:  38% (12/31)   [Kremote: Resolving deltas:  54% (17/31)   [Kremote: Resolving deltas:  58% (18/31)   [Kremote: Resolving deltas:  67% (21/31)   [Kremote: Resolving deltas:  70% (22/31)   [Kremote: Resolving deltas:  74% (23/31)   [Kremote: Resolving deltas:  80% (25/31)   [Kremote: Resolving deltas:  83% (26/31)   [Kremote: Resolving deltas:  87% (27/31)   [Kremote: Resolving deltas:  90% (28/31)   [Kremote: Resolving deltas:  93% (29/31)   [Kremote: Resolving deltas:  96% (30/31)   [Kremote: Resolving deltas: 100% (31/31)   [Kremote: Resolving deltas: 100% (31/31), completed with 23 local objects.[K
-To https://github.com/xie186/stat_note_with_r.git
-   9fb6ad5..34e08b4  master -> master
-]0;/home/xie186/statistics_with_R$ git push origin master[C[C[C[C[C[Ccommit -m "Update"[C[C[C[C[C[Cadd .[Kpush origin master[C[C[C[C[C[Ccommit -m "Add random read csv files"[C[C[C[C[C[Cadd .[Kcommit -m "Add random read csv files"[C[C[C[C[C[Cadd .[Kpush origin master[C[C[C[C[C[Ccommit -m "Update"[C[C[C[C[C[Cadd .[Kpush origin master[C[C[C[C[C[Ccommit -m "Update"[C[C[C[C[C[Cadd .[Kremote -v[C[Csh order_Rmd_file.sh[C[C[1@cat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[42@perl scripts/rename_Rmd.pl ordered_Rmd.txt  >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[42Pcat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Psh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-mv: '00_R_intro.Rmd' and '00_R_intro.Rmd' are the same file
-mv: '01_plot_in_R.Rmd' and '01_plot_in_R.Rmd' are the same file
-mv: '02_correlation_in_R.Rmd' and '02_correlation_in_R.Rmd' are the same file
-mv: '03_stand_dev_stand_err.Rmd' and '03_stand_dev_stand_err.Rmd' are the same file
-mv: '04_ttest.Rmd' and '04_ttest.Rmd' are the same file
-mv: '05_linear_model.Rmd' and '05_linear_model.Rmd' are the same file
-mv: '06_multi_linear_regression.Rmd' and '06_multi_linear_regression.Rmd' are the same file
-mv: '07_multiple_regresssion_with_an_interaction_term.Rmd' and '07_multiple_regresssion_with_an_interaction_term.Rmd' are the same file
-mv: '08_bayesian_network.Rmd' and '08_bayesian_network.Rmd' are the same file
-mv: '09_correlation_test.Rmd' and '09_correlation_test.Rmd' are the same file
-mv: '10_neg_binomial_count.Rmd' and '10_neg_binomial_count.Rmd' are the same file
-mv: '11_missing_values.Rmd' and '11_missing_values.Rmd' are the same file
-mv: '12_intro_dplyr.Rmd' and '12_intro_dplyr.Rmd' are the same file
-mv: '13_PCA.Rmd' and '13_PCA.Rmd' are the same file
-mv: '14_ml_random_forest.Rmd' and '14_ml_random_forest.Rmd' are the same file
-mv: '15_QTLanalysis.Rmd' and '15_QTLanalysis.Rmd' are the same file
-mv: '16_reference_resouce.Rmd' and '16_reference_resouce.Rmd' are the same file
-]0;/home/xie186/statistics_with_R$ sh order_Rmd_file.sh[C[Cgit push origin master[C[C[C[C[C[Ccommit -m "Update"[C[C[C[C[C[Cadd .[Kpush origin master[C[C[C[C[C[Ccommit -m "Add random read csv files"[C[C[C[C[C[Cadd .[Kcommit -m "Add random read csv files"[C[C[C[C[C[Cadd .[Kpush origin master[C[C[C[C[C[Ccommit -m "Update"[C[C[C[C[C[Cadd .[Kpush origin master[C[C[C[C[C[Ccommit -m "Update"[C[C[C[C[C[Cadd .[Kremote -v[C[Csh order_Rmd_file.sh[C[C[1@cat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[42@perl scripts/rename_Rmd.pl ordered_Rmd.txt  >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ perl scripts/rename_Rmd.pl ordered_Rmd.txt  > order_Rmd_file.sh[C[Csh order_Rmd_file.sh[K
-mv: '00_R_intro.Rmd' and '00_R_intro.Rmd' are the same file
-mv: '01_plot_in_R.Rmd' and '01_plot_in_R.Rmd' are the same file
-mv: '02_correlation_in_R.Rmd' and '02_correlation_in_R.Rmd' are the same file
-mv: '03_stand_dev_stand_err.Rmd' and '03_stand_dev_stand_err.Rmd' are the same file
-mv: '04_ttest.Rmd' and '04_ttest.Rmd' are the same file
-mv: '05_linear_model.Rmd' and '05_linear_model.Rmd' are the same file
-mv: '06_multi_linear_regression.Rmd' and '06_multi_linear_regression.Rmd' are the same file
-mv: '07_multiple_regresssion_with_an_interaction_term.Rmd' and '07_multiple_regresssion_with_an_interaction_term.Rmd' are the same file
-mv: '08_bayesian_network.Rmd' and '08_bayesian_network.Rmd' are the same file
-mv: '09_correlation_test.Rmd' and '09_correlation_test.Rmd' are the same file
-mv: '10_neg_binomial_count.Rmd' and '10_neg_binomial_count.Rmd' are the same file
-]0;/home/xie186/statistics_with_R$ sh order_Rmd_file.sh[C[C[43@perl scripts/rename_Rmd.pl ordered_Rmd.txt  >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-[K$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ git remote -v
-origin	https://github.com/xie186/stat_note_with_r.git (fetch)
-origin	https://github.com/xie186/stat_note_with_r.git (push)
-]0;/home/xie186/statistics_with_R$ ^[[H[K[K[K?^M[K
-
-?: command not found
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ pwd
-/home/xie186/statistics_with_R
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ sui[Kdo cp /home/xie002/tb_tutorial/analysis/read_count/yeast_DESeq2_DEG.tab data/
-[sudo] password for xie186: 
-
-Sorry, try again.
-[sudo] password for xie186: 
-Sorry, try again.
-[sudo] password for xie186: 
-sudo: 3 incorrect password attempts
-]0;/home/xie186/statistics_with_R$ sudo cp /home/xie002/tb_tutorial/analysis/read_count/yeast_DESeq2_DEG.tab data/
-[sudo] password for xie186: 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ 
-[K$ 
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ pwd
-/home/xie186/statistics_with_R
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ ls
-00_R_intro.Rmd                                        12_missing_values.Rmd     data_transformation.Rmd
-01_plot_in_R.Rmd                                      13_intro_dplyr.Rmd        [0m[01;34mdocs[0m
-02_correlation_in_R.Rmd                               14_PCA.Rmd                index.Rmd
-03_stand_dev_stand_err.Rmd                            15_ml_random_forest.Rmd   LICENSE
-04_ttest.Rmd                                          16_QTLanalysis.Rmd        ordered_Rmd.txt
-05_linear_model.Rmd                                   17_reference_resouce.Rmd  order_Rmd_file.sh
-06_multi_linear_regression.Rmd                        [01;34m_book[0m                     order_Rmd_file.sh.README
-07_multiple_regresssion_with_an_interaction_term.Rmd  [01;34m_bookdown_files[0m           README.md
-08_bayesian_network.Rmd                               bookdown-minimal.Rproj    reference.bib
-09_correlation_test.Rmd                               _bookdown.yml             [01;34mscripts[0m
-10_neg_binomial_count.Rmd                             code.R                    Workspace.RData
-11_multiple_test_correction.Rmd                       [01;34mdata[0m
-]0;/home/xie186/statistics_with_R$ 
-]0;/home/xie186/statistics_with_R$ cd ..
-]0;/home/xie186$ ls
-
-
-
-
-
-pwd
-
-ls
-
-[0m[01;32mABI_all_SNP.vcf[0m                             nohup.out
-[01;34manaconda3[0m                                   note_danshen.ipynb
-[01;34mbin[0m                                         [01;34mpearDB_anno[0m
-[01;34mbiodocker_viewbs_bak[0m                        PEAR.ipynb
-[01;34mbioinfo_with_perl[0m                           [01;34mperl5[0m
-[01;34mconda-bld[0m                                   [01;34mPictures[0m
-[01;36mdanshen_RNA_seq_metabolomics.ipynb[0m          [01;34mPublic[0m
-[01;36mDESeq2_time_series.ipynb[0m                    [01;34mR[0m
-[01;34mDesktop[0m                                     requirements.txt
-Dockerfile_ViewBS                           [01;31mresult_for_Xie_BJXNG18.tar.gz[0m
-[01;34mdocker_test[0m                                 Rplots.pdf
-[01;34mDocuments[0m                                   [01;34msalvia_RNA-seq[0m
-[01;34mdog_snp[0m                                     [01;34mSinogene[0m
-[01;34mdog_snp_chip[0m                                [01;34msnakemake_academy[0m
-DogWGS.ipynb                                [01;34msnap[0m
-[01;34mDownloads[0m                                   [01;34msoftware[0m
-examples.desktop                            [01;34mstatistics_with_R[0m
-FastqSummaryF1L1.txt                        TabOmics_GeCKOdata_map_stat.xlsx_0_1.ods
-[01;31mG2-2_S2_L001_R1_001.fastq.gz[0m                TabOmics_GeCKOdata_map_stat.xlsx_0.ods
-[01;34mGGPred[0m                                      TabOmics_GeCKOdata_map_stat.xlsx_1.ods
-[01;34mgithub_book[0m                                 [01;34mtbDocker[0m
-[01;34migv[0m                                         [01;34mtbDogDoc[0m
-inline-supplementary-material-1.xlsx_0.ods  [01;34mtbDogSNPchip[0m
-[01;34mjikai_data[0m                                  [01;34mTemplates[0m
-[01;34mjupyter_nb[0m                                  [01;34mtest[0m
-[01;34mkivy_dev[0m                                    test1
-[01;34mKivyMD-master[0m                               [01;34mtest_ara[0m
-[01;31mKivyMD-master.zip[0m                           [01;34mtest_crispr[0m
-[01;34mkivy_test[0m                                   test.sh
-[01;34mlib[0m                                         [01;34mtip4bioinformatics[0m
-[01;34mmaize_phasiRNA[0m                              Untitled1.ipynb
-[01;34mminiconda2[0m                                  untitled_1.ods
-[01;34mminiconda3[0m                                  Untitled2.ipynb
-mRNA_Phloem_vs_Xylem.DE_ALL.xls_0.ods       Untitled.ipynb
-[01;34mMusic[0m                                       [01;34mVideos[0m
-[01;34mncbi[0m                                        [01;34mViewBSdocker[0m
-]0;/home/xie186$ 
-]0;/home/xie186$ 
-]0;/home/xie186$ 
-]0;/home/xie186$ 
-]0;/home/xie186$ 
-]0;/home/xie186$ pwd
-/home/xie186
-]0;/home/xie186$ 
-]0;/home/xie186$ ls
-[0m[01;32mABI_all_SNP.vcf[0m                             nohup.out
-[01;34manaconda3[0m                                   note_danshen.ipynb
-[01;34mbin[0m                                         [01;34mpearDB_anno[0m
-[01;34mbiodocker_viewbs_bak[0m                        PEAR.ipynb
-[01;34mbioinfo_with_perl[0m                           [01;34mperl5[0m
-[01;34mconda-bld[0m                                   [01;34mPictures[0m
-[01;36mdanshen_RNA_seq_metabolomics.ipynb[0m          [01;34mPublic[0m
-[01;36mDESeq2_time_series.ipynb[0m                    [01;34mR[0m
-[01;34mDesktop[0m                                     requirements.txt
-Dockerfile_ViewBS                           [01;31mresult_for_Xie_BJXNG18.tar.gz[0m
-[01;34mdocker_test[0m                                 Rplots.pdf
-[01;34mDocuments[0m                                   [01;34msalvia_RNA-seq[0m
-[01;34mdog_snp[0m                                     [01;34mSinogene[0m
-[01;34mdog_snp_chip[0m                                [01;34msnakemake_academy[0m
-DogWGS.ipynb                                [01;34msnap[0m
-[01;34mDownloads[0m                                   [01;34msoftware[0m
-examples.desktop                            [01;34mstatistics_with_R[0m
-FastqSummaryF1L1.txt                        TabOmics_GeCKOdata_map_stat.xlsx_0_1.ods
-[01;31mG2-2_S2_L001_R1_001.fastq.gz[0m                TabOmics_GeCKOdata_map_stat.xlsx_0.ods
-[01;34mGGPred[0m                                      TabOmics_GeCKOdata_map_stat.xlsx_1.ods
-[01;34mgithub_book[0m                                 [01;34mtbDocker[0m
-[01;34migv[0m                                         [01;34mtbDogDoc[0m
-inline-supplementary-material-1.xlsx_0.ods  [01;34mtbDogSNPchip[0m
-[01;34mjikai_data[0m                                  [01;34mTemplates[0m
-[01;34mjupyter_nb[0m                                  [01;34mtest[0m
-[01;34mkivy_dev[0m                                    test1
-[01;34mKivyMD-master[0m                               [01;34mtest_ara[0m
-[01;31mKivyMD-master.zip[0m                           [01;34mtest_crispr[0m
-[01;34mkivy_test[0m                                   test.sh
-[01;34mlib[0m                                         [01;34mtip4bioinformatics[0m
-[01;34mmaize_phasiRNA[0m                              Untitled1.ipynb
-[01;34mminiconda2[0m                                  untitled_1.ods
-[01;34mminiconda3[0m                                  Untitled2.ipynb
-mRNA_Phloem_vs_Xylem.DE_ALL.xls_0.ods       Untitled.ipynb
-[01;34mMusic[0m                                       [01;34mVideos[0m
-[01;34mncbi[0m                                        [01;34mViewBSdocker[0m
-]0;/home/xie186$ 
-]0;/home/xie186$ cp statistics_with_R/ statistics_with_R/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K linux[K[K[K[K[K[Kb[K bookdown_linux_notes
-cp: omitting directory 'statistics_with_R/'
-]0;/home/xie186$ 
-]0;/home/xie186$ 
-]0;/home/xie186$ 
-]0;/home/xie186$ cp statistics_with_R/ bookdown_linux_notes[C[C[C[C[C[1@ [1@-[1@r
-
 
 
 
@@ -1004,3 +541,468 @@ git]0;/home/xie186/statistics_with_R(base) $
 ]0;/home/xie186/statistics_with_R(base) $ git add /
 fatal: /: '/' is outside repository
 ]0;/home/xie186/statistics_with_R(base) $ git add /[K.
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ goit[K[K[Kit commit -m ::[K[K""U"p"d"a"t"e"
+[master 7ceaa29] Update
+ 6 files changed, 249 insertions(+), 245 deletions(-)
+ rewrite .Rproj.user/8F4F4022/console06/INDEX001 (76%)
+ rewrite .Rproj.user/8F4F4022/persistent-state (76%)
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ git push origin master
+error: cannot run rpostback-askpass: No such file or directory
+Username for 'https://github.com': xie186
+error: cannot run rpostback-askpass: No such file or directory
+Password for 'https://xie186@github.com': 
+Counting objects: 98, done.
+Delta compression using up to 4 threads.
+Compressing objects:   1% (1/91)   Compressing objects:   2% (2/91)   Compressing objects:   3% (3/91)   Compressing objects:   4% (4/91)   Compressing objects:   5% (5/91)   Compressing objects:   6% (6/91)   Compressing objects:   7% (7/91)   Compressing objects:   8% (8/91)   Compressing objects:   9% (9/91)   Compressing objects:  10% (10/91)   Compressing objects:  12% (11/91)   Compressing objects:  13% (12/91)   Compressing objects:  14% (13/91)   Compressing objects:  15% (14/91)   Compressing objects:  16% (15/91)   Compressing objects:  17% (16/91)   Compressing objects:  18% (17/91)   Compressing objects:  19% (18/91)   Compressing objects:  20% (19/91)   Compressing objects:  21% (20/91)   Compressing objects:  23% (21/91)   Compressing objects:  24% (22/91)   Compressing objects:  25% (23/91)   Compressing objects:  26% (24/91)   Compressing objects:  27% (25/91)   Compressing objects:  28% (26/91)   Compressing objects:  29% (27/91)   Compressing objects:  30% (28/91)   Compressing objects:  31% (29/91)   Compressing objects:  32% (30/91)   Compressing objects:  34% (31/91)   Compressing objects:  35% (32/91)   Compressing objects:  36% (33/91)   Compressing objects:  37% (34/91)   Compressing objects:  38% (35/91)   Compressing objects:  39% (36/91)   Compressing objects:  40% (37/91)   Compressing objects:  41% (38/91)   Compressing objects:  42% (39/91)   Compressing objects:  43% (40/91)   Compressing objects:  45% (41/91)   Compressing objects:  46% (42/91)   Compressing objects:  47% (43/91)   Compressing objects:  48% (44/91)   Compressing objects:  49% (45/91)   Compressing objects:  50% (46/91)   Compressing objects:  51% (47/91)   Compressing objects:  52% (48/91)   Compressing objects:  53% (49/91)   Compressing objects:  54% (50/91)   Compressing objects:  56% (51/91)   Compressing objects:  57% (52/91)   Compressing objects:  58% (53/91)   Compressing objects:  59% (54/91)   Compressing objects:  60% (55/91)   Compressing objects:  61% (56/91)   Compressing objects:  62% (57/91)   Compressing objects:  63% (58/91)   Compressing objects:  64% (59/91)   Compressing objects:  65% (60/91)   Compressing objects:  67% (61/91)   Compressing objects:  68% (62/91)   Compressing objects:  69% (63/91)   Compressing objects:  70% (64/91)   Compressing objects:  71% (65/91)   Compressing objects:  72% (66/91)   Compressing objects:  73% (67/91)   Compressing objects:  74% (68/91)   Compressing objects:  75% (69/91)   Compressing objects:  76% (70/91)   Compressing objects:  78% (71/91)   Compressing objects:  79% (72/91)   Compressing objects:  80% (73/91)   Compressing objects:  81% (74/91)   Compressing objects:  82% (75/91)   Compressing objects:  83% (76/91)   Compressing objects:  84% (77/91)   Compressing objects:  85% (78/91)   Compressing objects:  86% (79/91)   Compressing objects:  87% (80/91)   Compressing objects:  89% (81/91)   Compressing objects:  90% (82/91)   Compressing objects:  91% (83/91)   Compressing objects:  92% (84/91)   Compressing objects:  93% (85/91)   Compressing objects:  94% (86/91)   Compressing objects:  95% (87/91)   Compressing objects:  96% (88/91)   Compressing objects:  97% (89/91)   Compressing objects:  98% (90/91)   Compressing objects: 100% (91/91)   Compressing objects: 100% (91/91), done.
+Writing objects:   1% (1/98)   Writing objects:   2% (2/98)   Writing objects:   3% (3/98)   Writing objects:   4% (4/98)   Writing objects:   5% (5/98)   Writing objects:   6% (6/98)   Writing objects:   8% (8/98)   Writing objects:   9% (9/98)   Writing objects:  10% (10/98)   Writing objects:  11% (11/98)   Writing objects:  12% (12/98)   Writing objects:  13% (13/98)   Writing objects:  14% (14/98)   Writing objects:  15% (15/98)   Writing objects:  16% (16/98)   Writing objects:  17% (17/98)   Writing objects:  18% (18/98)   Writing objects:  19% (19/98)   Writing objects:  20% (20/98)   Writing objects:  21% (21/98)   Writing objects:  22% (22/98)   Writing objects:  23% (23/98)   Writing objects:  24% (24/98)   Writing objects:  25% (25/98)   Writing objects:  26% (26/98)   Writing objects:  27% (27/98)   Writing objects:  28% (28/98)   Writing objects:  29% (29/98)   Writing objects:  30% (30/98)   Writing objects:  31% (31/98)   Writing objects:  32% (32/98)   Writing objects:  33% (33/98)   Writing objects:  34% (34/98)   Writing objects:  35% (35/98)   Writing objects:  36% (36/98)   Writing objects:  37% (37/98)   Writing objects:  38% (38/98)   Writing objects:  39% (39/98)   Writing objects:  40% (40/98)   Writing objects:  41% (41/98)   Writing objects:  42% (42/98)   Writing objects:  43% (43/98)   Writing objects:  44% (44/98)   Writing objects:  45% (45/98)   Writing objects:  46% (46/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  47% (47/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  48% (48/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  50% (49/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  51% (50/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  52% (51/98), 1.05 MiB | 1.65 MiB/s   
+Writing objects:  53% (52/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  54% (53/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  55% (54/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  56% (55/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  57% (56/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  58% (57/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  59% (58/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  60% (59/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  62% (61/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  63% (62/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  64% (63/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  65% (64/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  66% (65/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  67% (66/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  68% (67/98), 1.05 MiB | 1.65 MiB/s   Writing objects:  69% (68/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  70% (69/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  71% (70/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  74% (73/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  75% (74/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  76% (75/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  77% (76/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  78% (77/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  79% (78/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  80% (79/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  81% (80/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  82% (81/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  83% (82/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  84% (83/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  85% (84/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  86% (85/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  87% (86/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  88% (87/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  89% (88/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  90% (89/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  91% (90/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  92% (91/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  93% (92/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  94% (93/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  95% (94/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  96% (95/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  97% (96/98), 2.65 MiB | 2.32 MiB/s   Writing objects:  98% (97/98), 2.65 MiB | 2.32 MiB/s   Writing objects: 100% (98/98), 2.65 MiB | 2.32 MiB/s   Writing objects: 100% (98/98), 2.73 MiB | 2.32 MiB/s, done.
+Total 98 (delta 43), reused 0 (delta 0)
+
+
+remote: Resolving deltas:   0% (0/43)   [Kremote: Resolving deltas:   2% (1/43)   [Kremote: Resolving deltas:   6% (3/43)   [Kremote: Resolving deltas:  11% (5/43)   [Kremote: Resolving deltas:  16% (7/43)   [Kremote: Resolving deltas:  18% (8/43)   [Kremote: Resolving deltas:  23% (10/43)   [Kremote: Resolving deltas:  27% (12/43)   [Kremote: Resolving deltas:  30% (13/43)   [Kremote: Resolving deltas:  32% (14/43)   [Kremote: Resolving deltas:  34% (15/43)   [Kremote: Resolving deltas:  37% (16/43)   [Kremote: Resolving deltas:  39% (17/43)   [Kremote: Resolving deltas:  41% (18/43)   [Kremote: Resolving deltas:  46% (20/43)   [Kremote: Resolving deltas:  48% (21/43)   [Kremote: Resolving deltas:  51% (22/43)   [Kremote: Resolving deltas:  67% (29/43)   [Kremote: Resolving deltas:  69% (30/43)   [Kremote: Resolving deltas:  72% (31/43)   [Kremote: Resolving deltas:  81% (35/43)   [Kremote: Resolving deltas:  83% (36/43)   [Kremote: Resolving deltas:  86% (37/43)   [Kremote: Resolving deltas:  88% (38/43)   [Kremote: Resolving deltas:  93% (40/43)   [Kremote: Resolving deltas:  95% (41/43)   [Kremote: Resolving deltas:  97% (42/43)   [Kremote: Resolving deltas: 100% (43/43)   [Kremote: Resolving deltas: 100% (43/43), completed with 26 local objects.[K
+
+
+To https://github.com/xie186/stat_note_with_r.git
+   34e08b4..7ceaa29  master -> master
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ git remote -v
+origin	https://github.com/xie186/stat_note_with_r.git (fetch)
+origin	https://github.com/xie186/stat_note_with_r.git (push)
+
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ ls
+00_R_intro.Rmd                                        13_intro_dplyr.Rmd        index.Rmd
+01_plot_in_R.Rmd                                      14_PCA.Rmd                LICENSE
+02_correlation_in_R.Rmd                               15_ml_random_forest.Rmd   ordered_Rmd.txt
+03_stand_dev_stand_err.Rmd                            16_QTLanalysis.Rmd        order_Rmd_file.sh
+04_ttest.Rmd                                          17_reference_resouce.Rmd  order_Rmd_file.sh.README
+05_linear_model.Rmd                                   [0m[01;34m_book[0m                     permutation_combinaiton.Rmd
+06_multi_linear_regression.Rmd                        [01;34m_bookdown_files[0m           pls_da.Rmd
+07_multiple_regresssion_with_an_interaction_term.Rmd  bookdown-minimal.Rproj    README.md
+08_bayesian_network.Rmd                               _bookdown.yml             reference.bib
+09_correlation_test.Rmd                               code.R                    scale.Rmd
+10_neg_binomial_count.Rmd                             [01;34mdata[0m                      [01;34mscripts[0m
+11_multiple_test_correction.Rmd                       data_transformation.Rmd   web_scraping.Rmd
+12_missing_values.Rmd                                 [01;34mdocs[0m                      Workspace.RData
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ grep ''i'n's't'a'l'p'[1P'.'[1P'l'.'p'a'c'k'a'g'e's'(')'[C[1P'[C *Rmd
+[35m[K00_R_intro.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"LaF")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"igraph") 
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"network") 
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"sna")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"visNetwork")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"threejs")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"ndtv")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"RColorBrewer") 
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"png")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"networkD3")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"animation")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"maps")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"geosphere")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K# [01;31m[Kinstall.packages([m[K"RColorBrewer")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K# [01;31m[Kinstall.packages([m[K"png")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K# [01;31m[Kinstall.packages([m[K"animation")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K# [01;31m[Kinstall.packages([m[K"visNetwork")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K# [01;31m[Kinstall.packages([m[K"threejs")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K# [01;31m[Kinstall.packages([m[K"networkD3")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K# [01;31m[Kinstall.packages([m[K"ndtv", dependencies=T)
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K# [01;31m[Kinstall.packages([m[K"maps")
+[35m[K01_plot_in_R.Rmd[m[K[36m[K:[m[K# [01;31m[Kinstall.packages([m[K"geosphere")
+[35m[K02_correlation_in_R.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"psych")
+[35m[K07_multiple_regresssion_with_an_interaction_term.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"UsingR")
+[35m[K08_bayesian_network.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"bnlearn")
+[35m[K08_bayesian_network.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[Klme4)
+[35m[K08_bayesian_network.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"bnlearn")
+[35m[K12_missing_values.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"mice")
+[35m[K12_missing_values.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"VIM")
+[35m[K13_intro_dplyr.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"dplyr")
+[35m[K14_PCA.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"corrplot")
+[35m[K14_PCA.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"FactoMineR")
+[35m[K14_PCA.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"FactoInvestigate")
+[35m[K15_ml_random_forest.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"AppliedPredictiveModeling")
+[35m[K15_ml_random_forest.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"caret")
+[35m[K15_ml_random_forest.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"ellipse")
+[35m[Kindex.Rmd[m[K[36m[K:[m[Kif(length(new.packages)) [01;31m[Kinstall.packages([m[Knew.packages)
+[35m[Kpermutation_combinaiton.Rmd[m[K[36m[K:[m[K[01;31m[Kinstall.packages([m[K"combinat")
+[35m[Kweb_scraping.Rmd[m[K[36m[K:[m[K#[01;31m[Kinstall.packages([m[K"RISmed")
+]0;/home/xie186/statistics_with_R(base) $ grep 'install.packages(' *Rmd |perl -e ''w'h'i'l'e'*'(')'[1P'[1P'[1P'(')'{'}'<){}'>){}'[C[C$}'_}'=}'~}''}''}'[C[1P}'[1P}'/}'/}'(/}')/}'")/}'")/}'[C[1P)/}'[1P)/}'"()/}'[C[C[C"/}'\"/}'\"()\"/}'[C[C.)\"/}'*)\"/}'=$_=~/\"(.*)\"/}'(=$_=~/\"(.*)\"/}')=$_=~/\"(.*)\"/}'$)=$_=~/\"(.*)\"/}'a)=$_=~/\"(.*)\"/}'a)=$_=~/\"(.*)\"/}'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C;}' }'p}'r}'i}'n}'t}' }'"}'"}';}'$";}'a";}'a";}'\";}'n";}'
+LaF
+igraph
+network
+sna
+visNetwork
+threejs
+ndtv
+RColorBrewer
+png
+networkD3
+animation
+maps
+geosphere
+RColorBrewer
+png
+animation
+visNetwork
+threejs
+networkD3
+ndtv
+maps
+geosphere
+psych
+UsingR
+bnlearn
+
+bnlearn
+mice
+VIM
+dplyr
+corrplot
+FactoMineR
+FactoInvestigate
+AppliedPredictiveModeling
+caret
+ellipse
+
+combinat
+RISmed
+]0;/home/xie186/statistics_with_R(base) $ grep 'install.packages(' *Rmd |perl -e 'while(<>){($aa)=$_=~/\"(.*)\"/; print "$aa\n";}'[C$aa\n";}'_$aa\n";}' $aa\n";}'
+00_R_intro.Rmd:#install.packages("LaF")
+ LaF
+01_plot_in_R.Rmd:install.packages("igraph") 
+ igraph
+01_plot_in_R.Rmd:install.packages("network") 
+ network
+01_plot_in_R.Rmd:install.packages("sna")
+ sna
+01_plot_in_R.Rmd:install.packages("visNetwork")
+ visNetwork
+01_plot_in_R.Rmd:install.packages("threejs")
+ threejs
+01_plot_in_R.Rmd:install.packages("ndtv")
+ ndtv
+01_plot_in_R.Rmd:install.packages("RColorBrewer") 
+ RColorBrewer
+01_plot_in_R.Rmd:install.packages("png")
+ png
+01_plot_in_R.Rmd:install.packages("networkD3")
+ networkD3
+01_plot_in_R.Rmd:install.packages("animation")
+ animation
+01_plot_in_R.Rmd:install.packages("maps")
+ maps
+01_plot_in_R.Rmd:install.packages("geosphere")
+ geosphere
+01_plot_in_R.Rmd:# install.packages("RColorBrewer")
+ RColorBrewer
+01_plot_in_R.Rmd:# install.packages("png")
+ png
+01_plot_in_R.Rmd:# install.packages("animation")
+ animation
+01_plot_in_R.Rmd:# install.packages("visNetwork")
+ visNetwork
+01_plot_in_R.Rmd:# install.packages("threejs")
+ threejs
+01_plot_in_R.Rmd:# install.packages("networkD3")
+ networkD3
+01_plot_in_R.Rmd:# install.packages("ndtv", dependencies=T)
+ ndtv
+01_plot_in_R.Rmd:# install.packages("maps")
+ maps
+01_plot_in_R.Rmd:# install.packages("geosphere")
+ geosphere
+02_correlation_in_R.Rmd:#install.packages("psych")
+ psych
+07_multiple_regresssion_with_an_interaction_term.Rmd:#install.packages("UsingR")
+ UsingR
+08_bayesian_network.Rmd:#install.packages("bnlearn")
+ bnlearn
+08_bayesian_network.Rmd:#install.packages(lme4)
+ 
+08_bayesian_network.Rmd:#install.packages("bnlearn")
+ bnlearn
+12_missing_values.Rmd:#install.packages("mice")
+ mice
+12_missing_values.Rmd:#install.packages("VIM")
+ VIM
+13_intro_dplyr.Rmd:#install.packages("dplyr")
+ dplyr
+14_PCA.Rmd:#install.packages("corrplot")
+ corrplot
+14_PCA.Rmd:#install.packages("FactoMineR")
+ FactoMineR
+14_PCA.Rmd:#install.packages("FactoInvestigate")
+ FactoInvestigate
+15_ml_random_forest.Rmd:#install.packages("AppliedPredictiveModeling")
+ AppliedPredictiveModeling
+15_ml_random_forest.Rmd:#install.packages("caret")
+ caret
+15_ml_random_forest.Rmd:#install.packages("ellipse")
+ ellipse
+index.Rmd:if(length(new.packages)) install.packages(new.packages)
+ 
+permutation_combinaiton.Rmd:install.packages("combinat")
+ combinat
+web_scraping.Rmd:#install.packages("RISmed")
+ RISmed
+]0;/home/xie186/statistics_with_R(base) $ grep 'install.packages(' *Rmd |perl -e 'while(<>){($aa)=$_=~/\"(.*)\"/; print "$_ $aa\n";}'[1@c[1@h[1@o[1@m[1@p[1@;[1@ 
+00_R_intro.Rmd:#install.packages("LaF") LaF
+01_plot_in_R.Rmd:install.packages("igraph")  igraph
+01_plot_in_R.Rmd:install.packages("network")  network
+01_plot_in_R.Rmd:install.packages("sna") sna
+01_plot_in_R.Rmd:install.packages("visNetwork") visNetwork
+01_plot_in_R.Rmd:install.packages("threejs") threejs
+01_plot_in_R.Rmd:install.packages("ndtv") ndtv
+01_plot_in_R.Rmd:install.packages("RColorBrewer")  RColorBrewer
+01_plot_in_R.Rmd:install.packages("png") png
+01_plot_in_R.Rmd:install.packages("networkD3") networkD3
+01_plot_in_R.Rmd:install.packages("animation") animation
+01_plot_in_R.Rmd:install.packages("maps") maps
+01_plot_in_R.Rmd:install.packages("geosphere") geosphere
+01_plot_in_R.Rmd:# install.packages("RColorBrewer") RColorBrewer
+01_plot_in_R.Rmd:# install.packages("png") png
+01_plot_in_R.Rmd:# install.packages("animation") animation
+01_plot_in_R.Rmd:# install.packages("visNetwork") visNetwork
+01_plot_in_R.Rmd:# install.packages("threejs") threejs
+01_plot_in_R.Rmd:# install.packages("networkD3") networkD3
+01_plot_in_R.Rmd:# install.packages("ndtv", dependencies=T) ndtv
+01_plot_in_R.Rmd:# install.packages("maps") maps
+01_plot_in_R.Rmd:# install.packages("geosphere") geosphere
+02_correlation_in_R.Rmd:#install.packages("psych") psych
+07_multiple_regresssion_with_an_interaction_term.Rmd:#install.packages("UsingR") UsingR
+08_bayesian_network.Rmd:#install.packages("bnlearn") bnlearn
+08_bayesian_network.Rmd:#install.packages(lme4) 
+08_bayesian_network.Rmd:#install.packages("bnlearn") bnlearn
+12_missing_values.Rmd:#install.packages("mice") mice
+12_missing_values.Rmd:#install.packages("VIM") VIM
+13_intro_dplyr.Rmd:#install.packages("dplyr") dplyr
+14_PCA.Rmd:#install.packages("corrplot") corrplot
+14_PCA.Rmd:#install.packages("FactoMineR") FactoMineR
+14_PCA.Rmd:#install.packages("FactoInvestigate") FactoInvestigate
+15_ml_random_forest.Rmd:#install.packages("AppliedPredictiveModeling") AppliedPredictiveModeling
+15_ml_random_forest.Rmd:#install.packages("caret") caret
+15_ml_random_forest.Rmd:#install.packages("ellipse") ellipse
+index.Rmd:if(length(new.packages)) install.packages(new.packages) 
+permutation_combinaiton.Rmd:install.packages("combinat") combinat
+web_scraping.Rmd:#install.packages("RISmed") RISmed
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ grep 'install.packages(' *Rmd |perl -e 'while(<>){chomp; ($aa)=$_=~/\"(.*)\"/; print "$_ $aa\n";}' [1P[1@ [1P[1P[1@ [1P[1P[C[1P[1@ 
+ LaF  igraph  network  sna  visNetwork  threejs  ndtv  RColorBrewer  png  networkD3  animation  maps  geosphere  RColorBrewer  png  animation  visNetwork  threejs  networkD3  ndtv  maps  geosphere  psych  UsingR  bnlearn    bnlearn  mice  VIM  dplyr  corrplot  FactoMineR  FactoInvestigate  AppliedPredictiveModeling  caret  ellipse    combinat  RISmed ]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ grep 'install.packages(' *Rmd |perl -e 'while(<>){chomp; ($aa)=$_=~/\"(.*)\"/; print " $aa ";}' [C[1@"[1@"[C[C[C[C[1@.
+Scalar found where operator expected at -e line 1, near "" "$aa"
+	(Missing operator before $aa?)
+String found where operator expected at -e line 1, near "$aa". ""
+	(Missing operator before ". "?)
+syntax error at -e line 1, near "" "$aa"
+Execution of -e aborted due to compilation errors.
+]0;/home/xie186/statistics_with_R(base) $ grep 'install.packages(' *Rmd |perl -e 'while(<>){chomp; ($aa)=$_=~/\"(.*)\"/; print " "$aa". ";}' [1P[1P[1@,[1@\[1@\
+ "LaF", "igraph", "network", "sna", "visNetwork", "threejs", "ndtv", "RColorBrewer", "png", "networkD3", "animation", "maps", "geosphere", "RColorBrewer", "png", "animation", "visNetwork", "threejs", "networkD3", "ndtv", "maps", "geosphere", "psych", "UsingR", "bnlearn", "", "bnlearn", "mice", "VIM", "dplyr", "corrplot", "FactoMineR", "FactoInvestigate", "AppliedPredictiveModeling", "caret", "ellipse", "", "combinat", "RISmed",]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ grep 'install.packages(' *Rmd |perl -e 'while(<>){chomp; ($aa)=$_=~/\"(.*)\"/; print " \"$aa\",";}' 
+ "LaF", "igraph", "network", "sna", "visNetwork", "threejs", "ndtv", "RColorBrewer", "png", "networkD3", "animation", "maps", "geosphere", "RColorBrewer", "png", "animation", "visNetwork", "threejs", "networkD3", "ndtv", "maps", "geosphere", "psych", "UsingR", "bnlearn", "", "bnlearn", "mice", "VIM", "dplyr", "corrplot", "FactoMineR", "FactoInvestigate", "AppliedPredictiveModeling", "caret", "ellipse", "", "combinat", "RISmed",]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ ls
+00_R_intro.Rmd                                        13_intro_dplyr.Rmd        index.Rmd
+01_plot_in_R.Rmd                                      14_PCA.Rmd                LICENSE
+02_correlation_in_R.Rmd                               15_ml_random_forest.Rmd   ordered_Rmd.txt
+03_stand_dev_stand_err.Rmd                            16_QTLanalysis.Rmd        order_Rmd_file.sh
+04_ttest.Rmd                                          17_reference_resouce.Rmd  order_Rmd_file.sh.README
+05_linear_model.Rmd                                   [0m[01;34m_book[0m                     permutation_combinaiton.Rmd
+06_multi_linear_regression.Rmd                        [01;34m_bookdown_files[0m           pls_da.Rmd
+07_multiple_regresssion_with_an_interaction_term.Rmd  bookdown-minimal.Rproj    README.md
+08_bayesian_network.Rmd                               _bookdown.yml             reference.bib
+09_correlation_test.Rmd                               code.R                    scale.Rmd
+10_neg_binomial_count.Rmd                             [01;34mdata[0m                      [01;34mscripts[0m
+11_multiple_test_correction.Rmd                       data_transformation.Rmd   web_scraping.Rmd
+12_missing_values.Rmd                                 [01;34mdocs[0m                      Workspace.RData
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ vi sste[Kste[K[K[K[K[K[K[K[K[Kls *sh
+order_Rmd_file.sh
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ vi [K[K[K
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ ls
+00_R_intro.Rmd                                        13_intro_dplyr.Rmd        index.Rmd
+01_plot_in_R.Rmd                                      14_PCA.Rmd                LICENSE
+02_correlation_in_R.Rmd                               15_ml_random_forest.Rmd   ordered_Rmd.txt
+03_stand_dev_stand_err.Rmd                            16_QTLanalysis.Rmd        order_Rmd_file.sh
+04_ttest.Rmd                                          17_reference_resouce.Rmd  order_Rmd_file.sh.README
+05_linear_model.Rmd                                   [0m[01;34m_book[0m                     permutation_combinaiton.Rmd
+06_multi_linear_regression.Rmd                        [01;34m_bookdown_files[0m           pls_da.Rmd
+07_multiple_regresssion_with_an_interaction_term.Rmd  bookdown-minimal.Rproj    README.md
+08_bayesian_network.Rmd                               _bookdown.yml             reference.bib
+09_correlation_test.Rmd                               code.R                    scale.Rmd
+10_neg_binomial_count.Rmd                             [01;34mdata[0m                      [01;34mscripts[0m
+11_multiple_test_correction.Rmd                       data_transformation.Rmd   web_scraping.Rmd
+12_missing_values.Rmd                                 [01;34mdocs[0m                      Workspace.RData
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ pwd
+/home/xie186/statistics_with_R
+]0;/home/xie186/statistics_with_R(base) $ 
+dpkg -S /usr/include/GL/gl.h
+
+]0;/home/xie186/statistics_with_R(base) $ dpkg -S /usr/include/GL/gl.h
+mesa-common-dev:amd64: /usr/include/GL/gl.h
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ sudo apt-get install mesa-common-dev
+[sudo] password for xie186: 
+Sorry, try again.
+[sudo] password for xie186: 
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+mesa-common-dev is already the newest version (18.0.5-0ubuntu0~16.04.1).
+mesa-common-dev set to manually installed.
+The following packages were automatically installed and are no longer required:
+  cdbs dh-translations intltool libblas-dev libjs-sphinxdoc liblapack-dev libllvm5.0 libmariadb2
+  libpcre3-dev libpcre32-3 libpcrecpp0v5 libreadline-dev libreadline6-dev linux-headers-4.15.0-32
+  linux-headers-4.15.0-32-generic linux-headers-4.15.0-33 linux-headers-4.15.0-33-generic
+  linux-headers-4.15.0-34 linux-headers-4.15.0-34-generic linux-headers-4.15.0-39
+  linux-headers-4.15.0-39-generic linux-headers-4.15.0-42 linux-headers-4.15.0-42-generic
+  linux-headers-4.15.0-43 linux-headers-4.15.0-43-generic linux-image-4.15.0-32-generic
+  linux-image-4.15.0-33-generic linux-image-4.15.0-34-generic linux-image-4.15.0-39-generic
+  linux-image-4.15.0-42-generic linux-image-4.15.0-43-generic linux-modules-4.15.0-32-generic
+  linux-modules-4.15.0-33-generic linux-modules-4.15.0-34-generic linux-modules-4.15.0-39-generic
+  linux-modules-4.15.0-42-generic linux-modules-4.15.0-43-generic python-gst-1.0 python-scour
+  python3-numpy python3-rpy2 python3-yaml qtdeclarative5-controls-plugin
+  qtdeclarative5-dialogs-plugin r-base-core r-base-dev r-base-html r-cran-boot r-cran-class
+  r-cran-cluster r-cran-codetools r-cran-dbi r-cran-foreign r-cran-lattice r-cran-mass
+  r-cran-matrix r-cran-mgcv r-cran-nlme r-cran-rpart r-cran-spatial r-cran-survival r-doc-html
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 71 not upgraded.
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ sudo apt-get install mesa-common-dev[C[C[C[C[C[C[C[C[C[8Pdpkg -S /usr/include/GL/gl.h
+mesa-common-dev:amd64: /usr/include/GL/gl.h
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ sudo apt-get install libglu1-mesa-dev
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  cdbs dh-translations intltool libblas-dev libjs-sphinxdoc liblapack-dev libllvm5.0 libmariadb2
+  libpcre3-dev libpcre32-3 libpcrecpp0v5 libreadline-dev libreadline6-dev linux-headers-4.15.0-32
+  linux-headers-4.15.0-32-generic linux-headers-4.15.0-33 linux-headers-4.15.0-33-generic
+  linux-headers-4.15.0-34 linux-headers-4.15.0-34-generic linux-headers-4.15.0-39
+  linux-headers-4.15.0-39-generic linux-headers-4.15.0-42 linux-headers-4.15.0-42-generic
+  linux-headers-4.15.0-43 linux-headers-4.15.0-43-generic linux-image-4.15.0-32-generic
+  linux-image-4.15.0-33-generic linux-image-4.15.0-34-generic linux-image-4.15.0-39-generic
+  linux-image-4.15.0-42-generic linux-image-4.15.0-43-generic linux-modules-4.15.0-32-generic
+  linux-modules-4.15.0-33-generic linux-modules-4.15.0-34-generic linux-modules-4.15.0-39-generic
+  linux-modules-4.15.0-42-generic linux-modules-4.15.0-43-generic python-gst-1.0 python-scour
+  python3-numpy python3-rpy2 python3-yaml qtdeclarative5-controls-plugin
+  qtdeclarative5-dialogs-plugin r-base-core r-base-dev r-base-html r-cran-boot r-cran-class
+  r-cran-cluster r-cran-codetools r-cran-dbi r-cran-foreign r-cran-lattice r-cran-mass
+  r-cran-matrix r-cran-mgcv r-cran-nlme r-cran-rpart r-cran-spatial r-cran-survival r-doc-html
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  libglu1-mesa-dev
+0 upgraded, 1 newly installed, 0 to remove and 71 not upgraded.
+Need to get 202 kB of archives.
+After this operation, 952 kB of additional disk space will be used.
+0% [Working]0% [Waiting for headers]                        Get:1 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libglu1-mesa-dev amd64 9.0.0-2.1 [202 kB]
+1% [1 libglu1-mesa-dev 2,613 B/202 kB 1%]                                         100% [Working]              Fetched 202 kB in 0s (302 kB/s)
+Selecting previously unselected package libglu1-mesa-dev:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 488550 files and directories currently installed.)
+Preparing to unpack .../libglu1-mesa-dev_9.0.0-2.1_amd64.deb ...
+Unpacking libglu1-mesa-dev:amd64 (9.0.0-2.1) ...
+Setting up libglu1-mesa-dev:amd64 (9.0.0-2.1) ...
+
+
+
+
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ deb https://cloud.r-project.org/bin/linux/ubuntu cosmic-cran35/
+No command 'deb' found, did you mean:
+ Command 'dex' from package 'dex' (universe)
+ Command 'debc' from package 'devscripts' (main)
+ Command 'debi' from package 'devscripts' (main)
+ Command 'deb3' from package 'quilt' (universe)
+ Command 'dub' from package 'dub' (universe)
+ Command 'xdeb' from package 'xdeb' (universe)
+ Command 'dab' from package 'bsdgames' (universe)
+ Command 'derb' from package 'icu-devtools' (main)
+deb: command not found
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ deb https://cloud.r-project.org/bin/linux/ubuntu cosmic-cran35/[C[C[C[C[C[C[C[C[C[Ksudo apt isnt[K[K[Knstall dev[Kb
+[sudo] password for xie186: 
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+E: Unable to locate package deb
+]0;/home/xie186/statistics_with_R(base) $ 
+]0;/home/xie186/statistics_with_R(base) $ 
+[K$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ pwd
+/home/xie186/statistics_with_R
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ ls
+00_R_intro.Rmd                                        15_ml_random_forest.Rmd   LICENSE
+01_plot_in_R.Rmd                                      16_QTLanalysis.Rmd        ordered_Rmd.txt
+02_correlation_in_R.Rmd                               17_reference_resouce.Rmd  order_Rmd_file.sh
+03_stand_dev_stand_err.Rmd                            bayesian_modeling.Rmd     order_Rmd_file.sh.README
+04_ttest.Rmd                                          bioinfBookXIE186.Rmd      overdispersion.Rmd
+05_linear_model.Rmd                                   [0m[01;34m_book[0m                     permutation_combinaiton.Rmd
+06_multi_linear_regression.Rmd                        [01;34m_bookdown_files[0m           pls_da.Rmd
+07_multiple_regresssion_with_an_interaction_term.Rmd  bookdown-minimal.Rproj    README.md
+08_bayesian_network.Rmd                               _bookdown.yml             reference.bib
+09_correlation_test.Rmd                               code.R                    scale.Rmd
+10_neg_binomial_count.Rmd                             [01;34mdata[0m                      [01;34mscripts[0m
+11_multiple_test_correction.Rmd                       data_transformation.Rmd   web_scraping.Rmd
+12_missing_values.Rmd                                 [01;34mdocs[0m                      Workspace.RData
+13_intro_dplyr.Rmd                                    goodmess_of_fit.Rmd
+14_PCA.Rmd                                            index.Rmd
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ [K$ sudo apt-get build-dep r-cran-foo
+[sudo] password for xie186: 
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+E: You must put some 'source' URIs in your sources.list
+]0;/home/xie186/statistics_with_R$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DA B9
+Executing: /tmp/tmp.fdIEiIC546/gpg.1.sh --keyserver
+keyserver.ubuntu.com
+--recv-keys
+E298A3A825C0D65DFD57CBB651716619E084DAB9
+gpg: requesting key E084DAB9 from hkp server keyserver.ubuntu.com
+gpg: key E084DAB9: "Michael Rutter <marutter@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ pwd
+/home/xie186/statistics_with_R
+]0;/home/xie186/statistics_with_R$ 
+]0;/home/xie186/statistics_with_R$ 

@@ -1,0 +1,22 @@
+# Permutation and combination
+
+As a matter of fact, a permutation is an ordered combination. There are basically two types of permutations, with repetition (or replacement) and without repetition (without replacement).
+
+
+```{r}
+require(combinat)
+permn(3)
+combn(3, 2)
+```
+
+```{r}
+length(permn(3))
+dim(combn(3,2))[2]
+```
+
+
+## Reference
+
+Combinations and Permutations: https://www.mathsisfun.com/combinatorics/combinations-permutations.html
+
+Combinations and permutations in R: https://davetang.org/muse/2013/09/09/combinations-and-permutations-in-r/
