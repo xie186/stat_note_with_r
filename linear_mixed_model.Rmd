@@ -1,0 +1,74 @@
+# Linear mixed model in R
+
+
+## Data from an Oats Field Trial
+
+The Oats data frame has 72 rows and 4 columns.
+
+This data frame contains the following columns:
+
+* __Block__: an ordered factor with levels VI < V < III < IV < II < I
+
+* __Variety__: a factor with levels Golden Rain Marvellous Victory
+
+* __nitro__: a numeric vector
+
+* __yield__: a numeric vector
+
+
+```{r}
+library(MASS)
+
+library(summarytools)
+dfSummary(oats)
+```
+
+```{r}
+summary(oats)
+```
+
+
+## Data visulization
+
+```{r}
+library(ggplot2)
+ggplot(oats, aes(x = V, y = Y)) + 
+    geom_point()
+```
+
+
+```{r}
+library(ggplot2)
+ggplot(oats, aes(x = V, y = Y, color = N)) + 
+    geom_point() + facet_wrap(~N, nrow = 1)
+```
+
+```{r}
+library(ggplot2)
+ggplot(oats, aes(x = N, y = Y, color = N)) + 
+    geom_point() + facet_wrap(~V, nrow = 1)
+```
+
+
+```{r}
+library(ggplot2)
+ggplot(oats, aes(x = N, y = Y, color = N)) + 
+    geom_boxplot() + 
+    geom_point() + facet_wrap(~V, nrow = 1)
+```
+
+
+## Mixed linear model
+
+```{r}
+politeness=
+read.csv("http://www.bodowinter.com/tutorial/politeness_data.csv")
+head(politeness)
+
+```
+
+
+```{r}
+data(Oats)
+```
+

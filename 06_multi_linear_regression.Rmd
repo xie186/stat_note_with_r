@@ -41,11 +41,6 @@ head(tab)
 
 
 
-## Mixed linear model
 
-```{r}
-politeness=
-read.csv("http://www.bodowinter.com/tutorial/politeness_data.csv")
-head(politeness)
 
-```
+
