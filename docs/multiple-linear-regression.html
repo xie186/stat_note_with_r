@@ -186,7 +186,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>7</b> MRG</a><ul>
 <li class="chapter" data-level="7.1" data-path="mrg.html"><a href="mrg.html#read-the-data-1"><i class="fa fa-check"></i><b>7.1</b> Read the data</a></li>
-<li class="chapter" data-level="7.2" data-path="mrg.html"><a href="mrg.html#mixed-linear-model"><i class="fa fa-check"></i><b>7.2</b> Mixed linear model</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>8</b> Multiple linear regression</a><ul>
 <li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-4"><i class="fa fa-check"></i><b>8.1</b> </a></li>
@@ -288,6 +287,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="25.1.2" data-path="web-scraping.html"><a href="web-scraping.html#search-keyword"><i class="fa fa-check"></i><b>25.1.2</b> Search keyword</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="26" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html"><i class="fa fa-check"></i><b>26</b> Linear mixed model in R</a><ul>
+<li class="chapter" data-level="26.1" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#data-from-an-oats-field-trial"><i class="fa fa-check"></i><b>26.1</b> Data from an Oats Field Trial</a></li>
+<li class="chapter" data-level="26.2" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#data-visulization"><i class="fa fa-check"></i><b>26.2</b> Data visulization</a></li>
+<li class="chapter" data-level="26.3" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#mixed-linear-model"><i class="fa fa-check"></i><b>26.3</b> Mixed linear model</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -316,16 +320,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## [1] &quot;Ozone&quot;   &quot;Solar.R&quot; &quot;Wind&quot;    &quot;Temp&quot;    &quot;Month&quot;   &quot;Day&quot;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(graphics)
 <span class="kw">pairs</span>(airquality, <span class="dt">panel =</span> panel.smooth, <span class="dt">main =</span> <span class="st">&quot;airquality data&quot;</span>)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-33-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-32-1.png" width="576" /></p>
 <p>A formula of the form <code>y ~ x | a</code> indicates that plots of <code>y</code> versus <code>x</code> should be produced conditional on the variable <code>a</code>. A formula of the form <code>y ~ x| a * b</code> indicates that plots of <code>y</code> versus <code>x</code> should be produced conditional on the two variables <code>a</code> and <code>b</code></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">coplot</span>(Ozone<span class="op">~</span>Solar.R<span class="op">|</span>Wind,  <span class="dt">panel =</span> panel.smooth, airquality)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-34-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-33-1.png" width="576" /></p>
 <pre><code>## 
 ##  Missing rows: 5, 6, 10, 11, 25, 26, 27, 32, 33, 34, 35, 36, 37, 39, 42, 43, 45, 46, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 65, 72, 75, 83, 84, 96, 97, 98, 102, 103, 107, 115, 119, 150</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">model2 =<span class="st"> </span><span class="kw">lm</span>(Ozone<span class="op">~</span>Solar.R<span class="op">*</span>Wind, airquality)</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="co"># Change the panel layout to 2 x 2</span>
 <span class="kw">plot</span>(model2)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-36-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-35-1.png" width="576" /></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>)) <span class="co"># Change back to 1 x 1</span></code></pre>
 <ol style="list-style-type: decimal">
 <li>Residuals vs Fitted</li>
@@ -352,7 +356,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre class="sourceCode r"><code class="sourceCode r">model_fs =<span class="st"> </span><span class="kw">lm</span>(fheight<span class="op">~</span>sheight, father.son)</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="co"># Change the panel layout to 2 x 2</span>
 <span class="kw">plot</span>(model_fs)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-39-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-38-1.png" width="576" /></p>
 </div>
 <div id="section-5" class="section level2">
 <h2><span class="header-section-number">8.2</span> </h2>
@@ -382,7 +386,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span class="kw">termplot</span>(model2, <span class="dt">partial.resid=</span><span class="ot">TRUE</span>, <span class="dt">col.res =</span> <span class="st">&quot;royalblue&quot;</span>)</code></pre>
 <pre><code>## Warning in termplot(model2, partial.resid = TRUE, col.res = &quot;royalblue&quot;):
 ## &#39;model&#39; appears to involve interactions: see the help page</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-41-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-40-1.png" width="576" /></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(airquality<span class="op">$</span>Solar.R)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
 ##     7.0   115.8   205.0   185.9   258.8   334.0       7</code></pre>
@@ -409,7 +413,7 @@ p3 =<span class="st"> </span><span class="kw">predict</span>(model2, <span class
 <span class="kw">lines</span>(p1, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)
 <span class="kw">lines</span>(p2, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)
 <span class="kw">lines</span>(p3, <span class="dt">col=</span><span class="st">&quot;darkgreen&quot;</span>)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-45-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-44-1.png" width="576" /></p>
 
 </div>
 </div>

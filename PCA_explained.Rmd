@@ -1,0 +1,51 @@
+# PCA 
+
+
+## Variance explained 
+
+```{r}
+set.seed(2018)
+mx <- matrix(rnorm(4*2), nrow=4, ncol=2)
+mx <- cbind(mx, (mx[,1]+mx[,2])/2 + rnorm(4, sd=0.4))
+mx
+
+```
+
+
+```{r}
+vars <- apply(mx, 2, var)
+vars
+```
+
+Note that these are different from true population variances, which we know to be equal to 1, 1, and 0.66, respectively.
+
+When talking about PCA, the sum of the sample variances of all individual variables is called the total variance. If we divide individual variances by the total variance, we’ll see how much variance each variable explains:
+
+```{r}
+vars/sum(vars)
+
+```
+
+
+The highest fraction of explained variance among these variables is 53%, and the lowest one is 17%. We can also compute these fractions for subsets of variables. For instance, variables 1 and 2 together explain 83% of the total variance, and variables 1 and 3 explain 47%.
+
+
+```{r}
+pca <- prcomp(mx, retx=T)
+mx_transformed <- pca$x
+mx_transformed
+```
+```{r}
+vars_transformed <- apply(mx_transformed, 2, var)
+# or: pca$sdev^2
+vars_transformed
+```
+
+```{r}
+vars_transformed/sum(vars_transformed)
+```
+
+Reference: 
+
+https://ro-che.info/articles/2017-12-11-pca-explained-variance
+

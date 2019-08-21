@@ -1,0 +1,28 @@
+#  Survival Analysis Basics
+
+Survival analysis correspnds to a set statstical aapproaches used to investifvate the time it takes for an event of interest to occur. 
+
+
+Survival analysis is used in a variety of field such as:
+
+Cancer studies for patients survival time analyses, Sociology for “event-history analysis”, and in engineering for “failure-time analysis”.
+
+In cancer studies, typical research questions are like:
+
+* What is the impact of certain clinical characteristics on patient’s survival
+* What is the probability that an individual survives 3 years?
+* Are there differences in survival between groups of patients?
+
+
+In cancer studies, most of survival analyses use the following methods:
+
+* Kaplan-Meier plots to visualize survival curves
+
+* Log-rank test to compare the survival curves of two or more groups
+
+* Cox proportional hazards regression to describe the effect of variables on survival.
+
+
+# Reference
+
+http://www.sthda.com/english/wiki/survival-analysis-basics

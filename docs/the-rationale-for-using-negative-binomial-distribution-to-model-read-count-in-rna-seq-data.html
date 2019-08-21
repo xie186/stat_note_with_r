@@ -186,7 +186,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>7</b> MRG</a><ul>
 <li class="chapter" data-level="7.1" data-path="mrg.html"><a href="mrg.html#read-the-data-1"><i class="fa fa-check"></i><b>7.1</b> Read the data</a></li>
-<li class="chapter" data-level="7.2" data-path="mrg.html"><a href="mrg.html#mixed-linear-model"><i class="fa fa-check"></i><b>7.2</b> Mixed linear model</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>8</b> Multiple linear regression</a><ul>
 <li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-4"><i class="fa fa-check"></i><b>8.1</b> </a></li>
@@ -288,6 +287,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="25.1.2" data-path="web-scraping.html"><a href="web-scraping.html#search-keyword"><i class="fa fa-check"></i><b>25.1.2</b> Search keyword</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="26" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html"><i class="fa fa-check"></i><b>26</b> Linear mixed model in R</a><ul>
+<li class="chapter" data-level="26.1" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#data-from-an-oats-field-trial"><i class="fa fa-check"></i><b>26.1</b> Data from an Oats Field Trial</a></li>
+<li class="chapter" data-level="26.2" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#data-visulization"><i class="fa fa-check"></i><b>26.2</b> Data visulization</a></li>
+<li class="chapter" data-level="26.3" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#mixed-linear-model"><i class="fa fa-check"></i><b>26.3</b> Mixed linear model</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -336,9 +340,9 @@ obs_pios &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class
 ##   15 
 ##    1</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(obs_nb, <span class="dt">breaks =</span> <span class="dv">1000</span>)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-53-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-52-1.png" width="576" /></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(obs_pios, <span class="dt">breaks =</span> <span class="dv">1000</span>)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-54-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-53-1.png" width="576" /></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(obs_nb)</code></pre>
 <pre><code>## [1] 9.949713</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(obs_pios)</code></pre>
@@ -351,7 +355,7 @@ dist_nb =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">N
     dist_nb[i] =<span class="st"> </span><span class="kw">var</span>(obs_nb_tem)<span class="op">/</span><span class="kw">mean</span>(obs_nb_tem)
 }
 <span class="kw">hist</span>(dist_nb)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-56-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-55-1.png" width="576" /></p>
 <pre class="sourceCode r"><code class="sourceCode r">n =<span class="st"> </span><span class="dv">10000</span>
 dist_pios =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)
 <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n){
@@ -359,10 +363,10 @@ dist_pios =<span class="st"> </span><span class="kw">rep</span>(<span class="ot"
     dist_pios[i] =<span class="st"> </span><span class="kw">var</span>(obs_pois_tem)<span class="op">/</span><span class="kw">mean</span>(obs_pois_tem)
 }
 <span class="kw">hist</span>(dist_pios)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-57-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-56-1.png" width="576" /></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(dist_nb <span class="op">-</span><span class="st"> </span>dist_pios, <span class="dt">breaks=</span><span class="dv">100</span>, <span class="dt">col =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="dt">border =</span> <span class="ot">NA</span>)
 <span class="kw">abline</span>(<span class="dt">v=</span><span class="dv">0</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">lty=</span><span class="st">&quot;dashed&quot;</span>)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-58-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-57-1.png" width="576" /></p>
 <div id="real-data" class="section level3">
 <h3><span class="header-section-number">10.1.1</span> Real data</h3>
 <pre class="sourceCode r"><code class="sourceCode r">read_count =<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;data/yeast_EV_DNMT3B_count.tab&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">head=</span>T)
@@ -380,7 +384,7 @@ read_count_sub =<span class="st"> </span>read_count[, <span class="kw">c</span>(
 <pre><code>##       Min.    1st Qu.     Median       Mean    3rd Qu.       Max. 
 ##      -6078          1        623    1058496       5794 2026890302</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mean_var_diff,<span class="dt">breaks=</span><span class="dv">100000</span>,<span class="dt">xlim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">50000</span>,<span class="dv">100000</span>))</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-59-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-58-1.png" width="576" /></p>
 </div>
 </div>
 <div id="reference-9" class="section level2">

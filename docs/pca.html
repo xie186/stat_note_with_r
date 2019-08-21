@@ -186,7 +186,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>7</b> MRG</a><ul>
 <li class="chapter" data-level="7.1" data-path="mrg.html"><a href="mrg.html#read-the-data-1"><i class="fa fa-check"></i><b>7.1</b> Read the data</a></li>
-<li class="chapter" data-level="7.2" data-path="mrg.html"><a href="mrg.html#mixed-linear-model"><i class="fa fa-check"></i><b>7.2</b> Mixed linear model</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>8</b> Multiple linear regression</a><ul>
 <li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-4"><i class="fa fa-check"></i><b>8.1</b> </a></li>
@@ -288,6 +287,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="25.1.2" data-path="web-scraping.html"><a href="web-scraping.html#search-keyword"><i class="fa fa-check"></i><b>25.1.2</b> Search keyword</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="26" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html"><i class="fa fa-check"></i><b>26</b> Linear mixed model in R</a><ul>
+<li class="chapter" data-level="26.1" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#data-from-an-oats-field-trial"><i class="fa fa-check"></i><b>26.1</b> Data from an Oats Field Trial</a></li>
+<li class="chapter" data-level="26.2" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#data-visulization"><i class="fa fa-check"></i><b>26.2</b> Data visulization</a></li>
+<li class="chapter" data-level="26.3" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#mixed-linear-model"><i class="fa fa-check"></i><b>26.3</b> Mixed linear model</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -345,7 +349,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="check-the-distribution-of-the-data" class="section level2">
 <h2><span class="header-section-number">14.4</span> Check the distribution of the data</h2>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(iris_tab<span class="op">$</span>sepal_length)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-74-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-73-1.png" width="576" /></p>
 </div>
 <div id="eigendecomposition---computing-eigenvectors-and-eigenvalues" class="section level2">
 <h2><span class="header-section-number">14.5</span> Eigendecomposition - Computing Eigenvectors and Eigenvalues</h2>
@@ -370,7 +374,7 @@ cov_mat</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;corrplot&quot;)</span>
 <span class="kw">library</span>(corrplot)
 <span class="kw">corrplot</span>(cov_mat)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-76-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-75-1.png" width="576" /></p>
 </div>
 </div>
 <div id="pca-with-two-variables" class="section level2">
@@ -385,11 +389,11 @@ cov_mat</code></pre>
 ## 5          1.4         0.2
 ## 6          1.7         0.4</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(new_data<span class="op">$</span>petal_length, new_data<span class="op">$</span>petal_width)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-77-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-76-1.png" width="576" /></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;FactoMineR&quot;)</span>
 <span class="kw">library</span>(<span class="st">&quot;FactoMineR&quot;</span>)
 pc_2var_res =<span class="st"> </span><span class="kw">PCA</span>(new_data)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-78-1.png" width="576" /><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-78-2.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-77-1.png" width="576" /><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-77-2.png" width="576" /></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(pc_2var_res)</code></pre>
 <pre><code>## **Results for the Principal Component Analysis (PCA)**
 ## The analysis was performed on 150 individuals, described by 2 variables
@@ -3383,9 +3387,9 @@ cor_matrix&lt;-<span class="kw">cor</span>(wine_x)
 <span class="co"># method = &quot;square&quot;, ellipse, number, shade, color, pie</span>
 <span class="co"># type = upper, lower, full(default)</span>
 <span class="kw">corrplot</span>(cor_matrix, <span class="dt">method=</span><span class="st">&quot;circle&quot;</span>, <span class="dt">type =</span> <span class="st">&quot;upper&quot;</span>)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-83-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-82-1.png" width="576" /></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">corrplot.mixed</span>(cor_matrix)</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-83-2.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-82-2.png" width="576" /></p>
 </div>
 <div id="example" class="section level3">
 <h3><span class="header-section-number">14.7.3</span> Example</h3>
@@ -3426,7 +3430,7 @@ tree.pca&lt;-<span class="kw">princomp</span>(tree)
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biplot</span>(tree.pca,<span class="dt">xlabs=</span>tree.vol,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre>
 <pre><code>## Warning in arrows(0, 0, y[, 1L] * 0.8, y[, 2L] * 0.8, col = col[2L], length
 ## = arrow.len): zero-length arrow is of indeterminate angle and so skipped</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-87-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-86-1.png" width="576" /></p>
 <p>We see that trees high in volume tend to have a high tree girth, but the three height doesn’t give any information on tree volume. This is likely wrong and the consequence of the two different unit measures.</p>
 <p>We could use the same units, or we could standardize the variables. I expect both will lead to a more balanced picture of the variability. Of course in this case one can argue that the variables should have the same unit but not be standardized, which may be a valid argument, were it not that we are measuring two different things. (When we would be measuring the weight of the tree and the girth of the tree, the scale on which both should be measured is no longer very clear. In this case we have a clear argument to work on the standardized variables.)</p>
 <pre class="sourceCode r"><code class="sourceCode r">tree.height&lt;-tree.height<span class="op">*</span><span class="dv">5280</span>
@@ -3452,7 +3456,7 @@ tree.pca&lt;-<span class="kw">princomp</span>(tree)
 ## Proportion Var    0.5    0.5
 ## Cumulative Var    0.5    1.0</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biplot</span>(tree.pca,<span class="dt">xlabs=</span>tree.vol,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-88-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-87-1.png" width="576" /></p>
 <p>We now see that trees which are tall and have a big girth, are high in volume (bottom left corner), compared to low girth and low height for low volume trees (upper right corner). This intuitively makes sense.</p>
 <p>If one watches closely, however, we see that the contrast between high/low volume is strongest in the girth direction and not in the height direction. Let’s see what happens when we standardize:</p>
 <pre class="sourceCode r"><code class="sourceCode r">tree&lt;-<span class="kw">scale</span>(tree,<span class="dt">center=</span>F,<span class="dt">scale=</span>T)
@@ -3475,7 +3479,7 @@ tree.pca&lt;-<span class="kw">princomp</span>(tree)
 ## Proportion Var    0.5    0.5
 ## Cumulative Var    0.5    1.0</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biplot</span>(tree.pca,<span class="dt">xlabs=</span>tree.vol,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-89-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-88-1.png" width="576" /></p>
 <p>Indeed, the girth now explains the majority of the difference in high and low volume trees! (The length of the arrow in the biplot is indicatory of the variance in the original variable.) So even if things are measured on the same scale, standardizing may be useful. Not standardizing may be recommended when we are for example comparing the length of different species of trees because this is exactly the same measurement.</p>
 </div>
 </div>

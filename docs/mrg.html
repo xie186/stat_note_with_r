@@ -186,7 +186,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>7</b> MRG</a><ul>
 <li class="chapter" data-level="7.1" data-path="mrg.html"><a href="mrg.html#read-the-data-1"><i class="fa fa-check"></i><b>7.1</b> Read the data</a></li>
-<li class="chapter" data-level="7.2" data-path="mrg.html"><a href="mrg.html#mixed-linear-model"><i class="fa fa-check"></i><b>7.2</b> Mixed linear model</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>8</b> Multiple linear regression</a><ul>
 <li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-4"><i class="fa fa-check"></i><b>8.1</b> </a></li>
@@ -288,6 +287,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="25.1.2" data-path="web-scraping.html"><a href="web-scraping.html#search-keyword"><i class="fa fa-check"></i><b>25.1.2</b> Search keyword</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="26" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html"><i class="fa fa-check"></i><b>26</b> Linear mixed model in R</a><ul>
+<li class="chapter" data-level="26.1" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#data-from-an-oats-field-trial"><i class="fa fa-check"></i><b>26.1</b> Data from an Oats Field Trial</a></li>
+<li class="chapter" data-level="26.2" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#data-visulization"><i class="fa fa-check"></i><b>26.2</b> Data visulization</a></li>
+<li class="chapter" data-level="26.3" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#mixed-linear-model"><i class="fa fa-check"></i><b>26.3</b> Mixed linear model</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -345,19 +349,6 @@ tab&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;data/galton.csv&
 ## 4      1   78.5   67.0   0   69.0
 ## 5      2   75.5   66.5   1   73.5
 ## 6      2   75.5   66.5   1   72.5</code></pre>
-</div>
-<div id="mixed-linear-model" class="section level2">
-<h2><span class="header-section-number">7.2</span> Mixed linear model</h2>
-<pre class="sourceCode r"><code class="sourceCode r">politeness=
-<span class="kw">read.csv</span>(<span class="st">&quot;http://www.bodowinter.com/tutorial/politeness_data.csv&quot;</span>)
-<span class="kw">head</span>(politeness)</code></pre>
-<pre><code>##   subject gender scenario attitude frequency
-## 1      F1      F        1      pol     213.3
-## 2      F1      F        1      inf     204.5
-## 3      F1      F        2      pol     285.1
-## 4      F1      F        2      inf     259.7
-## 5      F1      F        3      pol     203.9
-## 6      F1      F        3      inf     286.9</code></pre>
 
 </div>
 </div>

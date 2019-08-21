@@ -186,7 +186,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7" data-path="mrg.html"><a href="mrg.html"><i class="fa fa-check"></i><b>7</b> MRG</a><ul>
 <li class="chapter" data-level="7.1" data-path="mrg.html"><a href="mrg.html#read-the-data-1"><i class="fa fa-check"></i><b>7.1</b> Read the data</a></li>
-<li class="chapter" data-level="7.2" data-path="mrg.html"><a href="mrg.html#mixed-linear-model"><i class="fa fa-check"></i><b>7.2</b> Mixed linear model</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>8</b> Multiple linear regression</a><ul>
 <li class="chapter" data-level="8.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#section-4"><i class="fa fa-check"></i><b>8.1</b> </a></li>
@@ -288,6 +287,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="25.1.2" data-path="web-scraping.html"><a href="web-scraping.html#search-keyword"><i class="fa fa-check"></i><b>25.1.2</b> Search keyword</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="26" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html"><i class="fa fa-check"></i><b>26</b> Linear mixed model in R</a><ul>
+<li class="chapter" data-level="26.1" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#data-from-an-oats-field-trial"><i class="fa fa-check"></i><b>26.1</b> Data from an Oats Field Trial</a></li>
+<li class="chapter" data-level="26.2" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#data-visulization"><i class="fa fa-check"></i><b>26.2</b> Data visulization</a></li>
+<li class="chapter" data-level="26.3" data-path="linear-mixed-model-in-r.html"><a href="linear-mixed-model-in-r.html#mixed-linear-model"><i class="fa fa-check"></i><b>26.3</b> Mixed linear model</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -322,7 +326,7 @@ x &lt;-<span class="st"> </span>x <span class="op">+</span><span class="st"> </s
 <pre class="sourceCode r"><code class="sourceCode r">p1 &lt;-<span class="st"> </span><span class="kw">hist</span>(x,<span class="dt">breaks=</span><span class="dv">50</span>, <span class="dt">include.lowest=</span><span class="ot">FALSE</span>, <span class="dt">right=</span><span class="ot">FALSE</span>)</code></pre>
 <pre><code>## Warning in hist.default(x, breaks = 50, include.lowest = FALSE, right =
 ## FALSE): &#39;include.lowest&#39; ignored as &#39;breaks&#39; is not a vector</code></pre>
-<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-100-1.png" width="576" /></p>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-99-1.png" width="576" /></p>
 <p>The plot above shows the histogram of the above dataset:</p>
 <p>The second task is a little bit tricky. It is mainly based on your experience and your knowledge of statistical distribution. Since we created the dataset ourselves, it is easy (surprisingly!) to guess the distribution. Let assume we know that the distribution is a Gamma distribution with shape 10 and scale 3.</p>
 <p>The third task is to do some statistical testing to see if data is actually driven from the parametric distribution. These tests are call Goodness of fit. There are three well-known and widely use goodness of fit tests that also have nice package in R.</p>

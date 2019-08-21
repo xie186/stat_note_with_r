@@ -1,0 +1,232 @@
+# Unstanding power in statistical test
+
+
+## Calculating the power using a normal distribution
+
+
+We will assume that the standard deviation is 2, and the sample size is 20. In the example below we will use a 95% confidence level and wish to find the power to detect a true mean that differs from 5 by an amount of 1.5. (All of these numbers are made up solely for this example.) The commands to find the confidence interval in R are the following:
+
+
+```{r}
+a <- 5 # 
+sd <- 2 # standard deviation
+n <- 20 # sample size
+error <- qnorm(0.975)*sd/sqrt(n)
+left <- a-error
+right <- a+error
+error 
+left
+right
+```
+
+
+Next we find the Z-scores for the left and right values assuming that the true mean is 5+1.5=6.5:
+
+```{r}
+assumed = a + 1.5
+Zleft <- (left-assumed)/(sd/sqrt(n))
+Zright <-(right-assumed)/(sd/sqrt(n))
+p <- pnorm(Zright)-pnorm(Zleft)
+p
+1-p
+```
+
+```{r}
+Zleft
+Zright
+```
+
+In this example, the power of the test is approximately 91.8%. If the true mean differs from 5 by 1.5 then the probability that we will reject the null hypothesis is approximately 91.8%.
+
+```{r}
+se = sqrt(sd/n)
+alpha = 0.05
+cuts = c(1-alpha/2, alpha/2)
+crits = qnorm(cuts, 5, se)    ## Critical Values Based on Null
+
+lowlim = a - 4*sd
+uplim  = a + 4*sd
+
+### Distribution normal mean 5
+x.grid = seq(lowlim,uplim, length= 500)
+dens.all = dnorm(x.grid, mean=a, sd = sd)
+plot(x.grid, dens.all, type="l", xlab="X", ylab="Density")
+
+pcts = c(0.025,0.975)
+outside=qnorm(pcts,a,sd)
+below = min(outside)
+above = max(outside)
+
+x.below    = x.grid[x.grid<below]
+dens.below = dens.all[x.grid<below]
+polygon(c(x.below,rev(x.below)),c(rep(0,length(x.below)),rev(dens.below)),col="grey",density=40)
+x.above    = x.grid[x.grid>above]
+dens.above = dens.all[x.grid>above]
+polygon(c(x.above,rev(x.above)),c(rep(0,length(x.above)),rev(dens.above)),col="grey",density=40)
+
+
+### 
+
+mu1 = a + 1.5
+lowlim1 = mu1 - 4*sd
+uplim1 =  mu1 + 4*sd
+x.grid = seq(lowlim1, uplim1, length= 500)
+dens.all = dnorm(x.grid, mean=mu1, sd = sd)
+lines(x.grid,dens.all, col="blue", lty="dashed")
+
+outside=qnorm(pcts,mu1,sd)
+below = min(outside)
+above = max(outside)
+
+x.below    = x.grid[x.grid<below]
+dens.below = dens.all[x.grid<below]
+polygon(c(x.below,rev(x.below)),c(rep(0,length(x.below)),rev(dens.below)),col="blue",density=40)
+x.above    = x.grid[x.grid>above]
+dens.above = dens.all[x.grid>above]
+polygon(c(x.above,rev(x.above)),c(rep(0,length(x.above)),rev(dens.above)),col="blue",density=40)
+
+## 
+abline(v = left,  lty="dashed", col="red")
+abline(v = right, lty="dashed", col="red")
+
+```
+
+```{r}
+
+```
+
+## Function `shadenorm()`
+
+```{r}
+## Reference: https://gist.github.com/tony91782/950812
+## -------------------------- ##
+## An R Function that Shades  ##
+## under a normal density.    ##
+##                            ##
+## This is a convenience      ##
+## function for polygon()     ##
+## -------------------------- ##
+
+shadenorm = function(below=NULL, above=NULL, pcts = c(0.025,0.975), mu=0, sig=1, numpts = 500, color = "gray", dens = 40,
+                   lines=FALSE,between=NULL,outside=NULL){
+   if(is.null(between)){
+      bothnull = is.null(below) & is.null(above)
+      if(bothnull==TRUE){
+        below = ifelse(is.null(below), qnorm(pcts[1],mu,sig), below)
+        above = ifelse(is.null(above), qnorm(pcts[2],mu,sig), above)
+      }
+   }
+
+   if(is.null(outside)==FALSE){
+        if(is.numeric(outside)==FALSE){if(outside==TRUE){outside=qnorm(pcts,mu,sig)}}
+        below = min(outside)
+        above = max(outside)
+   }
+
+   lowlim = mu - 4*sig
+   uplim  = mu + 4*sig
+
+   x.grid = seq(lowlim,uplim, length= numpts)
+   dens.all = dnorm(x.grid,mean=mu, sd = sig)
+
+   if(lines==FALSE){
+         plot(x.grid, dens.all, type="l", xlab="X", ylab="Density")
+   }
+
+   if(lines==TRUE){
+         lines(x.grid,dens.all)
+   }
+
+   if(is.null(below)==FALSE){
+       x.below    = x.grid[x.grid<below]
+       dens.below = dens.all[x.grid<below]
+       polygon(c(x.below,rev(x.below)),c(rep(0,length(x.below)),rev(dens.below)),col=color,density=dens)
+   }
+
+   if(is.null(above)==FALSE){
+       x.above    = x.grid[x.grid>above]
+       dens.above = dens.all[x.grid>above]
+       polygon(c(x.above,rev(x.above)),c(rep(0,length(x.above)),rev(dens.above)),col=color,density=dens)
+   }
+
+   
+
+   if(is.null(between)==FALSE){
+        if(is.numeric(between)==FALSE){if(between==TRUE){between=qnorm(pcts,mu,sig)}}
+        from = min(between)
+        to   = max(between)
+
+        x.between    = x.grid[x.grid>from&x.grid<to]
+        dens.between = dens.all[x.grid>from&x.grid<to]
+        polygon(c(x.between,rev(x.between)),c(rep(0,length(x.between)),rev(dens.between)),col=color,density=dens)
+   }
+}
+```
+
+
+
+```{r}
+## Parameters of the Problem ##
+
+mu0   = 6     ## Null-hypothesized value
+alpha = 0.05  ## Significance Level
+s.sq  = 16    ## Variance from pilot study
+n1    = 64    ## Sample Size
+alt =  6.5
+
+se = sqrt(s.sq/n1)
+
+## -------------------------- ##
+## What is Statistical Power? ##
+## -------------------------- ##
+
+cuts = c(1-alpha/2, alpha/2)
+crits = qnorm(cuts, mu0, sqrt(s.sq/n1))    ## Critical Values Based on Null
+shadenorm(mu=mu0, sig = se, outside=crits) ## My own function
+shadenorm(mu = 6.5, sig = se, lines=TRUE, outside=crits, col="blue")
+```
+
+## Write a Function to Compute it
+
+```{r}
+power = function(theta, mu, var, n, alpha=0.05){
+   ## The qnorm function is simply the inverse of the cdf
+   ## You can think of as the inverse of pnorm
+   crit.l = qnorm(alpha/2, mu, sqrt(var/ n))    ## Critical Value Based on Null
+   crit.h = qnorm(1-alpha/2, mu, sqrt(var/ n))  ## Critical Value Based on Null
+   
+   # pnorm is the R function that calculates the c.d.f. (Cumulative distribution function)
+   # P(X < ctrit.l)
+   pr.high = pnorm(crit.h, theta, sd = sqrt(var/ n),lower.tail=FALSE) ## Prob Reject High
+   ## P(X > ctrit.l)
+   pr.low  = pnorm(crit.l, theta, sd = sqrt(var/ n))                  ## Prob Reject Low
+   pow = pr.low+pr.high
+
+   pow
+}
+```
+
+```{r}
+power(thet=6.5, mu=6, var= 16, n = 64)
+thet = seq(3,9, by=0.01)
+pow = power(thet, mu0, s.sq, n1)
+plot(thet, pow, type="l", ylim=c(0,1), main="My Power Plot")
+
+n2 = 256  ## New Larger Sample Size
+pow2 = power(thet, mu0, s.sq,n2)
+lines(thet, pow2, lty="dashed", col="blue")
+abline(h=0.05, lty="dotted")
+```
+
+
+# Reference
+
+An R Function that Shades under a normal density: https://gist.github.com/tony91782/950812
+
+Computing statistical power: https://www.r-bloggers.com/computing-statistical-power/
+
+Probability Distributions in R: http://www.stat.umn.edu/geyer/old/5101/rlook.html
+
+Introduction to dnorm, pnorm, qnorm, and rnorm for new biostatisticians: http://seankross.com/notes/dpqr/
+
+Calculating The Power Of A Test: https://www.cyclismo.org/tutorial/R/power.html

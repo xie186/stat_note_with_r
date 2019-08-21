@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>20 Overdispersion | Notes of R for Bioinformatics</title>
-  <meta name="description" content="20 Overdispersion | Notes of R for Bioinformatics">
+  <title>26 Linear mixed model in R | Notes of R for Bioinformatics</title>
+  <meta name="description" content="26 Linear mixed model in R | Notes of R for Bioinformatics">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="20 Overdispersion | Notes of R for Bioinformatics" />
+  <meta property="og:title" content="26 Linear mixed model in R | Notes of R for Bioinformatics" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="20 Overdispersion | Notes of R for Bioinformatics" />
+  <meta name="twitter:title" content="26 Linear mixed model in R | Notes of R for Bioinformatics" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="goodness-of-fit-in-r.html">
-<link rel="next" href="package-management.html">
+<link rel="prev" href="web-scraping.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -309,35 +309,102 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="overdispersion" class="section level1">
-<h1><span class="header-section-number">20</span> Overdispersion</h1>
-<p>Overdispersion describes the observation that variation is higher than would be expected.</p>
-<div id="recognising-and-testing-for-overdispersion" class="section level2">
-<h2><span class="header-section-number">20.1</span> Recognising (and testing for) overdispersion</h2>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(lme4)
-<span class="kw">data</span>(grouseticks)
-<span class="kw">summary</span>(grouseticks)</code></pre>
-<pre><code>##      INDEX         TICKS           BROOD         HEIGHT      YEAR    
-##  1      :  1   Min.   : 0.00   606    : 10   Min.   :403.0   95:117  
-##  2      :  1   1st Qu.: 0.00   602    :  9   1st Qu.:430.0   96:155  
-##  3      :  1   Median : 2.00   537    :  7   Median :457.0   97:131  
-##  4      :  1   Mean   : 6.37   601    :  7   Mean   :462.2           
-##  5      :  1   3rd Qu.: 6.00   643    :  7   3rd Qu.:494.0           
-##  6      :  1   Max.   :85.00   711    :  7   Max.   :533.0           
-##  (Other):397                   (Other):356                           
-##     LOCATION      cHEIGHT       
-##  14     : 24   Min.   :-59.241  
-##  4      : 20   1st Qu.:-32.241  
-##  19     : 20   Median : -5.241  
-##  28     : 19   Mean   :  0.000  
-##  50     : 17   3rd Qu.: 31.759  
-##  36     : 16   Max.   : 70.759  
-##  (Other):287</code></pre>
+<div id="linear-mixed-model-in-r" class="section level1">
+<h1><span class="header-section-number">26</span> Linear mixed model in R</h1>
+<div id="data-from-an-oats-field-trial" class="section level2">
+<h2><span class="header-section-number">26.1</span> Data from an Oats Field Trial</h2>
+<p>The Oats data frame has 72 rows and 4 columns.</p>
+<p>This data frame contains the following columns:</p>
+<ul>
+<li><p><strong>Block</strong>: an ordered factor with levels VI &lt; V &lt; III &lt; IV &lt; II &lt; I</p></li>
+<li><p><strong>Variety</strong>: a factor with levels Golden Rain Marvellous Victory</p></li>
+<li><p><strong>nitro</strong>: a numeric vector</p></li>
+<li><p><strong>yield</strong>: a numeric vector</p></li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(MASS)
+
+<span class="kw">library</span>(summarytools)</code></pre>
+<pre><code>## Warning in fun(libname, pkgname): couldn&#39;t connect to display &quot;:0&quot;</code></pre>
+<pre><code>## system has no X11 capabilities, therefore only ascii graphs will be produced by dfSummary()</code></pre>
+<pre><code>## 
+## Attaching package: &#39;summarytools&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:Hmisc&#39;:
+## 
+##     label, label&lt;-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dfSummary</span>(oats)</code></pre>
+<pre><code>## Data Frame Summary  
+## oats  
+## Dimensions: 72 x 4  
+## Duplicates: 0  
+## 
+## --------------------------------------------------------------------------------------------------
+## No   Variable    Stats / Values            Freqs (% of Valid)   Graph           Valid    Missing  
+## ---- ----------- ------------------------- -------------------- --------------- -------- ---------
+## 1    B           1. I                      12 (16.7%)           III             72       0        
+##      [factor]    2. II                     12 (16.7%)           III             (100%)   (0%)     
+##                  3. III                    12 (16.7%)           III                               
+##                  4. IV                     12 (16.7%)           III                               
+##                  5. V                      12 (16.7%)           III                               
+##                  6. VI                     12 (16.7%)           III                               
+## 
+## 2    V           1. Golden.rain            24 (33.3%)           IIIIII          72       0        
+##      [factor]    2. Marvellous             24 (33.3%)           IIIIII          (100%)   (0%)     
+##                  3. Victory                24 (33.3%)           IIIIII                            
+## 
+## 3    N           1. 0.0cwt                 18 (25.0%)           IIIII           72       0        
+##      [factor]    2. 0.2cwt                 18 (25.0%)           IIIII           (100%)   (0%)     
+##                  3. 0.4cwt                 18 (25.0%)           IIIII                             
+##                  4. 0.6cwt                 18 (25.0%)           IIIII                             
+## 
+## 4    Y           Mean (sd) : 104 (27.1)    51 distinct values       :           72       0        
+##      [integer]   min &lt; med &lt; max:                                   : :         (100%)   (0%)     
+##                  53 &lt; 102.5 &lt; 174                                 : : : :                         
+##                  IQR (CV) : 35.2 (0.3)                            : : : :                         
+##                                                                 . : : : : : .                     
+## --------------------------------------------------------------------------------------------------</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(oats)</code></pre>
+<pre><code>##    B                V           N            Y        
+##  I  :12   Golden.rain:24   0.0cwt:18   Min.   : 53.0  
+##  II :12   Marvellous :24   0.2cwt:18   1st Qu.: 86.0  
+##  III:12   Victory    :24   0.4cwt:18   Median :102.5  
+##  IV :12                    0.6cwt:18   Mean   :104.0  
+##  V  :12                                3rd Qu.:121.2  
+##  VI :12                                Max.   :174.0</code></pre>
 </div>
-<div id="refefernce" class="section level2">
-<h2><span class="header-section-number">20.2</span> Refefernce</h2>
-<p><a href="https://biometry.github.io/APES/LectureNotes/2016-JAGS/Overdispersion/OverdispersionJAGS.pdf" class="uri">https://biometry.github.io/APES/LectureNotes/2016-JAGS/Overdispersion/OverdispersionJAGS.pdf</a></p>
-<p><a href="https://newonlinecourses.science.psu.edu/stat504/node/162/" class="uri">https://newonlinecourses.science.psu.edu/stat504/node/162/</a></p>
+<div id="data-visulization" class="section level2">
+<h2><span class="header-section-number">26.2</span> Data visulization</h2>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">ggplot</span>(oats, <span class="kw">aes</span>(<span class="dt">x =</span> V, <span class="dt">y =</span> Y)) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_point</span>()</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-119-1.png" width="576" /></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">ggplot</span>(oats, <span class="kw">aes</span>(<span class="dt">x =</span> V, <span class="dt">y =</span> Y, <span class="dt">color =</span> N)) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span>N, <span class="dt">nrow =</span> <span class="dv">1</span>)</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-120-1.png" width="576" /></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">ggplot</span>(oats, <span class="kw">aes</span>(<span class="dt">x =</span> N, <span class="dt">y =</span> Y, <span class="dt">color =</span> N)) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span>V, <span class="dt">nrow =</span> <span class="dv">1</span>)</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-121-1.png" width="576" /></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">ggplot</span>(oats, <span class="kw">aes</span>(<span class="dt">x =</span> N, <span class="dt">y =</span> Y, <span class="dt">color =</span> N)) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span>V, <span class="dt">nrow =</span> <span class="dv">1</span>)</code></pre>
+<p><img src="bioinfBookXIE186_files/figure-html/unnamed-chunk-122-1.png" width="576" /></p>
+</div>
+<div id="mixed-linear-model" class="section level2">
+<h2><span class="header-section-number">26.3</span> Mixed linear model</h2>
+<pre class="sourceCode r"><code class="sourceCode r">politeness=
+<span class="kw">read.csv</span>(<span class="st">&quot;http://www.bodowinter.com/tutorial/politeness_data.csv&quot;</span>)
+<span class="kw">head</span>(politeness)</code></pre>
+<pre><code>##   subject gender scenario attitude frequency
+## 1      F1      F        1      pol     213.3
+## 2      F1      F        1      inf     204.5
+## 3      F1      F        2      pol     285.1
+## 4      F1      F        2      inf     259.7
+## 5      F1      F        3      pol     203.9
+## 6      F1      F        3      inf     286.9</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(Oats)</code></pre>
+<pre><code>## Warning in data(Oats): data set &#39;Oats&#39; not found</code></pre>
 
 </div>
 </div>
@@ -346,8 +413,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="goodness-of-fit-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="package-management.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="web-scraping.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
